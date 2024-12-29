@@ -18,8 +18,9 @@ namespace DragonChanges.Utils
         public static void InitializeSettings()
         {
             ModMenu.ModMenu.AddSettings(
-                SettingsBuilder.New(RootKey, CreateString(GetKey("modcompat"), "Mod Compatibility"))
+                SettingsBuilder.New(RootKey, CreateString(GetKey("dc-title"), "DragonChanges"))
                     .SetMod(Main.entry)
+                    .AddAnotherSettingsGroup(GetKey("modcompat"), CreateString(GetKey("modcompat"), "Compatibility"))
                     .AddToggle(
                         Toggle.New(GetKey("mc-microscopic-horse"), defaultValue: true, CreateString("mc-microscopic-horse-toggle", "Adds the Nightmare animal companion (MicroscopicContent) to other pet lists")))
                     .AddToggle(

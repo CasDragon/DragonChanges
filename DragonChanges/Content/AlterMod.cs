@@ -52,6 +52,36 @@ namespace DragonChanges.Content
                     FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionWildlandShaman)
                         .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
                         .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.CavalierMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.BeastRiderMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.ArcaneRiderMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.BloodriderMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.GhostRiderGhostMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.NomadMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.OrderOfThePawMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.PaladinDivineMountSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.SoheiMonasticMountHorseSelection)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
+                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
+                        .AddToAllFeatures("4bfe297b1d2c47d18aa770ec5c132194")
+                        .Configure();
                 }
                 else
                 {

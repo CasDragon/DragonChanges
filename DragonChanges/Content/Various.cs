@@ -54,6 +54,36 @@ namespace DragonChanges.Content
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionWildlandShaman)
                     .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
                     .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.CavalierMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.BeastRiderMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.ArcaneRiderMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.BloodriderMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.GhostRiderGhostMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.NomadMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.OrderOfThePawMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.PaladinDivineMountSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.SoheiMonasticMountHorseSelection)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
+                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .Configure();
             }
         }
     }
