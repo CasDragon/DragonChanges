@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Utils;
 using DragonChanges.Content;
+using DragonChanges.NewStuff;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using UnityModManagerNet;
@@ -71,6 +72,7 @@ namespace DragonChanges
                     AlterMod.PatchHorse();
                     Drakes.PatchDrakes();
                     Various.PatchHippogriff();
+                    PowerfulThrow.Configure();
                 }
                 catch (Exception e)
                 {

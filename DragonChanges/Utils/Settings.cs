@@ -26,7 +26,10 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("ec-drakes"), defaultValue: false, CreateString("ec-drakes-toggle", "Super secret option to buff drakes from Expanded Content")))
                     .AddAnotherSettingsGroup(GetKey("various"), CreateString(GetKey("various-group"), "Various"))
                     .AddToggle(
-                        Toggle.New(GetKey("hippogriff"), defaultValue: true, CreateString("hippogriff-toggle", "Adds the Hippogriff  to other pet lists"))));
+                        Toggle.New(GetKey("hippogriff"), defaultValue: true, CreateString("hippogriff-toggle", "Adds the Hippogriff  to other pet lists")))
+                    .AddAnotherSettingsGroup(GetKey("newcontent"), CreateString(GetKey("newcontent-group"), "New Content"))
+                    .AddToggle(
+                        Toggle.New(GetKey("powerfulthrow"), defaultValue: true, CreateString("powerfulthrow-toggle", "Adds the feat Powerful Throw"))));
         }
         public static T GetSetting<T>(string key)
         {

@@ -1,12 +1,12 @@
 [
   {
-    "Key": "Example.Name",
+    "Key": "powerfulthrow.name",
     "ProcessTemplates": false,
     "enGB": "Name of your Feat/Class/Whatever"
   },
 
   {
-    "Key": "Example.Description",
-    "enGB": "Description for your Feat/Class/Whatever"
+    "Key": "powerfulthrow.description",
+    "enGB": "You may use your Strength modifier in place of your Dexterity modifier for your attack rolls when making a ranged attack with thrown weapons. You may also use the Power Attack feat instead of the Deadly Aim feat when attacking with thrown weapons."
   }
 ]
