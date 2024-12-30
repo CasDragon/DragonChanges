@@ -6,4 +6,6 @@ Current features include
 * Adds a super secret option for buffing [Expanded Content](https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/377)'s drake companion's initial stats. Disabled by default
 * Add new feature [Powerful Throw](https://www.d20pfsrd.com/magic/variant-magic-rules/akashic-magic/feats/powerful-throw-combat/) - requested by Rafanta89 on Discord
 
+Special thanks to AlterAsc for letting me steal his code, and Vek for also letting me steal his code. 
+
 Thanks to everyone on the Owlcat Discord for putting up with my nonsense, especially Micro / Kuru / ADDB / AlterAsc / Bittercrabapple
