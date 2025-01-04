@@ -75,6 +75,10 @@ namespace DragonChanges.NewStuff
             return UnitConfigurator.New(UndeadUnit, Guids.UndeadMountUnit)
                 .CopyFrom(oghorse)
                 .SetPrefab("9b94fcd181ed5304e867b02c4faca9b8")
+                .SetCharisma(15)
+                .SetConstitution(6)
+                .SetType(UnitTypeRefs.PlagueBeast_Horse.Reference.Get())
+                .SetPortrait(UnitRefs.ArmyPlaguedHorse.Reference.Get().m_Portrait)
             //    .SetPortrait(portrait)
                 .Configure();
         }
