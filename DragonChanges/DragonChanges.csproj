@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>DragonChanges</AssemblyName>
 		<Description>DragonChanges</Description>
-		<Version>1.1.1</Version>
+		<Version>1.2.1</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>DragonChanges</RootNamespace>
@@ -26,6 +26,7 @@
 	<ItemGroup>
 		<None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="LocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="dragonchanges_assets" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 	<Target Name="ILRepack" AfterTargets="Build">
 		<ItemGroup>

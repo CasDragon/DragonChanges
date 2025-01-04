@@ -30,7 +30,9 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("hippogriff"), defaultValue: true, CreateString("hippogriff-toggle", "Adds the Hippogriff  to other pet lists")))
                     .AddAnotherSettingsGroup(GetKey("newcontent"), CreateString(GetKey("newcontent-group"), "New Content"))
                     .AddToggle(
-                        Toggle.New(GetKey("powerfulthrow"), defaultValue: true, CreateString("powerfulthrow-toggle", "Adds the feat Powerful Throw"))));
+                        Toggle.New(GetKey("powerfulthrow"), defaultValue: true, CreateString("powerfulthrow-toggle", "Adds the feat Powerful Throw")))
+                    .AddToggle(
+                        Toggle.New(GetKey("undeadmount"), defaultValue: true, CreateString("undeadmount-toggle", "Adds a new undead mount, and then adds it to mount selections"))));
         }
         public static T GetSetting<T>(string key)
         {
