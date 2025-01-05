@@ -63,7 +63,7 @@ namespace DragonChanges.NewStuff
                 .SetDescription(UndeadFeatureDescription)
                 .SetReapplyOnLevelUp(true)
                 .SetIsClassFeature(true)
-                .SetIcon("assets/icon/undeadhorse.png")
+                .SetIcon("assets/icons/undeadhorse.png")
                 .AddFeatureToPet(FeatureRefs.UndeadType.Reference.Get())
                 .Configure();
         }

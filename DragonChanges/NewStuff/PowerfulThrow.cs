@@ -40,7 +40,7 @@ namespace DragonChanges.NewStuff
                     .AddRecommendationStatComparison(higherStat: StatType.Strength, lowerStat: StatType.Dexterity,  diff: 4)
                     .AddRecommendationStatMiminum(minimalValue: 14, stat: StatType.Strength, goodIfHigher: true)
                     .AddToGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
-                    .SetIcon("assets/icon/undeadhorse.png")
+                    .SetIcon("assets/icons/undeadhorse.png")
                     .SetIsClassFeature(true)
                     .Configure();
                 var component = TTTHelpers.CreateCopy<AddInitiatorAttackWithWeaponTrigger>(BuffRefs.PowerAttackBuff.Reference.Get().GetComponent<AddInitiatorAttackWithWeaponTrigger>());
