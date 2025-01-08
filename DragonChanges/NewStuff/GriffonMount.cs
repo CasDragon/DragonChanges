@@ -3,53 +3,54 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using HarmonyLib;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints;
+using Kingmaker.Modding;
+using Kingmaker.View;
+using Kingmaker.Visual.Mounts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HarmonyLib;
-using Kingmaker.Modding;
-using Kingmaker.View;
-using Kingmaker.Visual.Mounts;
+using Kingmaker.UnitLogic.Buffs;
 
 namespace DragonChanges.NewStuff
 {
-    internal class UnicornMount
+    internal class GriffonMount
     {
-        internal static string UnicornUnit = "unicornmountunit";
-        internal static string UnicornFeatureName = "unicornmountfeature.name";
-        internal static string UnicornFeatureDescription = "unicornmountfeature.description";
-        internal static string UnicornFeature = "unicornmountfeature";
-        internal static string UnicornMountPortrait = "unicornmountportrait";
-        readonly static string unicornprefab = UnitRefs.CR3_UnicornStandard.Reference.Get().Prefab.AssetId;
+        internal static string GriffonUnit = "griffonmountunit";
+        internal static string GriffonFeatureName = "griffonmountfeature.name";
+        internal static string GriffonFeatureDescription = "griffonmountfeature.description";
+        internal static string GriffonFeature = "griffonmountfeature";
+        internal static string GriffonMountPortrait = "griffonmountportrait";
+        readonly static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
 
         public static void Configure()
         {
 
-            if (Settings.GetSetting<bool>("unicornmount"))
+            if (Settings.GetSetting<bool>("griffonmount"))
             {
-                Main.log.Log("Configuring unicorn mount");
-                BlueprintUnit unit = CreateUnicornMount();
-                BlueprintFeature feature = CreateUnicornMountFeature(unit);
-                AddUnicornMountToSelections(feature);
+                Main.log.Log("Configuring griffon mount");
+                BlueprintUnit unit = CreateGriffonMount();
+                BlueprintFeature feature = CreateGriffonMountFeature(unit);
+                AddGriffonMountToSelections(feature);
             }
             else
             {
-                Main.log.Log("Unicorn mount feature disabling, configuring dummies");
-                FeatureConfigurator.New(UnicornFeature, Guids.UnicornMountFeature)
+                Main.log.Log("Griffon mount feature disabling, configuring dummies");
+                FeatureConfigurator.New(GriffonFeature, Guids.GriffonMountFeature)
                     .Configure();
-                UnitConfigurator.New(UnicornUnit, Guids.UnicornMountUnit)
+                UnitConfigurator.New(GriffonUnit, Guids.GriffonMountUnit)
                     .Configure();
             }
         }
-        public static BlueprintFeature CreateUnicornMountFeature(BlueprintUnit unicornmountunit)
+        public static BlueprintFeature CreateGriffonMountFeature(BlueprintUnit griffonmountunit)
         {
-            Main.log.Log("Creating unicorn mount feature");
-            return FeatureConfigurator.New(UnicornFeature, Guids.UnicornMountFeature)
-                .AddPet(pet: unicornmountunit,
+            Main.log.Log("Creating griffon mount feature");
+            return FeatureConfigurator.New(GriffonFeature, Guids.GriffonMountFeature)
+                .AddPet(pet: griffonmountunit,
                         type: Kingmaker.Enums.PetType.AnimalCompanion,
                         progressionType: Kingmaker.Enums.PetProgressionType.AnimalCompanion,
                         levelRank: FeatureRefs.AnimalCompanionRank.Reference.Get(),
@@ -59,45 +60,45 @@ namespace DragonChanges.NewStuff
                 .AddBuffExtraEffects(checkedBuff: BuffRefs.MountedBuff.Reference.Get(),
                         extraEffectBuff: BuffRefs.AnimalCompanionFeatureHorseBuff.Reference.Get(),
                         useBaffContext: false)
-                .SetDisplayName(UnicornFeatureName)
-                .SetDescription(UnicornFeatureDescription)
+                .SetDisplayName(GriffonFeatureName)
+                .SetDescription(GriffonFeatureDescription)
                 .SetReapplyOnLevelUp(true)
                 .SetIsClassFeature(true)
                 .SetIcon(null)
-                //.SetIcon("assets/icons/unicornhorse.png")
+                //.SetIcon("assets/icons/griffonhorse.png")
                 .AddFeatureToPet(FeatureRefs.MagicalBeastType.Reference.Get())
                 .Configure();
         }
-        public static BlueprintUnit CreateUnicornMount()
+        public static BlueprintUnit CreateGriffonMount()
         {
-            Main.log.Log("Creating unicorn mount unit");
+            Main.log.Log("Creating griffon mount unit");
             BlueprintUnit oghorse = TTTHelpers.CreateCopy<BlueprintUnit>(UnitRefs.AnimalCompanionUnitHorse.Reference.Get());
-            //BlueprintPortrait portrait = CreateUnicornMountPortrait();
-            return UnitConfigurator.New(UnicornUnit, Guids.UnicornMountUnit)
+            //BlueprintPortrait portrait = CreateGriffonMountPortrait();
+            return UnitConfigurator.New(GriffonUnit, Guids.GriffonMountUnit)
                 .CopyFrom(oghorse)
-                .SetPrefab(UnitRefs.CR3_UnicornStandard.Reference.Get().Prefab)
-                .SetType(UnitTypeRefs.Unicorn.Reference.Get())
-                .SetPortrait(UnitRefs.CR3_UnicornStandard.Reference.Get().m_Portrait)
+                .SetPrefab(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab)
+                .SetType(UnitTypeRefs.EagleGiant.Reference.Get())
+                .SetPortrait(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Portrait)
             //    .SetPortrait(portrait)
                 .Configure();
         }
-        public static BlueprintPortrait CreateUnicornMountPortrait()
+        public static BlueprintPortrait CreateGriffonMountPortrait()
         {
             PortraitData data = new PortraitData();
             // todo: fix this mess
-            //data.m_FullLengthImage = "assets/portraits/unicornhorse/fulllength.png";
-            //data.m_PetEyeImage = "assets/portraits/unicornhorse/eye.png";
-            //data.m_HalfLengthImage = "assets/portraits/unicornhorse/medium.png";
-            //data.m_PortraitImage = "assets/portraits/unicornhorse/small.png";
-            return PortraitConfigurator.New(UnicornMountPortrait, Guids.UnicornMountPortrait)
+            //data.m_FullLengthImage = "assets/portraits/griffonhorse/fulllength.png";
+            //data.m_PetEyeImage = "assets/portraits/griffonhorse/eye.png";
+            //data.m_HalfLengthImage = "assets/portraits/griffonhorse/medium.png";
+            //data.m_PortraitImage = "assets/portraits/griffonhorse/small.png";
+            return PortraitConfigurator.New(GriffonMountPortrait, Guids.GriffonMountPortrait)
                 .SetData(data)
                 .Configure();
         }
-        public static void AddUnicornMountToSelections(BlueprintFeature mountfeature)
+        public static void AddGriffonMountToSelections(BlueprintFeature mountfeature)
         {
-            if (Settings.GetSetting<bool>("unicornmount"))
+            if (Settings.GetSetting<bool>("griffonmount"))
             {
-                Main.log.Log("Patching various animal selections to include unicorn mount");
+                Main.log.Log("Patching various animal selections to include griffon mount");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)
                     .AddToAllFeatures(mountfeature)
                     .Configure();
@@ -172,31 +173,31 @@ namespace DragonChanges.NewStuff
 
         //[HarmonyPatch(typeof(OwlcatModificationsManager))]
         [HarmonyPatch(typeof(OwlcatModificationsManager), nameof(OwlcatModificationsManager.OnResourceLoaded))]
-        public static class PatchUnicornOnLoad
+        public static class PatchGriffonOnLoad
         {
             /*[HarmonyPostfix]
             [HarmonyPatch(nameof(OwlcatModificationsManager.OnResourceLoaded))]
-            public static void OnResourceLoaded_UnicornPatch(object resource, string guid)*/
+            public static void OnResourceLoaded_GriffonPatch(object resource, string guid)*/
             [HarmonyPrefix]
             public static void Prefix(object resource, string guid)
             {
-                if (guid != unicornprefab)
+                if (guid != griffonprefab)
                     return;
-                Main.log.Log("Found unicorn prefab");
+                Main.log.Log("Found griffon prefab");
                 if (resource is UnitEntityView view)
                 {
-                    Main.log.Log("Start patching unicorn prefab for mounting");
-                    PatchUnicornAsset(view);
-                    Main.log.Log("Finised patching unicorn prefab");
+                    Main.log.Log("Start patching griffon prefab for mounting");
+                    PatchGriffonAsset(view);
+                    Main.log.Log("Finised patching griffon prefab");
                 }
             }
-            public static void PatchUnicornAsset(UnitEntityView view)
+            public static void PatchGriffonAsset(UnitEntityView view)
             {
                 MountOffsets offsets = view.gameObject.AddComponent<MountOffsets>();
-                var horse = ResourcesLibrary.TryGetResource<UnitEntityView>(unicornprefab);
-                if (horse is UnitEntityView)
+                var hypogriff = ResourcesLibrary.TryGetResource<UnitEntityView>(griffonprefab);
+                if (hypogriff is UnitEntityView)
                 {
-                    offsets = UnityEngine.Object.Instantiate(horse.GetComponent<MountOffsets>(), offsets.transform);
+                    offsets = UnityEngine.Object.Instantiate(hypogriff.GetComponent<MountOffsets>(), offsets.transform);
                 }
                 else
                 {

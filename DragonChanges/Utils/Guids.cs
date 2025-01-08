@@ -15,5 +15,8 @@ namespace DragonChanges.Utils
         internal static string UnicornMountFeature = "DEF68855-61C8-41E7-B51E-148D962021C0";
         internal static string UnicornMountUnit = "09204DD8-3A32-49EB-AEC5-F2BD7837815E";
         internal static string UnicornMountPortrait = "2442471A-FAE5-4CC4-940F-F2211845AE85";
+        internal static string GriffonMountFeature = "59B802E9-A613-42EC-AE7D-3A9EABAA40AB";
+        internal static string GriffonMountUnit = "AA043B97-A56E-4494-B499-2DB9AC04F3BC";
+        internal static string GriffonMountPortrait = "2048A29F-A3D0-48FA-9BF7-CE76B85340E1";
     }
 }

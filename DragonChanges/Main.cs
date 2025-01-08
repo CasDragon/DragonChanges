@@ -75,6 +75,7 @@ namespace DragonChanges
                     PowerfulThrow.Configure();
                     UndeadMount.Configure();
                     UnicornMount.Configure();
+                    GriffonMount.Configure();
                 }
                 catch (Exception e)
                 {
