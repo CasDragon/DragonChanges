@@ -74,6 +74,7 @@ namespace DragonChanges
                     Various.PatchHippogriff();
                     PowerfulThrow.Configure();
                     UndeadMount.Configure();
+                    UnicornMount.Configure();
                 }
                 catch (Exception e)
                 {
