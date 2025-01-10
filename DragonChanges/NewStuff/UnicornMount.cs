@@ -170,13 +170,13 @@ namespace DragonChanges.NewStuff
             }
         }
 
-        //[HarmonyPatch(typeof(OwlcatModificationsManager))]
+        /*//[HarmonyPatch(typeof(OwlcatModificationsManager))]
         [HarmonyPatch(typeof(OwlcatModificationsManager), nameof(OwlcatModificationsManager.OnResourceLoaded))]
         public static class PatchUnicornOnLoad
         {
             /*[HarmonyPostfix]
             [HarmonyPatch(nameof(OwlcatModificationsManager.OnResourceLoaded))]
-            public static void OnResourceLoaded_UnicornPatch(object resource, string guid)*/
+            public static void OnResourceLoaded_UnicornPatch(object resource, string guid)
             [HarmonyPrefix]
             public static void Prefix(object resource, string guid)
             {
@@ -203,6 +203,6 @@ namespace DragonChanges.NewStuff
                     Main.log.Log("Couldn't find horse prefab to steal from");
                 }
             }
-        }
+        }*/
     }
 }
