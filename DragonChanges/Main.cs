@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Utils;
 using DragonChanges.Content;
+using DragonChanges.New_Classes.Redditor;
+using DragonChanges.New_Classes.Swordmaster;
 using DragonChanges.NewStuff;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
@@ -76,6 +78,8 @@ namespace DragonChanges
                     UndeadMount.Configure();
                     UnicornMount.Configure();
                     GriffonMount.Configure();
+                    RedditorClass.Configure();
+                    SwordmasterClass.Configure();
                 }
                 catch (Exception e)
                 {

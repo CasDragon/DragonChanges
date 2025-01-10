@@ -41,5 +41,264 @@
   {
     "Key": "griffonmountfeature.description",
     "enGB": "TODO"
+  },
+
+  {
+    "Key": "redditor.name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor"
+  },
+
+  {
+    "Key": "redditor.description",
+    "enGB": "Reddit's own character class. CHA TO EVERYTHING! \nBasically Fighter class with +CHA to all stats and CHA spellcasting."
+  },
+
+  {
+    "Key": "redditor.shortdescription",
+    "enGB": "Reddit's own character class. CHA TO EVERYTHING!"
+  },
+
+  {
+    "Key": "ChaToInit.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Initiative"
+  },
+
+  {
+    "Key": "ChaToInit.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Initiative}Initiative{/g}."
+  },
+
+  {
+    "Key": "ChaToSaves.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Saving Throws"
+  },
+
+  {
+    "Key": "ChaToSaves.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:SaveFortitude}Fortitude{/g}, {g|Encyclopedia:SaveReflex}Reflex{/g}, and {g|Encyclopedia:SaveWill}Will{/g} saves."
+  },
+
+  {
+    "Key": "ChaToWis.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Wisdom"
+  },
+
+  {
+    "Key": "ChaToWis.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Wisdom}Wisdom{/g}."
+  },
+
+  {
+    "Key": "ChaToInt.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Intelligence"
+  },
+
+  {
+    "Key": "ChaToInt.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Intelligence}Intelligence{/g}."
+  },
+
+  {
+    "Key": "ChaToAC.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Armor"
+  },
+
+  {
+    "Key": "ChaToAC.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Armor_Class}AC{/g}."
+  },
+
+  {
+    "Key": "ChaToCha.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Charisma"
+  },
+
+  {
+    "Key": "ChaToCha.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}."
+  },
+
+  {
+    "Key": "ChaToDex.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Dexterity"
+  },
+
+  {
+    "Key": "ChaToDex.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Dexterity}Dexterity{/g}."
+  },
+
+  {
+    "Key": "ChaToCon.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Constitution"
+  },
+
+  {
+    "Key": "ChaToCon.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Constitution}Constitution{/g}."
+  },
+
+  {
+    "Key": "ChaToStr.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Strength"
+  },
+
+  {
+    "Key": "ChaToStr.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Strength}Strength{/g}."
+  },
+
+  {
+    "Key": "ChaToSkills.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Skills"
+  },
+
+  {
+    "Key": "ChaToSkills.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his skills."
+  },
+  {
+    "Key": "ChaToSpeed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Speed"
+  },
+
+  {
+    "Key": "ChaToSpeed.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Speed}Speed{/g}."
+  },
+
+  {
+    "Key": "ChaToDamage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Damage"
+  },
+
+  {
+    "Key": "ChaToDamage.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his damage."
+  },
+
+  {
+    "Key": "ChaToBAB.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor BAB"
+  },
+
+  {
+    "Key": "ChaToBAB.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:BaseAttackBonus}Base Attack Bonus{/g}."
+  },
+
+  {
+    "Key": "ChaToCrit.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Critical"
+  },
+
+  {
+    "Key": "ChaToCrit.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Critical bonus."
+  },
+
+  {
+    "Key": "ChaToSR.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Spell Resistance"
+  },
+
+  {
+    "Key": "ChaToSR.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Resistance."
+  },
+
+  {
+    "Key": "ChaToDR.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Damage Reduction"
+  },
+
+  {
+    "Key": "ChaToDR.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Damage Reduction. (CURRENTLY BROKEN)."
+  },
+
+  {
+    "Key": "ChaToSpellPen.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Spell Penetration"
+  },
+
+  {
+    "Key": "ChaToSpellPen.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Penetration. "
+  },
+
+  {
+    "Key": "ChaToSpellDC.Name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Spell DC"
+  },
+
+  {
+    "Key": "ChaToSpellDC.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his spell's DC. "
+  },
+
+  {
+    "Key": "ChaToChaCap.Name",
+    "ProcessTemplates": false,
+    "enGB": "Reddit Moderator Charisma"
+  },
+
+  {
+    "Key": "ChaToChaCap.Description",
+    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}, again!."
+  },
+
+  {
+    "Key": "redditor.spellbook.name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Spell Book"
+  },
+
+  {
+    "Key": "redditor.progression.name",
+    "ProcessTemplates": false,
+    "enGB": "Redditor Progression"
+  },
+
+  {
+    "Key": "swordmaster.class.name",
+    "ProcessTemplates": false,
+    "enGB": "Swordmaster"
+  },
+
+  {
+    "Key": "swordmaster.class.description",
+    "enGB": "TODO Swordmaster description"
+  },
+
+  {
+    "Key": "swordmaster.class.shortdescription",
+    "enGB": "TODO Swordmaster description"
+  },
+
+  {
+    "Key": "swordmaster.progression.name",
+    "ProcessTemplates": false,
+    "enGB": "Swordmaster Progression"
   }
+
 ]

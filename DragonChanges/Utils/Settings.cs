@@ -36,7 +36,12 @@ namespace DragonChanges.Utils
                     .AddToggle(
                         Toggle.New(GetKey("griffonmount"), defaultValue: true, CreateString("griffonmount-toggle", "Adds a new griffon mount, and then adds it to mount selections")))
                     .AddToggle(
-                        Toggle.New(GetKey("unicornmount"), defaultValue: true, CreateString("unicornmount-toggle", "Adds a new unicorn mount, and then adds it to mount selections"))));
+                        Toggle.New(GetKey("unicornmount"), defaultValue: true, CreateString("unicornmount-toggle", "Adds a new unicorn mount, and then adds it to mount selections")))
+                    .AddAnotherSettingsGroup(GetKey("newclasses"), CreateString(GetKey("newclasses-group"), "New Classes"))
+                    .AddToggle(
+                        Toggle.New(GetKey("redditor"), defaultValue: false, CreateString(GetKey("redditor-toggle"), "Enable the Redditor class  (which is a meme class I made)")))
+                    .AddToggle(
+                        Toggle.New(GetKey("swordmaster"), defaultValue: true, CreateString(GetKey("swordmaster-toggle"), "Enable the Swordmaster class"))));
         }
         public static T GetSetting<T>(string key)
         {
