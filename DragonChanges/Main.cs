@@ -4,8 +4,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Utils;
 using DragonChanges.Content;
+using DragonChanges.New_Classes;
 using DragonChanges.New_Classes.Redditor;
 using DragonChanges.New_Classes.Swordmaster;
 using DragonChanges.NewStuff;
@@ -28,9 +30,6 @@ namespace DragonChanges
         {
             log = modEntry.Logger;
             entry = modEntry;
-#if DEBUG
-            modEntry.OnUnload = OnUnload;
-#endif
             modEntry.OnGUI = OnGUI;
             HarmonyInstance = new Harmony(modEntry.Info.Id);
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
@@ -42,12 +41,6 @@ namespace DragonChanges
 
         }
 
-#if DEBUG
-        public static bool OnUnload(UnityModManager.ModEntry modEntry) {
-            HarmonyInstance.UnpatchAll(modEntry.Info.Id);
-            return true;
-        }
-#endif
         [HarmonyPatch(typeof(BlueprintsCache))]
         public static class BlueprintsCaches_Patch
         {
@@ -71,15 +64,12 @@ namespace DragonChanges
                     Utils.ModCompat.CheckForMods();
                     Utils.Settings.InitializeSettings();
                     log.Log("Patching blueprints.");
+                    Feature.Configure();
+                    AllClasses.Configure();
+                    // no group configures for these yet
                     AlterMod.PatchHorse();
                     Drakes.PatchDrakes();
                     Various.PatchHippogriff();
-                    PowerfulThrow.Configure();
-                    UndeadMount.Configure();
-                    UnicornMount.Configure();
-                    GriffonMount.Configure();
-                    RedditorClass.Configure();
-                    SwordmasterClass.Configure();
                 }
                 catch (Exception e)
                 {

@@ -17,11 +17,11 @@ namespace DragonChanges.New_Classes.Redditor
         internal static string progressionprefix = "redditor";
         internal static string progressionguid = Guids.redditorprogression;
         // don't edit
-        internal static string progressionname = $"{progressionprefix}.progression.name";
+        internal static string progressionname = $"{progressionprefix}progression";
 
-        public static void ConfigureDummy()
+        public static BlueprintProgression ConfigureDummy()
         {
-            ProgressionConfigurator.New(progressionname, progressionguid).Configure();
+            return ProgressionConfigurator.New(progressionname, progressionguid).Configure();
         }
         public static BlueprintProgression Configure()
         {
@@ -96,11 +96,10 @@ namespace DragonChanges.New_Classes.Redditor
                     FeatureSelectionRefs.WeaponMasterySelection.Reference.Get(),
                     FeatureSelectionRefs.FighterFeatSelection.Reference.Get());
 
-            BlueprintProgression prog = ProgressionConfigurator.New(progressionname, progressionguid)
+            return ProgressionConfigurator.New(progressionname, progressionguid)
                 .SetIsClassFeature(true)
                 .SetLevelEntries(entries)
                 .Configure();
-            return prog;
         }
     }
 }

@@ -30,8 +30,8 @@ namespace DragonChanges.New_Classes.Redditor
             if (Settings.GetSetting<bool>("redditor"))
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
-                BlueprintSpellbook spellbook = RedditorSpellbook.Configure();
                 BlueprintProgression progression = RedditorProgression.Configure();
+                BlueprintSpellbook spellbook = RedditorSpellbook.Configure();
                 ConfigureCharacterClass(progression, spellbook);
                 Main.log.Log($"{classprefix} configuration done!");
             }
@@ -47,9 +47,9 @@ namespace DragonChanges.New_Classes.Redditor
         {
             CharacterClassConfigurator.New(classprefix, classguid).Configure();
         }
-        public static BlueprintCharacterClass ConfigureCharacterClass(BlueprintProgression progression, BlueprintSpellbook spellbook = null)
+        public static void ConfigureCharacterClass(BlueprintProgression progression, BlueprintSpellbook spellbook = null)
         {
-            BlueprintCharacterClass cclass = CharacterClassConfigurator.New(classprefix, classguid)
+            var x = CharacterClassConfigurator.New(classprefix, classguid)
                 .SetLocalizedName(classname)
                 .SetLocalizedDescription(classdescription)
                 .SetLocalizedDescriptionShort(classshortdescription)
@@ -91,12 +91,14 @@ namespace DragonChanges.New_Classes.Redditor
                     StatType.SkillStealth,
                     StatType.SkillThievery)
                 .AddToRecommendedAttributes(StatType.Charisma)
-                //.AddToSignatureAbilities(Guids.chatocha)
-                .Configure();
+                .AddToSignatureAbilities(Guids.chatocha)
+                .SetProgression(progression);
+            if (spellbook != null)
+                x.SetSpellbook(spellbook);
+            BlueprintCharacterClass cclass = x.Configure();
             BlueprintCharacterClassReference classref = cclass.ToReference<BlueprintCharacterClassReference>();
             BlueprintRoot root = BlueprintTool.Get<BlueprintRoot>("2d77316c72b9ed44f888ceefc2a131f6");
             root.Progression.m_CharacterClasses = CommonTool.Append(root.Progression.m_CharacterClasses, classref);
-            return cclass;
         }
     }
 }

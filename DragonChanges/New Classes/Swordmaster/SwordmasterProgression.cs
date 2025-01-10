@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 namespace DragonChanges.New_Classes.Swordmaster
 {
     internal class SwordmasterProgression
-    {// edit
+    {
+        // edit
         internal static string progressionprefix = "swordmaster";
         internal static string progressionguid = Guids.SwordMasterProgression;
         // don't edit
@@ -19,11 +20,16 @@ namespace DragonChanges.New_Classes.Swordmaster
 
         public static void ConfigureDummy()
         {
-            ProgressionConfigurator.New(progressionname, progressionguid).Configure();
+            LevelEntryBuilder entries = new LevelEntryBuilder()
+                .AddEntry(0, Features.Proficiencies.ConfigureDummy());
+            ProgressionConfigurator.New(progressionname, progressionguid)
+                .SetLevelEntries(entries)
+                .Configure();
         }
         public static BlueprintProgression Configure()
         {
-            LevelEntryBuilder entries = new LevelEntryBuilder();
+            LevelEntryBuilder entries = new LevelEntryBuilder()
+                .AddEntry(0, Features.Proficiencies.Configure());
             BlueprintProgression prog = ProgressionConfigurator.New(progressionname, progressionguid)
                 .SetIsClassFeature(true)
                 .SetLevelEntries(entries)

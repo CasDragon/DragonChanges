@@ -51,7 +51,7 @@
 
   {
     "Key": "redditor.description",
-    "enGB": "Reddit's own character class. CHA TO EVERYTHING! \nBasically Fighter class with +CHA to all stats and CHA spellcasting."
+    "enGB": "Reddit's own character class. CHA TO EVERYTHING! \nBasically Fighter class with +CHA to all stats and CHA spellcasting. (This is a meme class I made, don't take it too seriously)'"
   },
 
   {
@@ -274,15 +274,9 @@
   },
 
   {
-    "Key": "redditor.progression.name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Progression"
-  },
-
-  {
     "Key": "swordmaster.class.name",
     "ProcessTemplates": false,
-    "enGB": "Swordmaster"
+    "enGB": "Swordmaster (WIP)"
   },
 
   {
@@ -299,6 +293,16 @@
     "Key": "swordmaster.progression.name",
     "ProcessTemplates": false,
     "enGB": "Swordmaster Progression"
-  }
+  },
 
+  {
+    "Key": "swordmaster.prociencies.name",
+    "ProcessTemplates": false,
+    "enGB": "Swordmaster Proficiencies"
+  },
+
+  {
+    "Key": "swordmaster.prociencies.description",
+    "enGB": "Swordmasters are proficient with all simpe and martial swords, plut the quarterstaff. They are proficient with light armor, but not with shields."
+  }
 ]
