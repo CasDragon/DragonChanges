@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Utils;
 using DragonChanges.Content;
+using DragonChanges.New_Archetypes;
 using DragonChanges.New_Classes;
 using DragonChanges.New_Classes.Redditor;
 using DragonChanges.New_Classes.Swordmaster;
@@ -66,6 +67,7 @@ namespace DragonChanges
                     log.Log("Patching blueprints.");
                     Feature.Configure();
                     AllClasses.Configure();
+                    AllArchetypes.Configure();
                     // no group configures for these yet
                     AlterMod.PatchHorse();
                     Drakes.PatchDrakes();

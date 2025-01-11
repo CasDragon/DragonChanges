@@ -315,5 +315,65 @@
   {
     "Key": "PowerfulWings.description",
     "enGB": "You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage "
+  },
+
+  {
+    "Key": "swordmaster-tengu.archetype.name",
+    "ProcessTemplates": false,
+    "enGB": "Swordmaster"
+  },
+
+  {
+    "Key": "swordmaster-tengu.archetype.description",
+    "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
+  },
+
+  {
+    "Key": "swordmaster-tengu.archetype.shortdescription",
+    "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
+  },
+
+  {
+    "Key": "swordmaster-tengu.featureselection.name",
+    "ProcessTemplates": false,
+    "enGB": "Trance Selection"
+  },
+
+  {
+    "Key": "swordmaster-tengu.featureselection.description",
+    "enGB": "At 3rd level, the swordmaster chooses one trance from the list below. She chooses another trance at 6th, 9th, 12th, 15th, and 18th level. She can only use one type of trance at a time."
+  },
+
+  {
+    "Key": "swordmaster-tengu.cranetrance.feature.name",
+    "ProcessTemplates": false,
+    "enGB": "Crane Trance"
+  },
+
+  {
+    "Key": "swordmaster-tengu.cranetrance.feature.description",
+    "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.cranetrance.ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Crane Trance (Ability)"
+  },
+
+  {
+    "Key": "swordmaster-tengu.cranetrance.ability.description",
+    "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.cranetrance.buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Crane Trance Buff"
+  },
+
+  {
+    "Key": "swordmaster-tengu.cranetrance.buff.description",
+    "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
   }
 ]
