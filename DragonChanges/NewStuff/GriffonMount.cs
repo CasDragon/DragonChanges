@@ -20,12 +20,11 @@ namespace DragonChanges.NewStuff
 {
     internal class GriffonMount
     {
-        internal static string GriffonUnit = "griffonmountunit";
+        internal static string GriffonUnit = "GriffonMount";
         internal static string GriffonFeatureName = "griffonmountfeature.name";
         internal static string GriffonFeatureDescription = "griffonmountfeature.description";
         internal static string GriffonFeature = "griffonmountfeature";
         internal static string GriffonMountPortrait = "griffonmountportrait";
-        readonly static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
 
         public static void Configure()
         {
@@ -64,8 +63,7 @@ namespace DragonChanges.NewStuff
                 .SetDescription(GriffonFeatureDescription)
                 .SetReapplyOnLevelUp(true)
                 .SetIsClassFeature(true)
-                .SetIcon(null)
-                //.SetIcon("assets/icons/griffonhorse.png")
+                //.SetIcon("assets/icons/griffonmount.png")
                 .AddFeatureToPet(FeatureRefs.MagicalBeastType.Reference.Get())
                 .Configure();
         }
@@ -73,25 +71,11 @@ namespace DragonChanges.NewStuff
         {
             Main.log.Log("Creating griffon mount unit");
             BlueprintUnit oghorse = TTTHelpers.CreateCopy<BlueprintUnit>(UnitRefs.AnimalCompanionUnitHorse.Reference.Get());
-            //BlueprintPortrait portrait = CreateGriffonMountPortrait();
             return UnitConfigurator.New(GriffonUnit, Guids.GriffonMountUnit)
                 .CopyFrom(oghorse)
                 .SetPrefab(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab)
                 .SetType(UnitTypeRefs.EagleGiant.Reference.Get())
                 .SetPortrait(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Portrait)
-            //    .SetPortrait(portrait)
-                .Configure();
-        }
-        public static BlueprintPortrait CreateGriffonMountPortrait()
-        {
-            PortraitData data = new PortraitData();
-            // todo: fix this mess
-            //data.m_FullLengthImage = "assets/portraits/griffonhorse/fulllength.png";
-            //data.m_PetEyeImage = "assets/portraits/griffonhorse/eye.png";
-            //data.m_HalfLengthImage = "assets/portraits/griffonhorse/medium.png";
-            //data.m_PortraitImage = "assets/portraits/griffonhorse/small.png";
-            return PortraitConfigurator.New(GriffonMountPortrait, Guids.GriffonMountPortrait)
-                .SetData(data)
                 .Configure();
         }
         public static void AddGriffonMountToSelections(BlueprintFeature mountfeature)
@@ -171,39 +155,5 @@ namespace DragonChanges.NewStuff
             }
         }
 
-        /*//[HarmonyPatch(typeof(OwlcatModificationsManager))]
-        [HarmonyPatch(typeof(OwlcatModificationsManager), nameof(OwlcatModificationsManager.OnResourceLoaded))]
-        public static class PatchGriffonOnLoad
-        {
-            /*[HarmonyPostfix]
-            [HarmonyPatch(nameof(OwlcatModificationsManager.OnResourceLoaded))]
-            public static void OnResourceLoaded_GriffonPatch(object resource, string guid)
-            [HarmonyPrefix]
-            public static void Prefix(object resource, string guid)
-            {
-                if (guid != griffonprefab)
-                    return;
-                Main.log.Log("Found griffon prefab");
-                if (resource is UnitEntityView view)
-                {
-                    Main.log.Log("Start patching griffon prefab for mounting");
-                    PatchGriffonAsset(view);
-                    Main.log.Log("Finised patching griffon prefab");
-                }
-            }
-            public static void PatchGriffonAsset(UnitEntityView view)
-            {
-                MountOffsets offsets = view.gameObject.AddComponent<MountOffsets>();
-                var hypogriff = ResourcesLibrary.TryGetResource<UnitEntityView>(griffonprefab);
-                if (hypogriff is UnitEntityView)
-                {
-                    offsets = UnityEngine.Object.Instantiate(hypogriff.GetComponent<MountOffsets>(), offsets.transform);
-                }
-                else
-                {
-                    Main.log.Log("Couldn't find horse prefab to steal from");
-                }
-            }
-        }*/
     }
 }

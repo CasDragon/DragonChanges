@@ -20,7 +20,7 @@ namespace DragonChanges.NewStuff
         internal static string featuredescription = $"{feature}.description";
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(feature))
+            if (Settings.GetSetting<bool>(feature.ToLower()))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();
@@ -37,7 +37,7 @@ namespace DragonChanges.NewStuff
         }
         public static void ConfigureEnabled()
         {
-            FeatureConfigurator.New(feature, featuredescription)
+            FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddPrerequisiteFullStatValue(stat: StatType.BaseAttackBonus,

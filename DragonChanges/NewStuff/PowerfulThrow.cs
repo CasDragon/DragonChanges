@@ -19,13 +19,13 @@ namespace DragonChanges.NewStuff
     {
         // edit
         internal static string feature = "PowerfulThrow";
-        internal static string featureguid = Guids.PowerfulWings;
+        internal static string featureguid = Guids.PowerfulThrowFeature;
         // don't edit
         internal static string featurename = $"{feature}.name";
         internal static string featuredescription = $"{feature}.description";
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(feature))
+            if (Settings.GetSetting<bool>(feature.ToLower()))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();
@@ -45,7 +45,7 @@ namespace DragonChanges.NewStuff
             AttackStatReplacementForWeaponGroup strcomponet = new AttackStatReplacementForWeaponGroup();
             strcomponet.FighterGroupFlag = WeaponFighterGroupFlags.Thrown;
             strcomponet.ReplacementStat = StatType.Strength;
-            FeatureConfigurator.New(feature, Guids.PowerfulThrowFeature)
+            FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddComponent(strcomponet)
