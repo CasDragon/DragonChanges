@@ -21,7 +21,7 @@ namespace DragonChanges.Utils
         internal static string SwordMasterClass = "13E5CB5C-7522-407E-BC4D-C746388565BA";
         internal static string SwordMasterProgression = "E21A2068-4279-40C2-8D48-989D452F1F22";
         internal static string SwordmasterProficiences = "9616285D-0172-406F-B55A-68CA1F27BA81";
-        internal static string guid4 = "63EC6FA2-4412-48E0-A10F-888F5121EE06";
+        internal static string PowerfulWings = "63EC6FA2-4412-48E0-A10F-888F5121EE06";
         internal static string guid5 = "772ADD94-F771-40CD-A7FB-52EDC198C70C";
         internal static string guid6 = "16632F24-0751-4F09-8348-B12D25104F04";
         internal static string guid7 = "F2A2DC49-F768-4B28-8291-FFFE60F3A63C";

@@ -32,6 +32,8 @@ namespace DragonChanges.Utils
                     .AddToggle(
                         Toggle.New(GetKey("powerfulthrow"), defaultValue: true, CreateString("powerfulthrow-toggle", "Adds the feat Powerful Throw")))
                     .AddToggle(
+                        Toggle.New(GetKey("PowerfulWings"), defaultValue: true, CreateString("PowerfulWings-toggle", "Adds the feat Powerful Wings")))
+                    .AddToggle(
                         Toggle.New(GetKey("undeadmount"), defaultValue: true, CreateString("undeadmount-toggle", "Adds a new undead mount, and then adds it to mount selections")))
                     .AddToggle(
                         Toggle.New(GetKey("griffonmount"), defaultValue: true, CreateString("griffonmount-toggle", "Adds a new griffon mount, and then adds it to mount selections")))

@@ -1,12 +1,12 @@
 [
   {
-    "Key": "powerfulthrow.name",
+    "Key": "PowerfulThrow.name",
     "ProcessTemplates": false,
     "enGB": "Powerful Throw"
   },
 
   {
-    "Key": "powerfulthrow.description",
+    "Key": "PowerfulThrow.description",
     "enGB": "You may use your {g}Strength{/g} modifier in place of your {g}Dexterity{/g} modifier for your attack rolls when making a ranged attack with thrown weapons. You may also use the Power Attack feat instead of the Deadly Aim feat when attacking with thrown weapons."
   },
 
@@ -304,5 +304,16 @@
   {
     "Key": "swordmaster.prociencies.description",
     "enGB": "Swordmasters are proficient with all simpe and martial swords, plut the quarterstaff. They are proficient with light armor, but not with shields."
+  },
+
+  {
+    "Key": "PowerfulWings.name",
+    "ProcessTemplates": false,
+    "enGB": "Powerful Wings"
+  },
+
+  {
+    "Key": "PowerfulWings.description",
+    "enGB": "You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage "
   }
 ]

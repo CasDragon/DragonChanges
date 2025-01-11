@@ -17,56 +17,64 @@ namespace DragonChanges.NewStuff
 {
     internal class PowerfulThrow
     {
-        internal static string feature = "powerfulthrow";
-        internal static string featurename = "powerfulthrow.name";
-        internal static string featuredescription = "powerfulthrow.description";
+        // edit
+        internal static string feature = "PowerfulThrow";
+        internal static string featureguid = Guids.PowerfulWings;
+        // don't edit
+        internal static string featurename = $"{feature}.name";
+        internal static string featuredescription = $"{feature}.description";
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("powerfulthrow"))
+            if (Settings.GetSetting<bool>(feature))
             {
-                Main.log.Log("Creating Powerful Throw feature");
-                AttackStatReplacementForWeaponGroup strcomponet = new AttackStatReplacementForWeaponGroup();
-                strcomponet.FighterGroupFlag = WeaponFighterGroupFlags.Thrown;
-                strcomponet.ReplacementStat = StatType.Strength;
-                FeatureConfigurator.New(feature, Guids.PowerfulThrowFeature)
-                    .SetDisplayName(featurename)
-                    .SetDescription(featuredescription)
-                    .AddComponent(strcomponet)
-                    /*.AddAttackStatReplacementFixed(new BlueprintCore.Blueprints.Components.Replacements.AttackStatReplacementFixed(
-                            replacementStat: StatType.Strength,
-                            weaponSubcategory: WeaponSubCategory.Thrown))*/
-                    .AddPrerequisiteFeature(FeatureRefs.PowerAttackFeature.Reference.Get())
-                    .AddPrerequisiteStatValue(StatType.BaseAttackBonus, 1)
-                    .AddRecommendationStatComparison(higherStat: StatType.Strength, lowerStat: StatType.Dexterity,  diff: 4)
-                    .AddRecommendationStatMiminum(minimalValue: 14, stat: StatType.Strength, goodIfHigher: true)
-                    .AddToGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
-                    .SetIcon("assets/icons/undeadhorse.png")
-                    .SetIsClassFeature(true)
-                    .Configure();
-                var component = TTTHelpers.CreateCopy<AddInitiatorAttackWithWeaponTrigger>(BuffRefs.PowerAttackBuff.Reference.Get().GetComponent<AddInitiatorAttackWithWeaponTrigger>());
-                component.Group = WeaponFighterGroup.Thrown;
-                component.CheckWeaponGroup = true;
-                component.CheckWeaponRangeType = false;
-                BuffConfigurator.For(BuffRefs.PowerAttackBuff)
-                    .AddComponent(component)
-                    .Configure();
-                var bcomponent = TTTHelpers.CreateCopy<WeaponParametersAttackBonus>(BuffRefs.PowerAttackBuffEffect.Reference.Get().GetComponent<WeaponParametersAttackBonus>());
-                bcomponent.Ranged = true;
-                var acomponent = TTTHelpers.CreateCopy<WeaponParametersDamageBonus>(BuffRefs.PowerAttackBuffEffect.Reference.Get().GetComponent<WeaponParametersDamageBonus>());
-                acomponent.Ranged = true;
-                BuffConfigurator.For(BuffRefs.PowerAttackBuffEffect)
-                    .AddComponent(bcomponent)
-                    .AddComponent(acomponent)
-                    .Configure();
+                Main.log.Log($"{feature} feature enabled, configuring");
+                ConfigureEnabled();
             }
             else
             {
-                Main.log.Log("Powerful Throw is disabled, configuring dummy");
-                FeatureConfigurator.New(feature, Guids.PowerfulThrowFeature)
-                    .SetDisplayName(featurename)
-                    .SetDescription(featuredescription)
-                    .Configure();
+                Main.log.Log($"{feature} disabled, configuring dummy");
+                ConfigureDummy();
             }
+        }
+        public static void ConfigureDummy()
+        {
+            FeatureConfigurator.New(feature, featureguid).Configure();
+        }
+        public static void ConfigureEnabled()
+        {
+            AttackStatReplacementForWeaponGroup strcomponet = new AttackStatReplacementForWeaponGroup();
+            strcomponet.FighterGroupFlag = WeaponFighterGroupFlags.Thrown;
+            strcomponet.ReplacementStat = StatType.Strength;
+            FeatureConfigurator.New(feature, Guids.PowerfulThrowFeature)
+                .SetDisplayName(featurename)
+                .SetDescription(featuredescription)
+                .AddComponent(strcomponet)
+                /*.AddAttackStatReplacementFixed(new BlueprintCore.Blueprints.Components.Replacements.AttackStatReplacementFixed(
+                        replacementStat: StatType.Strength,
+                        weaponSubcategory: WeaponSubCategory.Thrown))*/
+                .AddPrerequisiteFeature(FeatureRefs.PowerAttackFeature.Reference.Get())
+                .AddPrerequisiteStatValue(StatType.BaseAttackBonus, 1)
+                .AddRecommendationStatComparison(higherStat: StatType.Strength, lowerStat: StatType.Dexterity,  diff: 4)
+                .AddRecommendationStatMiminum(minimalValue: 14, stat: StatType.Strength, goodIfHigher: true)
+                .AddToGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
+                //.SetIcon("assets/icons/powerfulthrow.png")
+                .SetIsClassFeature(true)
+                .Configure();
+            var component = TTTHelpers.CreateCopy<AddInitiatorAttackWithWeaponTrigger>(BuffRefs.PowerAttackBuff.Reference.Get().GetComponent<AddInitiatorAttackWithWeaponTrigger>());
+            component.Group = WeaponFighterGroup.Thrown;
+            component.CheckWeaponGroup = true;
+            component.CheckWeaponRangeType = false;
+            BuffConfigurator.For(BuffRefs.PowerAttackBuff)
+                .AddComponent(component)
+                .Configure();
+            var bcomponent = TTTHelpers.CreateCopy<WeaponParametersAttackBonus>(BuffRefs.PowerAttackBuffEffect.Reference.Get().GetComponent<WeaponParametersAttackBonus>());
+            bcomponent.Ranged = true;
+            var acomponent = TTTHelpers.CreateCopy<WeaponParametersDamageBonus>(BuffRefs.PowerAttackBuffEffect.Reference.Get().GetComponent<WeaponParametersDamageBonus>());
+            acomponent.Ranged = true;
+            BuffConfigurator.For(BuffRefs.PowerAttackBuffEffect)
+                .AddComponent(bcomponent)
+                .AddComponent(acomponent)
+                .Configure();
         }
     }
 }

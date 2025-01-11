@@ -12,6 +12,7 @@ namespace DragonChanges.NewStuff
         {
             // feats
             PowerfulThrow.Configure();
+            PowerfulWings.Configure();
             // mounts
             GriffonMount.Configure();
             UndeadMount.Configure();
