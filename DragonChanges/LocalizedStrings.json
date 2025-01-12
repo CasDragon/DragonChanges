@@ -375,5 +375,170 @@
   {
     "Key": "swordmaster-tengu.cranetrance.buff.description",
     "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.dragontrance.feature.name",
+    "ProcessTemplates": false,
+    "enGB": "Dragon Trance"
+  },
+
+  {
+    "Key": "swordmaster-tengu.dragontrance.feature.description",
+    "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.dragontrance.ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Dragon Trance (Ability)"
+  },
+
+  {
+    "Key": "swordmaster-tengu.dragontrance.ability.description",
+    "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.dragontrance.buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Dragon Trance Buff"
+  },
+
+  {
+    "Key": "swordmaster-tengu.dragontrance.buff.description",
+    "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.leopardtrance.feature.name",
+    "ProcessTemplates": false,
+    "enGB": "Leopard Trance"
+  },
+
+  {
+    "Key": "swordmaster-tengu.leopardtrance.feature.description",
+    "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.leopardtrance.ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Leopard Trance (Ability)"
+  },
+
+  {
+    "Key": "swordmaster-tengu.leopardtrance.ability.description",
+    "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.leopardtrance.buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Leopard Trance Buff"
+  },
+
+  {
+    "Key": "swordmaster-tengu.leopardtrance.buff.description",
+    "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.monkeytrance.feature.name",
+    "ProcessTemplates": false,
+    "enGB": "Monkey Trance"
+  },
+
+  {
+    "Key": "swordmaster-tengu.monkeytrance.feature.description",
+    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster can make an Acrobatics check opposed by an opponent’s CMD. If she succeeds, she may move 5 feet as a swift action within the opponent’s threatened area; this movement does not provoke attacks of opportunity and does not count as a 5-foot step"
+  },
+
+  {
+    "Key": "swordmaster-tengu.monkeytrance.ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Monkey Trance (Ability)"
+  },
+
+  {
+    "Key": "swordmaster-tengu.monkeytrance.ability.description",
+    "enGB": "snip"
+  },
+
+  {
+    "Key": "swordmaster-tengu.monkeytrance.buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Monkey Trance Buff"
+  },
+
+  {
+    "Key": "swordmaster-tengu.monkeytrance.buff.description",
+    "enGB": "snip"
+  },
+
+  {
+    "Key": "swordmaster-tengu.serpenttrance.feature.name",
+    "ProcessTemplates": false,
+    "enGB": "Serpent Trance"
+  },
+
+  {
+    "Key": "swordmaster-tengu.serpenttrance.feature.description",
+    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster receives a +4 bonus on Bluff checks made to feint during combat."
+  },
+
+  {
+    "Key": "swordmaster-tengu.serpenttrance.ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Serpent Trance (Ability)"
+  },
+
+  {
+    "Key": "swordmaster-tengu.serpenttrance.ability.description",
+    "enGB": "snip"
+  },
+
+  {
+    "Key": "swordmaster-tengu.serpenttrance.buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Serpent Trance Buff"
+  },
+
+  {
+    "Key": "swordmaster-tengu.serpenttrance.buff.description",
+    "enGB": "snip"
+  },
+
+  {
+    "Key": "swordmaster-tengu.tigertrance.feature.name",
+    "ProcessTemplates": false,
+    "enGB": "Tiger Trance"
+  },
+
+  {
+    "Key": "swordmaster-tengu.tigertrance.feature.description",
+    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster can make a combat maneuver check against an opponent within charge range. If she succeeds, she may charge that opponent and make a full attack against that opponent."
+  },
+
+  {
+    "Key": "swordmaster-tengu.tigertrance.ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Tiger Trance (Ability)"
+  },
+
+  {
+    "Key": "swordmaster-tengu.tigertrance.ability.description",
+    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster can make a combat maneuver check against an opponent within charge range. If she succeeds, she may charge that opponent and make a full attack against that opponent."
+  },
+
+  {
+    "Key": "swordmaster-tengu.tigertrance.buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Tiger Trance Buff"
+  },
+
+  {
+    "Key": "swordmaster-tengu.tigertrance.buff.description",
+    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster can make a combat maneuver check against an opponent within charge range. If she succeeds, she may charge that opponent and make a full attack against that opponent."
   }
 ]

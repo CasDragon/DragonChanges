@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
+using BlueprintCore.Blueprints.References;
 using DragonChanges.New_Archetypes.Swordmaster_Tengu.Features;
 using DragonChanges.New_Classes.Swordmaster;
 using DragonChanges.Utils;
@@ -67,6 +68,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
                 .AddToRemoveFeatures()
                 .AddToAddFeatures()
                 .AddToRecommendedAttributes(Kingmaker.EntitySystem.Stats.StatType.Wisdom)
+                .SetClass(CharacterClassRefs.RogueClass)
                 .Configure();
         }
         public static BlueprintFeatureSelection ConfigureTraceFeatureSelectionDummy()
