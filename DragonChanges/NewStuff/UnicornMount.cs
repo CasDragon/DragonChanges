@@ -79,6 +79,9 @@ namespace DragonChanges.NewStuff
                 .SetPrefab(UnitRefs.CR3_UnicornStandard.Reference.Get().Prefab)
                 .SetType(UnitTypeRefs.Unicorn.Reference.Get())
                 .SetPortrait(UnitRefs.CR3_UnicornStandard.Reference.Get().m_Portrait)
+                .AddAdditionalLimb(ItemWeaponRefs.GoreLarge1d8.Reference.Get())
+                .SetIntelligence(11)
+                .SetCharisma(18)
                 .Configure();
         }
         public static void AddUnicornMountToSelections(BlueprintFeature mountfeature)

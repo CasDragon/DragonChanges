@@ -451,7 +451,7 @@
 
   {
     "Key": "swordmaster-tengu.monkeytrance.feature.description",
-    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster can make an Acrobatics check opposed by an opponent’s CMD. If she succeeds, she may move 5 feet as a swift action within the opponent’s threatened area; this movement does not provoke attacks of opportunity and does not count as a 5-foot step"
+    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
   },
 
   {
@@ -462,7 +462,7 @@
 
   {
     "Key": "swordmaster-tengu.monkeytrance.ability.description",
-    "enGB": "snip"
+    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
   },
 
   {
@@ -473,7 +473,7 @@
 
   {
     "Key": "swordmaster-tengu.monkeytrance.buff.description",
-    "enGB": "snip"
+    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
   },
 
   {
@@ -484,7 +484,7 @@
 
   {
     "Key": "swordmaster-tengu.serpenttrance.feature.description",
-    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster receives a +4 bonus on Bluff checks made to feint during combat."
+    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
   },
 
   {
@@ -495,7 +495,7 @@
 
   {
     "Key": "swordmaster-tengu.serpenttrance.ability.description",
-    "enGB": "snip"
+    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
   },
 
   {
@@ -506,7 +506,7 @@
 
   {
     "Key": "swordmaster-tengu.serpenttrance.buff.description",
-    "enGB": "snip"
+    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
   },
 
   {
@@ -517,7 +517,7 @@
 
   {
     "Key": "swordmaster-tengu.tigertrance.feature.description",
-    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster can make a combat maneuver check against an opponent within charge range. If she succeeds, she may charge that opponent and make a full attack against that opponent."
+    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
   },
 
   {
@@ -528,7 +528,7 @@
 
   {
     "Key": "swordmaster-tengu.tigertrance.ability.description",
-    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster can make a combat maneuver check against an opponent within charge range. If she succeeds, she may charge that opponent and make a full attack against that opponent."
+    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
   },
 
   {
@@ -539,6 +539,6 @@
 
   {
     "Key": "swordmaster-tengu.tigertrance.buff.description",
-    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster can make a combat maneuver check against an opponent within charge range. If she succeeds, she may charge that opponent and make a full attack against that opponent."
+    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
   }
 ]

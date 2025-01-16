@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kingmaker.UnitLogic.Buffs;
+using Kingmaker.Utility;
 
 namespace DragonChanges.NewStuff
 {
@@ -76,6 +77,16 @@ namespace DragonChanges.NewStuff
                 .SetPrefab(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab)
                 .SetType(UnitTypeRefs.EagleGiant.Reference.Get())
                 .SetPortrait(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Portrait)
+                .AddSecondaryAttacks(ItemWeaponRefs.Talon1d4.Reference.Get(), ItemWeaponRefs.Talon1d4.Reference.Get())
+                .SetStrength(10)
+                .SetDexterity(17)
+                .SetConstitution(14)
+                .SetIntelligence(5)
+                .SetWisdom(13)
+                .SetCharisma(8)
+                .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillAthletics)
+                .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
+                .SetSpeed(new Feet(50))
                 .Configure();
         }
         public static void AddGriffonMountToSelections(BlueprintFeature mountfeature)

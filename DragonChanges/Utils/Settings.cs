@@ -25,6 +25,8 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("mc-microscopic-horse"), defaultValue: true, CreateString("mc-microscopic-horse-toggle", "Adds the Nightmare animal companion (MicroscopicContent) to other pet lists")))
                     .AddToggle(
                         Toggle.New(GetKey("ec-drakes"), defaultValue: false, CreateString("ec-drakes-toggle", "Super secret option to buff drakes from Expanded Content")))
+                    .AddToggle(
+                        Toggle.New(GetKey("co-pairedopp"), defaultValue: false, CreateString("co-pairedopp-toggle", "Adds Paired Opportunist teamwork feat to more selections")))
                     .AddAnotherSettingsGroup(GetKey("various"), CreateString(GetKey("various-group"), "Various"))
                     .AddToggle(
                         Toggle.New(GetKey("hippogriff"), defaultValue: true, CreateString("hippogriff-toggle", "Adds the Hippogriff  to other pet lists")))

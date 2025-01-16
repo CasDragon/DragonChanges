@@ -14,6 +14,7 @@ namespace DragonChanges.Utils
         public static bool expandedcontent = false;
         public static bool homebrewarchetypes = false;
         public static bool tttbase = false;
+        public static bool cop = false;
 
         public static void CheckForMods()
         {
@@ -25,8 +26,14 @@ namespace DragonChanges.Utils
             LogModState(homebrewarchetypes, "Homebrew Archetypes");
             tttbase = isTTTBaseEnabled();
             LogModState(tttbase, "TabletopTweaks-Base");
+            cop = isCOPEnabled();
+            LogModState(cop, "CharacterOptionsPlus");
         }
-
+        public static bool isCOPEnabled()
+        {
+            Main.log.Log("Checking for CO+");
+            return IsModEnabled("CharacterOptionsPlus");
+        }
         public static bool isTTTBaseEnabled()
         {
             Main.log.Log("Checking for TTT-Base");

@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils.Types;
 using DragonChanges.New_Archetypes.Swordmaster_Tengu.Features;
 using DragonChanges.New_Classes.Swordmaster;
 using DragonChanges.Utils;
@@ -25,7 +26,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
 
         internal static string featureselectionguid = Guids.TraceSelection;
 
-        internal static string abilityresourceguid = Guids.TranceResource
+        internal static string abilityresourceguid = Guids.TranceResource;
 
         // don't edit
         internal static string archetypename = $"{archetypeprefix}.archetype.name";
@@ -46,6 +47,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
                 BlueprintFeatureSelection featureSelection = ConfigureTraceFeatureSelection();
                 ConfigureArchetype(featureSelection);
                 Main.log.Log($"{archetypeprefix} configuration done!");
+                return;
             }
             else
             {
@@ -61,12 +63,28 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
         }
         public static void ConfigureArchetype(BlueprintFeatureSelection featureSelection)
         {
+            var removef = LevelEntryBuilder.New()
+                .AddEntry(3, FeatureRefs.DangerSenseRogue.Reference.Get())
+                .AddEntry(6, FeatureRefs.DangerSenseRogue.Reference.Get())
+                .AddEntry(9, FeatureRefs.DangerSenseRogue.Reference.Get())
+                .AddEntry(12, FeatureRefs.DangerSenseRogue.Reference.Get())
+                .AddEntry(15, FeatureRefs.DangerSenseRogue.Reference.Get())
+                .AddEntry(18, FeatureRefs.DangerSenseRogue.Reference.Get())
+                .GetEntries();
+            var addf =  LevelEntryBuilder.New()
+                .AddEntry(3, featureSelection)
+                .AddEntry(6, featureSelection)
+                .AddEntry(9, featureSelection)
+                .AddEntry(12, featureSelection)
+                .AddEntry(15, featureSelection)
+                .AddEntry(18, featureSelection)
+                .GetEntries();
             ArchetypeConfigurator.New(archetypeprefix, archetypeguid)
                 .SetLocalizedName(archetypename)
                 .SetLocalizedDescription(archetypedescription)
                 .SetLocalizedDescriptionShort(archetypeshortdescription)
-                .AddToRemoveFeatures()
-                .AddToAddFeatures()
+                .AddToRemoveFeatures(removef)
+                .AddToAddFeatures(addf)
                 .AddToRecommendedAttributes(Kingmaker.EntitySystem.Stats.StatType.Wisdom)
                 .SetClass(CharacterClassRefs.RogueClass)
                 .Configure();

@@ -1,10 +1,12 @@
 ﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
+using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
+using Kingmaker.UnitLogic.Commands.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,9 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
     internal class MonkeyTrance
     {
         // edit
-        internal static string featureprefix = "swordmaster-tengu.cranetrance";
+        internal static string featureprefix = "swordmaster-tengu.monkeytrance";
         internal static string featuretype = "feature";
-        internal static string featureguid = Guids.CraneTranceFeature;
+        internal static string featureguid = Guids.MonkeyTranceFeature;
         // don't edit
         internal static string feature = $"{featureprefix}.{featuretype}";
         internal static string featurename = $"{feature}.name";
@@ -41,9 +43,9 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
                 .Configure();
         }
         // edit
-        internal static string abilityprefix = "swordmaster-tengu.cranetrance";
+        internal static string abilityprefix = "swordmaster-tengu.monkeytrance";
         internal static string abilitytype = "ability";
-        internal static string abilityguid = Guids.CraneTranceAbility;
+        internal static string abilityguid = Guids.MonkeyTranceAbility;
         // don't edit
         internal static string ability = $"{abilityprefix}.{abilitytype}";
         internal static string abilityname = $"{ability}.name";
@@ -59,6 +61,14 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
             return ActivatableAbilityConfigurator.New(ability, abilityguid)
                 .SetDisplayName(abilityname)
                 .SetDescription(abilitydescription)
+                .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Fatigued, invert: true)
+                .AddAbilityResources(resource: Swordmaster_Tengu.abilityResource)
+                .SetDeactivateIfCombatEnded(true)
+                .SetDeactivateImmediately(true)
+                .SetDeactivateIfOwnerUnconscious(true)
+                .SetOnlyInCombat(true)
+                .SetActivationType(AbilityActivationType.WithUnitCommand)
+                .SetActivateWithUnitCommand(UnitCommand.CommandType.Standard)
                 .SetBuff(ConfigureBuff())
                 .Configure();
         }
@@ -81,6 +91,13 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
             return BuffConfigurator.New(buff, buffguid)
                 .SetDisplayName(buffname)
                 .SetDescription(buffdescription)
+                .AddFeatureIfHasFact(checkedFact: FeatureRefs.ImprovedTrip.Reference.Get(), feature: FeatureRefs.ImprovedTrip.Reference.Get(), not: true)
+                .AddFeatureIfHasFact(checkedFact: FeatureRefs.FurysFall.Reference.Get(), feature: FeatureRefs.FurysFall.Reference.Get(), not: true)
+                .SetIsClassFeature(true)
+                .SetStacking(StackingType.Prolong)
+                .SetRanks(0)
+                .SetTickEachSecond(false)
+                .SetFrequency(Kingmaker.UnitLogic.Mechanics.DurationRate.Rounds)
                 .Configure();
         }
     }

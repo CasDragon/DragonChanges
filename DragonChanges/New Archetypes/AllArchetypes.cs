@@ -10,7 +10,7 @@ namespace DragonChanges.New_Archetypes
     {
         public static void Configure()
         {
-            Swordmaster_Tengu.Configure();
+            Swordmaster_Tengu.Swordmaster_Tengu.Configure();
         }
     }
 }
