@@ -1,6 +1,11 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils;
 using DragonChanges.Utils;
+using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes;
+using Kingmaker.UnitLogic.Abilities.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
