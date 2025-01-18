@@ -540,5 +540,16 @@
   {
     "Key": "swordmaster-tengu.tigertrance.buff.description",
     "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
+  },
+
+  {
+    "Key": "Wanderer.name",
+    "ProcessTemplates": false,
+    "enGB": "Wanderer - Cursed (lycanthropy)"
+  },
+
+  {
+    "Key": "Wanderer.description",
+    "enGB": "Adds Perception and Mobility to list of class skills. She also is able to use her curse to qualify for feats that require lycanthropy."
   }
 ]

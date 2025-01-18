@@ -8,6 +8,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Utils;
 using DragonChanges.Content;
 using DragonChanges.New_Archetypes;
+using DragonChanges.New_Backgrounds;
 using DragonChanges.New_Classes;
 using DragonChanges.New_Classes.Redditor;
 using DragonChanges.New_Classes.Swordmaster;
@@ -65,6 +66,7 @@ namespace DragonChanges
                     Utils.ModCompat.CheckForMods();
                     Utils.Settings.InitializeSettings();
                     log.Log("Patching blueprints.");
+                    AllBackgrounds.Configure();
                     Feature.Configure();
                     AllClasses.Configure();
                     AllArchetypes.Configure();

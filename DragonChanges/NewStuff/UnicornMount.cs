@@ -200,7 +200,7 @@ namespace DragonChanges.NewStuff
 
                 offsets.PelvisIkTarget = CreateMountBone(view.Pelvis.FindChildRecursive("Locator_Torso_Upper_02"),
                     "Pelvis",
-                    new Vector3(0f, 0.371f, 0.135f),
+                    new Vector3(0f, 0.361f, 0.065f),
                     new Vector3(0.7602f, 180f, 0f));
                 offsets.LeftFootIkTarget = CreateMountBone(view.Pelvis.FindChildRecursive("Locator_Torso_Upper_02"),
                     "LeftFoot",
@@ -223,6 +223,7 @@ namespace DragonChanges.NewStuff
                     "Hands",
                     new Vector3(0f, 0.5108f, -0.5856f),
                     new Vector3(359.9774f, 0f, 337.0312f));
+
 
                 var offsetConfig = ScriptableObject.CreateInstance<RaceMountOffsetsConfig>();
                 offsetConfig.name = "Unicorn_MountConfig";
