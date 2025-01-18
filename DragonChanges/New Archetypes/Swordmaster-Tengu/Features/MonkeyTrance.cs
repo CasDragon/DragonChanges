@@ -73,9 +73,9 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
                 .Configure();
         }
         // edit
-        internal static string buffprefix = "swordmaster-tengu.cranetrance";
+        internal static string buffprefix = "swordmaster-tengu.monkeytrance";
         internal static string bufftype = "buff";
-        internal static string buffguid = Guids.CraneTranceBuff;
+        internal static string buffguid = Guids.MonkeyTranceBuff;
         // don't edit
         internal static string buff = $"{buffprefix}.{bufftype}";
         internal static string buffname = $"{buff}.name";

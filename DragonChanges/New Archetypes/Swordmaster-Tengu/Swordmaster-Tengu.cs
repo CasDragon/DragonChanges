@@ -40,7 +40,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
         internal static BlueprintAbilityResource abilityResource;
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("swordmaster-tengu"))
+            if (Settings.GetSetting<bool>("swordmastertengu"))
             {
                 Main.log.Log($"{archetypeprefix} archetype enabled, configuring started");
                 abilityResource = ConfigureAbilityResource();
