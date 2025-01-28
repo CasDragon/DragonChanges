@@ -103,5 +103,4 @@ namespace DragonChanges.Patches
 
         private SortedDictionary<DCActivatableAbilityGroup, int> m_GroupsSizeIncreases = new SortedDictionary<DCActivatableAbilityGroup, int>();
     }
-    }
 }
