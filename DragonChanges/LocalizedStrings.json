@@ -545,11 +545,22 @@
   {
     "Key": "Wanderer.name",
     "ProcessTemplates": false,
-    "enGB": "Wanderer - Cursed (lycanthropy)"
+    "enGB": "Cursed (lycanthropy)"
   },
 
   {
     "Key": "Wanderer.description",
     "enGB": "Adds Perception and Mobility to list of class skills. She also is able to use her curse to qualify for feats that require lycanthropy."
+  },
+
+  {
+    "Key": "TranceMaster.name",
+    "ProcessTemplates": false,
+    "enGB": "Trance Master"
+  },
+
+  {
+    "Key": "TranceMaster.description",
+    "enGB": "Allows the Swordmaster to enter 2 trances at a time"
   }
 ]

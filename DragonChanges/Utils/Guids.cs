@@ -66,8 +66,8 @@ namespace DragonChanges.Utils
         internal const string redditorspellbook = "eb7baf21-6e1b-4089-9dbb-b236dc566d51";
         internal const string redditorspellsperday = "e24bb35c-351c-47c5-8fe8-f3c25e1087af"; 
         internal static string TranceResource = "F4154E2A-D70E-425B-9B52-F8D7ACB1A79F";
-        internal static string WandererBackground = "528F780F-8169-4A73-A82B-0E69C0D1F466";
-        internal static string guid2 = "5D30C57B-DA49-4752-943F-C17604D3FDE3";
+        internal static string CursedBackground = "528F780F-8169-4A73-A82B-0E69C0D1F466";
+        internal static string TranceMaster = "5D30C57B-DA49-4752-943F-C17604D3FDE3";
         internal static string guid3 = "C3A2CB8A-6152-4D2B-A347-941EBABECD27";
         internal static string guid4 = "339CB2F9-3884-4B5E-96DA-B8F5E5B7795C";
         internal static string guid5 = "4C179DA3-2BF3-4CE6-A361-463D5D76ECAA";

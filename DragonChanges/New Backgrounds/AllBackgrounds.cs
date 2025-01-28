@@ -10,7 +10,7 @@ namespace DragonChanges.New_Backgrounds
     {
         public static void Configure()
         {
-            Wanderer.Configure();
+            CursedLycan.Configure();
         }
     }
 }

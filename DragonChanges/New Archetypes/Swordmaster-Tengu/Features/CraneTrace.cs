@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.Patches;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -71,6 +72,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
                 .SetOnlyInCombat(true)
                 .SetActivationType(AbilityActivationType.WithUnitCommand)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
+                .SetGroup((ActivatableAbilityGroup)ActivatableAbilityGroupPatch.DCActivatableAbilityGroup.TenguSwordmasterTrance)
                 .SetBuff(ConfigureBuff())
                 .Configure();
         }

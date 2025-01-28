@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DragonChanges.New_Backgrounds
 {
-    internal class Wanderer
+    internal class CursedLycan
     {
         // edit
         internal static string feature = "Wanderer";
-        internal static string featureguid = Guids.WandererBackground;
+        internal static string featureguid = Guids.CursedBackground;
         // don't edit
         internal static string featurename = $"{feature}.name";
         internal static string featuredescription = $"{feature}.description";
@@ -21,12 +21,12 @@ namespace DragonChanges.New_Backgrounds
         {
             if (Settings.GetSetting<bool>(feature.ToLower()))
             {
-                Main.log.Log($"{feature} feature enabled, configuring");
+                Main.log.Log($"Cursed background feature enabled, configuring");
                 ConfigureEnabled();
             }
             else
             {
-                Main.log.Log($"{feature} disabled, configuring dummy");
+                Main.log.Log($"Cursed background disabled, configuring dummy");
                 ConfigureDummy();
             }
         }
@@ -36,9 +36,10 @@ namespace DragonChanges.New_Backgrounds
         }
         public static void ConfigureEnabled()
         {
-            FeatureConfigurator.New(feature, featureguid, Kingmaker.Blueprints.Classes.FeatureGroup.BackgroundSelection)
+            FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
+                .AddToFeatureSelection(FeatureSelectionRefs.BackgroundsWandererSelection.Reference.Get())
                 .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
                 .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillAthletics)
                 .Configure();
