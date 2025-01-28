@@ -1,6 +1,8 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Prerequisites;
 using Kingmaker.EntitySystem.Stats;
 using System;
 using System.Collections.Generic;
@@ -37,14 +39,19 @@ namespace DragonChanges.NewStuff
         }
         public static void ConfigureEnabled()
         {
+            var c = new PrerequisiteParametrizedFeature();
+            c.m_Feature = ParametrizedFeatureRefs.WeaponFocus.Reference.Get().ToReference<BlueprintFeatureReference>();
+            c.ParameterType = Kingmaker.Blueprints.Classes.Selection.FeatureParameterType.WeaponCategory;
+            c.WeaponCategory = Kingmaker.Enums.WeaponCategory.Wing;
             FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
+                .AddToGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Feat)
                 .AddPrerequisiteFullStatValue(stat: StatType.BaseAttackBonus,
                                               value: 8)
                 .AddPrerequisiteFullStatValue(stat: StatType.Strength,
                                               value: 13)
-                .AddPrerequisiteFeature(FeatureRefs.WeaponFocusWing.Reference.Get())
+                .AddComponent(c)
                 .AddAdditionalLimb(ItemWeaponRefs.WingColossal2d8.Reference.Get())
                 .AddAdditionalLimb(ItemWeaponRefs.WingColossal2d8.Reference.Get())
                 .Configure();

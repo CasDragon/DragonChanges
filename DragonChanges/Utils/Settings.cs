@@ -43,7 +43,10 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("unicornmount"), defaultValue: true, CreateString("unicornmount-toggle", "Adds a new unicorn mount, and then adds it to mount selections")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))
                     .AddToggle(
-                        Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmaster-tengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))
+                        Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmastertengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))
+                    .AddAnotherSettingsGroup(GetKey("newbackgrounds"), CreateString(GetKey("newbackgrounds-group"), "New Backgrounds"))
+                    .AddToggle(
+                        Toggle.New(GetKey("wanderer"), defaultValue: true, CreateString(GetKey("wanderer-toggle"), "Enable the Wanderer (Lycanothrpy) background")))
                     .AddAnotherSettingsGroup(GetKey("newclasses"), CreateString(GetKey("newclasses-group"), "New Classes"))
                     .AddToggle(
                         Toggle.New(GetKey("redditor"), defaultValue: false, CreateString(GetKey("redditor-toggle"), "Enable the Redditor class  (which is a meme class I made, don't take too seriously)")))

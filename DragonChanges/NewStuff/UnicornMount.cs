@@ -51,13 +51,23 @@ namespace DragonChanges.NewStuff
         public static BlueprintFeature CreateUnicornMountFeature(BlueprintUnit unicornmountunit)
         {
             Main.log.Log("Creating unicorn mount feature");
+            var x = new Kingmaker.UnitLogic.Mechanics.ContextValue();
+            x.ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple;
+            x.Value = 0;
+            x.ValueRank = Kingmaker.Enums.AbilityRankType.Default;
+            x.Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None;
+            x.m_AbilityParameter = Kingmaker.UnitLogic.Mechanics.AbilityParameterType.Level;
             return FeatureConfigurator.New(UnicornFeature, Guids.UnicornMountFeature)
                 .AddPet(pet: unicornmountunit,
                         type: Kingmaker.Enums.PetType.AnimalCompanion,
                         progressionType: Kingmaker.Enums.PetProgressionType.AnimalCompanion,
                         levelRank: FeatureRefs.AnimalCompanionRank.Reference.Get(),
                         upgradeFeature: FeatureRefs.AnimalCompanionUpgradeHorse.Reference.Get(),
-                        upgradeLevel: 4)
+                        upgradeLevel: 4,
+                        useContextValueLevel: false,
+                        forceAutoLevelup: false,
+                        destroyPetOnDeactivate: false,
+                        levelContextValue: x)
                 .AddPrerequisitePet(noCompanion: true)
                 .AddBuffExtraEffects(checkedBuff: BuffRefs.MountedBuff.Reference.Get(),
                         extraEffectBuff: BuffRefs.AnimalCompanionFeatureHorseBuff.Reference.Get(),

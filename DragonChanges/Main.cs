@@ -74,7 +74,6 @@ namespace DragonChanges
                     AlterMod.PatchHorse();
                     Drakes.PatchDrakes();
                     Various.PatchHippogriff();
-                    Various.PatchPairedOpportunist();
                 }
                 catch (Exception e)
                 {

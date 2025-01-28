@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>DragonChanges</AssemblyName>
 		<Description>DragonChanges</Description>
-		<Version>1.3.0</Version>
+		<Version>1.5.1</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>DragonChanges</RootNamespace>

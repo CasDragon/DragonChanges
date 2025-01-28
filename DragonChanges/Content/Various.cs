@@ -16,32 +16,6 @@ namespace DragonChanges.Content
 {
     internal class Various
     {
-        public static void PatchPairedOpportunist()
-        {
-            if (Settings.GetSetting<bool>("hippogriff"))
-            {
-                if (ModCompat.cop)
-                {
-                    Main.log.Log("CO-Paired Opportunist setting enabled, patching selections to add it");
-                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.CavalierTacticianFeatSelection)
-                        .AddToAllFeatures("41df43af78bc477aa33ae57d86ba8928")
-                        .Configure();
-                    FeatureSelectionConfigurator.For(FeatureSelectionRefs.DevilbanePriestTeamworkFeatSelection)
-                        .AddToAllFeatures("41df43af78bc477aa33ae57d86ba8928")
-                        .Configure();
-                    return;
-                }
-                else
-                {
-                    Main.log.Log("CO-Paired Opportunist setting enabled, but CO+ isn't detected, skipping");
-                    return;
-                }
-            }
-            else
-            {
-                Main.log.Log("CO-Paired Opportunist setting disabled, skipping");
-            }
-        }
         public static void PatchHippogriff()
         {
             if (Settings.GetSetting<bool>("hippogriff"))

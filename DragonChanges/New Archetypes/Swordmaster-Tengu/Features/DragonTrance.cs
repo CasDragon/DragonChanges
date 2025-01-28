@@ -68,7 +68,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
                 .SetDeactivateIfOwnerUnconscious(true)
                 .SetOnlyInCombat(true)
                 .SetActivationType(AbilityActivationType.WithUnitCommand)
-                .SetActivateWithUnitCommand(UnitCommand.CommandType.Standard)
+                .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
                 .SetBuff(ConfigureBuff())
                 .Configure();
         }
