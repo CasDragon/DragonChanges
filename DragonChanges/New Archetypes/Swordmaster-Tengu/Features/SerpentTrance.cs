@@ -67,7 +67,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
                 .SetDeactivateIfCombatEnded(true)
                 .SetDeactivateImmediately(true)
                 .SetDeactivateIfOwnerUnconscious(true)
-                .SetOnlyInCombat(true)
+                .SetOnlyInCombat(false)
                 .SetActivationType(AbilityActivationType.WithUnitCommand)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
                 .SetGroup((ActivatableAbilityGroup)ActivatableAbilityGroupPatch.DCActivatableAbilityGroup.TenguSwordmasterTrance)
