@@ -76,7 +76,6 @@ namespace DragonChanges.NewStuff
                 .SetIcon("assets/icons/undeadhorse.png")
                 .AddFeatureToPet(FeatureRefs.UndeadType.Reference.Get())
                 .SetRanks(1)
-                //.SetGroups(FeatureGroup.AnimalCompanion)
                 .Configure();
         }
         public static BlueprintUnit CreateUndeadMount()
@@ -179,7 +178,6 @@ namespace DragonChanges.NewStuff
             skills.UseMagicDevice = 0;
             skills.LoreReligion = 0;
             skills.KnowledgeArcana = 0;
-            skills.KnowledgeWorld = 0;
             return UnitConfigurator.New(UndeadUnit, Guids.UndeadMountUnit)
                 //.CopyFrom(oghorse)
                 .AddClassLevels(characterClass: CharacterClassRefs.AnimalCompanionClass.Reference.Get(),
@@ -226,7 +224,9 @@ namespace DragonChanges.NewStuff
                 .SetColor(new Color(0.15f, 0.15f, 0.15f, 1.0f))
                 .SetVisual(visual)
                 .SetBody(body)
-                .AddAdditionalLimb()
+                .SetFactionOverrides(new FactionOverrides())
+                .SetAlternativeBrains()
+                .SetAdditionalTemplates()
                 .SetPortrait(UnitRefs.ArmyPlaguedHorse.Reference.Get().m_Portrait)
             //    .SetPortrait(portrait)
                 .Configure();
