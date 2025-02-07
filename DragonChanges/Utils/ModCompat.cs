@@ -15,6 +15,7 @@ namespace DragonChanges.Utils
         public static bool homebrewarchetypes = false;
         public static bool tttbase = false;
         public static bool cop = false;
+        public static bool pp = false;
 
         public static void CheckForMods()
         {
@@ -28,6 +29,13 @@ namespace DragonChanges.Utils
             LogModState(tttbase, "TabletopTweaks-Base");
             cop = isCOPEnabled();
             LogModState(cop, "CharacterOptionsPlus");
+            pp = isPPEnabled();
+            LogModState(pp, "PrestigePlus");
+        }
+        public static bool isPPEnabled()
+        {
+            Main.log.Log("Checking for PrestigePlus");
+            return IsModEnabled("PrestigePlugs");
         }
         public static bool isCOPEnabled()
         {
