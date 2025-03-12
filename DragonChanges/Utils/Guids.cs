@@ -68,7 +68,7 @@ namespace DragonChanges.Utils
         internal static string TranceResource = "F4154E2A-D70E-425B-9B52-F8D7ACB1A79F";
         internal static string CursedBackground = "528F780F-8169-4A73-A82B-0E69C0D1F466";
         internal static string TranceMaster = "5D30C57B-DA49-4752-943F-C17604D3FDE3";
-        internal static string guid3 = "C3A2CB8A-6152-4D2B-A347-941EBABECD27";
+        internal static string AspectBeast = "C3A2CB8A-6152-4D2B-A347-941EBABECD27";
         internal static string guid4 = "339CB2F9-3884-4B5E-96DA-B8F5E5B7795C";
         internal static string guid5 = "4C179DA3-2BF3-4CE6-A361-463D5D76ECAA";
         internal static string guid6 = "5E8EF8B0-8316-422D-8BC8-873584BF8F07";

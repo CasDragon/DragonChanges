@@ -15,6 +15,7 @@ namespace DragonChanges.NewStuff
             PowerfulThrow.Configure();
             PowerfulWings.Configure();
             TranceMaster.Configure();
+            //AspectOfTheBeast.Configure();
             // mounts
             GriffonMount.Configure();
             UndeadMount.Configure();
