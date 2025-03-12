@@ -19,56 +19,23 @@ namespace DragonChanges.Utils
 
         public static void CheckForMods()
         {
-            microscopic = IsMicroscopicEnabled();
-            LogModState(microscopic, "Microscopic Content Expansion");
-            expandedcontent = IsECEnabled();
-            LogModState(expandedcontent, "Expanded Content");
-            homebrewarchetypes = IsHAEnabled();
-            LogModState(homebrewarchetypes, "Homebrew Archetypes");
-            tttbase = isTTTBaseEnabled();
-            LogModState(tttbase, "TabletopTweaks-Base");
-            cop = isCOPEnabled();
-            LogModState(cop, "CharacterOptionsPlus");
-            pp = isPPEnabled();
-            LogModState(pp, "PrestigePlus");
-        }
-        public static bool isPPEnabled()
-        {
-            Main.log.Log("Checking for PrestigePlus");
-            return IsModEnabled("PrestigePlugs");
-        }
-        public static bool isCOPEnabled()
-        {
-            Main.log.Log("Checking for CO+");
-            return IsModEnabled("CharacterOptionsPlus");
-        }
-        public static bool isTTTBaseEnabled()
-        {
-            Main.log.Log("Checking for TTT-Base");
-            return IsModEnabled("TabletopTweaks-Base");
-        }
-        public static bool IsHAEnabled()
-        {
-            Main.log.Log("Checking for HomebrewArchetypes");
-            return IsModEnabled("HomebrewArchetypes", "owlcat");
-        }
-        public static bool IsMicroscopicEnabled()
-        {
-            Main.log.Log("Checking for Microscopic Content Expansion");
-            return IsModEnabled("MicroscopicContentExpansion");
-        }
-        public static bool IsECEnabled()
-        {
-            Main.log.Log("Checking for Expanded Content");
-            return IsModEnabled("ExpandedContent");
+            microscopic = IsModEnabled("MicroscopicContentExpansion");
+            expandedcontent = IsModEnabled("ExpandedContent");
+            homebrewarchetypes = IsModEnabled("HomebrewArchetypes", "owlcat");
+            tttbase = IsModEnabled("TabletopTweaks-Base");
+            cop = IsModEnabled("CharacterOptionsPlus");
+            pp = IsModEnabled("PrestigePlugs");
         }
         public static bool IsModEnabled(string modName, string modtype="umm")
         {
+            Main.log.Log($"Checking for {modName}");
+            bool found = false;
             if (modtype=="umm")
-                return UnityModManager.modEntries.Where(mod => mod.Info.Id.Equals(modName) && mod.Enabled && !mod.ErrorOnLoading).Any();
+                found = UnityModManager.modEntries.Where(mod => mod.Info.Id.Equals(modName) && mod.Enabled && !mod.ErrorOnLoading).Any();
             if (modtype=="owlcat")
-                return OwlcatModificationsManager.Instance.AppliedModifications.Any(x => x.Manifest.UniqueName == modName);
-            return false;
+                found = OwlcatModificationsManager.Instance.AppliedModifications.Any(x => x.Manifest.UniqueName == modName);
+            LogModState(found, modName);
+            return found;
         }
         public static void LogModState(bool mod, string modname)
         {
