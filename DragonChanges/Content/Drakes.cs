@@ -1,19 +1,16 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DragonChanges.Utils;
 
 namespace DragonChanges.Content
 {
     internal class Drakes
     {
+        [DragonConfigure]
         public static void PatchDrakes()
         {
-            if (Utils.Settings.GetSetting<bool>("ec-drakes"))
+            if (Settings.GetSetting<bool>("ec-drakes"))
             {
-                if (Utils.ModCompat.expandedcontent)
+                if (ModCompat.expandedcontent)
                 {
                     Main.log.Log("Patching drakes with meme op stats");
                     // black

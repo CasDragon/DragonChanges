@@ -33,6 +33,7 @@ namespace DragonChanges.NewStuff
         internal static string UndeadFeature = "undeadmountfeature";
         internal static string UndeadMountPortrait = "undeadmountportrait";
 
+        [DragonConfigure]
         public static void Configure()
         {
 

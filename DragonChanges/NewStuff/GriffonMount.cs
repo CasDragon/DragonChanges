@@ -39,6 +39,7 @@ namespace DragonChanges.NewStuff
         internal static string GriffonMountPortrait = "griffonmountportrait";
         internal static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
 
+        [DragonConfigure]
         public static void Configure()
         {
 

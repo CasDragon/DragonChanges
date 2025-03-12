@@ -1,16 +1,18 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.Utils;
 using HarmonyLib;
 
 namespace DragonChanges.Content
 {
     internal class AlterMod
     {
+        [DragonConfigure]
         public static void PatchHorse()
         {
-            if (Utils.Settings.GetSetting<bool>("mc-microscopic-horse"))
+            if (Settings.GetSetting<bool>("mc-microscopic-horse"))
             {
-                if (Utils.ModCompat.microscopic)
+                if (ModCompat.microscopic)
                 {
                     Main.log.Log("Patching various animal selections to include Nightmare horse (Microscopic)");
                     FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)

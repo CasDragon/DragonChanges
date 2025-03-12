@@ -27,6 +27,7 @@ namespace DragonChanges.New_Classes.Swordmaster
         internal static string classname = $"{classprefix}.class.name";
         internal static string classdescription = $"{classprefix}.class.description";
         internal static string classshortdescription = $"{classprefix}.class.shortdescription";
+        [DragonConfigure]
         public static void Configure()
         {
             if (Settings.GetSetting<bool>("swordmaster"))

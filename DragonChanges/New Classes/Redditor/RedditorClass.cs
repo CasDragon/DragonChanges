@@ -25,6 +25,7 @@ namespace DragonChanges.New_Classes.Redditor
         internal static string classname = $"{classprefix}.name";
         internal static string classdescription = $"{classprefix}.description";
         internal static string classshortdescription = $"{classprefix}.shortdescription";
+        [DragonConfigure]
         public static void Configure()
         {
             if (Settings.GetSetting<bool>("redditor"))

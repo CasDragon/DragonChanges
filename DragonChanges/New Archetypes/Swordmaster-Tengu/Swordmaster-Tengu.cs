@@ -38,6 +38,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
         internal static string featureselectiondescription = $"{featureselectionn}.description";
 
         internal static BlueprintAbilityResource abilityResource;
+        [DragonConfigure]
         public static void Configure()
         {
             if (Settings.GetSetting<bool>("swordmastertengu"))

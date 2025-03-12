@@ -35,6 +35,7 @@ namespace DragonChanges.NewStuff
         internal static string UnicornMountPortrait = "unicornmountportrait";
         readonly static string unicornprefab = UnitRefs.CR3_UnicornStandard.Reference.Get().Prefab.AssetId;
 
+        [DragonConfigure]
         public static void Configure()
         {
 

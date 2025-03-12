@@ -1,27 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
-using BlueprintCore.Utils;
-using DragonChanges.Content;
-using DragonChanges.New_Archetypes;
-using DragonChanges.New_Backgrounds;
-using DragonChanges.New_Classes;
-using DragonChanges.New_Classes.Redditor;
-using DragonChanges.New_Classes.Swordmaster;
-using DragonChanges.NewStuff;
+using DragonChanges.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using UnityModManagerNet;
 
 namespace DragonChanges
 {
-#if DEBUG
-    [EnableReloading]
-#endif
     public static class Main
     {
         internal static Harmony HarmonyInstance;
@@ -63,17 +48,18 @@ namespace DragonChanges
                     Initialized = true;
 
                     log.Log("Checking for mods for compatibility patches");
-                    Utils.ModCompat.CheckForMods();
-                    Utils.Settings.InitializeSettings();
+                    ModCompat.CheckForMods();
+                    Settings.InitializeSettings();
                     log.Log("Patching blueprints.");
-                    AllBackgrounds.Configure();
+                    Thingy.DoPatches();
+                    /*AllBackgrounds.Configure();
                     Feature.Configure();
                     AllClasses.Configure();
                     AllArchetypes.Configure();
                     // no group configures for these yet
                     AlterMod.PatchHorse();
                     Drakes.PatchDrakes();
-                    Various.PatchHippogriff();
+                    Various.PatchHippogriff();*/
                 }
                 catch (Exception e)
                 {

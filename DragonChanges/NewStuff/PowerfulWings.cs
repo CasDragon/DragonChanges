@@ -20,6 +20,7 @@ namespace DragonChanges.NewStuff
         // don't edit
         internal static string featurename = $"{feature}.name";
         internal static string featuredescription = $"{feature}.description";
+        [DragonConfigure]
         public static void Configure()
         {
             if (Settings.GetSetting<bool>(feature.ToLower()))
