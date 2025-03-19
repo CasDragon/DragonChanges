@@ -112,6 +112,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
                             MonkeyTrance.ConfigureFeature(),
                             SerpentTrance.ConfigureFeature(),
                             TigerTrance.ConfigureFeature()])
+                .SetRanks(6)
                 .Configure();
         }
         public static BlueprintAbilityResource ConfigureAbilityResourceDummy()
