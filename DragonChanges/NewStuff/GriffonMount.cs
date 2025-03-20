@@ -154,23 +154,6 @@ namespace DragonChanges.NewStuff
             cmdvalue.Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None;
             cmdvalue.PropertyName = Kingmaker.Enums.ContextPropertyName.Value1;
             cmdvalue.m_AbilityParameter = AbilityParameterType.Level;
-            UnitVisualParams visual = new UnitVisualParams();
-            visual.BloodType = Kingmaker.Visual.HitSystem.BloodType.Common;
-            visual.FootprintType = Kingmaker.Enums.FootprintType.AnimalHoof;
-            visual.FootprintScale = 0.7f;
-            visual.IsNotUseDismember = false;
-            visual.IsBlockChangeClothColor = false;
-            visual.m_Barks = BlueprintTool.GetRef<BlueprintUnitAsksListReference>("2108e4bdab276c6428c0bf7ce98cfbf7");
-            visual.ReachFXThresholdBonus = 0.0f;
-            visual.DefaultArmorSoundType = ArmorSoundType.Flesh;
-            visual.FootstepSoundSizeType = FootstepSoundSizeType.BootMedium;
-            visual.FootSoundType = FootSoundType.HardPaw;
-            visual.FootSoundSize = Kingmaker.Enums.Size.Medium;
-            visual.BodySoundType = BodySoundType.Flesh;
-            visual.BodySoundSize = Kingmaker.Enums.Size.Medium;
-            visual.NoFinishingBlow = false;
-            visual.ImportanceOverride = 0;
-            visual.SilentCaster = true;
             BlueprintUnit.UnitBody body = new BlueprintUnit.UnitBody();
             body.DisableHands = false;
             body.m_EmptyHandWeapon = ItemWeaponRefs.WeaponEmptyHand.Reference.Get().ToReference<BlueprintItemWeaponReference>();
@@ -202,8 +185,8 @@ namespace DragonChanges.NewStuff
                 .SetIntelligence(5)
                 .SetWisdom(13)
                 .SetCharisma(8)
-                .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillAthletics)
-                .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
+                .AddClassSkill(StatType.SkillAthletics)
+                .AddClassSkill(StatType.SkillPerception)
                 .SetSpeed(new Feet(50))
                 .AddClassLevels(characterClass: CharacterClassRefs.AnimalCompanionClass.Reference.Get(),
                     levels: 0,
@@ -239,7 +222,7 @@ namespace DragonChanges.NewStuff
                                 FeatureRefs.AnimalCompanionNotUpgradedHorse.Reference.Get(),
                                 FeatureRefs.AnimalCompanionScent30.Reference.Get()])
                 .SetColor(new Color(0.15f, 0.15f, 0.15f, 1.0f))
-                .SetVisual(visual)
+                .SetVisual(oghorse.Visual)
                 .SetBody(body)
                 .SetFactionOverrides(new FactionOverrides())
                 .SetAlternativeBrains()
