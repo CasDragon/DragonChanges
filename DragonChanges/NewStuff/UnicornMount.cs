@@ -1,28 +1,22 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
-using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HarmonyLib;
-using Kingmaker.Modding;
-using Kingmaker.View;
-using Kingmaker.Visual.Mounts;
+using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Root;
-using Owlcat.Runtime.Core.Utils;
-using UnityEngine;
-using BlueprintCore.Utils;
-using Kingmaker.UnitLogic.Mechanics;
-using Kingmaker.Visual.Sound;
 using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Modding;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.FactLogic;
+using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.View;
+using Kingmaker.Visual.Mounts;
+using Owlcat.Runtime.Core.Utils;
+using System.Linq;
+using UnityEngine;
 
 namespace DragonChanges.NewStuff
 {
@@ -31,7 +25,7 @@ namespace DragonChanges.NewStuff
         internal static string UnicornUnit = "UnicornMount";
         internal static string UnicornFeatureName = "unicornmountfeature.name";
         internal static string UnicornFeatureDescription = "unicornmountfeature.description";
-        internal static string UnicornFeature = "unicornmountfeature";
+        internal static string UnicornFeature = "UnicornMount-feature";
         internal static string UnicornMountPortrait = "unicornmountportrait";
         readonly static string unicornprefab = UnitRefs.CR3_UnicornStandard.Reference.Get().Prefab.AssetId;
 
@@ -58,12 +52,12 @@ namespace DragonChanges.NewStuff
         public static BlueprintFeature CreateUnicornMountFeature(BlueprintUnit unicornmountunit)
         {
             Main.log.Log("Creating unicorn mount feature");
-            var x = new Kingmaker.UnitLogic.Mechanics.ContextValue();
-            x.ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple;
+            var x = new ContextValue();
+            x.ValueType = ContextValueType.Simple;
             x.Value = 0;
             x.ValueRank = Kingmaker.Enums.AbilityRankType.Default;
             x.Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None;
-            x.m_AbilityParameter = Kingmaker.UnitLogic.Mechanics.AbilityParameterType.Level;
+            x.m_AbilityParameter = AbilityParameterType.Level;
             return FeatureConfigurator.New(UnicornFeature, Guids.UnicornMountFeature)
                 .AddPet(pet: unicornmountunit,
                         type: Kingmaker.Enums.PetType.AnimalCompanion,
@@ -83,7 +77,6 @@ namespace DragonChanges.NewStuff
                 .SetDescription(UnicornFeatureDescription)
                 .SetReapplyOnLevelUp(true)
                 .SetIsClassFeature(true)
-                //.SetIcon("assets/icons/unicornmount.png")
                 .AddFeatureToPet(FeatureRefs.MagicalBeastType.Reference.Get())
                 .Configure();
         }

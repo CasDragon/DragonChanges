@@ -1,20 +1,12 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Classes;
-using DragonChanges.Utils;
-using Kingmaker.Blueprints.Classes;
-using Kingmaker.RuleSystem;
-using Kingmaker.EntitySystem.Stats;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
-using Kingmaker.Blueprints.Root;
+using DragonChanges.Utils;
 using Kingmaker.Blueprints;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using DragonChanges.New_Classes.Redditor;
-using Kingmaker.Blueprints.Classes.Spells;
+using Kingmaker.Blueprints.Classes;
+using Kingmaker.Blueprints.Root;
+using Kingmaker.EntitySystem.Stats;
+using Kingmaker.RuleSystem;
 
 namespace DragonChanges.New_Classes.Swordmaster
 {
@@ -80,7 +72,7 @@ namespace DragonChanges.New_Classes.Swordmaster
                 .SetHitDie(DiceType.D8)
                 .SetStartingGold(70)
                 .SetSkillPoints(2)
-                .SetClassSkills(StatType.SkillAthletics, 
+                .SetClassSkills(StatType.SkillAthletics,
                                 StatType.SkillKnowledgeWorld,
                                 StatType.SkillPerception,
                                 StatType.SkillPersuasion)

@@ -1,32 +1,24 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
 using HarmonyLib;
-using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes;
+using Kingmaker.Blueprints.Root;
+using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Modding;
+using Kingmaker.RuleSystem.Rules;
+using Kingmaker.UnitLogic.Buffs;
+using Kingmaker.UnitLogic.FactLogic;
+using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.Utility;
 using Kingmaker.View;
 using Kingmaker.Visual.Mounts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Kingmaker.UnitLogic.Buffs;
-using Kingmaker.Utility;
-using Kingmaker.Blueprints.Root;
 using Owlcat.Runtime.Core.Utils;
+using System.Linq;
 using UnityEngine;
-using Kingmaker.Designers.EventConditionActionSystem.Actions;
-using Kingmaker.RuleSystem.Rules;
-using Kingmaker.UnitLogic.FactLogic;
-using Owlcat.Runtime.Core.Physics.PositionBasedDynamics.Bodies;
-using Kingmaker.EntitySystem.Stats;
-using BlueprintCore.Utils;
-using Kingmaker.UnitLogic.Mechanics;
-using Kingmaker.Visual.Sound;
 
 namespace DragonChanges.NewStuff
 {
@@ -35,7 +27,7 @@ namespace DragonChanges.NewStuff
         internal static string GriffonUnit = "GriffonMount";
         internal static string GriffonFeatureName = "griffonmountfeature.name";
         internal static string GriffonFeatureDescription = "griffonmountfeature.description";
-        internal static string GriffonFeature = "griffonmountfeature";
+        internal static string GriffonFeature = "GriffonMount-feature";
         internal static string GriffonMountPortrait = "griffonmountportrait";
         internal static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
 
@@ -62,12 +54,12 @@ namespace DragonChanges.NewStuff
         public static BlueprintFeature CreateGriffonMountFeature(BlueprintUnit griffonmountunit)
         {
             Main.log.Log("Creating griffon mount feature");
-            var x = new Kingmaker.UnitLogic.Mechanics.ContextValue();
-            x.ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple;
+            var x = new ContextValue();
+            x.ValueType = ContextValueType.Simple;
             x.Value = 0;
             x.ValueRank = Kingmaker.Enums.AbilityRankType.Default;
             x.Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None;
-            x.m_AbilityParameter = Kingmaker.UnitLogic.Mechanics.AbilityParameterType.Level;
+            x.m_AbilityParameter = AbilityParameterType.Level;
             return FeatureConfigurator.New(GriffonFeature, Guids.GriffonMountFeature)
                 .AddPet(pet: griffonmountunit,
                         type: Kingmaker.Enums.PetType.AnimalCompanion,
@@ -348,7 +340,7 @@ namespace DragonChanges.NewStuff
                 offsets.PelvisIkTarget = CreateMountBone(view.Pelvis.FindChildRecursive("Chest_M"),
                     "Pelvis",
                     new Vector3(-0.003f, 0.016f, 0.001f));
-                    //new Vector3(0.7602f, 180f, 0f));
+                //new Vector3(0.7602f, 180f, 0f));
                 offsets.LeftFootIkTarget = CreateMountBone(view.Pelvis.FindChildRecursive("Chest_M"),
                     "LeftFoot",
                     new Vector3(-0.194f, 0.28f, 0.394f),
@@ -360,16 +352,16 @@ namespace DragonChanges.NewStuff
                 offsets.LeftKneeIkTarget = CreateMountBone(view.Pelvis.FindChildRecursive("Chest_M"),
                     "LeftKnee",
                     new Vector3(-0.243f, 0.066f, 0.204f));
-                    //new Vector3(359.9774f, 0f, 149.1742f));
+                //new Vector3(359.9774f, 0f, 149.1742f));
                 offsets.RightKneeIkTarget = CreateMountBone(view.Pelvis.FindChildRecursive("Chest_M"),
                     "RightKnee",
                     new Vector3(-0.011f, 0.181f, -0.359f));
-                    //new Vector3(359.9774f, 0f, 337.0312f));
+                //new Vector3(359.9774f, 0f, 337.0312f));
 
                 offsets.Hands = CreateMountBone(view.Pelvis.FindChildRecursive("Locator_Head_01"),
                     "Hands",
                     new Vector3(-0.265f, -0.24f, -0.103f));
-                    //new Vector3(359.9774f, 0f, 337.0312f));
+                //new Vector3(359.9774f, 0f, 337.0312f));
 
 
                 var offsetConfig = ScriptableObject.CreateInstance<RaceMountOffsetsConfig>();

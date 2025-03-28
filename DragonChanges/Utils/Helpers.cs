@@ -1,21 +1,11 @@
 ﻿// Copyright (c) 2019 Jennifer Messerly
 // This code is licensed under MIT license (see LICENSE for details)
 
-using BlueprintCore.Utils;
-using JetBrains.Annotations;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Classes.Selection;
-using Kingmaker.Blueprints.Root.Strings;
-using Kingmaker.ElementsSystem;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
-using Kingmaker.Localization;
-using Kingmaker.Localization.Shared;
 using Kingmaker.ResourceLinks;
-using Kingmaker.UI.Common;
-using Kingmaker.UnitLogic.Buffs.Blueprints;
-using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics.Components;
 using Kingmaker.UnitLogic.Mechanics.Properties;
 using Kingmaker.Utility;
@@ -242,7 +232,7 @@ namespace DragonChanges.Utils
             init?.Invoke(config);
             return config;
         }
-        
+
         internal class ObjectDeepCopier
         {
             internal class ArrayTraverse

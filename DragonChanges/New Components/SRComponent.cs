@@ -1,17 +1,12 @@
-﻿using Kingmaker.Blueprints.Facts;
+﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Experience;
+using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.JsonSystem;
-using Kingmaker.Blueprints;
+using Kingmaker.EntitySystem.Stats;
+using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Parts;
-using Kingmaker.UnitLogic;
 using Kingmaker.Utility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Blueprints.Classes.Experience;
 
 namespace DragonChanges.New_Components
 {

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HarmonyLib;
+﻿using HarmonyLib;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 using Kingmaker.UnitLogic.Parts;
+using System;
+using System.Collections.Generic;
 using static DragonChanges.Patches.ActivatableAbilityGroupPatch;
 
 namespace DragonChanges.Patches

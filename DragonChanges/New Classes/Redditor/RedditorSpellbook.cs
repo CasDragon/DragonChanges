@@ -1,15 +1,9 @@
-﻿using BlueprintCore.Blueprints.Configurators.Classes.Spells;
-using BlueprintCore.Blueprints.Configurators.Classes;
+﻿using BlueprintCore.Blueprints.Configurators.Classes;
+using BlueprintCore.Blueprints.Configurators.Classes.Spells;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes.Spells;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Kingmaker.EntitySystem.Stats;
-using UnityEngine;
 
 namespace DragonChanges.New_Classes.Redditor
 {

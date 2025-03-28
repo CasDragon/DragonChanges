@@ -1,20 +1,12 @@
-﻿using BlueprintCore.Blueprints.Configurators.Classes;
-using BlueprintCore.Blueprints.CustomConfigurators;
+﻿using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.New_Archetypes.Swordmaster_Tengu.Features;
-using DragonChanges.New_Classes.Swordmaster;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints;
-using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Classes.Selection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
 {
@@ -33,7 +25,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
         internal static string archetypedescription = $"{archetypeprefix}.archetype.description";
         internal static string archetypeshortdescription = $"{archetypeprefix}.archetype.shortdescription";
 
-        internal static string featureselectionn = $"{archetypeprefix}.featureselection";
+        internal static string featureselectionn = "TranceSelection";
         internal static string featureselectionname = $"{featureselectionn}.name";
         internal static string featureselectiondescription = $"{featureselectionn}.description";
 
@@ -72,7 +64,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
                 .AddEntry(15, FeatureRefs.DangerSenseRogue.Reference.Get())
                 .AddEntry(18, FeatureRefs.DangerSenseRogue.Reference.Get())
                 .GetEntries();
-            var addf =  LevelEntryBuilder.New()
+            var addf = LevelEntryBuilder.New()
                 .AddEntry(3, featureSelection)
                 .AddEntry(6, featureSelection)
                 .AddEntry(9, featureSelection)

@@ -1,14 +1,5 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.References;
+﻿using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 using DragonChanges.Utils;
-using Kingmaker.Blueprints.Classes.Prerequisites;
-using Kingmaker.Blueprints;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 
 namespace DragonChanges.NewStuff
 {

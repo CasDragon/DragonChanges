@@ -2,48 +2,56 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
-using DragonChanges.Patches;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Commands.Base;
 
-namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
+namespace DragonChanges.NewStuff.AutoMetamagics
 {
-    internal class TigerTrance
-    {
-        // edit
-        internal static string featureprefix = "swordmaster-tengu.tigertrance";
-        internal static string featuretype = "feature";
-        internal static string featureguid = Guids.TigerTranceFeature;
+    internal class AutoBolstered
+    {// edit
+        internal static string feature = "AutoBolstered";
+        internal static string featureguid = Guids.AutoBolstered;
         // don't edit
-        internal static string feature = "TigerTrance";
         internal static string featurename = $"{feature}.name";
         internal static string featuredescription = $"{feature}.description";
-
-        public static BlueprintFeature ConfigureFeatureDummy()
+        [DragonConfigure]
+        public static void Configure()
         {
-            ConfigureAbilityDummy();
-            ConfigureBuffDummy();
-            return FeatureConfigurator.New(feature, featureguid)
-                .Configure();
+            if (Settings.GetSetting<bool>("autometamagics"))
+            {
+                Main.log.Log($"{feature} feature enabled, configuring");
+                ConfigureEnabled();
+            }
+            else
+            {
+                Main.log.Log($"{feature} disabled, configuring dummy");
+                ConfigureDummy();
+            }
         }
-        public static BlueprintFeature ConfigureFeature()
+        public static void ConfigureDummy()
         {
-            return FeatureConfigurator.New(feature, featureguid)
+            FeatureConfigurator.New(feature, featureguid).Configure();
+        }
+        public static void ConfigureEnabled()
+        {
+            FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
+                .AddRecommendationRequiresSpellbook()
+                .AddRecommendationHasFeature(FeatureRefs.BolsteredSpellFeat.Reference.Get())
+                .AddPrerequisiteFeature(FeatureRefs.BolsteredSpellFeat.Reference.Get())
+                .AddToGroups(FeatureGroup.MythicAbility)
                 .AddFacts(new() { ConfigureAbility() })
-                .SetIsClassFeature(true)
                 .Configure();
         }
         // edit
-        internal static string abilityprefix = "swordmaster-tengu.tigertrance";
-        internal static string abilitytype = "ability";
-        internal static string abilityguid = Guids.TigerTranceAbility;
+        internal static string ability = "AutoBolstered-ability";
+        internal static string abilityguid = Guids.AutoBolsteredAbility;
         // don't edit
-        internal static string ability = $"{abilityprefix}.{abilitytype}";
         internal static string abilityname = $"{ability}.name";
         internal static string abilitydescription = $"{ability}.description";
 
@@ -57,25 +65,20 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
             return ActivatableAbilityConfigurator.New(ability, abilityguid)
                 .SetDisplayName(abilityname)
                 .SetDescription(abilitydescription)
-                .AddRestrictionHasUnitCondition(Kingmaker.UnitLogic.UnitCondition.Fatigued, invert: true)
-                .AddAbilityResources(resource: Swordmaster_Tengu.abilityResource)
                 .SetDeactivateIfCombatEnded(false)
                 .SetDeactivateImmediately(true)
                 .SetDeactivateIfOwnerUnconscious(true)
                 .SetOnlyInCombat(false)
-                .SetActivationType(AbilityActivationType.WithUnitCommand)
+                .SetActivationType(AbilityActivationType.Immediately)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
-                .SetGroup((ActivatableAbilityGroup)ActivatableAbilityGroupPatch.DCActivatableAbilityGroup.TenguSwordmasterTrance)
                 .SetBuff(ConfigureBuff())
-                .SetIcon("Assets/Modifications/DragonChanges 1/TigerTrance.png".ToLower())
+                .SetIcon("Assets/Modifications/DragonChanges 1/AutoBolster.png".ToLower())
                 .Configure();
         }
         // edit
-        internal static string buffprefix = "swordmaster-tengu.tigertrance";
-        internal static string bufftype = "buff";
-        internal static string buffguid = Guids.TigerTranceBuff;
+        internal static string buff = "AutoBolstered-buff";
+        internal static string buffguid = Guids.AutoBolsteredBuff;
         // don't edit
-        internal static string buff = $"{buffprefix}.{bufftype}";
         internal static string buffname = $"{buff}.name";
         internal static string buffdescription = $"{buff}.description";
 
@@ -89,13 +92,11 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
             return BuffConfigurator.New(buff, buffguid)
                 .SetDisplayName(buffname)
                 .SetDescription(buffdescription)
-                .AddFeatureIfHasFact(checkedFact: FeatureRefs.Pounce.Reference.Get(), feature: FeatureRefs.Pounce.Reference.Get(), not: true)
+                .AddAutoMetamagic(metamagic: Metamagic.Bolstered)
                 .SetIsClassFeature(true)
-                .SetStacking(StackingType.Prolong)
+                .SetStacking(StackingType.Ignore)
                 .SetRanks(0)
-                .SetTickEachSecond(false)
-                .SetFrequency(Kingmaker.UnitLogic.Mechanics.DurationRate.Rounds)
-                .SetIcon("Assets/Modifications/DragonChanges 1/TigerTrance.png".ToLower())
+                .SetIcon("Assets/Modifications/DragonChanges 1/AutoBolster.png".ToLower())
                 .Configure();
         }
     }

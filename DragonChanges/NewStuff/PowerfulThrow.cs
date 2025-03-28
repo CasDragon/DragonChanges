@@ -1,6 +1,4 @@
-﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
@@ -9,8 +7,6 @@ using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Enums;
-using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics.Components;
 
 namespace DragonChanges.NewStuff
@@ -50,15 +46,11 @@ namespace DragonChanges.NewStuff
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddComponent(strcomponet)
-                /*.AddAttackStatReplacementFixed(new BlueprintCore.Blueprints.Components.Replacements.AttackStatReplacementFixed(
-                        replacementStat: StatType.Strength,
-                        weaponSubcategory: WeaponSubCategory.Thrown))*/
                 .AddPrerequisiteFeature(FeatureRefs.PowerAttackFeature.Reference.Get())
                 .AddPrerequisiteStatValue(StatType.BaseAttackBonus, 1)
-                .AddRecommendationStatComparison(higherStat: StatType.Strength, lowerStat: StatType.Dexterity,  diff: 4)
+                .AddRecommendationStatComparison(higherStat: StatType.Strength, lowerStat: StatType.Dexterity, diff: 4)
                 .AddRecommendationStatMiminum(minimalValue: 14, stat: StatType.Strength, goodIfHigher: true)
                 .AddToGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
-                //.SetIcon("assets/icons/powerfulthrow.png")
                 .SetIsClassFeature(true)
                 .Configure();
             var component = TTTHelpers.CreateCopy<AddInitiatorAttackWithWeaponTrigger>(BuffRefs.PowerAttackBuff.Reference.Get().GetComponent<AddInitiatorAttackWithWeaponTrigger>());

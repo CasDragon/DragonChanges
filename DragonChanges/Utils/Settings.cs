@@ -1,13 +1,7 @@
-﻿using DragonChanges;
-using Kingmaker.Localization;
+﻿using Kingmaker.Localization;
 using ModMenu.Settings;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityModManagerNet;
 
 namespace DragonChanges.Utils
 {
@@ -30,6 +24,8 @@ namespace DragonChanges.Utils
                     .AddAnotherSettingsGroup(GetKey("various"), CreateString(GetKey("various-group"), "Various"))
                     .AddToggle(
                         Toggle.New(GetKey("hippogriff"), defaultValue: true, CreateString("hippogriff-toggle", "Adds the Hippogriff  to other pet lists")))
+                    .AddToggle(
+                        Toggle.New(GetKey("autometamagics"), defaultValue: true, CreateString("autometamagics-toggle", "Adds feats that grant autometamagic to Mythic Abilities")))
                     .AddAnotherSettingsGroup(GetKey("newcontent"), CreateString(GetKey("newcontent-group"), "New Content"))
                     .AddToggle(
                         Toggle.New(GetKey("powerfulthrow"), defaultValue: true, CreateString("powerfulthrow-toggle", "Adds the feat Powerful Throw")))

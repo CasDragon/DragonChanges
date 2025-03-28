@@ -1,9 +1,5 @@
 ﻿using Kingmaker.Modding;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityModManagerNet;
 
 namespace DragonChanges.Utils
@@ -26,13 +22,13 @@ namespace DragonChanges.Utils
             cop = IsModEnabled("CharacterOptionsPlus");
             pp = IsModEnabled("PrestigePlugs");
         }
-        public static bool IsModEnabled(string modName, string modtype="umm")
+        public static bool IsModEnabled(string modName, string modtype = "umm")
         {
             Main.log.Log($"Checking for {modName}");
             bool found = false;
-            if (modtype=="umm")
+            if (modtype == "umm")
                 found = UnityModManager.modEntries.Where(mod => mod.Info.Id.Equals(modName) && mod.Enabled && !mod.ErrorOnLoading).Any();
-            if (modtype=="owlcat")
+            if (modtype == "owlcat")
                 found = OwlcatModificationsManager.Instance.AppliedModifications.Any(x => x.Manifest.UniqueName == modName);
             LogModState(found, modName);
             return found;

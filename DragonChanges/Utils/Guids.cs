@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DragonChanges.Utils
+﻿namespace DragonChanges.Utils
 {
     internal class Guids
     {
@@ -64,32 +58,57 @@ namespace DragonChanges.Utils
         internal const string chatodc = "f677586a-efdb-4eb9-bfd3-f7cf81e38a9b";
         internal const string chatochacap = "57f4ee94-78ab-40b8-bcd8-a85afd85e85e";
         internal const string redditorspellbook = "eb7baf21-6e1b-4089-9dbb-b236dc566d51";
-        internal const string redditorspellsperday = "e24bb35c-351c-47c5-8fe8-f3c25e1087af"; 
+        internal const string redditorspellsperday = "e24bb35c-351c-47c5-8fe8-f3c25e1087af";
         internal static string TranceResource = "F4154E2A-D70E-425B-9B52-F8D7ACB1A79F";
         internal static string CursedBackground = "528F780F-8169-4A73-A82B-0E69C0D1F466";
         internal static string TranceMaster = "5D30C57B-DA49-4752-943F-C17604D3FDE3";
         internal static string AspectBeast = "C3A2CB8A-6152-4D2B-A347-941EBABECD27";
-        internal static string guid4 = "339CB2F9-3884-4B5E-96DA-B8F5E5B7795C";
-        internal static string guid5 = "4C179DA3-2BF3-4CE6-A361-463D5D76ECAA";
-        internal static string guid6 = "5E8EF8B0-8316-422D-8BC8-873584BF8F07";
-        internal static string guid7 = "520B1943-3BD4-4B29-856A-0EB729242475";
-        internal static string guid8 = "3F30130A-17ED-4F16-9D06-23B5D1548F2F";
-        internal static string guid9 = "D73FAF86-CC5E-4D8D-B786-F431C419F917";
-        internal static string guid10 = "99EB8F59-D3C0-454D-8450-A153E8AC9E4C";
-        internal static string guid11 = "FFEC1306-D5C4-4022-8D02-9760DE7ABA61";
-        internal static string guid12 = "4232AF70-7481-40E2-98A9-BD9552AF19E4";
-        internal static string guid13 = "CF57CC97-C4FE-4342-8507-AE78F1F9799B";
-        internal static string guid14 = "8E82B5BE-1C35-4EB8-8393-0EF8799AEBCA";
-        internal static string guid15 = "B946D70C-06AD-440C-9DA7-A0FB0FD3BCEB";
-        internal static string guid16 = "20F6F7C8-BC2F-4B74-BCE5-52F88CE9B437";
-        internal static string guid17 = "626E981B-9759-4C41-BA25-CCECEAB9E0C5";
-        internal static string guid18 = "FAAE4244-A7D5-4561-A7A4-6F1F9C041EA5";
-        internal static string guid19 = "58903BA1-B228-4670-8852-F9E7C919B1EA";
-        internal static string guid20 = "8E7F54E3-C2AF-4D9D-8CB0-2BFB455DABAA";
-        internal static string guid21 = "C5A8A20B-D2DF-4FB6-B7D8-1EEAD9CF2345";
-        internal static string guid22 = "18B3B63E-7F30-4D29-AF95-2FAF72E3A4BF";
-        internal static string guid23 = "64129305-752F-42BE-B7BB-79B278F77B34";
-        internal static string guid24 = "DA0BC3ED-7A7B-4249-A5B0-3D77905A9327";
-        internal static string guid25 = "0A2BADD0-023C-47C3-B6D3-09C02771F20B";
+        internal static string AutoMax = "339CB2F9-3884-4B5E-96DA-B8F5E5B7795C";
+        internal static string AutoMaxAbility = "4C179DA3-2BF3-4CE6-A361-463D5D76ECAA";
+        internal static string AutoMaxBuff = "5E8EF8B0-8316-422D-8BC8-873584BF8F07";
+        internal static string AutoExtend = "520B1943-3BD4-4B29-856A-0EB729242475";
+        internal static string AutoExtendAbility = "3F30130A-17ED-4F16-9D06-23B5D1548F2F";
+        internal static string AutoExtendBuff = "D73FAF86-CC5E-4D8D-B786-F431C419F917";
+        internal static string AutoEmpower = "99EB8F59-D3C0-454D-8450-A153E8AC9E4C";
+        internal static string AutoEmpowerAbility = "FFEC1306-D5C4-4022-8D02-9760DE7ABA61";
+        internal static string AutoEmpowerBuff = "4232AF70-7481-40E2-98A9-BD9552AF19E4";
+        internal static string AutoQuicken = "CF57CC97-C4FE-4342-8507-AE78F1F9799B";
+        internal static string AutoQuickenAbility = "8E82B5BE-1C35-4EB8-8393-0EF8799AEBCA";
+        internal static string AutoQuickenBuff = "B946D70C-06AD-440C-9DA7-A0FB0FD3BCEB";
+        internal static string AutoReach = "20F6F7C8-BC2F-4B74-BCE5-52F88CE9B437";
+        internal static string AutoReachAbility = "626E981B-9759-4C41-BA25-CCECEAB9E0C5";
+        internal static string AutoReachBuff = "FAAE4244-A7D5-4561-A7A4-6F1F9C041EA5";
+        internal static string AutoBolstered = "58903BA1-B228-4670-8852-F9E7C919B1EA";
+        internal static string AutoBolsteredAbility = "8E7F54E3-C2AF-4D9D-8CB0-2BFB455DABAA";
+        internal static string AutoBolsteredBuff = "C5A8A20B-D2DF-4FB6-B7D8-1EEAD9CF2345";
+        internal static string AutoSelective = "18B3B63E-7F30-4D29-AF95-2FAF72E3A4BF";
+        internal static string AutoSelectiveAbility = "64129305-752F-42BE-B7BB-79B278F77B34";
+        internal static string AutoSelectiveBuff = "DA0BC3ED-7A7B-4249-A5B0-3D77905A9327";
+        internal static string AutoPersistent = "0A2BADD0-023C-47C3-B6D3-09C02771F20B";
+        internal static string AutoPersistentAbility = "4ACD0503-5298-448D-81E6-55EB50DFCAB8";
+        internal static string AutoPersistentBuff = "F44E2465-272C-403D-B093-0B5C7121EADC";
+        internal static string AutoIntensified = "E9111FCB-A4E3-41D9-990D-CE2109A02D6D";
+        internal static string AutoIntensifiedAbility = "B736652F-0446-4943-9C20-2CA937CE54A2";
+        internal static string AutoIntensifiedBuff = "0027C99F-C5A8-4080-9BE3-CE35227E2A45";
+        internal static string AutoPiercing = "CF2AC2B6-CE62-477E-A0E6-85BE50D80BA5";
+        internal static string AutoPiercingAbility = "0C8764F0-4B2F-4BE0-807B-6A939B24DD9A";
+        internal static string AutoPiercingBuff = "A19CA52F-9F54-4B59-9B35-4F45A7EE109B";
+        internal static string guid8 = "CDC66189-0108-4926-9980-C2FAF4D36677";
+        internal static string guid9 = "6B787663-EA02-4F30-B09A-4B66DD15E33B";
+        internal static string guid10 = "77589786-187F-4238-8C1A-78E2CD21BD6A";
+        internal static string guid11 = "E4EFC231-C410-4E56-B366-2DD492687632";
+        internal static string guid12 = "8A18D18E-970A-45A0-9706-754540067909";
+        internal static string guid13 = "F8ED35AC-2B3E-4AB6-8335-EC02206923DA";
+        internal static string guid14 = "FD7191A7-96ED-457E-9A82-E19A17B3D722";
+        internal static string guid15 = "6FE92ACA-BF83-4BB1-802C-0E4E4723FD71";
+        internal static string guid16 = "F111B658-B76F-40A5-B068-20309DC03238";
+        internal static string guid17 = "F7B21535-954A-458B-A5B9-BE66BF58113E";
+        internal static string guid18 = "AA902884-A087-49C3-8D33-A2079BF33397";
+        internal static string guid19 = "98C3E8E2-F0E0-4594-A1C1-E5CD94D61BA2";
+        internal static string guid20 = "6736C903-D315-46E8-877F-5BF55202F316";
+        internal static string guid21 = "FF9ED9C3-406F-4EB4-8A68-390567B971D4";
+        internal static string guid22 = "031819B9-3B17-41DF-8BED-AD5F38C7E625";
+        internal static string guid23 = "FCA844ED-14FF-4F03-B5E6-C8A867C4FEBC";
+        internal static string guid24 = "AFC3896C-53BD-4840-8C90-039C9DAE4D97";
     }
 }

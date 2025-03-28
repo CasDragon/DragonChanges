@@ -2,25 +2,13 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
-using BlueprintCore.Utils;
-using BlueprintCore.Utils.Assets;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Designers.Mechanics.Buffs;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Items;
-using Kingmaker.ResourceLinks;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics;
-using Kingmaker.Visual.Sound;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace DragonChanges.NewStuff
@@ -30,7 +18,7 @@ namespace DragonChanges.NewStuff
         internal static string UndeadUnit = "undeadmountunit";
         internal static string UndeadFeatureName = "undeadmountfeature.name";
         internal static string UndeadFeatureDescription = "undeadmountfeature.description";
-        internal static string UndeadFeature = "undeadmountfeature";
+        internal static string UndeadFeature = "UndeadHorse-feature";
         internal static string UndeadMountPortrait = "undeadmountportrait";
 
         [DragonConfigure]
@@ -74,7 +62,6 @@ namespace DragonChanges.NewStuff
                 .SetDescription(UndeadFeatureDescription)
                 .SetReapplyOnLevelUp(true)
                 .SetIsClassFeature(true)
-                .SetIcon("assets/icons/undeadhorse.png")
                 .AddFeatureToPet(FeatureRefs.UndeadType.Reference.Get())
                 .SetRanks(1)
                 .Configure();

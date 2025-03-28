@@ -1,7 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
-using HarmonyLib;
 
 namespace DragonChanges.Content
 {

@@ -1,14 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
-using DragonChanges.Utils;
-using Kingmaker.Blueprints.Classes.Prerequisites;
-using Kingmaker.Blueprints;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DragonChanges.Patches;
+using DragonChanges.Utils;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 
 namespace DragonChanges.NewStuff

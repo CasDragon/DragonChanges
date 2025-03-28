@@ -1,8 +1,8 @@
-﻿using System;
-using System.Reflection;
-using DragonChanges.Utils;
+﻿using DragonChanges.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
+using System;
+using System.Reflection;
 using UnityModManagerNet;
 
 namespace DragonChanges
