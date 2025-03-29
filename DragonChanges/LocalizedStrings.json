@@ -892,5 +892,170 @@
   {
     "Key": "AutoPiercing-buff.description",
     "enGB": "Spells will have Piercing applied to them"
+  },
+
+  {
+    "Key": "AutoBurning.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Burning"
+  },
+
+  {
+    "Key": "AutoBurning.description",
+    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+  },
+
+  {
+    "Key": "AutoBurning-ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Burning"
+  },
+
+  {
+    "Key": "AutoBurning-ability.description",
+    "enGB": "Enable to give your spells Burning through your mythic power!"
+  },
+
+  {
+    "Key": "AutoBurning-buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Burning"
+  },
+
+  {
+    "Key": "AutoBurning-buff.description",
+    "enGB": "Spells will have Burning applied to them"
+  },
+
+  {
+    "Key": "AutoEncourage.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Encouraging"
+  },
+
+  {
+    "Key": "AutoEncourage.description",
+    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+  },
+
+  {
+    "Key": "AutoEncourage-ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Encouraging"
+  },
+
+  {
+    "Key": "AutoEncourage-ability.description",
+    "enGB": "Enable to give your spells Encouraging through your mythic power!"
+  },
+
+  {
+    "Key": "AutoEncourage-buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Encouraging"
+  },
+
+  {
+    "Key": "AutoEncourage-buff.description",
+    "enGB": "Spells will have Encouraging applied to them"
+  },
+
+  {
+    "Key": "AutoFlare.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Flaring"
+  },
+
+  {
+    "Key": "AutoFlare.description",
+    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+  },
+
+  {
+    "Key": "AutoFlare-ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Flaring"
+  },
+
+  {
+    "Key": "AutoFlare-ability.description",
+    "enGB": "Enable to give your spells Flaring through your mythic power!"
+  },
+
+  {
+    "Key": "AutoFlare-buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Flaring"
+  },
+
+  {
+    "Key": "AutoFlare-buff.description",
+    "enGB": "Spells will have Flaring applied to them"
+  },
+
+  {
+    "Key": "AutoRime.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Rime"
+  },
+
+  {
+    "Key": "AutoRime.description",
+    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+  },
+
+  {
+    "Key": "AutoRime-ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Rime"
+  },
+
+  {
+    "Key": "AutoRime-ability.description",
+    "enGB": "Enable to give your spells Rime through your mythic power!"
+  },
+
+  {
+    "Key": "AutoRime-buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Rime"
+  },
+
+  {
+    "Key": "AutoRime-buff.description",
+    "enGB": "Spells will have Rime applied to them"
+  },
+
+  {
+    "Key": "AutoSolidShadows.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Solid-Shadows"
+  },
+
+  {
+    "Key": "AutoSolidShadows.description",
+    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+  },
+
+  {
+    "Key": "AutoSolidShadows-ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Solid-Shadows"
+  },
+
+  {
+    "Key": "AutoSolidShadows-ability.description",
+    "enGB": "Enable to give your spells Solid Shadows through your mythic power!"
+  },
+
+  {
+    "Key": "AutoSolidShadows-buff.name",
+    "ProcessTemplates": false,
+    "enGB": "Auto-Solid-Shadows"
+  },
+
+  {
+    "Key": "AutoSolidShadows-buff.description",
+    "enGB": "Spells will have Solid Shadows applied to them"
   }
 ]

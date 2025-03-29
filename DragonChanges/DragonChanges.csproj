@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>DragonChanges</AssemblyName>
 		<Description>DragonChanges</Description>
-		<Version>1.7.0</Version>
+		<Version>1.7.1</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>DragonChanges</RootNamespace>
@@ -62,6 +62,9 @@
 	<ItemGroup>
 	  <Reference Include="ModMenu">
 	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Pathfinder Second Adventure\Mods\ModMenu\ModMenu.dll</HintPath>
+	  </Reference>
+	  <Reference Include="TabletopTweaks-Core">
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Pathfinder Second Adventure\Mods\TabletopTweaks-Core\TabletopTweaks-Core.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 	<Target Name="GenerateCustomPropsFile" Condition="$(WrathInstallDir) == ''">
