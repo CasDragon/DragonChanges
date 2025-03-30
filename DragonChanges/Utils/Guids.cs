@@ -108,7 +108,7 @@
         internal static string AutoSolidShadows = "6736C903-D315-46E8-877F-5BF55202F316";
         internal static string AutoSolidShadowsAbility = "FF9ED9C3-406F-4EB4-8A68-390567B971D4";
         internal static string AutoSolidShadowsBuff = "031819B9-3B17-41DF-8BED-AD5F38C7E625";
-        internal static string guid23 = "FCA844ED-14FF-4F03-B5E6-C8A867C4FEBC";
+        internal static string HeavenRay = "FCA844ED-14FF-4F03-B5E6-C8A867C4FEBC";
         internal static string guid24 = "AFC3896C-53BD-4840-8C90-039C9DAE4D97";
     }
 }

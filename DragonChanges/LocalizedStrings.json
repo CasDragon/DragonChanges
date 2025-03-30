@@ -1057,5 +1057,16 @@
   {
     "Key": "AutoSolidShadows-buff.description",
     "enGB": "Spells will have Solid Shadows applied to them"
+  },
+
+  {
+    "Key": "HeavenRay.name",
+    "ProcessTemplates": false,
+    "enGB": "Heavenfire Ray"
+  },
+
+  {
+    "Key": "HeavenRay.description",
+    "enGB": "A blast of heavenfire blazes from your hands. You can fire one ray, plus one additional ray for every 4 {g|Encyclopedia:Caster_Level}caster levels{/g} beyond 11th (to a maximum of three rays at 19th level). Each ray requires a ranged {g|Encyclopedia:TouchAttack}touch attack{/g} to hit and deals {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Damage}damage{/g} per caster level (maximum 15d6). Half the damage is {g|Encyclopedia:Energy_Damage}fire damage{/g}, but the other half results directly from holy power and is therefore not subject to being reduced by fire {g|Encyclopedia:Energy_Resistance}resistance{/g}."
   }
 ]

@@ -37,6 +37,9 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("griffonmount"), defaultValue: true, CreateString("griffonmount-toggle", "Adds a new griffon mount, and then adds it to mount selections")))
                     .AddToggle(
                         Toggle.New(GetKey("unicornmount"), defaultValue: true, CreateString("unicornmount-toggle", "Adds a new unicorn mount, and then adds it to mount selections")))
+                    .AddAnotherSettingsGroup(GetKey("newspells"), CreateString(GetKey("newspells-group"), "New Spells"))
+                    .AddToggle(
+                        Toggle.New(GetKey("heavenfire"), defaultValue: true, CreateString(GetKey("heavenfire-toggle"), "Enable the Heavenfire Ray spell")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))
                     .AddToggle(
                         Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmastertengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))
