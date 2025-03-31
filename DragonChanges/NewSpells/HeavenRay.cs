@@ -64,11 +64,10 @@ namespace DragonChanges.NewSpells
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)
                 // components
-                .AddSpellComponent(SpellSchool.Evocation)
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.MagusSpellList.Reference.Get())
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.ClericSpellList.Reference.Get())
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.WitchSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.MagusSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.ClericSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WitchSpellList.Reference.Get())
                 .AddAbilityDeliverProjectile(
                         projectiles: [ProjectileRefs.PolarRay00.Reference.Get(),
                                 ProjectileRefs.RayOfFrost00.Reference.Get(),
@@ -84,10 +83,13 @@ namespace DragonChanges.NewSpells
                         actions: ActionsBuilder.New()
                                     .DealDamage(
                                         DamageTypes.Energy(DamageEnergyType.Fire),
-                                        ContextDice.Value(DiceType.D6))
+                                        ContextDice.Value(DiceType.D6, ContextValues.Rank(AbilityRankType.Default)),
+                                        half: true)
                                     .DealDamage(
                                         DamageTypes.Energy(DamageEnergyType.Holy),
-                                        ContextDice.Value(DiceType.D6))
+                                        ContextDice.Value(DiceType.D6, ContextValues.Rank(AbilityRankType.Default)),
+                                        half: true
+                                        )
                                     .Add(new ContextActionDisableBonusForDamage()
                                     {
                                         DisableAdditionalDamage = true,
