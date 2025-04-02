@@ -109,6 +109,30 @@
         internal static string AutoSolidShadowsAbility = "FF9ED9C3-406F-4EB4-8A68-390567B971D4";
         internal static string AutoSolidShadowsBuff = "031819B9-3B17-41DF-8BED-AD5F38C7E625";
         internal static string HeavenRay = "FCA844ED-14FF-4F03-B5E6-C8A867C4FEBC";
-        internal static string guid24 = "AFC3896C-53BD-4840-8C90-039C9DAE4D97";
+        internal static string HellBall = "AFC3896C-53BD-4840-8C90-039C9DAE4D97";
+        internal static string HellBallFeature = "E7ADAB84-D366-44C6-B6C3-0E3B33CE7AF0";
+        internal static string guid2 = "07342849-01B6-4BF8-9DCA-175D8C3EA2F0";
+        internal static string guid3 = "AA81F2F2-D86D-493F-9B6D-B9F224EDABAD";
+        internal static string guid4 = "E6B29600-6056-47DA-84D1-748D537FAEDC";
+        internal static string guid5 = "EE6BEC7D-7D26-457B-88AD-67EC8FE6B8C5";
+        internal static string guid6 = "1D8EA46D-CB36-4ED5-9D34-DA6E398423F1";
+        internal static string guid7 = "74793441-285B-4F2B-9FCC-393CA9C7ADCD";
+        internal static string guid8 = "7476C22E-9F4F-41F2-834C-5761D839DD7B";
+        internal static string guid9 = "DB19FC54-5C5F-4F79-B173-C3A7B756702D";
+        internal static string guid10 = "645E17F7-B45D-4950-88C0-463490E260D6";
+        internal static string guid11 = "76978458-5642-447F-A147-77047DBDF633";
+        internal static string guid12 = "76E3258C-75A9-4124-AC13-AF98A63FC58F";
+        internal static string guid13 = "77D2BB80-4066-440A-8739-78D831E5C110";
+        internal static string guid14 = "97B9D659-A4AE-4CC8-905B-D6E997D26EEF";
+        internal static string guid15 = "271EA3B6-1479-4266-8608-A09DFB933C7A";
+        internal static string guid16 = "32890570-B4C9-44E4-B8C3-54F0C41A332C";
+        internal static string guid17 = "E31F1246-75F4-43B4-9AC1-897992AB8E05";
+        internal static string guid18 = "39DCF045-6DCB-4E1E-B129-677465F87B2F";
+        internal static string guid19 = "79AB07FF-BA9F-4729-A0BE-9780EEED8E14";
+        internal static string guid20 = "A3E0D1E6-17AA-4424-B65F-A77397A3C11C";
+        internal static string guid21 = "4F5D96D8-C7B6-42B1-B7AD-935685242164";
+        internal static string guid22 = "54600673-2CCD-4A65-BEBE-768A652B8CB7";
+        internal static string guid23 = "F83FDDD5-8E68-4473-B72D-8E75BD59FE66";
+        internal static string guid24 = "7F59444B-8623-45EA-8456-5B768E6587C1";
     }
 }

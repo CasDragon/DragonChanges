@@ -40,6 +40,8 @@ namespace DragonChanges.Utils
                     .AddAnotherSettingsGroup(GetKey("newspells"), CreateString(GetKey("newspells-group"), "New Spells"))
                     .AddToggle(
                         Toggle.New(GetKey("heavenray"), defaultValue: true, CreateString(GetKey("heavenfire-toggle"), "Enable the Heavenfire Ray spell")))
+                    .AddToggle(
+                        Toggle.New(GetKey("hellball"), defaultValue: true, CreateString(GetKey("hellball-toggle"), "Enable the HellBall spell, added from a Mythic Feat")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))
                     .AddToggle(
                         Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmastertengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))
