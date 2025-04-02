@@ -13,6 +13,7 @@ using Kingmaker.UnitLogic.Abilities.Blueprints;
 using JetBrains.Annotations;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.Utility;
+using BlueprintCore.Utils;
 
 namespace DragonChanges.New_Components
 {
@@ -27,7 +28,6 @@ namespace DragonChanges.New_Components
         [NotNull]
         public int spelllevel;
 
-        private AbilityData abilityData;
         public override void OnTurnOn()
         {
             AddToKnown();
@@ -53,7 +53,7 @@ namespace DragonChanges.New_Components
                         }
                         else
                         {
-                            abilityData = AddKnownTemporary(spellbook, spelllevel, spell);
+                            AddKnownTemporary(spellbook, spelllevel, spell);
                         }
                     }
                 }
@@ -68,6 +68,7 @@ namespace DragonChanges.New_Components
                     Spellbook spellbook = this.Owner.Descriptor.GetSpellbook(classData.Spellbook);
                     if (spellbook != null)
                     {
+                        AbilityData abilityData = spellbook.SureKnownSpells(spelllevel).FirstItem((AbilityData s) => s.Blueprint == spell);
                         spellbook.RemoveTemporarySpell(abilityData);
                     }
                 }
@@ -80,7 +81,7 @@ namespace DragonChanges.New_Components
             {
                 abilityData = new AbilityData(blueprint, sb, spellLevel)
                 {
-                    IsTemporary = true,
+                    IsTemporary = true
                 };
                 sb.SureKnownSpells(spellLevel).Add(abilityData);
                 sb.AddKnownSpellLevel(blueprint, spellLevel);
