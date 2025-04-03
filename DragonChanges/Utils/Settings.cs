@@ -42,6 +42,8 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("heavenray"), defaultValue: true, CreateString(GetKey("heavenfire-toggle"), "Enable the Heavenfire Ray spell")))
                     .AddToggle(
                         Toggle.New(GetKey("hellball"), defaultValue: true, CreateString(GetKey("hellball-toggle"), "Enable the HellBall spell, added from a Mythic Feat")))
+                    .AddToggle(
+                        Toggle.New(GetKey("hellballicon"), defaultValue: false, CreateString(GetKey("hellhellballiconball-toggle"), "Change the HellBall spelll icon to the WRONG icon, which is worse, for Tomek")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))
                     .AddToggle(
                         Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmastertengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))

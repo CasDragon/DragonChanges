@@ -118,7 +118,7 @@ namespace DragonChanges.NewSpells
                     aOEType: Kingmaker.Craft.CraftAOE.None,
                     savingThrow: Kingmaker.Craft.CraftSavingThrow.None,
                     spellType: Kingmaker.Craft.CraftSpellType.Damage)
-                .SetIcon("Assets/Modifications/DragonChanges 1/DragonTrance.png".ToLower())
+                .SetIcon("Assets/Modifications/DragonChanges 1/HeavenFireRay.png".ToLower())
                 .Configure();
         }
     }

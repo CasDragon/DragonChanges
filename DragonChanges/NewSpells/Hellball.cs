@@ -63,42 +63,42 @@ namespace DragonChanges.NewSpells
             {
                 metas = metas | (Metamagic)(CustomMetamagic.Burning | CustomMetamagic.ElementalAcid |
                     CustomMetamagic.ElementalCold | CustomMetamagic.ElementalElectricity |
-                    CustomMetamagic.ElementalFire | CustomMetamagic.Flaring);
+                    CustomMetamagic.ElementalFire | CustomMetamagic.Flaring | CustomMetamagic.Rime);
+            }
+            string spellicon = "Assets/Modifications/DragonChanges 1/HellBall.png".ToLower();
+            if (Settings.GetSetting<bool>("hellballicon"))
+            {
+                spellicon = "Assets/Modifications/DragonChanges 1/HellBallWrong.png".ToLower();
             }
             return AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Acid | SpellDescriptor.Sonic | SpellDescriptor.Electricity)
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)
                 // components
                 .AddAbilityDeliverProjectile(
-                        projectiles: [ProjectileRefs.Fireball00.Reference.Get(),
-                                ProjectileRefs.ElectroBallProjectile00.Reference.Get(),
-                                ProjectileRefs.SnowBall00.Reference.Get()],
+                        projectiles: [ProjectileRefs.Fireball00.Reference.Get()],
                         type: Kingmaker.UnitLogic.Abilities.Components.AbilityProjectileType.Simple,
-                        needAttackRoll: true,
-                        weapon: ItemWeaponRefs.RayItem.Reference.Get(),
-                        replaceAttackRollBonusStat: false,
-                        delayBetweenProjectiles: 0.4f)
+                        needAttackRoll: false)
                 .AddAbilityEffectRunAction(
                         savingThrowType: Kingmaker.EntitySystem.Stats.SavingThrowType.Reflex,
                         actions: ActionsBuilder.New()
                                     .DealDamage(
                                         DamageTypes.Energy(DamageEnergyType.Fire),
-                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(10)),
+                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(20)),
                                         isAoE: true,
                                         halfIfSaved: true)
                                     .DealDamage(
                                         DamageTypes.Energy(DamageEnergyType.Sonic),
-                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(10)),
+                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(20)),
                                         isAoE: true,
                                         halfIfSaved: true)
                                     .DealDamage(
                                         DamageTypes.Energy(DamageEnergyType.Electricity),
-                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(10)),
+                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(20)),
                                         isAoE: true,
                                         halfIfSaved: true)
                                     .DealDamage(
                                         DamageTypes.Energy(DamageEnergyType.Acid),
-                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(10)),
+                                        ContextDice.Value(DiceType.D6, ContextValues.Constant(20)),
                                         isAoE: true,
                                         halfIfSaved: true)
                                     .Add(new ContextActionDisableBonusForDamage()
@@ -127,7 +127,7 @@ namespace DragonChanges.NewSpells
                     aOEType: Kingmaker.Craft.CraftAOE.AOE,
                     savingThrow: Kingmaker.Craft.CraftSavingThrow.Reflex,
                     spellType: Kingmaker.Craft.CraftSpellType.Damage)
-                .SetIcon("Assets/Modifications/DragonChanges 1/DragonTrance.png".ToLower())
+                .SetIcon(spellicon)
                 .Configure();
         }
 
@@ -149,8 +149,6 @@ namespace DragonChanges.NewSpells
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddToGroups(Kingmaker.Blueprints.Classes.FeatureGroup.MythicFeat)
-                .AddPrerequisiteCasterTypeSpellLevel(true, false, 9)
-                .AddPrerequisiteCasterTypeSpellLevel(false, false, 9)
                 .AddComponent(new SpellToBook()
                         {
                             spell = newspell,
