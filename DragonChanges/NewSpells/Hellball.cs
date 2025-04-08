@@ -24,6 +24,7 @@ using System.Linq;
 using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
 using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 using DragonChanges.New_Components;
+using Kingmaker.UnitLogic.Abilities.Components;
 
 namespace DragonChanges.NewSpells
 {
@@ -108,7 +109,7 @@ namespace DragonChanges.NewSpells
                                         DisableFavoredEnemyDamage = true,
                                         DisableSneak = true
                                     }))
-                .AddAbilityTargetsAround(radius: new Feet(30), spreadSpeed: new Feet(25), includeDead: false)
+                .AddAbilityTargetsAround(radius: new Feet(30), spreadSpeed: new Feet(25), includeDead: false, targetType: TargetType.Any)
                 // fields
                 .SetType(AbilityType.Spell)
                 .SetRange(AbilityRange.Long)
@@ -118,7 +119,8 @@ namespace DragonChanges.NewSpells
                 .SetCanTargetSelf(true)
                 .SetShouldTurnToTarget(true)
                 .SetSpellResistance(true)
-                .SetEffectOnAlly(AbilityEffectOnUnit.None)
+                .SetIgnoreSpellResistanceForAlly(false)
+                .SetEffectOnAlly(AbilityEffectOnUnit.Harmful)
                 .SetEffectOnEnemy(AbilityEffectOnUnit.Harmful)
                 .SetAnimation(UnitAnimationActionCastSpell.CastAnimationStyle.Directional)
                 .SetActionType(CommandType.Standard)

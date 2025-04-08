@@ -12,6 +12,7 @@ namespace DragonChanges.Utils
         public static bool tttbase = false;
         public static bool cop = false;
         public static bool pp = false;
+        public static bool randomequipment = false;
 
         public static void CheckForMods()
         {
@@ -21,6 +22,7 @@ namespace DragonChanges.Utils
             tttbase = IsModEnabled("TabletopTweaks-Base");
             cop = IsModEnabled("CharacterOptionsPlus");
             pp = IsModEnabled("PrestigePlugs");
+            randomequipment = IsModEnabled("RandomEquipment");
         }
         public static bool IsModEnabled(string modName, string modtype = "umm")
         {

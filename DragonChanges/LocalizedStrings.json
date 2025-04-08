@@ -1078,7 +1078,7 @@
 
   {
     "Key": "HellBall.description",
-    "enGB": "You unleash a massive blast of energy that detonates upon all in the AoE, dealing 10d6 fire, 10d6 acid, 10d6 electrical and 10d6 sonic damage. A reflex save halfs damage."
+    "enGB": "You unleash a massive blast of energy that detonates upon all in the AoE, dealing 20d6 fire, 20d6 acid, 20d6 electrical and 20d6 sonic damage. A reflex save halves damage."
   },
 
   {
@@ -1090,5 +1090,27 @@
   {
     "Key": "HellBall-feature.description",
     "enGB": "Grants you a new powerful spell called Hellbell, which does 10d6 damage of multiple elements! Requires being able to cast spell level 9."
+  },
+
+  {
+    "Key": "StorvalsThunder.name",
+    "ProcessTemplates": false,
+    "enGB": "Storval's Thunder"
+  },
+
+  {
+    "Key": "StorvalsThunder.description",
+    "enGB": "The hematite head of this +1 earth breaker crackles with electricity, dealing an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit."
+  },
+
+  {
+    "Key": "StorvalsThunder-enchant.name",
+    "ProcessTemplates": false,
+    "enGB": "Storval's Thunder"
+  },
+
+  {
+    "Key": "StorvalsThunder-enchant.description",
+    "enGB": "Deals an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit."
   }
 ]

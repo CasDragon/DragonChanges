@@ -41,9 +41,12 @@ namespace DragonChanges.Utils
                     .AddToggle(
                         Toggle.New(GetKey("heavenray"), defaultValue: true, CreateString(GetKey("heavenfire-toggle"), "Enable the Heavenfire Ray spell")))
                     .AddToggle(
-                        Toggle.New(GetKey("hellball"), defaultValue: true, CreateString(GetKey("hellball-toggle"), "Enable the HellBall spell, added from a Mythic Feat")))
+                        Toggle.New(GetKey("hellball"), defaultValue: true, CreateString(GetKey("hellball-toggle"), "Enable the HellBall spell, added from a Mythic Ability")))
                     .AddToggle(
-                        Toggle.New(GetKey("hellballicon"), defaultValue: false, CreateString(GetKey("hellhellballiconball-toggle"), "Change the HellBall spelll icon to the WRONG icon, which is worse, for Tomek")))
+                        Toggle.New(GetKey("hellballicon"), defaultValue: false, CreateString(GetKey("hellhellballiconball-toggle"), "Change the HellBall spell icon to the WRONG icon, which is worse, for Tomek (requires game restart)")))
+                    .AddAnotherSettingsGroup(GetKey("newitems"), CreateString(GetKey("newitems-group"), "New Items/Weapons/Armor"))
+                    .AddToggle(
+                        Toggle.New(GetKey("storvalsthunder"), defaultValue: true, CreateString(GetKey("storvalsthunder-toggle"), "Enable the Storval's Thunder weapon.")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))
                     .AddToggle(
                         Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmastertengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))

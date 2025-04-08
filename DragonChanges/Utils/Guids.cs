@@ -111,8 +111,8 @@
         internal static string HeavenRay = "FCA844ED-14FF-4F03-B5E6-C8A867C4FEBC";
         internal static string HellBall = "AFC3896C-53BD-4840-8C90-039C9DAE4D97";
         internal static string HellBallFeature = "E7ADAB84-D366-44C6-B6C3-0E3B33CE7AF0";
-        internal static string guid2 = "07342849-01B6-4BF8-9DCA-175D8C3EA2F0";
-        internal static string guid3 = "AA81F2F2-D86D-493F-9B6D-B9F224EDABAD";
+        internal static string ThunderHammer = "07342849-01B6-4BF8-9DCA-175D8C3EA2F0";
+        internal static string ThunderHammerEnchant = "AA81F2F2-D86D-493F-9B6D-B9F224EDABAD";
         internal static string guid4 = "E6B29600-6056-47DA-84D1-748D537FAEDC";
         internal static string guid5 = "EE6BEC7D-7D26-457B-88AD-67EC8FE6B8C5";
         internal static string guid6 = "1D8EA46D-CB36-4ED5-9D34-DA6E398423F1";
