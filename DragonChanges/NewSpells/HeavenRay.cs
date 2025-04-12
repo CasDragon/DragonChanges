@@ -68,6 +68,7 @@ namespace DragonChanges.NewSpells
                 .AddToSpellList(level: 6, spellList: SpellListRefs.MagusSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.ClericSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WitchSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.MagicDeceiverSpellList.Reference.Get())
                 .AddAbilityDeliverProjectile(
                         projectiles: [ProjectileRefs.PolarRay00.Reference.Get(),
                                 ProjectileRefs.RayOfFrost00.Reference.Get(),

@@ -82,5 +82,16 @@ namespace DragonChanges.Content
                     .Configure();
             }
         }
+        [DragonConfigure]
+        public static void CarrierofDisease()
+        {
+            Main.log.Log("Adding Carrier of Disease to Extra Hex");
+            FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraWitchHexSelection)
+                .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                .Configure();
+            FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraShamanHexSelection)
+                .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                .Configure();
+        }
     }
 }

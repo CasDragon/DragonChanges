@@ -50,14 +50,18 @@ namespace DragonChanges.NewStuff.AutoMetamagics
         }
         public static void ConfigureEnabled()
         {
-            FeatureConfigurator.New(feature, featureguid)
+            SimpleBlueprint encourage = BlueprintTool.GetRef<BlueprintFeatureReference>("392608e8033a409ab96afdfbf315e028").GetBlueprint();
+            BlueprintFeature x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddRecommendationRequiresSpellbook()
-                .AddRecommendationHasFeature(BlueprintTool.GetRef<BlueprintFeatureReference>("392608e8033a409ab96afdfbf315e028").GetBlueprint())
-                .AddPrerequisiteFeature(BlueprintTool.GetRef<BlueprintFeatureReference>("392608e8033a409ab96afdfbf315e028").GetBlueprint())
+                .AddRecommendationHasFeature(encourage)
+                .AddPrerequisiteFeature(encourage)
                 .AddToGroups(FeatureGroup.MythicAbility)
                 .AddFacts(new() { ConfigureAbility() })
+                .Configure();
+            FeatureConfigurator.For("392608e8033a409ab96afdfbf315e028")
+                .AddToIsPrerequisiteFor(x)
                 .Configure();
         }
         // edit

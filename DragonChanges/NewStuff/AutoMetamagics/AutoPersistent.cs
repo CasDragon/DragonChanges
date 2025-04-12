@@ -39,7 +39,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
         }
         public static void ConfigureEnabled()
         {
-            FeatureConfigurator.New(feature, featureguid)
+            BlueprintFeature x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddRecommendationRequiresSpellbook()
@@ -47,6 +47,9 @@ namespace DragonChanges.NewStuff.AutoMetamagics
                 .AddPrerequisiteFeature(FeatureRefs.PersistentSpellFeat.Reference.Get())
                 .AddToGroups(FeatureGroup.MythicAbility)
                 .AddFacts(new() { ConfigureAbility() })
+                .Configure();
+            FeatureConfigurator.For(FeatureRefs.PersistentSpellFeat)
+                .AddToIsPrerequisiteFor(x)
                 .Configure();
         }
         // edit
