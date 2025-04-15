@@ -1112,5 +1112,16 @@
   {
     "Key": "StorvalsThunder-enchant.description",
     "enGB": "Deals an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit."
+  },
+
+  {
+    "Key": "GraveSingerPlus.name",
+    "ProcessTemplates": false,
+    "enGB": "Grave Singer Plus"
+  },
+
+  {
+    "Key": "GraveSingerPlus.description",
+    "enGB": "Gives you +1 bonus to both crit range and crit multiplier. (Gives these bonuses for all weapons/unarmed, despite needing Improved Crit & Improved Crit Mythic)"
   }
 ]

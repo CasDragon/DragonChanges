@@ -113,7 +113,7 @@
         internal static string HellBallFeature = "E7ADAB84-D366-44C6-B6C3-0E3B33CE7AF0";
         internal static string ThunderHammer = "07342849-01B6-4BF8-9DCA-175D8C3EA2F0";
         internal static string ThunderHammerEnchant = "AA81F2F2-D86D-493F-9B6D-B9F224EDABAD";
-        internal static string guid4 = "E6B29600-6056-47DA-84D1-748D537FAEDC";
+        internal static string MythicCritThingy = "E6B29600-6056-47DA-84D1-748D537FAEDC";
         internal static string guid5 = "EE6BEC7D-7D26-457B-88AD-67EC8FE6B8C5";
         internal static string guid6 = "1D8EA46D-CB36-4ED5-9D34-DA6E398423F1";
         internal static string guid7 = "74793441-285B-4F2B-9FCC-393CA9C7ADCD";
@@ -132,7 +132,5 @@
         internal static string guid20 = "A3E0D1E6-17AA-4424-B65F-A77397A3C11C";
         internal static string guid21 = "4F5D96D8-C7B6-42B1-B7AD-935685242164";
         internal static string guid22 = "54600673-2CCD-4A65-BEBE-768A652B8CB7";
-        internal static string guid23 = "F83FDDD5-8E68-4473-B72D-8E75BD59FE66";
-        internal static string guid24 = "7F59444B-8623-45EA-8456-5B768E6587C1";
     }
 }
