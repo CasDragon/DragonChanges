@@ -37,7 +37,7 @@ namespace DragonChanges.New_Backgrounds
                 .SetDescription(featuredescription)
                 .AddToFeatureSelection(FeatureSelectionRefs.BackgroundsWandererSelection.Reference.Get())
                 .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
-                .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillAthletics)
+                .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillMobility)
                 .Configure();
         }
     }
