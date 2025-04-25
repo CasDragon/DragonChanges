@@ -1,13 +1,8 @@
-﻿using BlueprintCore.Blueprints.Configurators.Items;
-using BlueprintCore.Blueprints.Configurators.Items.Weapons;
+﻿using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.NewAbilities;
 using DragonChanges.NewEnchantments;
 using DragonChanges.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonChanges.NewItems
 {
@@ -37,6 +32,7 @@ namespace DragonChanges.NewItems
         public static void ConfigureDummy()
         {
             ItemWeaponConfigurator.New(item, itemguid).Configure();
+            StorvalsThunderAbility.ConfigureDummy();
         }
         public static void ConfigureEnabled()
         {
@@ -49,6 +45,12 @@ namespace DragonChanges.NewItems
                 .SetSize(Kingmaker.Enums.Size.Medium)
                 .SetEnchantments([WeaponEnchantmentRefs.Enhancement1.Reference.Get(),
                                   StorvalsThunderEnchant.ConfigureEnabled()])
+                .SetAbility(StorvalsThunderAbility.ConfigureEnabled())
+                .SetSpendCharges(true)
+                .SetCharges(3)
+                .SetRestoreChargesOnRest(true)
+                //.SetCasterLevel(20)
+                .SetDC(20)
                 .SetCost(5000)
                 .Configure();
         }

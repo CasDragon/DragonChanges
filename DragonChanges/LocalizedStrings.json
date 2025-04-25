@@ -1123,5 +1123,16 @@
   {
     "Key": "GraveSingerPlus.description",
     "enGB": "Gives you +1 bonus to both crit range and crit multiplier. (Gives these bonuses for all weapons/unarmed, despite needing Improved Crit & Improved Crit Mythic)"
+  },
+
+  {
+    "Key": "StorvalsThunder-ability.name",
+    "ProcessTemplates": false,
+    "enGB": "Storval's Thunder "
+  },
+
+  {
+    "Key": "StorvalsThunder-ability.description",
+    "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a DC 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)"
   }
 ]

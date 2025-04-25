@@ -114,7 +114,7 @@
         internal static string ThunderHammer = "07342849-01B6-4BF8-9DCA-175D8C3EA2F0";
         internal static string ThunderHammerEnchant = "AA81F2F2-D86D-493F-9B6D-B9F224EDABAD";
         internal static string MythicCritThingy = "E6B29600-6056-47DA-84D1-748D537FAEDC";
-        internal static string guid5 = "EE6BEC7D-7D26-457B-88AD-67EC8FE6B8C5";
+        internal static string ThunderHammerAbility = "EE6BEC7D-7D26-457B-88AD-67EC8FE6B8C5";
         internal static string guid6 = "1D8EA46D-CB36-4ED5-9D34-DA6E398423F1";
         internal static string guid7 = "74793441-285B-4F2B-9FCC-393CA9C7ADCD";
         internal static string guid8 = "7476C22E-9F4F-41F2-834C-5761D839DD7B";

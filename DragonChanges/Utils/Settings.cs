@@ -49,6 +49,8 @@ namespace DragonChanges.Utils
                     .AddAnotherSettingsGroup(GetKey("newitems"), CreateString(GetKey("newitems-group"), "New Items/Weapons/Armor"))
                     .AddToggle(
                         Toggle.New(GetKey("storvalsthunder"), defaultValue: true, CreateString(GetKey("storvalsthunder-toggle"), "Enable the Storval's Thunder weapon.")))
+                    .AddToggle(
+                        Toggle.New(GetKey("thwarter"), defaultValue: true, CreateString("thwarter-toggle", "Adds the Thwarter tongi item")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))
                     .AddToggle(
                         Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmastertengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))
