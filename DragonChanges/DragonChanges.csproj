@@ -63,6 +63,7 @@
 		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
 		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" IncludeAssets="build; contentfiles" Version="0.4.2" PrivateAssets="all" />
 		<PackageReference Include="ILRepack.MSBuild.Task" Version="2.*" />
+		<PackageReference Include="MicroUtils.HarmonyAnalyzers" Version="*" />
 		<PackageReference Include="WW-Blueprint-Core" Version="*" />
 	</ItemGroup>	  
 
