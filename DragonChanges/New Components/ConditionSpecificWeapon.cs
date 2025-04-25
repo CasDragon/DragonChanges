@@ -3,6 +3,7 @@ using Kingmaker.UnitLogic.Mechanics.Conditions;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Items.Slots;
 using Kingmaker.Blueprints.Items.Weapons;
+using BlueprintCore.Conditions.Builder.ContextEx;
 
 namespace DragonChanges.New_Components
 {
@@ -17,27 +18,8 @@ namespace DragonChanges.New_Components
         public bool CheckWeapons()
         {
             UnitEntityData unitEntityData = (this.CheckOnCaster ? base.Context.MaybeCaster : base.Target.Unit);
-            HandSlot slot1 = unitEntityData.Body.PrimaryHand;
-            HandSlot slot2 = unitEntityData.Body.SecondaryHand;
-            bool flag1;
-            bool flag2;
-            if (slot1.MaybeItem == null)
-            {
-                flag1 = false;
-            }
-            else
-            {
-                flag1 = slot1.Weapon.Blueprint.Equals(weapon);
-            }
-            if (slot2.MaybeItem == null)
-            {
-                 flag2 = false;
-            }
-            else
-            {
-                flag2 = slot2.Weapon.Blueprint.Equals(weapon);
-            }
-            return flag1 || flag2;
+            var body = unitEntityData.Body;
+            return body.PrimaryHand.MaybeWeapon?.Blueprint == weapon || body.SecondaryHand.MaybeWeapon?.Blueprint == weapon;
         }
     }
 }

@@ -120,7 +120,7 @@
         internal static string StorvalSetBonus = "7476C22E-9F4F-41F2-834C-5761D839DD7B";
         internal static string StorvalSetBonusFeature = "DB19FC54-5C5F-4F79-B173-C3A7B756702D";
         internal static string ThunderShieldBuff = "645E17F7-B45D-4950-88C0-463490E260D6";
-        internal static string guid11 = "76978458-5642-447F-A147-77047DBDF633";
+        internal static string StorvalSetBonusChecker = "76978458-5642-447F-A147-77047DBDF633";
         internal static string guid12 = "76E3258C-75A9-4124-AC13-AF98A63FC58F";
         internal static string guid13 = "77D2BB80-4066-440A-8739-78D831E5C110";
         internal static string guid14 = "97B9D659-A4AE-4CC8-905B-D6E997D26EEF";
