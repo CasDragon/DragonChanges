@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Conditions.Builder;
 using BlueprintCore.Utils;
 using DragonChanges.New_Components;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Enums;
 using Kingmaker.UnitLogic.Mechanics.Conditions;
@@ -16,7 +17,7 @@ namespace DragonChanges.BPCoreExtensions
     {
         public static ConditionsBuilder HasSpecificWeapon(
             this ConditionsBuilder builder,
-            BlueprintItemWeapon weapon,
+            SimpleBlueprint weapon,
             bool? bothHandsAreEmpty = null,
             WeaponCategory? category = null,
             bool? checkOnCaster = null,

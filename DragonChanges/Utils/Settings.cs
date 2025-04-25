@@ -48,9 +48,7 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("hellballicon"), defaultValue: false, CreateString(GetKey("hellhellballiconball-toggle"), "Change the HellBall spell icon to the WRONG icon, which is worse, for Tomek (requires game restart)")))
                     .AddAnotherSettingsGroup(GetKey("newitems"), CreateString(GetKey("newitems-group"), "New Items/Weapons/Armor"))
                     .AddToggle(
-                        Toggle.New(GetKey("storvalsthunder"), defaultValue: true, CreateString(GetKey("storvalsthunder-toggle"), "Enable the Storval's Thunder weapon.")))
-                    .AddToggle(
-                        Toggle.New(GetKey("storvalsfang"), defaultValue: true, CreateString(GetKey("storvalsfang-toggle"), "Enable the Storval's Fang shield.")))
+                        Toggle.New(GetKey("storvalsthunder"), defaultValue: true, CreateString(GetKey("storvalsthunder-toggle"), "Enable the Storval's Thunder weapon and the Storval's Fang shield.")))
                     .AddToggle(
                         Toggle.New(GetKey("thwarter"), defaultValue: true, CreateString("thwarter-toggle", "Adds the Thwarter tongi item")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))

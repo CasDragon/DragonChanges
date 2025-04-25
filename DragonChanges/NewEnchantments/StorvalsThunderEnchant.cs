@@ -11,6 +11,7 @@ using DragonChanges.BPCoreExtensions;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Items.Ecnchantments;
+using Kingmaker.Blueprints.Items.Shields;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
@@ -31,7 +32,7 @@ namespace DragonChanges.NewEnchantments
         internal static string enchantment = "StorvalsThunder-enchant";
         internal static string enchantmentguid = Guids.ThunderHammerEnchant;
         internal static string feature = "StorvalSetBonusFeature";
-        internal static string featureguid = Guids.StorvalSetBonus;
+        internal static string featureguid = Guids.StorvalSetBonusFeature;
         internal static string buff = "StorvalSetBonusChecker";
         internal static string buffguid = Guids.StorvalSetBonusChecker;
         // don't edit
@@ -42,7 +43,7 @@ namespace DragonChanges.NewEnchantments
             FeatureConfigurator.New(feature, featureguid).Configure();
             return WeaponEnchantmentConfigurator.New(enchantment, enchantmentguid).Configure();
         }
-        public static BlueprintWeaponEnchantment ConfigureEnabled()
+        public static BlueprintWeaponEnchantment ConfigureEnabled(BlueprintItemShield shield)
         {
             BlueprintBuff actualbuff = BuffConfigurator.New(buff, buffguid)
                 .AddIncreaseSpellDC(spell: Guids.ThunderHammerAbility, value: ContextValues.Constant(5), descriptor: ModifierDescriptor.UntypedStackable)
@@ -52,7 +53,7 @@ namespace DragonChanges.NewEnchantments
             BlueprintBuff feat = BuffConfigurator.New(feature, featureguid)
                 .AddBuffActions(activated: ActionsBuilder.New()
                     .Conditional(conditions: ConditionsBuilder.New()
-                        .HasSpecificWeapon(BlueprintTool.Get<BlueprintItemWeapon>(Guids.ThunderShield)),
+                        .HasSpecificWeapon(shield),
                         ifTrue: ActionsBuilder.New().ApplyBuff(actualbuff, durationValue: ContextDuration.Fixed(1, DurationRate.Minutes))))
                 .SetFlags(BlueprintBuff.Flags.HiddenInUi)
                 .Configure();

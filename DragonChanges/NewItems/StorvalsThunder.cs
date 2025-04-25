@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.References;
 using DragonChanges.NewAbilities;
 using DragonChanges.NewEnchantments;
 using DragonChanges.Utils;
+using Kingmaker.Blueprints.Items.Shields;
 
 namespace DragonChanges.NewItems
 {
@@ -20,11 +21,13 @@ namespace DragonChanges.NewItems
             if (Settings.GetSetting<bool>(item.ToLower()))
             {
                 Main.log.Log($"{item} item enabled, configuring");
-                ConfigureEnabled();
+                var x = StorvalsFang.ConfigureEnabled();
+                ConfigureEnabled(x);
             }
             else
             {
                 Main.log.Log($"{item} disabled, configuring dummy");
+                StorvalsFang.ConfigureDummy();
                 ConfigureDummy();
             }
         }
@@ -34,7 +37,7 @@ namespace DragonChanges.NewItems
             StorvalsThunderEnchant.ConfigureDummy();
             StorvalsThunderAbility.ConfigureDummy();
         }
-        public static void ConfigureEnabled()
+        public static void ConfigureEnabled(BlueprintItemShield shield)
         {
             ItemWeaponConfigurator.New(item, itemguid)
                 .SetDisplayNameText(itemname)
@@ -44,7 +47,7 @@ namespace DragonChanges.NewItems
                 .SetVisualParameters(ItemWeaponRefs.EarthBreakerPlus1.Reference.Get().VisualParameters)
                 .SetSize(Kingmaker.Enums.Size.Medium)
                 .SetEnchantments([WeaponEnchantmentRefs.Enhancement1.Reference.Get(),
-                                  StorvalsThunderEnchant.ConfigureEnabled()])
+                                  StorvalsThunderEnchant.ConfigureEnabled(shield)])
                 .SetAbility(StorvalsThunderAbility.ConfigureEnabled())
                 .SetSpendCharges(true)
                 .SetCharges(3)
