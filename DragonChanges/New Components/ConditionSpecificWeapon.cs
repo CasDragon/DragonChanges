@@ -1,10 +1,5 @@
 ﻿using Kingmaker.EntitySystem.Entities;
-using Kingmaker.Enums;
-using Kingmaker.Items;
 using Kingmaker.UnitLogic.Mechanics.Conditions;
-using Kingmaker.Utility;
-using Kingmaker;
-using System;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Items.Slots;
 using Kingmaker.Blueprints.Items.Weapons;
@@ -22,25 +17,25 @@ namespace DragonChanges.New_Components
         public bool CheckWeapons()
         {
             UnitEntityData unitEntityData = (this.CheckOnCaster ? base.Context.MaybeCaster : base.Target.Unit);
-            HandSlot slot1 = unitEntityData.Body.SecondaryHand;
-            bool flag1 = false;
-            if (!slot1.HasWeapon || slot1.MaybeItem == null)
+            HandSlot slot1 = unitEntityData.Body.PrimaryHand;
+            HandSlot slot2 = unitEntityData.Body.SecondaryHand;
+            bool flag1;
+            bool flag2;
+            if (slot1.MaybeItem == null)
             {
                 flag1 = false;
             }
             else
             {
-                flag1 = slot1.Weapon.Blueprint.AssetGuid.Equals(weapon.AssetGuid);
+                flag1 = slot1.Weapon.Blueprint.Equals(weapon);
             }
-            HandSlot slot2 = unitEntityData.Body.SecondaryHand;
-            bool flag2 = false;
-            if (!slot2.HasWeapon || slot2.MaybeItem == null)
+            if (slot2.MaybeItem == null)
             {
                  flag2 = false;
             }
             else
             {
-                flag2 = slot2.Weapon.Blueprint.AssetGuid.Equals(weapon.AssetGuid);
+                flag2 = slot2.Weapon.Blueprint.Equals(weapon);
             }
             return flag1 || flag2;
         }
