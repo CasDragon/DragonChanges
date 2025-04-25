@@ -26,12 +26,12 @@ namespace DragonChanges.NewItems
             {
                 Main.log.Log($"{item} disabled, configuring dummy");
                 ConfigureDummy();
-                StorvalsThunderEnchant.ConfigureDummy();
             }
         }
         public static void ConfigureDummy()
         {
             ItemWeaponConfigurator.New(item, itemguid).Configure();
+            StorvalsThunderEnchant.ConfigureDummy();
             StorvalsThunderAbility.ConfigureDummy();
         }
         public static void ConfigureEnabled()
@@ -49,7 +49,6 @@ namespace DragonChanges.NewItems
                 .SetSpendCharges(true)
                 .SetCharges(3)
                 .SetRestoreChargesOnRest(true)
-                //.SetCasterLevel(20)
                 .SetDC(20)
                 .SetCost(5000)
                 .Configure();

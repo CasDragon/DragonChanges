@@ -1134,5 +1134,38 @@
   {
     "Key": "StorvalsThunder-ability.description",
     "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a DC 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)"
+  },
+
+  {
+    "Key": "StorvalsFang.name",
+    "ProcessTemplates": false,
+    "enGB": "Storval's Fang"
+  },
+
+  {
+    "Key": "StorvalsFang.description",
+    "enGB": "This metal +1 klar is shaped like the head of a storm roc, whose sharp feathers serve as the klar’s spikes, and it hums and crackles like a distant stormy sky. When used to make a shield bash attack, a Storval’s fang deals an additional 1d6 points of sonic damage. In addition, the wielder gains electricity resistance 5.\nIf the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
+  },
+
+  {
+    "Key": "SpikedLightShieldPlus1Sonic.name",
+    "ProcessTemplates": false,
+    "enGB": "Spiked Light Shield Plus 1 Sonic"
+  },
+
+  {
+    "Key": "SpikedLightShieldPlus1Sonic.description",
+    "enGB": "Spiked Light Shield Plus 1 Sonic"
+  },
+
+  {
+    "Key": "StorvalSetBonus.name",
+    "ProcessTemplates": false,
+    "enGB": "StorvalSetBonus"
+  },
+
+  {
+    "Key": "StorvalSetBonus.description",
+    "enGB": "If the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
   }
 ]

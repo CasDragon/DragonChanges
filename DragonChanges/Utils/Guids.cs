@@ -115,11 +115,11 @@
         internal static string ThunderHammerEnchant = "AA81F2F2-D86D-493F-9B6D-B9F224EDABAD";
         internal static string MythicCritThingy = "E6B29600-6056-47DA-84D1-748D537FAEDC";
         internal static string ThunderHammerAbility = "EE6BEC7D-7D26-457B-88AD-67EC8FE6B8C5";
-        internal static string guid6 = "1D8EA46D-CB36-4ED5-9D34-DA6E398423F1";
-        internal static string guid7 = "74793441-285B-4F2B-9FCC-393CA9C7ADCD";
-        internal static string guid8 = "7476C22E-9F4F-41F2-834C-5761D839DD7B";
-        internal static string guid9 = "DB19FC54-5C5F-4F79-B173-C3A7B756702D";
-        internal static string guid10 = "645E17F7-B45D-4950-88C0-463490E260D6";
+        internal static string ThunderShield = "1D8EA46D-CB36-4ED5-9D34-DA6E398423F1";
+        internal static string SpikedLightShieldSonic = "74793441-285B-4F2B-9FCC-393CA9C7ADCD";
+        internal static string StorvalSetBonus = "7476C22E-9F4F-41F2-834C-5761D839DD7B";
+        internal static string StorvalSetBonusFeature = "DB19FC54-5C5F-4F79-B173-C3A7B756702D";
+        internal static string ThunderShieldBuff = "645E17F7-B45D-4950-88C0-463490E260D6";
         internal static string guid11 = "76978458-5642-447F-A147-77047DBDF633";
         internal static string guid12 = "76E3258C-75A9-4124-AC13-AF98A63FC58F";
         internal static string guid13 = "77D2BB80-4066-440A-8739-78D831E5C110";
@@ -131,6 +131,5 @@
         internal static string guid19 = "79AB07FF-BA9F-4729-A0BE-9780EEED8E14";
         internal static string guid20 = "A3E0D1E6-17AA-4424-B65F-A77397A3C11C";
         internal static string guid21 = "4F5D96D8-C7B6-42B1-B7AD-935685242164";
-        internal static string guid22 = "54600673-2CCD-4A65-BEBE-768A652B8CB7";
     }
 }
