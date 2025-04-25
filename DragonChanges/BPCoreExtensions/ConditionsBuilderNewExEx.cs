@@ -18,6 +18,7 @@ namespace DragonChanges.BPCoreExtensions
         public static ConditionsBuilder HasSpecificWeapon(
             this ConditionsBuilder builder,
             SimpleBlueprint weapon,
+            bool? isShield = null,
             bool? bothHandsAreEmpty = null,
             WeaponCategory? category = null,
             bool? checkOnCaster = null,
@@ -31,6 +32,7 @@ namespace DragonChanges.BPCoreExtensions
         {
             var element = ElementTool.Create<ConditionSpecificWeapon>();
             element.weapon = weapon;
+            element.isShield  = isShield ?? element.isShield;
             element.BothHandsAreEmpty = bothHandsAreEmpty ?? element.BothHandsAreEmpty;
             element.Category = category ?? element.Category;
             element.CheckOnCaster = checkOnCaster ?? element.CheckOnCaster;

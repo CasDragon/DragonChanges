@@ -12,6 +12,7 @@ namespace DragonChanges.New_Components
     internal class ConditionSpecificWeapon : ContextConditionIsWeaponEquipped
     {
         public SimpleBlueprint weapon;
+        public bool isShield = false;
         public override bool CheckCondition()
         {
             return base.CheckCondition() && CheckWeapons();
@@ -20,7 +21,10 @@ namespace DragonChanges.New_Components
         {
             UnitEntityData unitEntityData = (this.CheckOnCaster ? base.Context.MaybeCaster : base.Target.Unit);
             var body = unitEntityData.Body;
-            return body.PrimaryHand.MaybeWeapon?.Blueprint == weapon || body.SecondaryHand.MaybeWeapon?.Blueprint == weapon;
+            if ( isShield)
+                return body.PrimaryHand.MaybeShield?.Blueprint == weapon || body.SecondaryHand.MaybeShield?.Blueprint == weapon;
+            else
+                return body.PrimaryHand.MaybeWeapon?.Blueprint == weapon || body.SecondaryHand.MaybeWeapon?.Blueprint == weapon;
         }
     }
 }
