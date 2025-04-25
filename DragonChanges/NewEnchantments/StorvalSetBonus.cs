@@ -26,7 +26,7 @@ namespace DragonChanges.NewEnchantments
             return WeaponEnchantmentConfigurator.New(enchantment, enchantmentguid)
                 .SetEnchantName(enchantmentname)
                 .SetDescription(enchantmentdescription)
-                .AddWeaponEnergyDamageDice(DamageEnergyType.Electricity, new DiceFormula() { m_Rolls = 2, m_Dice = DiceType.D6 })
+                .AddWeaponEnergyDamageDice(DamageEnergyType.Electricity, new DiceFormula(rollsCount: 2, diceType: DiceType.D6))
                 .Configure();
         }
     }
