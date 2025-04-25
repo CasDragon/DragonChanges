@@ -45,16 +45,20 @@ namespace DragonChanges.NewEnchantments
         }
         public static BlueprintWeaponEnchantment ConfigureEnabled(BlueprintItemShield shield)
         {
-            BlueprintBuff actualbuff = BuffConfigurator.New(buff, buffguid)
+            BlueprintBuff actualbuff = BuffConfigurator.New(feature, featureguid)
                 .AddIncreaseSpellDC(spell: Guids.ThunderHammerAbility, value: ContextValues.Constant(5), descriptor: ModifierDescriptor.UntypedStackable)
                 .AddBuffEnchantSpecificWeaponWorn(weaponBlueprint: Guids.ThunderHammer, enchantmentBlueprint: StorvalSetBonus.ConfigureEnabled())
                 .SetFlags(BlueprintBuff.Flags.HiddenInUi)
                 .Configure();
-            BlueprintBuff feat = BuffConfigurator.New(feature, featureguid)
+            BlueprintBuff feat = BuffConfigurator.New(buff, buffguid)
                 .AddBuffActions(activated: ActionsBuilder.New()
                     .Conditional(conditions: ConditionsBuilder.New()
                         .HasSpecificWeapon(shield),
-                        ifTrue: ActionsBuilder.New().ApplyBuff(actualbuff, durationValue: ContextDuration.Fixed(1, DurationRate.Minutes))))
+                        ifTrue: ActionsBuilder.New().ApplyBuff(actualbuff, durationValue: ContextDuration.Fixed(1, DurationRate.Minutes))),
+                    newRound: ActionsBuilder.New()
+                    .Conditional(conditions: ConditionsBuilder.New()
+                        .HasSpecificWeapon(shield),
+                        ifTrue: ActionsBuilder.New().ApplyBuff(actualbuff, durationValue: ContextDuration.Fixed(2, DurationRate.Rounds))))
                 .SetFlags(BlueprintBuff.Flags.HiddenInUi)
                 .Configure();
             return WeaponEnchantmentConfigurator.New(enchantment, enchantmentguid)
