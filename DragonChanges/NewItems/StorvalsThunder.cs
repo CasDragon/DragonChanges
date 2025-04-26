@@ -2,15 +2,17 @@
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewAbilities;
 using DragonChanges.NewEnchantments;
+using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints.Items.Shields;
+using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.RuleSystem.Rules.Abilities;
+using WrathScalingItemDCs.ScalingDC;
 
 namespace DragonChanges.NewItems
 {
-    [HarmonyPatch(typeof(IncreaseSpellDC))]
     internal class StorvalsThunder
     {
         // edit
@@ -26,7 +28,8 @@ namespace DragonChanges.NewItems
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 var x = StorvalsFang.ConfigureEnabled();
-                ConfigureEnabled(x);
+                var y = ConfigureEnabled(x);
+                AneviaVendor.AddItem(y);
             }
             else
             {
@@ -41,9 +44,9 @@ namespace DragonChanges.NewItems
             StorvalsThunderEnchant.ConfigureDummy();
             StorvalsThunderAbility.ConfigureDummy();
         }
-        public static void ConfigureEnabled(BlueprintItemShield shield)
+        public static BlueprintItemWeapon ConfigureEnabled(BlueprintItemShield shield)
         {
-            ItemWeaponConfigurator.New(item, itemguid)
+            return ItemWeaponConfigurator.New(item, itemguid)
                 .SetDisplayNameText(itemname)
                 .SetDescriptionText(itemdescription)
                 .SetCR(5)
@@ -56,17 +59,8 @@ namespace DragonChanges.NewItems
                 .SetSpendCharges(true)
                 .SetCharges(3)
                 .SetRestoreChargesOnRest(true)
-                .SetDC(20)
                 .SetCost(5000)
                 .Configure();
-        }
-        [HarmonyPatch(nameof(IncreaseSpellDC.OnEventAboutToTrigger)), HarmonyPrefix]
-        public static void Ihatelife(IncreaseSpellDC __instance, RuleCalculateAbilityParams evt)
-        {
-            Main.log.Log("debugging stupid dc thing - START -");
-            Main.log.Log($"Spell/ability being cast is {evt.Spell.AssetGuid}");
-            Main.log.Log($"Spell/ability being checked for is {__instance.Spell.AssetGuid}");
-            Main.log.Log("debugging stupid dc thing - END -");
         }
     }
 }

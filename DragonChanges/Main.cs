@@ -1,4 +1,6 @@
-﻿using DragonChanges.Utils;
+﻿using BlueprintCore.Blueprints.Configurators.Items;
+using DragonChanges.NewStuff;
+using DragonChanges.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using System;
@@ -34,7 +36,6 @@ namespace DragonChanges
             private static bool Initialized = false;
 
             [HarmonyPriority(Priority.Last)]
-            [HarmonyAfter()]
             [HarmonyPatch(nameof(BlueprintsCache.Init)), HarmonyPostfix]
             public static void Init_Postfix()
             {
@@ -51,15 +52,9 @@ namespace DragonChanges
                     ModCompat.CheckForMods();
                     Settings.InitializeSettings();
                     log.Log("Patching blueprints.");
+                    AneviaVendor.ConfigureStart();
                     Thingy.DoPatches();
-                    /*AllBackgrounds.Configure();
-                    Feature.Configure();
-                    AllClasses.Configure();
-                    AllArchetypes.Configure();
-                    // no group configures for these yet
-                    AlterMod.PatchHorse();
-                    Drakes.PatchDrakes();
-                    Various.PatchHippogriff();*/
+                    AneviaVendor.ConfigureEnd();
                 }
                 catch (Exception e)
                 {

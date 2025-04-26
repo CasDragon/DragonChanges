@@ -1133,7 +1133,7 @@
 
   {
     "Key": "StorvalsThunder-ability.description",
-    "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a DC 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)"
+    "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)"
   },
 
   {
@@ -1167,5 +1167,11 @@
   {
     "Key": "StorvalSetBonus.description",
     "enGB": "If the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
+  },
+
+  {
+    "Key": "AneviaVendorAnswer.text",
+    "ProcessTemplates": false,
+    "enGB": "(DragonChanges) Show me your wares!"
   }
 ]

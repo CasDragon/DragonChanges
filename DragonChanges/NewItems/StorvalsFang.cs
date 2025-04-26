@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.Configurators.Items.Shields;
 using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Shields;
 using System;
@@ -28,7 +29,7 @@ namespace DragonChanges.NewItems
         }
         public static BlueprintItemShield ConfigureEnabled()
         {
-            return ItemShieldConfigurator.New(item, itemguid)
+            BlueprintItemShield shield = ItemShieldConfigurator.New(item, itemguid)
                 .SetDisplayNameText(itemname)
                 .SetDescriptionText(itemdescription)
                 .SetCost(5000)
@@ -39,6 +40,8 @@ namespace DragonChanges.NewItems
                 .SetWeaponComponent(SpikedLightShieldPlus1Sonic.ConfigureEnabled())
                 .SetArmorComponent(ItemArmorRefs.LightShieldArmorItemPlus1.Reference.Get())
                 .Configure();
+            AneviaVendor.AddItem(shield);
+            return shield;
         }
     }
 }

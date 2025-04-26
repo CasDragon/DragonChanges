@@ -46,7 +46,7 @@ namespace DragonChanges.NewAbilities
                             )
                         )
                     )
-                .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
+                .AddContextSetAbilityParams(dC: ContextValues.Constant(20))
                 .AddComponent(AbilityRefs.VrockStunningScreechAbility.Reference.Get().GetComponent<AbilitySpawnFx>())
                 .SetType(AbilityType.Supernatural)
                 .SetRange(AbilityRange.Close)

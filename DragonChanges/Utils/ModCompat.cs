@@ -13,6 +13,7 @@ namespace DragonChanges.Utils
         public static bool cop = false;
         public static bool pp = false;
         public static bool randomequipment = false;
+        public static bool scalingequip = false;
 
         public static void CheckForMods()
         {
@@ -23,6 +24,7 @@ namespace DragonChanges.Utils
             cop = IsModEnabled("CharacterOptionsPlus");
             pp = IsModEnabled("PrestigePlugs");
             randomequipment = IsModEnabled("RandomEquipment");
+            scalingequip = IsModEnabled("WrathScalingItemDCs");
         }
         public static bool IsModEnabled(string modName, string modtype = "umm")
         {
