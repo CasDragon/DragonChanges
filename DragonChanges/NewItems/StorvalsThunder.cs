@@ -29,6 +29,8 @@ namespace DragonChanges.NewItems
                 Main.log.Log($"{item} item enabled, configuring");
                 var x = StorvalsFang.ConfigureEnabled();
                 var y = ConfigureEnabled(x);
+                if (ModCompat.scalingequip)
+                    ScalingDCAPI.AddItem(y);
                 AneviaVendor.AddItem(y);
             }
             else
