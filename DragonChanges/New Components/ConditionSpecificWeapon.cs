@@ -5,13 +5,18 @@ using Kingmaker.Items.Slots;
 using Kingmaker.Blueprints.Items.Weapons;
 using BlueprintCore.Conditions.Builder.ContextEx;
 using Kingmaker.Blueprints;
+using System;
+using UnityEngine;
 
 namespace DragonChanges.New_Components
 {
     [TypeId("54600673-2CCD-4A65-BEBE-768A652B8CB7")]
+    [Serializable]
     internal class ConditionSpecificWeapon : ContextConditionIsWeaponEquipped
     {
-        public SimpleBlueprint weapon;
+        [SerializeField]
+        public SimpleBlueprint weapon; 
+        [SerializeField]
         public bool isShield = false;
         public override bool CheckCondition()
         {

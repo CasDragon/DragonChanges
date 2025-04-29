@@ -14,18 +14,20 @@ using JetBrains.Annotations;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.Utility;
 using BlueprintCore.Utils;
+using UnityEngine;
 
 namespace DragonChanges.New_Components
 {
     [AllowedOn(typeof(BlueprintUnitFact), false)]
     [AllowMultipleComponents]
     [TypeId("4A25A5B0-E180-42BF-81E0-45334182EDCB")]
+    [Serializable]
     internal class SpellToBook : UnitFactComponentDelegate, IUnitSubscriber, ISubscriber
     {
-        [NotNull]
-        public BlueprintAbility spell;
+        [SerializeField]
+        public BlueprintAbilityReference spell;
 
-        [NotNull]
+        [SerializeField]
         public int spelllevel;
 
         public override void OnTurnOn()

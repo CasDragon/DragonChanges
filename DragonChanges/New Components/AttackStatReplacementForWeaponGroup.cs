@@ -6,6 +6,8 @@ using Kingmaker.EntitySystem.Stats;
 using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic;
+using System;
+using UnityEngine;
 
 namespace DragonChanges.NewStuff;
 
@@ -16,6 +18,7 @@ namespace DragonChanges.NewStuff;
 [AllowedOn(typeof(BlueprintUnitFact), false)]
 [AllowMultipleComponents]
 [TypeId("C218F7AF-7CBC-448F-BB23-FAD602A3465D")]
+[Serializable]
 public class AttackStatReplacementForWeaponGroup :
     UnitFactComponentDelegate,
     IInitiatorRulebookHandler<RuleCalculateAttackBonusWithoutTarget>,
@@ -23,8 +26,9 @@ public class AttackStatReplacementForWeaponGroup :
     ISubscriber,
     IInitiatorRulebookSubscriber
 {
+    [SerializeField]
     public StatType ReplacementStat;
-
+    [SerializeField]
     public WeaponFighterGroupFlags FighterGroupFlag;
 
 

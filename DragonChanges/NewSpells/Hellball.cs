@@ -25,6 +25,7 @@ using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
 using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 using DragonChanges.New_Components;
 using Kingmaker.UnitLogic.Abilities.Components;
+using Kingmaker.Blueprints;
 
 namespace DragonChanges.NewSpells
 {
@@ -153,7 +154,7 @@ namespace DragonChanges.NewSpells
                 .AddToGroups(Kingmaker.Blueprints.Classes.FeatureGroup.MythicFeat)
                 .AddComponent(new SpellToBook()
                         {
-                            spell = newspell,
+                            spell = newspell.ToReference<BlueprintAbilityReference>(),
                             spelllevel = 9,
                         })
                 .Configure();
