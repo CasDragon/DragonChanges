@@ -124,12 +124,11 @@
         internal static string AneviaVendorLootTable = "76E3258C-75A9-4124-AC13-AF98A63FC58F";
         internal static string AneviaVendorAnswer = "77D2BB80-4066-440A-8739-78D831E5C110";
         internal static string LightShieldArmorItemPlus1LightningResist = "97B9D659-A4AE-4CC8-905B-D6E997D26EEF";
-        internal static string guid15 = "271EA3B6-1479-4266-8608-A09DFB933C7A";
+        internal static string VendorUpgrader = "271EA3B6-1479-4266-8608-A09DFB933C7A";
         internal static string guid16 = "32890570-B4C9-44E4-B8C3-54F0C41A332C";
         internal static string guid17 = "E31F1246-75F4-43B4-9AC1-897992AB8E05";
         internal static string guid18 = "39DCF045-6DCB-4E1E-B129-677465F87B2F";
         internal static string guid19 = "79AB07FF-BA9F-4729-A0BE-9780EEED8E14";
         internal static string guid20 = "A3E0D1E6-17AA-4424-B65F-A77397A3C11C";
-        internal static string guid21 = "4F5D96D8-C7B6-42B1-B7AD-935685242164";
     }
 }

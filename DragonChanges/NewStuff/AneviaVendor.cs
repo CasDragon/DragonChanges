@@ -10,8 +10,7 @@ using Kingmaker.Blueprints.Items;
 using Kingmaker.Blueprints.Loot;
 using Kingmaker.Designers.EventConditionActionSystem.Evaluators;
 using Kingmaker.DialogSystem.Blueprints;
-using Kingmaker.ElementsSystem;
-using System.Linq;
+using Kingmaker.EntitySystem.Persistence.Versioning;
 
 namespace DragonChanges.NewStuff
 {
@@ -40,10 +39,12 @@ namespace DragonChanges.NewStuff
         {
             Main.log.Log("Attempting to finsh Anevia vendor");
             BlueprintSharedVendorTable loottable = aneviatable.Configure();
+            BlueprintUnitUpgrader vendorupgrader = VendorUnitUpgrader.Configure(loottable);
             foreach (var unit in aneviaunits)
             {
                 UnitConfigurator.For(unit.Reference.Get())
                     .AddSharedVendor(loottable)
+                    .AddUnitUpgraderComponent(upgraders: [vendorupgrader])
                     .Configure();
             }
             BlueprintAnswer newanswer = AnswerConfigurator.New(answer, answerguid)
