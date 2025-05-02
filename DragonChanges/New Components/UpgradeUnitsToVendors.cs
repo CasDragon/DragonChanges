@@ -33,9 +33,9 @@ namespace DragonChanges.New_Components
             {
                 return;
             }
-            target.Ensure<UnitPartVendor>().SetSharedInventory(vendortable);
-            //UnitPartVendor unitPartVendor = target.Get<UnitPartVendor>() ?? new UnitPartVendor();
-            //unitPartVendor.SetSharedInventory(vendortable);
+            //target.Ensure<UnitPartVendor>().SetSharedInventory(vendortable);
+            UnitPartVendor unitPartVendor = target.Get<UnitPartVendor>() ?? new UnitPartVendor();
+            unitPartVendor.SetSharedInventory(vendortable);
         }
     }
 }
