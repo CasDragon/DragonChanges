@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using Kingmaker.Blueprints.Classes;
 namespace DragonChanges.Content
 {
     internal class Various
@@ -11,75 +12,82 @@ namespace DragonChanges.Content
             if (Settings.GetSetting<bool>("hippogriff"))
             {
                 Main.log.Log("Patching various animal selections to include Hippogriff");
+                BlueprintFeature hippo = FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDivineHound)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDomain)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDomainSeparatist)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDruid)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionHunter)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionMadDog)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionPrimalDruid)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionRanger)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionSacredHuntsmaster)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionSylvanSorcerer)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionUrbanHunter)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionWildlandShaman)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.CavalierMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.BeastRiderMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.ArcaneRiderMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.BloodriderMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.GhostRiderGhostMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.NomadMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.OrderOfThePawMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.PaladinDivineMountSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.SoheiMonasticMountHorseSelection)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
-                    .AddToAllFeatures(FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get())
+                    .AddToAllFeatures(hippo)
                     .Configure();
+                if (ModCompat.tttbase)
+                {
+                    FeatureSelectionConfigurator.For("d9b99d9c48d2425894b565733e96c7e3")
+                        .AddToAllFeatures(hippo)
+                        .Configure();
+                }
             }
         }
         [DragonConfigure]

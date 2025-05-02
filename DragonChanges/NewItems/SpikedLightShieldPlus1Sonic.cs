@@ -1,14 +1,7 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.References;
-using DragonChanges.NewAbilities;
-using DragonChanges.NewEnchantments;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Weapons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonChanges.NewItems
 {
@@ -27,10 +20,9 @@ namespace DragonChanges.NewItems
         public static BlueprintItemWeapon ConfigureEnabled()
         {
             return ItemWeaponConfigurator.New(item, itemguid)
+                .CopyFrom(ItemWeaponRefs.MasterworkSpikedLightShield)
                 .SetDisplayNameText(itemname)
                 .SetDescriptionText(itemdescription)
-                .SetType(WeaponTypeRefs.SpikedLightShield.Reference.Get())
-                .SetSize(Kingmaker.Enums.Size.Medium)
                 .SetEnchantments([WeaponEnchantmentRefs.Enhancement1.Reference.Get(),
                                   WeaponEnchantmentRefs.Thundering.Reference.Get()])
                 .Configure();

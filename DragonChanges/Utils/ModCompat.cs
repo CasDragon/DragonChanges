@@ -1,6 +1,9 @@
-﻿using Kingmaker.Modding;
+﻿using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Items.Equipment;
+using Kingmaker.Modding;
 using System.Linq;
 using UnityModManagerNet;
+using WrathScalingItemDCs.ScalingDC;
 
 namespace DragonChanges.Utils
 {
@@ -47,6 +50,12 @@ namespace DragonChanges.Utils
             {
                 Main.log.Log($"{modname} wasn't found, disabling compatiblity patches");
             }
+        }
+        public static void AddEquipmentToScalingDC(BlueprintItemEquipment equipment)
+        {
+            if (!scalingequip)
+                return;
+            ScalingDCAPI.AddItem(equipment);
         }
     }
 }

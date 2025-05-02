@@ -1100,7 +1100,7 @@
 
   {
     "Key": "StorvalsThunder.description",
-    "enGB": "The hematite head of this +1 earth breaker crackles with electricity, dealing an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit."
+    "enGB": "The hematite head of this +1 earth breaker crackles with electricity, dealing an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit. 3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round."
   },
 
   {
@@ -1144,7 +1144,7 @@
 
   {
     "Key": "StorvalsFang.description",
-    "enGB": "This metal +1 klar is shaped like the head of a storm roc, whose sharp feathers serve as the klar’s spikes, and it hums and crackles like a distant stormy sky. When used to make a shield bash attack, a Storval’s fang deals an additional 1d6 points of sonic damage. In addition, the wielder gains electricity resistance 5.\nIf the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
+    "enGB": "This metal +1 klar is shaped like the head of a storm roc, whose sharp feathers serve as the klar’s spikes, and it hums and crackles like a distant stormy sky. When used to make a shield bash attack, a Storval’s fang deals an additional 1d6 points of sonic damage. In addition, the wielder gains electricity resistance 10.\nIf the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
   },
 
   {

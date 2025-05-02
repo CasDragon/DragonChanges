@@ -29,8 +29,11 @@ namespace DragonChanges.NewItems
                 Main.log.Log($"{item} item enabled, configuring");
                 var x = StorvalsFang.ConfigureEnabled();
                 var y = ConfigureEnabled(x);
-                if (ModCompat.scalingequip)
-                    ScalingDCAPI.AddItem(y);
+                try
+                {
+                    ModCompat.AddEquipmentToScalingDC(y);
+                }
+                catch { }
                 AneviaVendor.AddItem(y);
             }
             else
@@ -59,6 +62,7 @@ namespace DragonChanges.NewItems
                                   StorvalsThunderEnchant.ConfigureEnabled(shield)])
                 .SetAbility(StorvalsThunderAbility.ConfigureEnabled())
                 .SetSpendCharges(true)
+                .SetDC(20)
                 .SetCharges(3)
                 .SetRestoreChargesOnRest(true)
                 .SetCost(5000)

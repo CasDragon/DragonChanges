@@ -123,7 +123,7 @@
         internal static string StorvalSetBonusChecker = "76978458-5642-447F-A147-77047DBDF633";
         internal static string AneviaVendorLootTable = "76E3258C-75A9-4124-AC13-AF98A63FC58F";
         internal static string AneviaVendorAnswer = "77D2BB80-4066-440A-8739-78D831E5C110";
-        internal static string guid14 = "97B9D659-A4AE-4CC8-905B-D6E997D26EEF";
+        internal static string LightShieldArmorItemPlus1LightningResist = "97B9D659-A4AE-4CC8-905B-D6E997D26EEF";
         internal static string guid15 = "271EA3B6-1479-4266-8608-A09DFB933C7A";
         internal static string guid16 = "32890570-B4C9-44E4-B8C3-54F0C41A332C";
         internal static string guid17 = "E31F1246-75F4-43B4-9AC1-897992AB8E05";

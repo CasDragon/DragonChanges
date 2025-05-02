@@ -70,7 +70,7 @@ namespace DragonChanges.New_Components
                     Spellbook spellbook = this.Owner.Descriptor.GetSpellbook(classData.Spellbook);
                     if (spellbook != null)
                     {
-                        AbilityData abilityData = spellbook.SureKnownSpells(spelllevel).FirstItem((AbilityData s) => s.Blueprint == spell);
+                        AbilityData abilityData = spellbook.SureKnownSpells(spelllevel).FirstItem((AbilityData s) => s.Blueprint == spell.GetBlueprint());
                         spellbook.RemoveTemporarySpell(abilityData);
                     }
                 }
