@@ -17,12 +17,12 @@ namespace DragonChanges.NewStuff
     internal class AneviaVendor
     {
         // edit
-        internal static string vending = "AneviaVendor";
-        internal static string vendingguid = Guids.AneviaVendorLootTable;
-        internal static string answer = "AneviaVendorAnswer";
-        internal static string answerguid = Guids.AneviaVendorAnswer;
+        internal const string vending = "AneviaVendor";
+        internal const string vendingguid = Guids.AneviaVendorLootTable;
+        internal const string answer = "AneviaVendorAnswer";
+        internal const string answerguid = Guids.AneviaVendorAnswer;
         // don't edit
-        internal static string answertext = $"{answer}.text";
+        internal const string answertext = $"{answer}.text";
         internal static SharedVendorTableConfigurator aneviatable = null;
         internal static BlueprintCore.Utils.Blueprint<BlueprintReference<BlueprintUnit>>[] aneviaunits = 
                 [UnitRefs.AneviaTirabade, UnitRefs.AneviaTirabade_DH, UnitRefs.AneviaTirabade_DrezenCapital,
@@ -44,7 +44,7 @@ namespace DragonChanges.NewStuff
             {
                 UnitConfigurator.For(unit.Reference.Get())
                     .AddSharedVendor(loottable)
-                    .AddUnitUpgraderComponent(upgraders: [vendorupgrader])
+                    //.AddUnitUpgraderComponent(upgraders: [vendorupgrader])
                     .Configure();
             }
             BlueprintAnswer newanswer = AnswerConfigurator.New(answer, answerguid)

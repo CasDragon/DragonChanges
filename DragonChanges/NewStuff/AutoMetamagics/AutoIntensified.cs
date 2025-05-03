@@ -14,11 +14,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoIntensified
     {
         // edit
-        internal static string feature = "AutoIntensified";
-        internal static string featureguid = Guids.AutoIntensified;
+        internal const string feature = "AutoIntensified";
+        internal const string featureguid = Guids.AutoIntensified;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

@@ -14,11 +14,11 @@ namespace DragonChanges.NewStuff
     internal class PowerfulThrow
     {
         // edit
-        internal static string feature = "PowerfulThrow";
-        internal static string featureguid = Guids.PowerfulThrowFeature;
+        internal const string feature = "PowerfulThrow";
+        internal const string featureguid = Guids.PowerfulThrowFeature;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

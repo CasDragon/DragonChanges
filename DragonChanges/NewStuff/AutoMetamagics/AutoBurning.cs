@@ -17,11 +17,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoBurning
     {
         // edit
-        internal static string feature = "AutoBurning";
-        internal static string featureguid = Guids.AutoBurning;
+        internal const string feature = "AutoBurning";
+        internal const string featureguid = Guids.AutoBurning;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

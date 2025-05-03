@@ -14,11 +14,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoPiercing
     {
         // edit
-        internal static string feature = "AutoPiercing";
-        internal static string featureguid = Guids.AutoPiercing;
+        internal const string feature = "AutoPiercing";
+        internal const string featureguid = Guids.AutoPiercing;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

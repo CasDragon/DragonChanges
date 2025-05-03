@@ -16,11 +16,11 @@ namespace DragonChanges.NewItems
     internal class StorvalsThunder
     {
         // edit
-        internal static string item = "StorvalsThunder";
-        internal static string itemguid = Guids.ThunderHammer;
+        internal const string item = "StorvalsThunder";
+        internal const string itemguid = Guids.ThunderHammer;
         // don't edit
-        internal static string itemname = $"{item}.name";
-        internal static string itemdescription = $"{item}.description";
+        internal const string itemname = item + ".name";
+        internal const string itemdescription = item + ".description";
         [DragonConfigure]
         public static void Configure()
         {

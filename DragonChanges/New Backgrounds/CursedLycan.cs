@@ -7,11 +7,11 @@ namespace DragonChanges.New_Backgrounds
     internal class CursedLycan
     {
         // edit
-        internal static string feature = "Wanderer";
-        internal static string featureguid = Guids.CursedBackground;
+        internal const string feature = "Wanderer";
+        internal const string featureguid = Guids.CursedBackground;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

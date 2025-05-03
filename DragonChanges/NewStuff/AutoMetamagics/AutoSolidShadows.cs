@@ -17,11 +17,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoSolidShadows
     {
         // edit
-        internal static string feature = "AutoSolidShadows";
-        internal static string featureguid = Guids.AutoSolidShadows;
+        internal const string feature = "AutoSolidShadows";
+        internal const string featureguid = Guids.AutoSolidShadows;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

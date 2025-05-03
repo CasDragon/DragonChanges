@@ -10,11 +10,11 @@ namespace DragonChanges.NewStuff
     internal class PowerfulWings
     {
         // edit
-        internal static string feature = "PowerfulWings";
-        internal static string featureguid = Guids.PowerfulWings;
+        internal const string feature = "PowerfulWings";
+        internal const string featureguid = Guids.PowerfulWings;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

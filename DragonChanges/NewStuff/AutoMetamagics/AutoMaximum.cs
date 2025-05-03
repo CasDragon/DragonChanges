@@ -14,11 +14,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoMaximum
     {
         // edit
-        internal static string feature = "AutoMaximize";
-        internal static string featureguid = Guids.AutoMax;
+        internal const string feature = "AutoMaximize";
+        internal const string featureguid = Guids.AutoMax;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

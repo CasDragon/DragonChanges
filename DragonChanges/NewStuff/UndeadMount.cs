@@ -15,11 +15,11 @@ namespace DragonChanges.NewStuff
 {
     internal class UndeadMount
     {
-        internal static string UndeadUnit = "undeadmountunit";
-        internal static string UndeadFeatureName = "undeadmountfeature.name";
-        internal static string UndeadFeatureDescription = "undeadmountfeature.description";
-        internal static string UndeadFeature = "UndeadHorse-feature";
-        internal static string UndeadMountPortrait = "undeadmountportrait";
+        internal const string UndeadUnit = "undeadmountunit";
+        internal const string UndeadFeatureName = "undeadmountfeature.name";
+        internal const string UndeadFeatureDescription = "undeadmountfeature.description";
+        internal const string UndeadFeature = "UndeadHorse-feature";
+        internal const string UndeadMountPortrait = "undeadmountportrait";
 
         [DragonConfigure]
         public static void Configure()

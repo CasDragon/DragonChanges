@@ -15,11 +15,11 @@ namespace DragonChanges.NewAbilities
     internal class StorvalsThunderAbility
     {
         // edit
-        internal static string ability = "StorvalsThunder-ability";
-        internal static string abilityguid = Guids.ThunderHammerAbility;
+        internal const string ability = "StorvalsThunder-ability";
+        internal const string abilityguid = Guids.ThunderHammerAbility;
         // don't edit
-        internal static string abilityname = $"{ability}.name";
-        internal static string abilitydescription = $"{ability}.description";
+        internal const string abilityname = $"{ability}.name";
+        internal const string abilitydescription = $"{ability}.description";
         //[DragonConfigure]
         public static BlueprintAbility ConfigureDummy()
         {

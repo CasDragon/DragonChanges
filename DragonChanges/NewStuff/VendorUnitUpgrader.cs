@@ -15,8 +15,8 @@ namespace DragonChanges.NewStuff
     internal class VendorUnitUpgrader
     {
         // edit
-        internal static string upgrader = "VendorUpgrader";
-        internal static string upgraderguid = Guids.VendorUpgrader;
+        internal const string upgrader = "VendorUpgrader";
+        internal const string upgraderguid = Guids.VendorUpgrader;
         public static BlueprintUnitUpgrader Configure(BlueprintSharedVendorTable vendorTable)
         {
             BlueprintUnitUpgrader x = UnitUpgraderConfigurator.New(upgrader, upgraderguid)

@@ -31,15 +31,15 @@ namespace DragonChanges.NewEnchantments
     internal class StorvalsThunderEnchant
     {
         // edit
-        internal static string enchantment = "StorvalsThunder-enchant";
-        internal static string enchantmentguid = Guids.ThunderHammerEnchant;
-        internal static string feature = "StorvalSetBonusFeature";
-        internal static string featureguid = Guids.StorvalSetBonusFeature;
-        internal static string buff = "StorvalSetBonusChecker";
-        internal static string buffguid = Guids.StorvalSetBonusChecker;
+        internal const string enchantment = "StorvalsThunder-enchant";
+        internal const string enchantmentguid = Guids.ThunderHammerEnchant;
+        internal const string feature = "StorvalSetBonusFeature";
+        internal const string featureguid = Guids.StorvalSetBonusFeature;
+        internal const string buff = "StorvalSetBonusChecker";
+        internal const string buffguid = Guids.StorvalSetBonusChecker;
         // don't edit
-        internal static string enchantmentname = $"{enchantment}.name";
-        internal static string enchantmentdescription = $"{enchantment}.description";
+        internal const string enchantmentname = $"{enchantment}.name";
+        internal const string enchantmentdescription = $"{enchantment}.description";
         public static BlueprintWeaponEnchantment ConfigureDummy()
         {
             FeatureConfigurator.New(feature, featureguid).Configure();

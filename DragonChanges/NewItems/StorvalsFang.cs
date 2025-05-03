@@ -17,11 +17,11 @@ namespace DragonChanges.NewItems
     internal class StorvalsFang
     {
         // edit
-        internal static string item = "StorvalsFang";
-        internal static string itemguid = Guids.ThunderShield;
+        internal const string item = "StorvalsFang";
+        internal const string itemguid = Guids.ThunderShield;
         // don't edit
-        internal static string itemname = $"{item}.name";
-        internal static string itemdescription = $"{item}.description";
+        internal const string itemname = item + ".name";
+        internal const string itemdescription = item + ".description";
         public static void ConfigureDummy()
         {
             ItemShieldConfigurator.New(item, itemguid).Configure();
@@ -38,7 +38,7 @@ namespace DragonChanges.NewItems
                 .SetCR(5)
                 .SetVisualParameters(ItemShieldRefs.FleshTearerShieldItem.Reference.Get().VisualParameters)
                 .SetWeaponComponent(SpikedLightShieldPlus1Sonic.ConfigureEnabled())
-                .SetArmorComponent(ItemArmorRefs.LightShieldArmorItemPlus1.Reference.Get())
+                .SetArmorComponent(StorvalsFangArmor.ConfigureEnabled())
                 .Configure();
             AneviaVendor.AddItem(shield);
             return shield;

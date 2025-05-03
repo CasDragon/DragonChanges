@@ -12,11 +12,11 @@ namespace DragonChanges.templates
     internal class ItemTemplate
     {
         // edit
-        internal static string item = "item";
-        internal static string itemguid = Guids.AspectBeast;
+        internal const string item = "item";
+        internal const string itemguid = Guids.AspectBeast;
         // don't edit
-        internal static string itemname = $"{item}.name";
-        internal static string itemdescription = $"{item}.description";
+        internal const string itemname = $"{item}.name";
+        internal const string itemdescription = $"{item}.description";
         //[DragonConfigure]
         public static void Configure()
         {

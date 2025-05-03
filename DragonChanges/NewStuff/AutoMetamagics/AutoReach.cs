@@ -13,11 +13,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
 {
     internal class AutoReach
     {// edit
-        internal static string feature = "AutoReach";
-        internal static string featureguid = Guids.AutoReach;
+        internal const string feature = "AutoReach";
+        internal const string featureguid = Guids.AutoReach;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

@@ -12,11 +12,11 @@ namespace DragonChanges.NewEnchantments
     internal class StorvalSetBonus
     {
         // edit
-        internal static string enchantment = "StorvalSetBonus";
-        internal static string enchantmentguid = Guids.StorvalSetBonus;
+        internal const string enchantment = "StorvalSetBonus";
+        internal const string enchantmentguid = Guids.StorvalSetBonus;
         // don't edit
-        internal static string enchantmentname = $"{enchantment}.name";
-        internal static string enchantmentdescription = $"{enchantment}.description";
+        internal const string enchantmentname = $"{enchantment}.name";
+        internal const string enchantmentdescription = $"{enchantment}.description";
         public static void ConfigureDummy()
         {
             WeaponEnchantmentConfigurator.New(enchantment, enchantmentguid).Configure();

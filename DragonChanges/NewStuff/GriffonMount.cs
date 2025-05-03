@@ -24,11 +24,11 @@ namespace DragonChanges.NewStuff
 {
     internal class GriffonMount
     {
-        internal static string GriffonUnit = "GriffonMount";
-        internal static string GriffonFeatureName = "griffonmountfeature.name";
-        internal static string GriffonFeatureDescription = "griffonmountfeature.description";
-        internal static string GriffonFeature = "GriffonMount-feature";
-        internal static string GriffonMountPortrait = "griffonmountportrait";
+        internal const string GriffonUnit = "GriffonMount";
+        internal const string GriffonFeatureName = "griffonmountfeature.name";
+        internal const string GriffonFeatureDescription = "griffonmountfeature.description";
+        internal const string GriffonFeature = "GriffonMount-feature";
+        internal const string GriffonMountPortrait = "griffonmountportrait";
         internal static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
 
         [DragonConfigure]

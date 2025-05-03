@@ -32,11 +32,11 @@ namespace DragonChanges.NewSpells
     internal class Hellball
     {
         // edit
-        internal static string spell = "HellBall";
-        internal static string spellguid = Guids.HellBall;
+        internal const string spell = "HellBall";
+        internal const string spellguid = Guids.HellBall;
         // don't edit
-        internal static string spellname = $"{spell}.name";
-        internal static string spelldescription = $"{spell}.description";
+        internal const string spellname = $"{spell}.name";
+        internal const string spelldescription = $"{spell}.description";
 
         [DragonConfigure]
         public static void Configure()

@@ -8,11 +8,11 @@ namespace DragonChanges.NewItems
     internal class SpikedLightShieldPlus1Sonic
     {
         // edit
-        internal static string item = "SpikedLightShieldPlus1Sonic";
-        internal static string itemguid = Guids.SpikedLightShieldSonic;
+        internal const string item = "SpikedLightShieldPlus1Sonic";
+        internal const string itemguid = Guids.SpikedLightShieldSonic;
         // don't edit
-        internal static string itemname = $"{item}.name";
-        internal static string itemdescription = $"{item}.description";
+        internal const string itemname = item + ".name";
+        internal const string itemdescription = item + ".description";
         public static void ConfigureDummy()
         {
             ItemWeaponConfigurator.New(item, itemguid).Configure();

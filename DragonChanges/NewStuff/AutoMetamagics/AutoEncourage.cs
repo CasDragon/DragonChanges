@@ -17,11 +17,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoEncourage
     {
         // edit
-        internal static string feature = "AutoEncourage";
-        internal static string featureguid = Guids.AutoEncourage;
+        internal const string feature = "AutoEncourage";
+        internal const string featureguid = Guids.AutoEncourage;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

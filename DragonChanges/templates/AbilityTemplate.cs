@@ -13,11 +13,11 @@ namespace DragonChanges.templates
     internal class AbilityTemplate
     {
         // edit
-        internal static string ability = "";
-        internal static string abilityguid = Guids.CraneTranceAbility;
+        internal const string ability = "";
+        internal const string abilityguid = Guids.CraneTranceAbility;
         // don't edit
-        internal static string abilityname = $"{ability}.name";
-        internal static string abilitydescription = $"{ability}.description";
+        internal const string abilityname = $"{ability}.name";
+        internal const string abilitydescription = $"{ability}.description";
         //[DragonConfigure]
         public static void Configure()
         {

@@ -6,11 +6,11 @@ namespace DragonChanges.NewStuff
     internal class AspectOfTheBeast
     {
         // edit
-        internal static string feature = "AspectOfTheBeast";
-        internal static string featureguid = Guids.AspectBeast;
+        internal const string feature = "AspectOfTheBeast";
+        internal const string featureguid = Guids.AspectBeast;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         //[DragonConfigure]
         public static void Configure()
         {

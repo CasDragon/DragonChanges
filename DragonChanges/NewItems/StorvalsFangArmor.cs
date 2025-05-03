@@ -15,11 +15,11 @@ namespace DragonChanges.NewItems
     internal class StorvalsFangArmor
     {
         // edit
-        internal static string item = "LightShieldArmorItemPlus1LightningResist";
-        internal static string itemguid = Guids.LightShieldArmorItemPlus1LightningResist;
+        internal const string item = "LightShieldArmorItemPlus1LightningResist";
+        internal const string itemguid = Guids.LightShieldArmorItemPlus1LightningResist;
         // don't edit
-        internal static string itemname = $"{item}.name";
-        internal static string itemdescription = $"{item}.description";
+        internal const string itemname = item + ".name";
+        internal const string itemdescription = item + ".description";
         public static void ConfigureDummy()
         {
             ItemArmorConfigurator.New(item, itemguid).Configure();

@@ -14,11 +14,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoExtend
     {
         // edit
-        internal static string feature = "AutoExtend";
-        internal static string featureguid = Guids.AutoExtend;
+        internal const string feature = "AutoExtend";
+        internal const string featureguid = Guids.AutoExtend;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

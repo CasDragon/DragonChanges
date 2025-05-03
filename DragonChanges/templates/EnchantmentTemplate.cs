@@ -12,11 +12,11 @@ namespace DragonChanges.templates
     internal class EnchantmentTemplate
     {
         // edit
-        internal static string enchantment = "enchantment";
-        internal static string enchantmentguid = Guids.ThunderHammer;
+        internal const string enchantment = "enchantment";
+        internal const string enchantmentguid = Guids.ThunderHammer;
         // don't edit
-        internal static string enchantmentname = $"{enchantment}.name";
-        internal static string enchantmentdescription = $"{enchantment}.description";
+        internal const string enchantmentname = $"{enchantment}.name";
+        internal const string enchantmentdescription = $"{enchantment}.description";
         //[DragonConfigure]
         public static void Configure()
         {

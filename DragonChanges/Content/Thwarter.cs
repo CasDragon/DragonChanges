@@ -12,7 +12,7 @@ namespace DragonChanges.Content
 {
     internal class Thwarter
     {
-        public static string item = "Thwarter";
+        public const string item = "Thwarter";
         [DragonConfigure]
         public static void Configure()
         {

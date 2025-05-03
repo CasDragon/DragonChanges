@@ -14,11 +14,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoQuicken
     {
         // edit
-        internal static string feature = "AutoQuicken";
-        internal static string featureguid = Guids.AutoQuicken;
+        internal const string feature = "AutoQuicken";
+        internal const string featureguid = Guids.AutoQuicken;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

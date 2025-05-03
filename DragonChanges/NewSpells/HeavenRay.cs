@@ -28,11 +28,11 @@ namespace DragonChanges.NewSpells
     internal class HeavenRay
     {
         // edit
-        internal static string spell = "HeavenRay";
-        internal static string spellguid = Guids.HeavenRay;
+        internal const string spell = "HeavenRay";
+        internal const string spellguid = Guids.HeavenRay;
         // don't edit
-        internal static string spellname = $"{spell}.name";
-        internal static string spelldescription = $"{spell}.description";
+        internal const string spellname = $"{spell}.name";
+        internal const string spelldescription = $"{spell}.description";
         [DragonConfigure]
         public static void Configure()
         {

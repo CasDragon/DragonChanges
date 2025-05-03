@@ -14,11 +14,11 @@ namespace DragonChanges.NewStuff.AutoMetamagics
     internal class AutoEmpower
     { 
         // edit
-        internal static string feature = "AutoEmpower";
-        internal static string featureguid = Guids.AutoEmpower;
+        internal const string feature = "AutoEmpower";
+        internal const string featureguid = Guids.AutoEmpower;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
         public static void Configure()
         {

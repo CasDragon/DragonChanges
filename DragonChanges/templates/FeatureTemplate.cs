@@ -7,11 +7,11 @@ namespace DragonChanges.templates
     internal class FeatureTemplate
     {
         // edit
-        internal static string feature = "feature";
-        internal static string featureguid = Guids.AspectBeast;
+        internal const string feature = "feature";
+        internal const string featureguid = Guids.AspectBeast;
         // don't edit
-        internal static string featurename = $"{feature}.name";
-        internal static string featuredescription = $"{feature}.description";
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
         //[DragonConfigure]
         public static void Configure()
         {

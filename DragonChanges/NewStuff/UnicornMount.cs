@@ -22,11 +22,11 @@ namespace DragonChanges.NewStuff
 {
     internal class UnicornMount
     {
-        internal static string UnicornUnit = "UnicornMount";
-        internal static string UnicornFeatureName = "unicornmountfeature.name";
-        internal static string UnicornFeatureDescription = "unicornmountfeature.description";
-        internal static string UnicornFeature = "UnicornMount-feature";
-        internal static string UnicornMountPortrait = "unicornmountportrait";
+        internal const string UnicornUnit = "UnicornMount";
+        internal const string UnicornFeatureName = "unicornmountfeature.name";
+        internal const string UnicornFeatureDescription = "unicornmountfeature.description";
+        internal const string UnicornFeature = "UnicornMount-feature";
+        internal const string UnicornMountPortrait = "unicornmountportrait";
         readonly static string unicornprefab = UnitRefs.CR3_UnicornStandard.Reference.Get().Prefab.AssetId;
 
         [DragonConfigure]
@@ -169,8 +169,6 @@ namespace DragonChanges.NewStuff
                 .SetType("910d93c330c251741b29dad939a02f60")//UnitTypeRefs.Unicorn.Reference.Get())
                 .SetPortrait(UnitRefs.CR3_UnicornStandard.Reference.Get().m_Portrait)
                 .AddAdditionalLimb(ItemWeaponRefs.GoreLarge1d8.Reference.Get())
-                .SetIntelligence(11)
-                .SetCharisma(18)
                 .AddClassLevels(characterClass: CharacterClassRefs.AnimalCompanionClass.Reference.Get(),
                     levels: 0,
                     raceStat: StatType.Constitution,
@@ -193,8 +191,10 @@ namespace DragonChanges.NewStuff
                 .SetBrain("cf986dd7ba9d4ec46ad8a3a0406d02ae")
                 .SetStrength(16)
                 .SetDexterity(13)
+                .SetConstitution(16)
+                .SetIntelligence(11)
                 .SetWisdom(10)
-                .SetConstitution(6)
+                .SetCharisma(18)
                 .SetSpeed(new Kingmaker.Utility.Feet(50))
                 .SetBaseAttackBonus(0)
                 .SetMaxHP(0)
