@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
 namespace DragonChanges.Content
@@ -100,6 +101,14 @@ namespace DragonChanges.Content
             FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraShamanHexSelection)
                 .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
                 .Configure();
+        }
+        [DragonConfigure]
+        public static void ItemStuffs()
+        {
+            Main.log.Log("Adding Walls of Sanctuary to anevia vendor");
+            AneviaVendor.AddItem(ItemShieldRefs.WallsOfTheSanctuaryShieldItem.Reference.Get());
+            Main.log.Log("Adding Helmet of Guiding Light to anevia vendor");
+            AneviaVendor.AddItem(ItemEquipmentHeadRefs.HelmetOfTheGuidingLight.Reference.Get());
         }
     }
 }
