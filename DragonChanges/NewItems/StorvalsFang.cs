@@ -24,8 +24,10 @@ namespace DragonChanges.NewItems
         internal const string itemdescription = item + ".description";
         public static void ConfigureDummy()
         {
-            ItemShieldConfigurator.New(item, itemguid).Configure();
-            SpikedLightShieldPlus1Sonic.ConfigureDummy();
+            ItemShieldConfigurator.New(item, itemguid)
+                .SetWeaponComponent(SpikedLightShieldPlus1Sonic.ConfigureEnabled())
+                .SetArmorComponent(StorvalsFangArmor.ConfigureEnabled())
+                .Configure();
         }
         public static BlueprintItemShield ConfigureEnabled()
         {

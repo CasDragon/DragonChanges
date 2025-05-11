@@ -28,6 +28,8 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("autometamagics"), defaultValue: true, CreateString("autometamagics-toggle", "Adds feats that grant autometamagic to Mythic Abilities")))
                     .AddAnotherSettingsGroup(GetKey("newcontent"), CreateString(GetKey("newcontent-group"), "New Content"))
                     .AddToggle(
+                        Toggle.New(GetKey("newdeities"), defaultValue: true, CreateString("newdeities-toggle", "Adds various new deities.")))
+                    .AddToggle(
                         Toggle.New(GetKey("powerfulthrow"), defaultValue: true, CreateString("powerfulthrow-toggle", "Adds the feat Powerful Throw")))
                     .AddToggle(
                         Toggle.New(GetKey("powerfulwings"), defaultValue: true, CreateString("PowerfulWings-toggle", "Adds the feat Powerful Wings")))
@@ -51,6 +53,8 @@ namespace DragonChanges.Utils
                         Toggle.New(GetKey("storvalsthunder"), defaultValue: true, CreateString(GetKey("storvalsthunder-toggle"), "Enable the Storval's Thunder weapon and the Storval's Fang shield.")))
                     .AddToggle(
                         Toggle.New(GetKey("thwarter"), defaultValue: true, CreateString("thwarter-toggle", "Adds the Thwarter tongi item")))
+                    .AddToggle(
+                        Toggle.New(GetKey("memerings"), defaultValue: true, CreateString("memerings-toggle", "Adds adds a bunch of meme rings")))
                     .AddAnotherSettingsGroup(GetKey("newarchetypes"), CreateString(GetKey("newarchetypes-group"), "New Archetypes"))
                     .AddToggle(
                         Toggle.New(GetKey("swordmastertengu"), defaultValue: true, CreateString(GetKey("swordmastertengu-toggle"), "Enable the Swordmaster (Tengu) archetype")))

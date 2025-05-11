@@ -1173,5 +1173,60 @@
     "Key": "AneviaVendorAnswer.text",
     "ProcessTemplates": false,
     "enGB": "(DragonChanges) Show me your wares!"
+  },
+
+  {
+    "Key": "ChaMemeRingAC.name",
+    "ProcessTemplates": false,
+    "enGB": "Tomek's Ring"
+  },
+
+  {
+    "Key": "ChaMemeRingAC.description",
+    "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
+  },
+
+  {
+    "Key": "MemeRing1Feature.name",
+    "ProcessTemplates": false,
+    "enGB": "Tomek's Ring"
+  },
+
+  {
+    "Key": "MemeRing1Feature.description",
+    "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
+  },
+
+  {
+    "Key": "LesbianPolyculeDeity.name",
+    "ProcessTemplates": false,
+    "enGB": "Radiant Prism"
+  },
+
+  {
+    "Key": "LesbianPolyculeDeity.description",
+    "enGB": "The shining sun of Sarenrae, the twinkling stars of Desna, and the shimmering rainbow of Shelyn come together to form the Radiant Prism, a relatively small pantheon worshipped by those who actively fight against evil to protect the innocent. These three goddesses have been romantically involved with one another from time to time, so it makes sense that they would form a coalition. In addition to defeating the wicked, the Radiant Prism promotes the creation of beautiful works of art to bring more grace to the world.\nThough devotees of the Radiant Prism are tasked with battling all sources of evil, they are encouraged to refrain from becoming ruthless butchers. The wicked must be offered the chance to capitulate once it becomes clear their defeat is inevitable. Sarenrae’s compassion is a major pillar of the pantheon, and priests of the Radiant Prism attempt to redeem their enemies where possible. Of course, some creatures are remorseless in their evil (such as fiends and some undead), and the Radiant Prism doesn’t expect their worshippers to waste their lives trying to save such beings."
+  },
+
+  {
+    "Key": "MemeRing2.name",
+    "ProcessTemplates": false,
+    "enGB": "not implemented"
+  },
+
+  {
+    "Key": "MemeRing2.description",
+    "enGB": "not implemented"
+  },
+
+  {
+    "Key": "MemeRing2Feature.name",
+    "ProcessTemplates": false,
+    "enGB": "not implemented"
+  },
+
+  {
+    "Key": "MemeRing2Feature.description",
+    "enGB": "not implemented"
   }
 ]

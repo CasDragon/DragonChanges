@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>DragonChanges</AssemblyName>
 		<Description>DragonChanges</Description>
-		<Version>1.8.10</Version>
+		<Version>1.9.2</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>DragonChanges</RootNamespace>
@@ -27,13 +27,15 @@
 		<Reference Include="$(WrathInstallDir)\Mods\WrathScalingItemDCs\WrathScalingItemDCs.dll" />
 	</ItemGroup>
 	<ItemGroup>
-	  <None Remove="Icons\Abilities\StorvalsThunder.png" />
+		<None Remove="Icons\Abilities\StorvalsThunder.png" />
+		<None Remove="Icons\Deities\RadiantPrism.png" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="LocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="dragonchanges_assets" CopyToOutputDirectory="PreserveNewest" />
 		<EmbeddedResource Include="Icons\Abilities\StorvalsThunder.png" />
+		<EmbeddedResource Include="Icons\Deities\RadiantPrism.png" />
 	</ItemGroup>
 	<Target Name="ILRepack" AfterTargets="Build">
 		<ItemGroup>
