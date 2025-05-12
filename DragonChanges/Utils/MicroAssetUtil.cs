@@ -14,7 +14,7 @@ namespace DragonChanges.Utils
     internal class MicroAssetUtil
     {
         public static Sprite GetAssemblyResourceSprite(string name) =>
-            GetSpriteAssemblyResource(Assembly.GetExecutingAssembly(), $"{nameof(DragonChanges)}.Icons.Abilities.{name}")!;
+            GetSpriteAssemblyResource(Assembly.GetExecutingAssembly(), $"{nameof(DragonChanges)}.Icons.{name}")!;
         public static class Direct
         {
             /// <summary>

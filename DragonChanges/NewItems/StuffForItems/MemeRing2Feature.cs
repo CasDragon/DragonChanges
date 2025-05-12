@@ -1,4 +1,5 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using DragonChanges.New_Components;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
@@ -23,9 +24,7 @@ namespace DragonChanges.NewItems.StuffForItems
             BlueprintFeature thing = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
-                .AddDerivativeStatBonus(baseStat: StatType.Constitution,
-                    descriptor: ModifierDescriptor.UntypedStackable,
-                    derivativeStat: StatType.AC)
+                .AddComponent(new CritComponent() { stat= StatType.Constitution })
                 .AddRecalculateOnStatChange(stat: StatType.Constitution)
                 .SetHideInUI(true)
                 .Configure();

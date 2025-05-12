@@ -1211,12 +1211,12 @@
   {
     "Key": "MemeRing2.name",
     "ProcessTemplates": false,
-    "enGB": "not implemented"
+    "enGB": "Ring of Heavy Body"
   },
 
   {
     "Key": "MemeRing2.description",
-    "enGB": "not implemented"
+    "enGB": "The ring is imbued with the hope that having a heavy body will make your attacks better.\nAdds your CON bonus to your Critical range."
   },
 
   {

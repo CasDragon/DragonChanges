@@ -130,7 +130,7 @@
         internal const string MemeRing2 = "39DCF045-6DCB-4E1E-B129-677465F87B2F";
         internal const string MemeRing2Feature = "79AB07FF-BA9F-4729-A0BE-9780EEED8E14";
         internal const string LesbianPolyculeDeity = "A3E0D1E6-17AA-4424-B65F-A77397A3C11C";
-        internal const string guid0 = "E9374273-1C21-442E-9A29-87492A569939";
+        internal const string HeavenFireScroll = "E9374273-1C21-442E-9A29-87492A569939";
         internal const string guid1 = "39884DC2-BB19-4E05-8ACA-4A7E67F5555C";
         internal const string guid2 = "B84BD80B-A88F-454D-811E-CF25B5E28342";
         internal const string guid3 = "3A5E7317-611D-4562-BCAD-41380D97BE03";

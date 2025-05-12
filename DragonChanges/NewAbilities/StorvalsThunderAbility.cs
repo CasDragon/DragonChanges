@@ -56,7 +56,7 @@ namespace DragonChanges.NewAbilities
                 .SetCanTargetEnemies(true)
                 .SetShouldTurnToTarget(true)
                 .SetEffectOnEnemy(AbilityEffectOnUnit.Harmful)
-                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("StorvalsThunder.png"))
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.StorvalsThunder.png"))
                 .Configure();
         }
     }

@@ -146,7 +146,7 @@ namespace DragonChanges.NewStuff
                 .SetGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Deities)
                 .SetRanks(1)
                 .SetIsClassFeature(true)
-                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("RadiantPrism.png"))
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Deities.RadiantPrism.png"))
                 .Configure();
         }
     }
