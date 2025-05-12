@@ -55,7 +55,7 @@ namespace DragonChanges.NewItems.Scrolls
                 .AddCopyScroll()
                 .SetIcon(ItemEquipmentUsableRefs.ScrollOfHellfireRay.Reference.Get().Icon)
                 .Configure();
-            AneviaVendor.AddItem(scroll);
+            AneviaVendor.AddItem(scroll, 99);
         }
     }
 }
