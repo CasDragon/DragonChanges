@@ -22,6 +22,7 @@ using Kingmaker.Visual.Animation.Kingmaker.Actions;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 using System.Linq;
 using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
+using Kingmaker.UI.SettingsUI;
 
 namespace DragonChanges.NewSpells
 {
@@ -30,13 +31,16 @@ namespace DragonChanges.NewSpells
         // edit
         internal const string spell = "HeavenRay";
         internal const string spellguid = Guids.HeavenRay;
+        internal const string settingName = "heavenray";
+        internal const string settingDescription = "Enable the Heavenfire Ray spell";
         // don't edit
         internal const string spellname = $"{spell}.name";
         internal const string spelldescription = $"{spell}.description";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewSpells, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(spell.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{spell} feature enabled, configuring");
                 ConfigureEnabled();

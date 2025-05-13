@@ -12,16 +12,20 @@ using Kingmaker.UnitLogic.Commands.Base;
 namespace DragonChanges.NewStuff.AutoMetamagics
 {
     internal class AutoBolstered
-    {// edit
+    {
+        // edit
         internal const string feature = "AutoBolstered";
         internal const string featureguid = Guids.AutoBolstered;
+        internal const string settingName = "autometamagics";
+        internal const string settingDescription = "Adds feats that grant autometamagic to Mythic Abilities";
         // don't edit
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewSpells, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("autometamagics"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

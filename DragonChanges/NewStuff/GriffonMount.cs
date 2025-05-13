@@ -30,12 +30,14 @@ namespace DragonChanges.NewStuff
         internal const string GriffonFeature = "GriffonMount-feature";
         internal const string GriffonMountPortrait = "griffonmountportrait";
         internal static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
+        internal const string settingName = "griffonmount";
+        internal const string settingDescription = "Adds a new griffon mount, and then adds it to mount selections";
 
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-
-            if (Settings.GetSetting<bool>("griffonmount"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Configuring griffon mount");
                 BlueprintUnit unit = CreateGriffonMount();
@@ -223,7 +225,7 @@ namespace DragonChanges.NewStuff
         }
         public static void AddGriffonMountToSelections(BlueprintFeature mountfeature)
         {
-            if (Settings.GetSetting<bool>("griffonmount"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching various animal selections to include griffon mount");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)

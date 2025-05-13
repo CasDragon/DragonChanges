@@ -14,16 +14,19 @@ namespace DragonChanges.New_Classes.Redditor
     internal class RedditorClass
     {
         // edit
-        internal static string classprefix = "redditor";
-        internal static string classguid = Guids.redditorcharacterclass;
+        internal const string classprefix = "redditor";
+        internal const string classguid = Guids.redditorcharacterclass;
+        internal const string settingName = "redditor";
+        internal const string settingDescription = "Enable the Redditor class  (which is a meme class I made, don't take too seriously)";
         // don't edit
-        internal static string classname = $"{classprefix}.name";
-        internal static string classdescription = $"{classprefix}.description";
-        internal static string classshortdescription = $"{classprefix}.shortdescription";
+        internal const string classname = $"{classprefix}.name";
+        internal const string classdescription = $"{classprefix}.description";
+        internal const string classshortdescription = $"{classprefix}.shortdescription";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewClasses, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("redditor"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
                 BlueprintProgression progression = RedditorProgression.Configure();

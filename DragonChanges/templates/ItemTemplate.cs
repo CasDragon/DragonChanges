@@ -13,14 +13,17 @@ namespace DragonChanges.templates
     {
         // edit
         internal const string item = "item";
-        internal const string itemguid = Guids.AspectBeast;
+        internal const string itemguid = Guids.Template;
+        internal const string settingName = "";
+        internal const string settingDescription = "";
         // don't edit
         internal const string itemname = $"{item}.name";
         internal const string itemdescription = $"{item}.description";
         //[DragonConfigure]
+        //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(item.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();

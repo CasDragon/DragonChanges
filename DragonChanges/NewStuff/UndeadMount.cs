@@ -20,12 +20,14 @@ namespace DragonChanges.NewStuff
         internal const string UndeadFeatureDescription = "undeadmountfeature.description";
         internal const string UndeadFeature = "UndeadHorse-feature";
         internal const string UndeadMountPortrait = "undeadmountportrait";
+        internal const string settingName = "undeadmount";
+        internal const string settingDescription = "Adds a new undead mount, and then adds it to mount selections";
 
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-
-            if (Settings.GetSetting<bool>("undeadmount"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Configuring undead mount");
                 BlueprintUnit unit = CreateUndeadMount();
@@ -216,7 +218,7 @@ namespace DragonChanges.NewStuff
         }
         public static void AddUndeadMountToSelections(BlueprintFeature mountfeature)
         {
-            if (Settings.GetSetting<bool>("undeadmount"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching various animal selections to include undead mount");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)

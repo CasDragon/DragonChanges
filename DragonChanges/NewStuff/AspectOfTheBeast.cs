@@ -8,13 +8,16 @@ namespace DragonChanges.NewStuff
         // edit
         internal const string feature = "AspectOfTheBeast";
         internal const string featureguid = Guids.AspectBeast;
+        internal const string settingName = "aspectofthebeast";
+        internal const string settingDescription = "Enable the Aspect Of the Beast feature";
         // don't edit
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         //[DragonConfigure]
+        //[DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(feature.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

@@ -3,11 +3,6 @@ using BlueprintCore.Blueprints.References;
 using DragonChanges.New_Components;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonChanges.NewStuff
 {
@@ -16,13 +11,16 @@ namespace DragonChanges.NewStuff
         // edit
         internal const string feature = "GraveSingerPlus";
         internal const string featureguid = Guids.MythicCritThingy;
+        internal const string settingName = "gravesingerplus";
+        internal const string settingDescription = "Adds the feat GraveSingerPlus";
         // don't edit
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(feature.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

@@ -7,10 +7,13 @@ namespace DragonChanges.Content
 {
     internal class Various
     {
+        const string settingName = "hippogriff";
+        const string settingDescription = "Adds the Hippogriff animal companion to other pet lists";
         [DragonConfigure]
+        [DragonSetting(settingCategories.ModCompatability, settingName, settingDescription)]
         public static void PatchHippogriff()
         {
-            if (Settings.GetSetting<bool>("hippogriff"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching various animal selections to include Hippogriff");
                 BlueprintFeature hippo = FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get();

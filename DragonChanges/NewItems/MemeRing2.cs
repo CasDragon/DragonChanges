@@ -4,11 +4,6 @@ using DragonChanges.NewItems.StuffForItems;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Equipment;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonChanges.NewItems
 {
@@ -17,13 +12,14 @@ namespace DragonChanges.NewItems
         // edit
         internal const string item = "MemeRing2";
         internal const string itemguid = Guids.MemeRing2;
+        internal const string itemsettingname = "memerings";
         // don't edit
         internal const string itemname = $"{item}.name";
         internal const string itemdescription = $"{item}.description";
         [DragonConfigure]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("memerings"))
+            if (NewSettings.GetSetting<bool>(itemsettingname))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();
@@ -45,7 +41,7 @@ namespace DragonChanges.NewItems
                 .SetDisplayNameText(itemname)
                 .SetDescriptionText(itemdescription)
                 .SetIcon(ItemEquipmentRingRefs.CopperRing.Reference.Get().Icon)
-                .SetCost(10000)
+                .SetCost(35000)
                 .SetWeight(1)
                 .SetDestructible(false)
                 .SetInventoryEquipSound("ArmorPlateEquip")

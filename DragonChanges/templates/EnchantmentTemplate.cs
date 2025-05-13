@@ -13,14 +13,17 @@ namespace DragonChanges.templates
     {
         // edit
         internal const string enchantment = "enchantment";
-        internal const string enchantmentguid = Guids.ThunderHammer;
+        internal const string enchantmentguid = Guids.Template;
+        internal const string settingName = "";
+        internal const string settingDescription = "";
         // don't edit
         internal const string enchantmentname = $"{enchantment}.name";
         internal const string enchantmentdescription = $"{enchantment}.description";
         //[DragonConfigure]
+        //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(enchantment.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{enchantment} enchantment enabled, configuring");
                 ConfigureEnabled();

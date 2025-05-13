@@ -25,7 +25,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
         [DragonConfigure]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("autometamagics"))
+            if (NewSettings.GetSetting<bool>("autometamagics"))
             {
                 if (ModCompat.tttbase)
                 {

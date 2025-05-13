@@ -22,13 +22,16 @@ namespace DragonChanges.NewItems
         // edit
         internal const string item = "ChaMemeRingAC";
         internal const string itemguid = Guids.ChaMemeRingAC;
+        internal const string itemsettingname = "memerings";
+        internal const string itemsettingdescription = "Enables a bunch of meme rings";
         // don't edit
         internal const string itemname = $"{item}.name";
         internal const string itemdescription = $"{item}.description";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewItems, itemsettingname, itemsettingdescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("memerings"))
+            if (NewSettings.GetSetting<bool>(itemsettingname))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();
@@ -50,7 +53,7 @@ namespace DragonChanges.NewItems
                 .SetDisplayNameText(itemname)
                 .SetDescriptionText(itemdescription)
                 .SetIcon(ItemEquipmentRingRefs.CopperRing.Reference.Get().Icon)
-                .SetCost(10000)
+                .SetCost(50000)
                 .SetWeight(1)
                 .SetDestructible(false)
                 .SetInventoryEquipSound("ArmorPlateEquip")

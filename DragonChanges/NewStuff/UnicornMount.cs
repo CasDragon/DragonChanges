@@ -10,6 +10,7 @@ using Kingmaker.Blueprints.Root;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Modding;
 using Kingmaker.RuleSystem.Rules;
+using Kingmaker.UI.SettingsUI;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.View;
@@ -28,12 +29,14 @@ namespace DragonChanges.NewStuff
         internal const string UnicornFeature = "UnicornMount-feature";
         internal const string UnicornMountPortrait = "unicornmountportrait";
         readonly static string unicornprefab = UnitRefs.CR3_UnicornStandard.Reference.Get().Prefab.AssetId;
+        internal const string settingName = "unicornmount";
+        internal const string settingDescription = "Adds a new unicorn mount, and then adds it to mount selections";
 
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-
-            if (Settings.GetSetting<bool>("unicornmount"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Configuring unicorn mount");
                 BlueprintUnit unit = CreateUnicornMount();
@@ -218,7 +221,7 @@ namespace DragonChanges.NewStuff
         }
         public static void AddUnicornMountToSelections(BlueprintFeature mountfeature)
         {
-            if (Settings.GetSetting<bool>("unicornmount"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching various animal selections to include unicorn mount");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)

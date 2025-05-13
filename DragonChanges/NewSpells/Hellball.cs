@@ -2,27 +2,20 @@
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
-using Kingmaker.Enums;
 using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Utility;
 using BlueprintCore.Actions.Builder;
 using Kingmaker.UnitLogic.Mechanics.Actions;
-using Kingmaker.RuleSystem.Rules.Damage;
-using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.UnitLogic.Abilities;
-using Kingmaker.UnitLogic.Mechanics.Properties;
 using Kingmaker.RuleSystem;
 using BlueprintCore.Actions.Builder.BasicEx;
 using BlueprintCore.Utils.Types;
 using Kingmaker.Enums.Damage;
 using BlueprintCore.Actions.Builder.ContextEx;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
-using Kingmaker.View.Animation;
 using Kingmaker.Visual.Animation.Kingmaker.Actions;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
-using System.Linq;
 using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
-using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 using DragonChanges.New_Components;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.Blueprints;
@@ -34,14 +27,19 @@ namespace DragonChanges.NewSpells
         // edit
         internal const string spell = "HellBall";
         internal const string spellguid = Guids.HellBall;
+        internal const string settingName = "hellball";
+        internal const string settingDescription = "Enable the HellBall spell, added from a Mythic Ability";
+        internal const string settingiconName = "hellballicon";
+        internal const string settingiconDescription = "Change the HellBall spell icon to the WRONG icon, which is worse, for Tomek (requires game restart)";
         // don't edit
         internal const string spellname = $"{spell}.name";
         internal const string spelldescription = $"{spell}.description";
 
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewSpells, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(spell.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{spell} feature enabled, configuring");
                 BlueprintAbility newspell = ConfigureEnabled();
@@ -58,6 +56,7 @@ namespace DragonChanges.NewSpells
         {
             AbilityConfigurator.New(spell, spellguid).Configure();
         }
+        [DragonSetting(settingCategories.NewSpells, settingiconName, settingiconDescription)]
         public static BlueprintAbility ConfigureEnabled()
         {
             Metamagic metas = AbilityRefs.HellfireRay.Reference.Get().AvailableMetamagic;
@@ -68,7 +67,7 @@ namespace DragonChanges.NewSpells
                     CustomMetamagic.ElementalFire | CustomMetamagic.Flaring | CustomMetamagic.Rime);
             }
             string spellicon = "Assets/Modifications/DragonChanges 1/HellBall.png".ToLower();
-            if (Settings.GetSetting<bool>("hellballicon"))
+            if (NewSettings.GetSetting<bool>("hellballicon"))
             {
                 spellicon = "Assets/Modifications/DragonChanges 1/HellBallWrong.png".ToLower();
             }

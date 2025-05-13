@@ -5,6 +5,7 @@ using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Equipment;
 using Kingmaker.Enums;
+using Kingmaker.UI.SettingsUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,10 +19,11 @@ namespace DragonChanges.NewItems.Scrolls
         // edit
         internal const string item = "HeavenFireRayscroll";
         internal const string itemguid = Guids.HeavenFireScroll;
+        internal const string settingName = "heavenray";
         [DragonConfigure(1)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("heavenray"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();

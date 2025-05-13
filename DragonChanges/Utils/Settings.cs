@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DragonChanges.Utils
 {
-    internal class Settings
+    /*internal class Settings
     {
         private static readonly string RootKey = "dragonchanges";
 
@@ -91,7 +91,7 @@ namespace DragonChanges.Utils
     }
     public static class Helpers
     {
-        private static Dictionary<string, LocalizedString> textToLocalizedString = new Dictionary<string, LocalizedString>();
+        private static Dictionary<string, LocalizedString> textToLocalizedString = [];
         public static LocalizedString CreateString(string key, string value)
         {
             // See if we used the text previously.
@@ -106,8 +106,10 @@ namespace DragonChanges.Utils
             {
                 Main.log.Log($"Info: duplicate localized string `{key}`, different text.");
             }
-            var sE = new Kingmaker.Localization.LocalizationPack.StringEntry();
-            sE.Text = value;
+            var sE = new LocalizationPack.StringEntry
+            {
+                Text = value
+            };
             strings[key] = sE;
             localized = new LocalizedString
             {
@@ -116,6 +118,6 @@ namespace DragonChanges.Utils
             textToLocalizedString[value] = localized;
             return localized;
         }
-    }
+    }*/
 }
 

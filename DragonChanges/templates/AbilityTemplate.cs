@@ -14,14 +14,17 @@ namespace DragonChanges.templates
     {
         // edit
         internal const string ability = "";
-        internal const string abilityguid = Guids.CraneTranceAbility;
+        internal const string abilityguid = Guids.Template;
+        internal const string settingName = "";
+        internal const string settingDescription = "";
         // don't edit
         internal const string abilityname = $"{ability}.name";
         internal const string abilitydescription = $"{ability}.description";
         //[DragonConfigure]
+        //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(ability.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{ability} item enabled, configuring");
                 ConfigureEnabled();

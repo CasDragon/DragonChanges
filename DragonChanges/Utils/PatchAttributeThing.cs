@@ -7,15 +7,14 @@ namespace DragonChanges.Utils
     [AttributeUsage(AttributeTargets.Method)]
     internal class DragonConfigure : Attribute
     {
-        public static int priority = 0;
-        public DragonConfigure(int patchPriority = 0) 
+        private int priority = 0;
+        public DragonConfigure(int priority = 0)
         {
-            priority = patchPriority;
+            this.priority = priority;
         }
         public int PatchPriority
         {
-            get { return priority; }
-            set { priority = value; }
+            get { return this.priority; }
         }
     }
 

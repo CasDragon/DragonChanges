@@ -7,33 +7,37 @@ using DragonChanges.New_Archetypes.Swordmaster_Tengu.Features;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes.Selection;
+using Kingmaker.UI.SettingsUI;
 
 namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
 {
     internal class Swordmaster_Tengu
     {
         // edit
-        internal static string archetypeprefix = "swordmaster-tengu";
-        internal static string archetypeguid = Guids.tenguSwordmasterArchetype;
+        internal const string archetypeprefix = "swordmaster-tengu";
+        internal const string archetypeguid = Guids.tenguSwordmasterArchetype;
+        internal const string settingName = "swordmastertengu";
+        internal const string settingDescription = "Enable the Swordmaster (Tengu) archetype";
 
-        internal static string featureselectionguid = Guids.TraceSelection;
+        internal const string featureselectionguid = Guids.TraceSelection;
 
-        internal static string abilityresourceguid = Guids.TranceResource;
+        internal const string abilityresourceguid = Guids.TranceResource;
 
         // don't edit
-        internal static string archetypename = $"{archetypeprefix}.archetype.name";
-        internal static string archetypedescription = $"{archetypeprefix}.archetype.description";
-        internal static string archetypeshortdescription = $"{archetypeprefix}.archetype.shortdescription";
+        internal const string archetypename = $"{archetypeprefix}.archetype.name";
+        internal const string archetypedescription = $"{archetypeprefix}.archetype.description";
+        internal const string archetypeshortdescription = $"{archetypeprefix}.archetype.shortdescription";
 
-        internal static string featureselectionn = "TranceSelection";
-        internal static string featureselectionname = $"{featureselectionn}.name";
-        internal static string featureselectiondescription = $"{featureselectionn}.description";
+        internal const string featureselectionn = "TranceSelection";
+        internal const string featureselectionname = $"{featureselectionn}.name";
+        internal const string featureselectiondescription = $"{featureselectionn}.description";
 
         internal static BlueprintAbilityResource abilityResource;
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewArchetypes, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("swordmastertengu"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{archetypeprefix} archetype enabled, configuring started");
                 abilityResource = ConfigureAbilityResource();

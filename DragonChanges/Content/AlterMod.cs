@@ -6,10 +6,13 @@ namespace DragonChanges.Content
 {
     internal class AlterMod
     {
+        const string settingName = "mc-microscopic-horse";
+        const string settingDescription = "Adds the Nightmare animal companion (MicroscopicContent) to other pet lists";
         [DragonConfigure]
+        [DragonSetting(settingCategories.ModCompatability, settingName, settingDescription)]
         public static void PatchHorse()
         {
-            if (Settings.GetSetting<bool>("mc-microscopic-horse"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 if (ModCompat.microscopic)
                 {

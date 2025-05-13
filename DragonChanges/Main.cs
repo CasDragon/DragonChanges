@@ -50,7 +50,7 @@ namespace DragonChanges
 
                     log.Log("Checking for mods for compatibility patches");
                     ModCompat.CheckForMods();
-                    Settings.InitializeSettings();
+                    NewSettings.InitializeSettings();
                     log.Log("Patching blueprints.");
                     AneviaVendor.ConfigureStart();
                     Thingy.DoPatches();

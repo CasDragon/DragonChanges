@@ -18,7 +18,7 @@ namespace DragonChanges.NewStuff
         [DragonConfigure]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("swordmastertengu"))
+            if (NewSettings.GetSetting<bool>("swordmastertengu"))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

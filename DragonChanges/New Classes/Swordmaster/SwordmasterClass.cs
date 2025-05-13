@@ -15,14 +15,17 @@ namespace DragonChanges.New_Classes.Swordmaster
         // edit
         internal static string classprefix = "swordmaster";
         internal static string classguid = Guids.SwordMasterClass;
+        internal const string settingName = "swordmaster";
+        internal const string settingDescription = "Enable the Swordmaster class (WIP)";
         // don't edit
         internal static string classname = $"{classprefix}.class.name";
         internal static string classdescription = $"{classprefix}.class.description";
         internal static string classshortdescription = $"{classprefix}.class.shortdescription";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewClasses, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>("swordmaster"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
                 BlueprintProgression progression = SwordmasterProgression.Configure();

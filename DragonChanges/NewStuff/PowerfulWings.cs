@@ -12,13 +12,16 @@ namespace DragonChanges.NewStuff
         // edit
         internal const string feature = "PowerfulWings";
         internal const string featureguid = Guids.PowerfulWings;
+        internal const string settingName = "powerfulwings";
+        internal const string settingDescription = "Adds the feat Powerful Wings";
         // don't edit
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(feature.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

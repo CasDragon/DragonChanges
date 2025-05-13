@@ -5,10 +5,13 @@ namespace DragonChanges.Content
 {
     internal class Drakes
     {
+        const string settingName = "ec-drakes";
+        const string settingDescription = "Super secret option to buff drakes from Expanded Content";
         [DragonConfigure]
+        [DragonSetting(settingCategories.ModCompatability, settingName, settingDescription, false)]
         public static void PatchDrakes()
         {
-            if (Settings.GetSetting<bool>("ec-drakes"))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 if (ModCompat.expandedcontent)
                 {

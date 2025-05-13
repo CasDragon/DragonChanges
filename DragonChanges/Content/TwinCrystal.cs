@@ -1,5 +1,4 @@
-﻿using BlueprintCore.Blueprints.Configurators.Items;
-using BlueprintCore.Blueprints.Configurators.Items.Weapons;
+﻿using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
@@ -12,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace DragonChanges.Content
 {
-    internal class Thwarter
+    internal class TwinCrystal
     {
-        const string settingName = "thwarter";
-        const string settingDescription = "Enables the Thwarter tongi item";
+        const string settingName = "twincrystals";
+        const string settingDescription = "Enables the Twin Crystals double-sword item";
         [DragonConfigure]
         [DragonSetting(settingCategories.NewItems, settingName, settingDescription)]
         public static void Configure()
@@ -37,10 +36,13 @@ namespace DragonChanges.Content
         }
         public static void ConfigureEnabled()
         {
-            BlueprintItemWeapon tongi = ItemWeaponConfigurator.For(ItemWeaponRefs.JustifierTongiItem)
-                .SetVisualParameters(ItemWeaponRefs.TongiKeenPlus1.Reference.Get().VisualParameters)
+            BlueprintItemWeapon sword = ItemWeaponConfigurator.For(ItemWeaponRefs.TwinCrystalsItem)
+                .SetVisualParameters(ItemWeaponRefs.HavocHarbingerItem.Reference.Get().VisualParameters)
                 .Configure();
-            AneviaVendor.AddItem(tongi);
+            ItemWeaponConfigurator.For(ItemWeaponRefs.TwinCrystalsSecondItem)
+                .SetVisualParameters(ItemWeaponRefs.HavocHarbingerItemSecond.Reference.Get().VisualParameters)
+                .Configure();
+            AneviaVendor.AddItem(sword);
         }
     }
 }

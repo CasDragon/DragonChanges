@@ -7,6 +7,7 @@ using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.EntitySystem.Stats;
+using Kingmaker.UI.SettingsUI;
 using Kingmaker.UnitLogic.Mechanics.Components;
 
 namespace DragonChanges.NewStuff
@@ -16,13 +17,16 @@ namespace DragonChanges.NewStuff
         // edit
         internal const string feature = "PowerfulThrow";
         internal const string featureguid = Guids.PowerfulThrowFeature;
+        internal const string settingName = "powerfulthrow";
+        internal const string settingDescription = "Adds the feat Powerful Throw\"";
         // don't edit
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
+        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (Settings.GetSetting<bool>(feature.ToLower()))
+            if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();
