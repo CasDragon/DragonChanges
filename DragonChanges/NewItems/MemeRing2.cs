@@ -33,7 +33,7 @@ namespace DragonChanges.NewItems
         public static void ConfigureDummy()
         {
             ItemEquipmentRingConfigurator.New(item, itemguid).Configure();
-            MemeRing1Feature.ConfigureDummy();
+            MemeRing2Feature.ConfigureDummy();
         }
         public static void ConfigureEnabled()
         {
