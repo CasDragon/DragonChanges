@@ -2,7 +2,7 @@
   "Id": "DragonChanges",
   "DisplayName": "DragonChanges&Additions",
   "Author": "CascadingDragon",
-  "Version": "1.10.2",
+  "Version": "1.10.3",
   "ManagerVersion": "0.27.11",
   "Requirements": [ "ModMenu-2.0.0" ],
   "AssemblyName": "DragonChanges.dll",

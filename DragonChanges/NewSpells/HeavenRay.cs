@@ -23,6 +23,8 @@ using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 using System.Linq;
 using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
 using Kingmaker.UI.SettingsUI;
+using Kingmaker.Blueprints;
+using Kingmaker.UnitLogic.Mechanics.Components;
 
 namespace DragonChanges.NewSpells
 {
@@ -57,13 +59,16 @@ namespace DragonChanges.NewSpells
         }
         public static void ConfigureEnabled()
         {
-            Metamagic metas = AbilityRefs.HellfireRay.Reference.Get().AvailableMetamagic;
+            BlueprintAbility hellfire = AbilityRefs.HellfireRay.Reference.Get();
+            Metamagic metas = hellfire.AvailableMetamagic;
             if (ModCompat.tttbase)
             {
                 metas = metas | (Metamagic) (CustomMetamagic.Burning | CustomMetamagic.ElementalAcid |
                     CustomMetamagic.ElementalCold | CustomMetamagic.ElementalElectricity |
                     CustomMetamagic.ElementalFire | CustomMetamagic.Flaring);
             }
+            ContextRankConfig crc1 = hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount);
+            ContextRankConfig crc2 = hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default);
             AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)
@@ -102,11 +107,8 @@ namespace DragonChanges.NewSpells
                                         DisableFavoredEnemyDamage = true,
                                         DisableSneak = true
                                     }))
-                .AddContextRankConfig(ContextRankConfigs
-                                    .CasterLevel(useMax: true, type: AbilityRankType.ProjectilesCount, max: 3, min: 1)
-                                    .WithStartPlusDivStepProgression(divisor: 4, start: 11, delayStart: true))
-                .AddContextRankConfig(ContextRankConfigs
-                                    .CasterLevel(useMax: true, max: 15, min: 0))
+                .AddContextRankConfig(crc1)
+                .AddContextRankConfig(crc2)
                 // fields
                 .SetType(AbilityType.Spell)
                 .SetRange(AbilityRange.Close)
