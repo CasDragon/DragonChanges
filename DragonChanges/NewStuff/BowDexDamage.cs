@@ -8,6 +8,7 @@ using DragonChanges.BPCoreExtensions;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Enums;
 
 namespace DragonChanges.NewStuff
 {
@@ -47,7 +48,8 @@ namespace DragonChanges.NewStuff
                 .SetDescription(featuredescription)
                 .SetIsClassFeature(true)
                 .AddToGroups(Kingmaker.Blueprints.Classes.FeatureGroup.MythicAbility)
-                .AddWorkingAttackStatReplacementForWeaponGroup(StatType.Dexterity, WeaponFighterGroupFlags.Bows)
+                .AddWeaponTypeDamageStatReplacement(WeaponCategory.Longbow, false, StatType.Dexterity, false)
+                .AddWeaponTypeDamageStatReplacement(WeaponCategory.Shortbow, false, StatType.Dexterity, false)
                 .Configure();
         }
     }
