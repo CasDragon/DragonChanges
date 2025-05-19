@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.References;
 using DragonChanges.BPCoreExtensions;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Weapons;
@@ -50,6 +51,8 @@ namespace DragonChanges.NewStuff
                 .AddToGroups(Kingmaker.Blueprints.Classes.FeatureGroup.MythicAbility)
                 .AddWeaponTypeDamageStatReplacement(WeaponCategory.Longbow, false, StatType.Dexterity, false)
                 .AddWeaponTypeDamageStatReplacement(WeaponCategory.Shortbow, false, StatType.Dexterity, false)
+                .AddPrerequisiteFeature(FeatureRefs.DeadlyAimFeature.Reference.Get())
+                .AddPrerequisiteFullStatValue(stat: StatType.Dexterity, value: 18)
                 .Configure();
         }
     }
