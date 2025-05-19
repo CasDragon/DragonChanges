@@ -1,1232 +1,1243 @@
 [
-  {
-    "Key": "PowerfulThrow.name",
-    "ProcessTemplates": false,
-    "enGB": "Powerful Throw"
-  },
-
-  {
-    "Key": "PowerfulThrow.description",
-    "enGB": "You may use your {g}Strength{/g} modifier in place of your {g}Dexterity{/g} modifier for your attack rolls when making a ranged attack with thrown weapons. You may also use the Power Attack feat instead of the Deadly Aim feat when attacking with thrown weapons."
-  },
-
-  {
-    "Key": "undeadmountfeature.name",
-    "ProcessTemplates": false,
-    "enGB": "Animal Companion - Undead Horse"
-  },
-
-  {
-    "Key": "undeadmountfeature.description",
-    "enGB": "{g|Encyclopedia:Size}Size{/g}: Large\n{g|Encyclopedia:Speed}Speed{/g}: 50 ft.\n{g|Encyclopedia:Armor_Class}AC{/g}: +4 natural armor\n{g|Encyclopedia:Attack}Attacks{/g}: bite ({g|Encyclopedia:Dice}1d4{/g}), 2 hooves (1d6)\n{g|Encyclopedia:Ability_Scores}Ability scores{/g}: {g|Encyclopedia:Strength}Str{/g} 16, {g|Encyclopedia:Dexterity}Dex{/g} 13, {g|Encyclopedia:Constitution}Con{/g} 15, {g|Encyclopedia:Intelligence}Int{/g} 2, {g|Encyclopedia:Wisdom}Wis{/g} 12, {g|Encyclopedia:Charisma}Cha{/g} 6\nSpecial qualities: {g|Encyclopedia:Scent}scent{/g}\nAt 4th level, a horse gains Str +2 and Con +2 and its hoof attacks become primary.\nWhen riding a horse, you gain a +1 {g|Encyclopedia:Bonus}bonus{/g} to AC and on attack rolls against enemies of Medium size or smaller."
-  },
-
-  {
-    "Key": "unicornmountfeature.name",
-    "ProcessTemplates": false,
-    "enGB": "Animal Companion - Unicorn"
-  },
-
-  {
-    "Key": "unicornmountfeature.description",
-    "enGB": "{g|Encyclopedia:Size}Size{/g}: Large\n{g|Encyclopedia:Speed}Speed{/g}: 50 ft.\n{g|Encyclopedia:Armor_Class}AC{/g}: +4 natural armor\n{g|Encyclopedia:Attack}Attacks{/g}: bite ({g|Encyclopedia:Dice}1d4{/g}), 2 hooves (1d6)\n{g|Encyclopedia:Ability_Scores}Ability scores{/g}: {g|Encyclopedia:Strength}Str{/g} 16, {g|Encyclopedia:Dexterity}Dex{/g} 13, {g|Encyclopedia:Constitution}Con{/g} 15, {g|Encyclopedia:Intelligence}Int{/g} 2, {g|Encyclopedia:Wisdom}Wis{/g} 12, {g|Encyclopedia:Charisma}Cha{/g} 6\nSpecial qualities: {g|Encyclopedia:Scent}scent{/g}\nAt 4th level, a horse gains Str +2 and Con +2 and its hoof attacks become primary.\nWhen riding a horse, you gain a +1 {g|Encyclopedia:Bonus}bonus{/g} to AC and on attack rolls against enemies of Medium size or smaller."
-  },
-
-  {
-    "Key": "griffonmountfeature.name",
-    "ProcessTemplates": false,
-    "enGB": "Animal Companion - Griffon"
-  },
-
-  {
-    "Key": "griffonmountfeature.description",
-    "enGB": "MOUNTING IS VISUALLY BROKEN\nTODO"
-  },
-
-  {
-    "Key": "redditor.name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor"
-  },
-
-  {
-    "Key": "redditor.description",
-    "enGB": "Reddit's own character class. CHA TO EVERYTHING! \nBasically Fighter class with +CHA to all stats and CHA spellcasting. (This is a meme class I made, don't take it too seriously)'"
-  },
-
-  {
-    "Key": "redditor.shortdescription",
-    "enGB": "Reddit's own character class. CHA TO EVERYTHING!"
-  },
-
-  {
-    "Key": "ChaToInit.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Initiative"
-  },
-
-  {
-    "Key": "ChaToInit.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Initiative}Initiative{/g}."
-  },
-
-  {
-    "Key": "ChaToSaves.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Saving Throws"
-  },
-
-  {
-    "Key": "ChaToSaves.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:SaveFortitude}Fortitude{/g}, {g|Encyclopedia:SaveReflex}Reflex{/g}, and {g|Encyclopedia:SaveWill}Will{/g} saves."
-  },
-
-  {
-    "Key": "ChaToWis.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Wisdom"
-  },
-
-  {
-    "Key": "ChaToWis.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Wisdom}Wisdom{/g}."
-  },
-
-  {
-    "Key": "ChaToInt.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Intelligence"
-  },
-
-  {
-    "Key": "ChaToInt.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Intelligence}Intelligence{/g}."
-  },
-
-  {
-    "Key": "ChaToAC.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Armor"
-  },
-
-  {
-    "Key": "ChaToAC.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Armor_Class}AC{/g}."
-  },
-
-  {
-    "Key": "ChaToCha.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Charisma"
-  },
-
-  {
-    "Key": "ChaToCha.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}."
-  },
-
-  {
-    "Key": "ChaToDex.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Dexterity"
-  },
-
-  {
-    "Key": "ChaToDex.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Dexterity}Dexterity{/g}."
-  },
-
-  {
-    "Key": "ChaToCon.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Constitution"
-  },
-
-  {
-    "Key": "ChaToCon.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Constitution}Constitution{/g}."
-  },
-
-  {
-    "Key": "ChaToStr.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Strength"
-  },
-
-  {
-    "Key": "ChaToStr.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Strength}Strength{/g}."
-  },
-
-  {
-    "Key": "ChaToSkills.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Skills"
-  },
-
-  {
-    "Key": "ChaToSkills.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his skills."
-  },
-  {
-    "Key": "ChaToSpeed.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Speed"
-  },
-
-  {
-    "Key": "ChaToSpeed.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Speed}Speed{/g}."
-  },
-
-  {
-    "Key": "ChaToDamage.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Damage"
-  },
-
-  {
-    "Key": "ChaToDamage.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his damage."
-  },
-
-  {
-    "Key": "ChaToBAB.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor BAB"
-  },
-
-  {
-    "Key": "ChaToBAB.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:BaseAttackBonus}Base Attack Bonus{/g}."
-  },
-
-  {
-    "Key": "ChaToCrit.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Critical"
-  },
-
-  {
-    "Key": "ChaToCrit.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Critical bonus."
-  },
-
-  {
-    "Key": "ChaToSR.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Spell Resistance"
-  },
-
-  {
-    "Key": "ChaToSR.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Resistance."
-  },
-
-  {
-    "Key": "ChaToDR.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Damage Reduction"
-  },
-
-  {
-    "Key": "ChaToDR.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Damage Reduction. (CURRENTLY BROKEN)."
-  },
-
-  {
-    "Key": "ChaToSpellPen.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Spell Penetration"
-  },
-
-  {
-    "Key": "ChaToSpellPen.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Penetration. "
-  },
-
-  {
-    "Key": "ChaToSpellDC.Name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Spell DC"
-  },
-
-  {
-    "Key": "ChaToSpellDC.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his spell's DC. "
-  },
-
-  {
-    "Key": "ChaToChaCap.Name",
-    "ProcessTemplates": false,
-    "enGB": "Reddit Moderator Charisma"
-  },
-
-  {
-    "Key": "ChaToChaCap.Description",
-    "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}, again!."
-  },
-
-  {
-    "Key": "redditor.spellbook.name",
-    "ProcessTemplates": false,
-    "enGB": "Redditor Spell Book"
-  },
-
-  {
-    "Key": "swordmaster.class.name",
-    "ProcessTemplates": false,
-    "enGB": "Swordmaster (WIP)"
-  },
-
-  {
-    "Key": "swordmaster.class.description",
-    "enGB": "TODO Swordmaster description"
-  },
-
-  {
-    "Key": "swordmaster.class.shortdescription",
-    "enGB": "TODO Swordmaster description"
-  },
-
-  {
-    "Key": "swordmaster.progression.name",
-    "ProcessTemplates": false,
-    "enGB": "Swordmaster Progression"
-  },
-
-  {
-    "Key": "swordmaster.prociencies.name",
-    "ProcessTemplates": false,
-    "enGB": "Swordmaster Proficiencies"
-  },
-
-  {
-    "Key": "swordmaster.prociencies.description",
-    "enGB": "Swordmasters are proficient with all simpe and martial swords, plut the quarterstaff. They are proficient with light armor, but not with shields."
-  },
-
-  {
-    "Key": "PowerfulWings.name",
-    "ProcessTemplates": false,
-    "enGB": "Powerful Wings"
-  },
-
-  {
-    "Key": "PowerfulWings.description",
-    "enGB": "You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage "
-  },
-
-  {
-    "Key": "swordmaster-tengu.archetype.name",
-    "ProcessTemplates": false,
-    "enGB": "Swordmaster"
-  },
-
-  {
-    "Key": "swordmaster-tengu.archetype.description",
-    "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
-  },
-
-  {
-    "Key": "swordmaster-tengu.archetype.shortdescription",
-    "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
-  },
-
-  {
-    "Key": "TranceSelection.name",
-    "ProcessTemplates": false,
-    "enGB": "Trance Selection"
-  },
-
-  {
-    "Key": "TranceSelection.description",
-    "enGB": "At 3rd level, the swordmaster chooses one trance from the list below. She chooses another trance at 6th, 9th, 12th, 15th, and 18th level. She can only use one type of trance at a time."
-  },
-
-  {
-    "Key": "CraneTrance.name",
-    "ProcessTemplates": false,
-    "enGB": "Crane Trance"
-  },
-
-  {
-    "Key": "CraneTrance.description",
-    "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.cranetrance.ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Crane Trance (Ability)"
-  },
-
-  {
-    "Key": "swordmaster-tengu.cranetrance.ability.description",
-    "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.cranetrance.buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Crane Trance Buff"
-  },
-
-  {
-    "Key": "swordmaster-tengu.cranetrance.buff.description",
-    "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
-  },
-
-  {
-    "Key": "DragonTrance.name",
-    "ProcessTemplates": false,
-    "enGB": "Dragon Trance"
-  },
-
-  {
-    "Key": "DragonTrance.description",
-    "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.dragontrance.ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Dragon Trance (Ability)"
-  },
-
-  {
-    "Key": "swordmaster-tengu.dragontrance.ability.description",
-    "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.dragontrance.buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Dragon Trance Buff"
-  },
-
-  {
-    "Key": "swordmaster-tengu.dragontrance.buff.description",
-    "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
-  },
-
-  {
-    "Key": "LeopardTrance.name",
-    "ProcessTemplates": false,
-    "enGB": "Leopard Trance"
-  },
-
-  {
-    "Key": "LeopardTrance.description",
-    "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.leopardtrance.ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Leopard Trance (Ability)"
-  },
-
-  {
-    "Key": "swordmaster-tengu.leopardtrance.ability.description",
-    "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.leopardtrance.buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Leopard Trance Buff"
-  },
-
-  {
-    "Key": "swordmaster-tengu.leopardtrance.buff.description",
-    "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
-  },
-
-  {
-    "Key": "MonkeyTrance.name",
-    "ProcessTemplates": false,
-    "enGB": "Monkey Trance"
-  },
-
-  {
-    "Key": "MonkeyTrance.description",
-    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.monkeytrance.ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Monkey Trance (Ability)"
-  },
-
-  {
-    "Key": "swordmaster-tengu.monkeytrance.ability.description",
-    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.monkeytrance.buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Monkey Trance Buff"
-  },
-
-  {
-    "Key": "swordmaster-tengu.monkeytrance.buff.description",
-    "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
-  },
-
-  {
-    "Key": "SerpentTrance.name",
-    "ProcessTemplates": false,
-    "enGB": "Serpent Trance"
-  },
-
-  {
-    "Key": "SerpentTrance.description",
-    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
-  },
-
-  {
-    "Key": "swordmaster-tengu.serpenttrance.ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Serpent Trance (Ability)"
-  },
-
-  {
-    "Key": "swordmaster-tengu.serpenttrance.ability.description",
-    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
-  },
-
-  {
-    "Key": "swordmaster-tengu.serpenttrance.buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Serpent Trance Buff"
-  },
-
-  {
-    "Key": "swordmaster-tengu.serpenttrance.buff.description",
-    "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
-  },
-
-  {
-    "Key": "TigerTrance.name",
-    "ProcessTemplates": false,
-    "enGB": "Tiger Trance"
-  },
-
-  {
-    "Key": "TigerTrance.description",
-    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.tigertrance.ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Tiger Trance (Ability)"
-  },
-
-  {
-    "Key": "swordmaster-tengu.tigertrance.ability.description",
-    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
-  },
-
-  {
-    "Key": "swordmaster-tengu.tigertrance.buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Tiger Trance Buff"
-  },
-
-  {
-    "Key": "swordmaster-tengu.tigertrance.buff.description",
-    "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
-  },
-
-  {
-    "Key": "Wanderer.name",
-    "ProcessTemplates": false,
-    "enGB": "Cursed (lycanthropy)"
-  },
-
-  {
-    "Key": "Wanderer.description",
-    "enGB": "Adds Perception and Mobility to list of class skills. She also is able to use her curse to qualify for feats that require lycanthropy."
-  },
-
-  {
-    "Key": "TranceMaster.name",
-    "ProcessTemplates": false,
-    "enGB": "Trance Master"
-  },
-
-  {
-    "Key": "TranceMaster.description",
-    "enGB": "Allows the Swordmaster to enter 2 trances at a time"
-  },
-
-  {
-    "Key": "AutoMaximize.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Maximize"
-  },
-
-  {
-    "Key": "AutoMaximize.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoMaximize-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Maximize"
-  },
-
-  {
-    "Key": "AutoMaximize-ability.description",
-    "enGB": "Enable to give your spells Maximum through your mythic power!"
-  },
-
-  {
-    "Key": "AutoMaximize-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Maximize"
-  },
-
-  {
-    "Key": "AutoMaximize-buff.description",
-    "enGB": "Spells will have Maximum applied to them"
-  },
-
-  {
-    "Key": "AutoExtend.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Extend"
-  },
-
-  {
-    "Key": "AutoExtend.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoExtend-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Extend"
-  },
-
-  {
-    "Key": "AutoExtend-ability.description",
-    "enGB": "Enable to give your spells Extend through your mythic power!"
-  },
-
-  {
-    "Key": "AutoExtend-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Extend"
-  },
-
-  {
-    "Key": "AutoExtend-buff.description",
-    "enGB": "Spells will have Extend applied to them"
-  },
-
-  {
-    "Key": "AutoEmpower.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Empower"
-  },
-
-  {
-    "Key": "AutoEmpower.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoEmpower-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Empower"
-  },
-
-  {
-    "Key": "AutoEmpower-ability.description",
-    "enGB": "Enable to give your spells Empower through your mythic power!"
-  },
-
-  {
-    "Key": "AutoEmpower-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Empower"
-  },
-
-  {
-    "Key": "AutoEmpower-buff.description",
-    "enGB": "Spells will have Empower applied to them"
-  },
-
-  {
-    "Key": "AutoQuicken.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Quicken"
-  },
-
-  {
-    "Key": "AutoQuicken.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoQuicken-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Quicken"
-  },
-
-  {
-    "Key": "AutoQuicken-ability.description",
-    "enGB": "Enable to give your spells Quicken through your mythic power!"
-  },
-
-  {
-    "Key": "AutoQuicken-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Quicken"
-  },
-
-  {
-    "Key": "AutoQuicken-buff.description",
-    "enGB": "Spells will have Quicken applied to them"
-  },
-
-  {
-    "Key": "AutoReach.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Reach"
-  },
-
-  {
-    "Key": "AutoReach.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoReach-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Reach"
-  },
-
-  {
-    "Key": "AutoReach-ability.description",
-    "enGB": "Enable to give your spells Reach through your mythic power!"
-  },
-
-  {
-    "Key": "AutoReach-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Reach"
-  },
-
-  {
-    "Key": "AutoReach-buff.description",
-    "enGB": "Spells will have Reach applied to them"
-  },
-
-  {
-    "Key": "AutoBolstered.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Bolster"
-  },
-
-  {
-    "Key": "AutoBolstered.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoBolstered-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Bolster"
-  },
-
-  {
-    "Key": "AutoBolstered-ability.description",
-    "enGB": "Enable to give your spells Bolster through your mythic power!"
-  },
-
-  {
-    "Key": "AutoBolstered-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Bolster"
-  },
-
-  {
-    "Key": "AutoBolstered-buff.description",
-    "enGB": "Spells will have Bolster applied to them"
-  },
-
-  {
-    "Key": "AutoSelective.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Selective"
-  },
-
-  {
-    "Key": "AutoSelective.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoSelective-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Selective"
-  },
-
-  {
-    "Key": "AutoSelective-ability.description",
-    "enGB": "Enable to give your spells Selective through your mythic power!"
-  },
-
-  {
-    "Key": "AutoSelective-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Selective"
-  },
-
-  {
-    "Key": "AutoSelective-buff.description",
-    "enGB": "Spells will have Selective applied to them"
-  },
-
-  {
-    "Key": "AutoPersistent.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Persistent"
-  },
-
-  {
-    "Key": "AutoPersistent.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoPersistent-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Persistent"
-  },
-
-  {
-    "Key": "AutoPersistent-ability.description",
-    "enGB": "Enable to give your spells Persistent through your mythic power!"
-  },
-
-  {
-    "Key": "AutoPersistent-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Persistent"
-  },
-
-  {
-    "Key": "AutoPersistent-buff.description",
-    "enGB": "Spells will have Persistent applied to them"
-  },
-
-  {
-    "Key": "AutoIntensified.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Intensify"
-  },
-
-  {
-    "Key": "AutoIntensified.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoIntensified-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Intensify"
-  },
-
-  {
-    "Key": "AutoIntensified-ability.description",
-    "enGB": "Enable to give your spells Intensify through your mythic power!"
-  },
-
-  {
-    "Key": "AutoIntensified-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Intensify"
-  },
-
-  {
-    "Key": "AutoIntensified-buff.description",
-    "enGB": "Spells will have Intensify applied to them"
-  },
-
-  {
-    "Key": "AutoPiercing.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Piercing"
-  },
-
-  {
-    "Key": "AutoPiercing.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoPiercing-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Piercing"
-  },
-
-  {
-    "Key": "AutoPiercing-ability.description",
-    "enGB": "Enable to give your spells Piercing through your mythic power!"
-  },
-
-  {
-    "Key": "AutoPiercing-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Piercing"
-  },
-
-  {
-    "Key": "AutoPiercing-buff.description",
-    "enGB": "Spells will have Piercing applied to them"
-  },
-
-  {
-    "Key": "AutoBurning.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Burning"
-  },
-
-  {
-    "Key": "AutoBurning.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoBurning-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Burning"
-  },
-
-  {
-    "Key": "AutoBurning-ability.description",
-    "enGB": "Enable to give your spells Burning through your mythic power!"
-  },
-
-  {
-    "Key": "AutoBurning-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Burning"
-  },
-
-  {
-    "Key": "AutoBurning-buff.description",
-    "enGB": "Spells will have Burning applied to them"
-  },
-
-  {
-    "Key": "AutoEncourage.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Encouraging"
-  },
-
-  {
-    "Key": "AutoEncourage.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoEncourage-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Encouraging"
-  },
-
-  {
-    "Key": "AutoEncourage-ability.description",
-    "enGB": "Enable to give your spells Encouraging through your mythic power!"
-  },
-
-  {
-    "Key": "AutoEncourage-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Encouraging"
-  },
-
-  {
-    "Key": "AutoEncourage-buff.description",
-    "enGB": "Spells will have Encouraging applied to them"
-  },
-
-  {
-    "Key": "AutoFlare.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Flaring"
-  },
-
-  {
-    "Key": "AutoFlare.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoFlare-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Flaring"
-  },
-
-  {
-    "Key": "AutoFlare-ability.description",
-    "enGB": "Enable to give your spells Flaring through your mythic power!"
-  },
-
-  {
-    "Key": "AutoFlare-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Flaring"
-  },
-
-  {
-    "Key": "AutoFlare-buff.description",
-    "enGB": "Spells will have Flaring applied to them"
-  },
-
-  {
-    "Key": "AutoRime.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Rime"
-  },
-
-  {
-    "Key": "AutoRime.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoRime-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Rime"
-  },
-
-  {
-    "Key": "AutoRime-ability.description",
-    "enGB": "Enable to give your spells Rime through your mythic power!"
-  },
-
-  {
-    "Key": "AutoRime-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Rime"
-  },
-
-  {
-    "Key": "AutoRime-buff.description",
-    "enGB": "Spells will have Rime applied to them"
-  },
-
-  {
-    "Key": "AutoSolidShadows.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Solid-Shadows"
-  },
-
-  {
-    "Key": "AutoSolidShadows.description",
-    "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
-  },
-
-  {
-    "Key": "AutoSolidShadows-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Solid-Shadows"
-  },
-
-  {
-    "Key": "AutoSolidShadows-ability.description",
-    "enGB": "Enable to give your spells Solid Shadows through your mythic power!"
-  },
-
-  {
-    "Key": "AutoSolidShadows-buff.name",
-    "ProcessTemplates": false,
-    "enGB": "Auto-Solid-Shadows"
-  },
-
-  {
-    "Key": "AutoSolidShadows-buff.description",
-    "enGB": "Spells will have Solid Shadows applied to them"
-  },
-
-  {
-    "Key": "HeavenRay.name",
-    "ProcessTemplates": false,
-    "enGB": "Heavenfire Ray"
-  },
-
-  {
-    "Key": "HeavenRay.description",
-    "enGB": "A blast of heavenfire blazes from your hands. You can fire one ray, plus one additional ray for every 4 {g|Encyclopedia:Caster_Level}caster levels{/g} beyond 11th (to a maximum of three rays at 19th level). Each ray requires a ranged {g|Encyclopedia:TouchAttack}touch attack{/g} to hit and deals {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Damage}damage{/g} per caster level (maximum 15d6). Half the damage is {g|Encyclopedia:Energy_Damage}fire damage{/g}, but the other half results directly from holy power and is therefore not subject to being reduced by fire {g|Encyclopedia:Energy_Resistance}resistance{/g}."
-  },
-
-  {
-    "Key": "HellBall.name",
-    "ProcessTemplates": false,
-    "enGB": "HellBall"
-  },
-
-  {
-    "Key": "HellBall.description",
-    "enGB": "You unleash a massive blast of energy that detonates upon all in the AoE, dealing 20d6 fire, 20d6 acid, 20d6 electrical and 20d6 sonic damage. A reflex save halves damage."
-  },
-
-  {
-    "Key": "HellBall-feature.name",
-    "ProcessTemplates": false,
-    "enGB": "HellBall Spell"
-  },
-
-  {
-    "Key": "HellBall-feature.description",
-    "enGB": "Grants you a new powerful spell called Hellbell, which does 10d6 damage of multiple elements! Requires being able to cast spell level 9."
-  },
-
-  {
-    "Key": "StorvalsThunder.name",
-    "ProcessTemplates": false,
-    "enGB": "Storval's Thunder"
-  },
-
-  {
-    "Key": "StorvalsThunder.description",
-    "enGB": "The hematite head of this +1 earth breaker crackles with electricity, dealing an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit. 3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round."
-  },
-
-  {
-    "Key": "StorvalsThunder-enchant.name",
-    "ProcessTemplates": false,
-    "enGB": "Storval's Thunder"
-  },
-
-  {
-    "Key": "StorvalsThunder-enchant.description",
-    "enGB": "Deals an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit."
-  },
-
-  {
-    "Key": "GraveSingerPlus.name",
-    "ProcessTemplates": false,
-    "enGB": "Grave Singer Plus"
-  },
-
-  {
-    "Key": "GraveSingerPlus.description",
-    "enGB": "Gives you +1 bonus to both crit range and crit multiplier. (Gives these bonuses for all weapons/unarmed, despite needing Improved Crit & Improved Crit Mythic)"
-  },
-
-  {
-    "Key": "StorvalsThunder-ability.name",
-    "ProcessTemplates": false,
-    "enGB": "Storval's Thunder "
-  },
-
-  {
-    "Key": "StorvalsThunder-ability.description",
-    "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)"
-  },
-
-  {
-    "Key": "StorvalsFang.name",
-    "ProcessTemplates": false,
-    "enGB": "Storval's Fang"
-  },
-
-  {
-    "Key": "StorvalsFang.description",
-    "enGB": "This metal +1 klar is shaped like the head of a storm roc, whose sharp feathers serve as the klar’s spikes, and it hums and crackles like a distant stormy sky. When used to make a shield bash attack, a Storval’s fang deals an additional 1d6 points of sonic damage. In addition, the wielder gains electricity resistance 10.\nIf the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
-  },
-
-  {
-    "Key": "SpikedLightShieldPlus1Sonic.name",
-    "ProcessTemplates": false,
-    "enGB": "Spiked Light Shield Plus 1 Sonic"
-  },
-
-  {
-    "Key": "SpikedLightShieldPlus1Sonic.description",
-    "enGB": "Spiked Light Shield Plus 1 Sonic"
-  },
-
-  {
-    "Key": "StorvalSetBonus.name",
-    "ProcessTemplates": false,
-    "enGB": "StorvalSetBonus"
-  },
-
-  {
-    "Key": "StorvalSetBonus.description",
-    "enGB": "If the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
-  },
-
-  {
-    "Key": "AneviaVendorAnswer.text",
-    "ProcessTemplates": false,
-    "enGB": "(DragonChanges) Show me your wares!"
-  },
-
-  {
-    "Key": "ChaMemeRingAC.name",
-    "ProcessTemplates": false,
-    "enGB": "Tomek's Ring"
-  },
-
-  {
-    "Key": "ChaMemeRingAC.description",
-    "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
-  },
-
-  {
-    "Key": "MemeRing1Feature.name",
-    "ProcessTemplates": false,
-    "enGB": "Tomek's Ring"
-  },
-
-  {
-    "Key": "MemeRing1Feature.description",
-    "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
-  },
-
-  {
-    "Key": "LesbianPolyculeDeity.name",
-    "ProcessTemplates": false,
-    "enGB": "Radiant Prism"
-  },
-
-  {
-    "Key": "LesbianPolyculeDeity.description",
-    "enGB": "The shining sun of Sarenrae, the twinkling stars of Desna, and the shimmering rainbow of Shelyn come together to form the Radiant Prism, a relatively small pantheon worshipped by those who actively fight against evil to protect the innocent. These three goddesses have been romantically involved with one another from time to time, so it makes sense that they would form a coalition. In addition to defeating the wicked, the Radiant Prism promotes the creation of beautiful works of art to bring more grace to the world.\nThough devotees of the Radiant Prism are tasked with battling all sources of evil, they are encouraged to refrain from becoming ruthless butchers. The wicked must be offered the chance to capitulate once it becomes clear their defeat is inevitable. Sarenrae’s compassion is a major pillar of the pantheon, and priests of the Radiant Prism attempt to redeem their enemies where possible. Of course, some creatures are remorseless in their evil (such as fiends and some undead), and the Radiant Prism doesn’t expect their worshippers to waste their lives trying to save such beings."
-  },
-
-  {
-    "Key": "MemeRing2.name",
-    "ProcessTemplates": false,
-    "enGB": "Ring of Heavy Body"
-  },
-
-  {
-    "Key": "MemeRing2.description",
-    "enGB": "The ring is imbued with the hope that having a heavy body will make your attacks better.\nAdds your CON bonus to your Critical range."
-  },
-
-  {
-    "Key": "MemeRing2Feature.name",
-    "ProcessTemplates": false,
-    "enGB": "not implemented"
-  },
-
-  {
-    "Key": "MemeRing2Feature.description",
-    "enGB": "not implemented"
-  }
+    {
+        "Key": "PowerfulThrow.name",
+        "ProcessTemplates": false,
+        "enGB": "Powerful Throw"
+    },
+
+    {
+        "Key": "PowerfulThrow.description",
+        "enGB": "You may use your {g}Strength{/g} modifier in place of your {g}Dexterity{/g} modifier for your attack rolls when making a ranged attack with thrown weapons. You may also use the Power Attack feat instead of the Deadly Aim feat when attacking with thrown weapons."
+    },
+
+    {
+        "Key": "undeadmountfeature.name",
+        "ProcessTemplates": false,
+        "enGB": "Animal Companion - Undead Horse"
+    },
+
+    {
+        "Key": "undeadmountfeature.description",
+        "enGB": "{g|Encyclopedia:Size}Size{/g}: Large\n{g|Encyclopedia:Speed}Speed{/g}: 50 ft.\n{g|Encyclopedia:Armor_Class}AC{/g}: +4 natural armor\n{g|Encyclopedia:Attack}Attacks{/g}: bite ({g|Encyclopedia:Dice}1d4{/g}), 2 hooves (1d6)\n{g|Encyclopedia:Ability_Scores}Ability scores{/g}: {g|Encyclopedia:Strength}Str{/g} 16, {g|Encyclopedia:Dexterity}Dex{/g} 13, {g|Encyclopedia:Constitution}Con{/g} 15, {g|Encyclopedia:Intelligence}Int{/g} 2, {g|Encyclopedia:Wisdom}Wis{/g} 12, {g|Encyclopedia:Charisma}Cha{/g} 6\nSpecial qualities: {g|Encyclopedia:Scent}scent{/g}\nAt 4th level, a horse gains Str +2 and Con +2 and its hoof attacks become primary.\nWhen riding a horse, you gain a +1 {g|Encyclopedia:Bonus}bonus{/g} to AC and on attack rolls against enemies of Medium size or smaller."
+    },
+
+    {
+        "Key": "unicornmountfeature.name",
+        "ProcessTemplates": false,
+        "enGB": "Animal Companion - Unicorn"
+    },
+
+    {
+        "Key": "unicornmountfeature.description",
+        "enGB": "{g|Encyclopedia:Size}Size{/g}: Large\n{g|Encyclopedia:Speed}Speed{/g}: 50 ft.\n{g|Encyclopedia:Armor_Class}AC{/g}: +4 natural armor\n{g|Encyclopedia:Attack}Attacks{/g}: bite ({g|Encyclopedia:Dice}1d4{/g}), 2 hooves (1d6)\n{g|Encyclopedia:Ability_Scores}Ability scores{/g}: {g|Encyclopedia:Strength}Str{/g} 16, {g|Encyclopedia:Dexterity}Dex{/g} 13, {g|Encyclopedia:Constitution}Con{/g} 15, {g|Encyclopedia:Intelligence}Int{/g} 2, {g|Encyclopedia:Wisdom}Wis{/g} 12, {g|Encyclopedia:Charisma}Cha{/g} 6\nSpecial qualities: {g|Encyclopedia:Scent}scent{/g}\nAt 4th level, a horse gains Str +2 and Con +2 and its hoof attacks become primary.\nWhen riding a horse, you gain a +1 {g|Encyclopedia:Bonus}bonus{/g} to AC and on attack rolls against enemies of Medium size or smaller."
+    },
+
+    {
+        "Key": "griffonmountfeature.name",
+        "ProcessTemplates": false,
+        "enGB": "Animal Companion - Griffon"
+    },
+
+    {
+        "Key": "griffonmountfeature.description",
+        "enGB": "MOUNTING IS VISUALLY BROKEN\nTODO"
+    },
+
+    {
+        "Key": "redditor.name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor"
+    },
+
+    {
+        "Key": "redditor.description",
+        "enGB": "Reddit's own character class. CHA TO EVERYTHING! \nBasically Fighter class with +CHA to all stats and CHA spellcasting. (This is a meme class I made, don't take it too seriously)'"
+    },
+
+    {
+        "Key": "redditor.shortdescription",
+        "enGB": "Reddit's own character class. CHA TO EVERYTHING!"
+    },
+
+    {
+        "Key": "ChaToInit.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Initiative"
+    },
+
+    {
+        "Key": "ChaToInit.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Initiative}Initiative{/g}."
+    },
+
+    {
+        "Key": "ChaToSaves.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Saving Throws"
+    },
+
+    {
+        "Key": "ChaToSaves.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:SaveFortitude}Fortitude{/g}, {g|Encyclopedia:SaveReflex}Reflex{/g}, and {g|Encyclopedia:SaveWill}Will{/g} saves."
+    },
+
+    {
+        "Key": "ChaToWis.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Wisdom"
+    },
+
+    {
+        "Key": "ChaToWis.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Wisdom}Wisdom{/g}."
+    },
+
+    {
+        "Key": "ChaToInt.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Intelligence"
+    },
+
+    {
+        "Key": "ChaToInt.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Intelligence}Intelligence{/g}."
+    },
+
+    {
+        "Key": "ChaToAC.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Armor"
+    },
+
+    {
+        "Key": "ChaToAC.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Armor_Class}AC{/g}."
+    },
+
+    {
+        "Key": "ChaToCha.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Charisma"
+    },
+
+    {
+        "Key": "ChaToCha.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}."
+    },
+
+    {
+        "Key": "ChaToDex.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Dexterity"
+    },
+
+    {
+        "Key": "ChaToDex.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Dexterity}Dexterity{/g}."
+    },
+
+    {
+        "Key": "ChaToCon.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Constitution"
+    },
+
+    {
+        "Key": "ChaToCon.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Constitution}Constitution{/g}."
+    },
+
+    {
+        "Key": "ChaToStr.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Strength"
+    },
+
+    {
+        "Key": "ChaToStr.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Strength}Strength{/g}."
+    },
+
+    {
+        "Key": "ChaToSkills.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Skills"
+    },
+
+    {
+        "Key": "ChaToSkills.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his skills."
+    },
+    {
+        "Key": "ChaToSpeed.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Speed"
+    },
+
+    {
+        "Key": "ChaToSpeed.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Speed}Speed{/g}."
+    },
+
+    {
+        "Key": "ChaToDamage.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Damage"
+    },
+
+    {
+        "Key": "ChaToDamage.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his damage."
+    },
+
+    {
+        "Key": "ChaToBAB.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor BAB"
+    },
+
+    {
+        "Key": "ChaToBAB.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:BaseAttackBonus}Base Attack Bonus{/g}."
+    },
+
+    {
+        "Key": "ChaToCrit.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Critical"
+    },
+
+    {
+        "Key": "ChaToCrit.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Critical bonus."
+    },
+
+    {
+        "Key": "ChaToSR.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Spell Resistance"
+    },
+
+    {
+        "Key": "ChaToSR.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Resistance."
+    },
+
+    {
+        "Key": "ChaToDR.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Damage Reduction"
+    },
+
+    {
+        "Key": "ChaToDR.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Damage Reduction. (CURRENTLY BROKEN)."
+    },
+
+    {
+        "Key": "ChaToSpellPen.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Spell Penetration"
+    },
+
+    {
+        "Key": "ChaToSpellPen.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Penetration. "
+    },
+
+    {
+        "Key": "ChaToSpellDC.Name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Spell DC"
+    },
+
+    {
+        "Key": "ChaToSpellDC.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his spell's DC. "
+    },
+
+    {
+        "Key": "ChaToChaCap.Name",
+        "ProcessTemplates": false,
+        "enGB": "Reddit Moderator Charisma"
+    },
+
+    {
+        "Key": "ChaToChaCap.Description",
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}, again!."
+    },
+
+    {
+        "Key": "redditor.spellbook.name",
+        "ProcessTemplates": false,
+        "enGB": "Redditor Spell Book"
+    },
+
+    {
+        "Key": "swordmaster.class.name",
+        "ProcessTemplates": false,
+        "enGB": "Swordmaster (WIP)"
+    },
+
+    {
+        "Key": "swordmaster.class.description",
+        "enGB": "TODO Swordmaster description"
+    },
+
+    {
+        "Key": "swordmaster.class.shortdescription",
+        "enGB": "TODO Swordmaster description"
+    },
+
+    {
+        "Key": "swordmaster.progression.name",
+        "ProcessTemplates": false,
+        "enGB": "Swordmaster Progression"
+    },
+
+    {
+        "Key": "swordmaster.prociencies.name",
+        "ProcessTemplates": false,
+        "enGB": "Swordmaster Proficiencies"
+    },
+
+    {
+        "Key": "swordmaster.prociencies.description",
+        "enGB": "Swordmasters are proficient with all simpe and martial swords, plut the quarterstaff. They are proficient with light armor, but not with shields."
+    },
+
+    {
+        "Key": "PowerfulWings.name",
+        "ProcessTemplates": false,
+        "enGB": "Powerful Wings"
+    },
+
+    {
+        "Key": "PowerfulWings.description",
+        "enGB": "You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage "
+    },
+
+    {
+        "Key": "swordmaster-tengu.archetype.name",
+        "ProcessTemplates": false,
+        "enGB": "Swordmaster"
+    },
+
+    {
+        "Key": "swordmaster-tengu.archetype.description",
+        "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
+    },
+
+    {
+        "Key": "swordmaster-tengu.archetype.shortdescription",
+        "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
+    },
+
+    {
+        "Key": "TranceSelection.name",
+        "ProcessTemplates": false,
+        "enGB": "Trance Selection"
+    },
+
+    {
+        "Key": "TranceSelection.description",
+        "enGB": "At 3rd level, the swordmaster chooses one trance from the list below. She chooses another trance at 6th, 9th, 12th, 15th, and 18th level. She can only use one type of trance at a time."
+    },
+
+    {
+        "Key": "CraneTrance.name",
+        "ProcessTemplates": false,
+        "enGB": "Crane Trance"
+    },
+
+    {
+        "Key": "CraneTrance.description",
+        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.cranetrance.ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Crane Trance (Ability)"
+    },
+
+    {
+        "Key": "swordmaster-tengu.cranetrance.ability.description",
+        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.cranetrance.buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Crane Trance Buff"
+    },
+
+    {
+        "Key": "swordmaster-tengu.cranetrance.buff.description",
+        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+    },
+
+    {
+        "Key": "DragonTrance.name",
+        "ProcessTemplates": false,
+        "enGB": "Dragon Trance"
+    },
+
+    {
+        "Key": "DragonTrance.description",
+        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.dragontrance.ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Dragon Trance (Ability)"
+    },
+
+    {
+        "Key": "swordmaster-tengu.dragontrance.ability.description",
+        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.dragontrance.buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Dragon Trance Buff"
+    },
+
+    {
+        "Key": "swordmaster-tengu.dragontrance.buff.description",
+        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+    },
+
+    {
+        "Key": "LeopardTrance.name",
+        "ProcessTemplates": false,
+        "enGB": "Leopard Trance"
+    },
+
+    {
+        "Key": "LeopardTrance.description",
+        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.leopardtrance.ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Leopard Trance (Ability)"
+    },
+
+    {
+        "Key": "swordmaster-tengu.leopardtrance.ability.description",
+        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.leopardtrance.buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Leopard Trance Buff"
+    },
+
+    {
+        "Key": "swordmaster-tengu.leopardtrance.buff.description",
+        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+    },
+
+    {
+        "Key": "MonkeyTrance.name",
+        "ProcessTemplates": false,
+        "enGB": "Monkey Trance"
+    },
+
+    {
+        "Key": "MonkeyTrance.description",
+        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.monkeytrance.ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Monkey Trance (Ability)"
+    },
+
+    {
+        "Key": "swordmaster-tengu.monkeytrance.ability.description",
+        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.monkeytrance.buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Monkey Trance Buff"
+    },
+
+    {
+        "Key": "swordmaster-tengu.monkeytrance.buff.description",
+        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
+    },
+
+    {
+        "Key": "SerpentTrance.name",
+        "ProcessTemplates": false,
+        "enGB": "Serpent Trance"
+    },
+
+    {
+        "Key": "SerpentTrance.description",
+        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
+    },
+
+    {
+        "Key": "swordmaster-tengu.serpenttrance.ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Serpent Trance (Ability)"
+    },
+
+    {
+        "Key": "swordmaster-tengu.serpenttrance.ability.description",
+        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
+    },
+
+    {
+        "Key": "swordmaster-tengu.serpenttrance.buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Serpent Trance Buff"
+    },
+
+    {
+        "Key": "swordmaster-tengu.serpenttrance.buff.description",
+        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
+    },
+
+    {
+        "Key": "TigerTrance.name",
+        "ProcessTemplates": false,
+        "enGB": "Tiger Trance"
+    },
+
+    {
+        "Key": "TigerTrance.description",
+        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.tigertrance.ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Tiger Trance (Ability)"
+    },
+
+    {
+        "Key": "swordmaster-tengu.tigertrance.ability.description",
+        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
+    },
+
+    {
+        "Key": "swordmaster-tengu.tigertrance.buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Tiger Trance Buff"
+    },
+
+    {
+        "Key": "swordmaster-tengu.tigertrance.buff.description",
+        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
+    },
+
+    {
+        "Key": "Wanderer.name",
+        "ProcessTemplates": false,
+        "enGB": "Cursed (lycanthropy)"
+    },
+
+    {
+        "Key": "Wanderer.description",
+        "enGB": "Adds Perception and Mobility to list of class skills. She also is able to use her curse to qualify for feats that require lycanthropy."
+    },
+
+    {
+        "Key": "TranceMaster.name",
+        "ProcessTemplates": false,
+        "enGB": "Trance Master"
+    },
+
+    {
+        "Key": "TranceMaster.description",
+        "enGB": "Allows the Swordmaster to enter 2 trances at a time"
+    },
+
+    {
+        "Key": "AutoMaximize.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Maximize"
+    },
+
+    {
+        "Key": "AutoMaximize.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoMaximize-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Maximize"
+    },
+
+    {
+        "Key": "AutoMaximize-ability.description",
+        "enGB": "Enable to give your spells Maximum through your mythic power!"
+    },
+
+    {
+        "Key": "AutoMaximize-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Maximize"
+    },
+
+    {
+        "Key": "AutoMaximize-buff.description",
+        "enGB": "Spells will have Maximum applied to them"
+    },
+
+    {
+        "Key": "AutoExtend.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Extend"
+    },
+
+    {
+        "Key": "AutoExtend.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoExtend-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Extend"
+    },
+
+    {
+        "Key": "AutoExtend-ability.description",
+        "enGB": "Enable to give your spells Extend through your mythic power!"
+    },
+
+    {
+        "Key": "AutoExtend-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Extend"
+    },
+
+    {
+        "Key": "AutoExtend-buff.description",
+        "enGB": "Spells will have Extend applied to them"
+    },
+
+    {
+        "Key": "AutoEmpower.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Empower"
+    },
+
+    {
+        "Key": "AutoEmpower.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoEmpower-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Empower"
+    },
+
+    {
+        "Key": "AutoEmpower-ability.description",
+        "enGB": "Enable to give your spells Empower through your mythic power!"
+    },
+
+    {
+        "Key": "AutoEmpower-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Empower"
+    },
+
+    {
+        "Key": "AutoEmpower-buff.description",
+        "enGB": "Spells will have Empower applied to them"
+    },
+
+    {
+        "Key": "AutoQuicken.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Quicken"
+    },
+
+    {
+        "Key": "AutoQuicken.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoQuicken-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Quicken"
+    },
+
+    {
+        "Key": "AutoQuicken-ability.description",
+        "enGB": "Enable to give your spells Quicken through your mythic power!"
+    },
+
+    {
+        "Key": "AutoQuicken-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Quicken"
+    },
+
+    {
+        "Key": "AutoQuicken-buff.description",
+        "enGB": "Spells will have Quicken applied to them"
+    },
+
+    {
+        "Key": "AutoReach.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Reach"
+    },
+
+    {
+        "Key": "AutoReach.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoReach-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Reach"
+    },
+
+    {
+        "Key": "AutoReach-ability.description",
+        "enGB": "Enable to give your spells Reach through your mythic power!"
+    },
+
+    {
+        "Key": "AutoReach-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Reach"
+    },
+
+    {
+        "Key": "AutoReach-buff.description",
+        "enGB": "Spells will have Reach applied to them"
+    },
+
+    {
+        "Key": "AutoBolstered.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Bolster"
+    },
+
+    {
+        "Key": "AutoBolstered.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoBolstered-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Bolster"
+    },
+
+    {
+        "Key": "AutoBolstered-ability.description",
+        "enGB": "Enable to give your spells Bolster through your mythic power!"
+    },
+
+    {
+        "Key": "AutoBolstered-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Bolster"
+    },
+
+    {
+        "Key": "AutoBolstered-buff.description",
+        "enGB": "Spells will have Bolster applied to them"
+    },
+
+    {
+        "Key": "AutoSelective.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Selective"
+    },
+
+    {
+        "Key": "AutoSelective.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoSelective-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Selective"
+    },
+
+    {
+        "Key": "AutoSelective-ability.description",
+        "enGB": "Enable to give your spells Selective through your mythic power!"
+    },
+
+    {
+        "Key": "AutoSelective-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Selective"
+    },
+
+    {
+        "Key": "AutoSelective-buff.description",
+        "enGB": "Spells will have Selective applied to them"
+    },
+
+    {
+        "Key": "AutoPersistent.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Persistent"
+    },
+
+    {
+        "Key": "AutoPersistent.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoPersistent-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Persistent"
+    },
+
+    {
+        "Key": "AutoPersistent-ability.description",
+        "enGB": "Enable to give your spells Persistent through your mythic power!"
+    },
+
+    {
+        "Key": "AutoPersistent-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Persistent"
+    },
+
+    {
+        "Key": "AutoPersistent-buff.description",
+        "enGB": "Spells will have Persistent applied to them"
+    },
+
+    {
+        "Key": "AutoIntensified.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Intensify"
+    },
+
+    {
+        "Key": "AutoIntensified.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoIntensified-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Intensify"
+    },
+
+    {
+        "Key": "AutoIntensified-ability.description",
+        "enGB": "Enable to give your spells Intensify through your mythic power!"
+    },
+
+    {
+        "Key": "AutoIntensified-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Intensify"
+    },
+
+    {
+        "Key": "AutoIntensified-buff.description",
+        "enGB": "Spells will have Intensify applied to them"
+    },
+
+    {
+        "Key": "AutoPiercing.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Piercing"
+    },
+
+    {
+        "Key": "AutoPiercing.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoPiercing-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Piercing"
+    },
+
+    {
+        "Key": "AutoPiercing-ability.description",
+        "enGB": "Enable to give your spells Piercing through your mythic power!"
+    },
+
+    {
+        "Key": "AutoPiercing-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Piercing"
+    },
+
+    {
+        "Key": "AutoPiercing-buff.description",
+        "enGB": "Spells will have Piercing applied to them"
+    },
+
+    {
+        "Key": "AutoBurning.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Burning"
+    },
+
+    {
+        "Key": "AutoBurning.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoBurning-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Burning"
+    },
+
+    {
+        "Key": "AutoBurning-ability.description",
+        "enGB": "Enable to give your spells Burning through your mythic power!"
+    },
+
+    {
+        "Key": "AutoBurning-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Burning"
+    },
+
+    {
+        "Key": "AutoBurning-buff.description",
+        "enGB": "Spells will have Burning applied to them"
+    },
+
+    {
+        "Key": "AutoEncourage.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Encouraging"
+    },
+
+    {
+        "Key": "AutoEncourage.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoEncourage-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Encouraging"
+    },
+
+    {
+        "Key": "AutoEncourage-ability.description",
+        "enGB": "Enable to give your spells Encouraging through your mythic power!"
+    },
+
+    {
+        "Key": "AutoEncourage-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Encouraging"
+    },
+
+    {
+        "Key": "AutoEncourage-buff.description",
+        "enGB": "Spells will have Encouraging applied to them"
+    },
+
+    {
+        "Key": "AutoFlare.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Flaring"
+    },
+
+    {
+        "Key": "AutoFlare.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoFlare-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Flaring"
+    },
+
+    {
+        "Key": "AutoFlare-ability.description",
+        "enGB": "Enable to give your spells Flaring through your mythic power!"
+    },
+
+    {
+        "Key": "AutoFlare-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Flaring"
+    },
+
+    {
+        "Key": "AutoFlare-buff.description",
+        "enGB": "Spells will have Flaring applied to them"
+    },
+
+    {
+        "Key": "AutoRime.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Rime"
+    },
+
+    {
+        "Key": "AutoRime.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoRime-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Rime"
+    },
+
+    {
+        "Key": "AutoRime-ability.description",
+        "enGB": "Enable to give your spells Rime through your mythic power!"
+    },
+
+    {
+        "Key": "AutoRime-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Rime"
+    },
+
+    {
+        "Key": "AutoRime-buff.description",
+        "enGB": "Spells will have Rime applied to them"
+    },
+
+    {
+        "Key": "AutoSolidShadows.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Solid-Shadows"
+    },
+
+    {
+        "Key": "AutoSolidShadows.description",
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+    },
+
+    {
+        "Key": "AutoSolidShadows-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Solid-Shadows"
+    },
+
+    {
+        "Key": "AutoSolidShadows-ability.description",
+        "enGB": "Enable to give your spells Solid Shadows through your mythic power!"
+    },
+
+    {
+        "Key": "AutoSolidShadows-buff.name",
+        "ProcessTemplates": false,
+        "enGB": "Auto-Solid-Shadows"
+    },
+
+    {
+        "Key": "AutoSolidShadows-buff.description",
+        "enGB": "Spells will have Solid Shadows applied to them"
+    },
+
+    {
+        "Key": "HeavenRay.name",
+        "ProcessTemplates": false,
+        "enGB": "Heavenfire Ray"
+    },
+
+    {
+        "Key": "HeavenRay.description",
+        "enGB": "A blast of heavenfire blazes from your hands. You can fire one ray, plus one additional ray for every 4 {g|Encyclopedia:Caster_Level}caster levels{/g} beyond 11th (to a maximum of three rays at 19th level). Each ray requires a ranged {g|Encyclopedia:TouchAttack}touch attack{/g} to hit and deals {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Damage}damage{/g} per caster level (maximum 15d6). Half the damage is {g|Encyclopedia:Energy_Damage}fire damage{/g}, but the other half results directly from holy power and is therefore not subject to being reduced by fire {g|Encyclopedia:Energy_Resistance}resistance{/g}."
+    },
+
+    {
+        "Key": "HellBall.name",
+        "ProcessTemplates": false,
+        "enGB": "HellBall"
+    },
+
+    {
+        "Key": "HellBall.description",
+        "enGB": "You unleash a massive blast of energy that detonates upon all in the AoE, dealing 20d6 fire, 20d6 acid, 20d6 electrical and 20d6 sonic damage. A reflex save halves damage."
+    },
+
+    {
+        "Key": "HellBall-feature.name",
+        "ProcessTemplates": false,
+        "enGB": "HellBall Spell"
+    },
+
+    {
+        "Key": "HellBall-feature.description",
+        "enGB": "Grants you a new powerful spell called Hellbell, which does 10d6 damage of multiple elements! Requires being able to cast spell level 9."
+    },
+
+    {
+        "Key": "StorvalsThunder.name",
+        "ProcessTemplates": false,
+        "enGB": "Storval's Thunder"
+    },
+
+    {
+        "Key": "StorvalsThunder.description",
+        "enGB": "The hematite head of this +1 earth breaker crackles with electricity, dealing an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit. 3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round."
+    },
+
+    {
+        "Key": "StorvalsThunder-enchant.name",
+        "ProcessTemplates": false,
+        "enGB": "Storval's Thunder"
+    },
+
+    {
+        "Key": "StorvalsThunder-enchant.description",
+        "enGB": "Deals an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit."
+    },
+
+    {
+        "Key": "GraveSingerPlus.name",
+        "ProcessTemplates": false,
+        "enGB": "Grave Singer Plus"
+    },
+
+    {
+        "Key": "GraveSingerPlus.description",
+        "enGB": "Gives you +1 bonus to both crit range and crit multiplier. (Gives these bonuses for all weapons/unarmed, despite needing Improved Crit & Improved Crit Mythic)"
+    },
+
+    {
+        "Key": "StorvalsThunder-ability.name",
+        "ProcessTemplates": false,
+        "enGB": "Storval's Thunder "
+    },
+
+    {
+        "Key": "StorvalsThunder-ability.description",
+        "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)"
+    },
+
+    {
+        "Key": "StorvalsFang.name",
+        "ProcessTemplates": false,
+        "enGB": "Storval's Fang"
+    },
+
+    {
+        "Key": "StorvalsFang.description",
+        "enGB": "This metal +1 klar is shaped like the head of a storm roc, whose sharp feathers serve as the klar’s spikes, and it hums and crackles like a distant stormy sky. When used to make a shield bash attack, a Storval’s fang deals an additional 1d6 points of sonic damage. In addition, the wielder gains electricity resistance 10.\nIf the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
+    },
+
+    {
+        "Key": "SpikedLightShieldPlus1Sonic.name",
+        "ProcessTemplates": false,
+        "enGB": "Spiked Light Shield Plus 1 Sonic"
+    },
+
+    {
+        "Key": "SpikedLightShieldPlus1Sonic.description",
+        "enGB": "Spiked Light Shield Plus 1 Sonic"
+    },
+
+    {
+        "Key": "StorvalSetBonus.name",
+        "ProcessTemplates": false,
+        "enGB": "StorvalSetBonus"
+    },
+
+    {
+        "Key": "StorvalSetBonus.description",
+        "enGB": "If the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
+    },
+
+    {
+        "Key": "AneviaVendorAnswer.text",
+        "ProcessTemplates": false,
+        "enGB": "(DragonChanges) Show me your wares!"
+    },
+
+    {
+        "Key": "ChaMemeRingAC.name",
+        "ProcessTemplates": false,
+        "enGB": "Tomek's Ring"
+    },
+
+    {
+        "Key": "ChaMemeRingAC.description",
+        "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
+    },
+
+    {
+        "Key": "MemeRing1Feature.name",
+        "ProcessTemplates": false,
+        "enGB": "Tomek's Ring"
+    },
+
+    {
+        "Key": "MemeRing1Feature.description",
+        "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
+    },
+
+    {
+        "Key": "LesbianPolyculeDeity.name",
+        "ProcessTemplates": false,
+        "enGB": "Radiant Prism"
+    },
+
+    {
+        "Key": "LesbianPolyculeDeity.description",
+        "enGB": "The shining sun of Sarenrae, the twinkling stars of Desna, and the shimmering rainbow of Shelyn come together to form the Radiant Prism, a relatively small pantheon worshipped by those who actively fight against evil to protect the innocent. These three goddesses have been romantically involved with one another from time to time, so it makes sense that they would form a coalition. In addition to defeating the wicked, the Radiant Prism promotes the creation of beautiful works of art to bring more grace to the world.\nThough devotees of the Radiant Prism are tasked with battling all sources of evil, they are encouraged to refrain from becoming ruthless butchers. The wicked must be offered the chance to capitulate once it becomes clear their defeat is inevitable. Sarenrae’s compassion is a major pillar of the pantheon, and priests of the Radiant Prism attempt to redeem their enemies where possible. Of course, some creatures are remorseless in their evil (such as fiends and some undead), and the Radiant Prism doesn’t expect their worshippers to waste their lives trying to save such beings."
+    },
+
+    {
+        "Key": "MemeRing2.name",
+        "ProcessTemplates": false,
+        "enGB": "Ring of Heavy Body"
+    },
+
+    {
+        "Key": "MemeRing2.description",
+        "enGB": "The ring is imbued with the hope that having a heavy body will make your attacks better.\nAdds your CON bonus to your Critical range."
+    },
+
+    {
+        "Key": "MemeRing2Feature.name",
+        "ProcessTemplates": false,
+        "enGB": "not implemented"
+    },
+
+    {
+        "Key": "MemeRing2Feature.description",
+        "enGB": "not implemented"
+    },
+
+    {
+        "Key": "SuperDexShot.name",
+        "ProcessTemplates": false,
+        "enGB": "Super Dextrous Shot"
+    },
+
+    {
+        "Key": "SuperDexShot.description",
+        "enGB": "With your Mythic PowerTM, you can now add your Dex bonus to your attacks with bows, replacing your Str bonus."
+    }
 ]

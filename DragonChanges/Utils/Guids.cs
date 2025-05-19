@@ -132,7 +132,7 @@
         internal const string LesbianPolyculeDeity = "A3E0D1E6-17AA-4424-B65F-A77397A3C11C";
         internal const string HeavenFireScroll = "E9374273-1C21-442E-9A29-87492A569939";
         internal const string Template = "39884DC2-BB19-4E05-8ACA-4A7E67F5555C";
-        internal const string guid2 = "B84BD80B-A88F-454D-811E-CF25B5E28342";
+        internal const string BowDexDamage = "B84BD80B-A88F-454D-811E-CF25B5E28342";
         internal const string guid3 = "3A5E7317-611D-4562-BCAD-41380D97BE03";
         internal const string guid4 = "5EC08222-EBDB-4BE3-8B29-B19C38C8FFEE";
         internal const string guid5 = "0B97997E-5787-4A50-B34A-DD644AFE4F16";
