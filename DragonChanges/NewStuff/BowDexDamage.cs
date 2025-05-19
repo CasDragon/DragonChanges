@@ -22,7 +22,7 @@ namespace DragonChanges.NewStuff
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
+        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
             if (NewSettings.GetSetting<bool>(settingName))
