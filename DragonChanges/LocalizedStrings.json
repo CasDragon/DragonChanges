@@ -1239,5 +1239,27 @@
     {
         "Key": "SuperDexShot.description",
         "enGB": "With your Mythic PowerTM, you can now add your Dex bonus to your attack's damage with long bows and short bows, replacing your Str bonus."
+    },
+
+    {
+        "Key": "Str2DRNecklace.name",
+        "ProcessTemplates": false,
+        "enGB": "Strongman's Necklace"
+    },
+
+    {
+        "Key": "Str2DRNecklace.description",
+        "enGB": "Strongman's Necklace make's it's user's skin as tough as their Strength!\nAdds STR bonus to DR."
+    },
+
+    {
+        "Key": "Str2DRNecklaceFeature.name",
+        "ProcessTemplates": false,
+        "enGB": "not implemented"
+    },
+
+    {
+        "Key": "Str2DRNecklaceFeature.description",
+        "enGB": "not implemented"
     }
 ]

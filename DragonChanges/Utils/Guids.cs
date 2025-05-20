@@ -133,8 +133,8 @@
         internal const string HeavenFireScroll = "E9374273-1C21-442E-9A29-87492A569939";
         internal const string Template = "39884DC2-BB19-4E05-8ACA-4A7E67F5555C";
         internal const string BowDexDamage = "B84BD80B-A88F-454D-811E-CF25B5E28342";
-        internal const string guid3 = "3A5E7317-611D-4562-BCAD-41380D97BE03";
-        internal const string guid4 = "5EC08222-EBDB-4BE3-8B29-B19C38C8FFEE";
+        internal const string StrToDRNecklace = "3A5E7317-611D-4562-BCAD-41380D97BE03";
+        internal const string StrToDRNecklaceFeature = "5EC08222-EBDB-4BE3-8B29-B19C38C8FFEE";
         internal const string guid5 = "0B97997E-5787-4A50-B34A-DD644AFE4F16";
         internal const string guid6 = "F4914512-A36D-4F24-93A1-1F95785B2BCE";
         internal const string guid7 = "063792B5-5C49-4482-A624-4CD8C02525D1";
@@ -154,6 +154,5 @@
         internal const string guid21 = "3D71C593-63E1-4292-9C50-98F54BFB3961";
         internal const string guid22 = "B5A90783-042A-4B3B-830F-3AF33F284E0A";
         internal const string guid23 = "8D7DDA99-E1A0-451D-98C8-F6BA07415FC2";
-        internal const string guid24 = "7F9C12C0-F358-480F-AB89-F66B7D4E7E80";
     }
 }

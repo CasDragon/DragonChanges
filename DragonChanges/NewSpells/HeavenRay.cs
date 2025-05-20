@@ -67,8 +67,8 @@ namespace DragonChanges.NewSpells
                     CustomMetamagic.ElementalCold | CustomMetamagic.ElementalElectricity |
                     CustomMetamagic.ElementalFire | CustomMetamagic.Flaring);
             }
-            ContextRankConfig crc1 = hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount);
-            ContextRankConfig crc2 = hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default);
+            ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount));
+            ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default));
             AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)

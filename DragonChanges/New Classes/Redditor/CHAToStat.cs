@@ -1,9 +1,12 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Utils.Types;
+using DragonChanges.BPCoreExtensions;
 using DragonChanges.New_Components;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
+using Kingmaker.UnitLogic.Mechanics.Properties;
 
 namespace DragonChanges.New_Classes.Redditor
 {
@@ -260,7 +263,8 @@ namespace DragonChanges.New_Classes.Redditor
             BlueprintFeature feature = FeatureConfigurator.New(featurenamedr, Guids.chatodr)
                 .SetDisplayName(displaynamedr)
                 .SetDescription(displaydescriptiondr)
-                .AddComponent<DRComponent>()
+                //.AddComponent<DRComponent>()
+                .AddNewDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma))
                 .AddRecalculateOnStatChange(stat: StatType.Charisma)
                 .Configure();
             return feature;
