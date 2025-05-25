@@ -1255,11 +1255,22 @@
     {
         "Key": "Str2DRNecklaceFeature.name",
         "ProcessTemplates": false,
-        "enGB": "not implemented"
+        "enGB": "Strongman's Necklace"
     },
 
     {
         "Key": "Str2DRNecklaceFeature.description",
-        "enGB": "not implemented"
+        "enGB": "Strongman's Necklace"
+    },
+
+    {
+        "Key": "AbundantAIS.name",
+        "ProcessTemplates": false,
+        "enGB": "Abundant All Is Darkness"
+    },
+
+    {
+        "Key": "AbundantAIS.description",
+        "enGB": "You've learned a way to increase the number of uses of your All is Darkness ability.\nBenefit: You can use All is Darnkess a number of additional times per day equal to half your mythic rank."
     }
 ]

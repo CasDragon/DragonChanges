@@ -17,6 +17,7 @@ namespace DragonChanges.Utils
         public static bool pp = false;
         public static bool randomequipment = false;
         public static bool scalingequip = false;
+        public static bool tttcore = false;
 
         public static void CheckForMods()
         {
@@ -28,6 +29,7 @@ namespace DragonChanges.Utils
             pp = IsModEnabled("PrestigePlugs");
             randomequipment = IsModEnabled("RandomEquipment");
             scalingequip = IsModEnabled("WrathScalingItemDCs");
+            tttcore = IsModEnabled("TabletopTweaks-Core.dll") || IsModEnabled("TabletopTweaks-Core");
         }
         public static bool IsModEnabled(string modName, string modtype = "umm")
         {

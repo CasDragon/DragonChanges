@@ -1,5 +1,7 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils.Types;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;

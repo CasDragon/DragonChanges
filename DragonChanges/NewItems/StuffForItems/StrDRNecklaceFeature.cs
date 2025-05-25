@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Utils.Types;
 using DragonChanges.BPCoreExtensions;
+using DragonChanges.New_Components;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Mechanics.Properties;
@@ -28,12 +29,19 @@ namespace DragonChanges.NewItems.StuffForItems
         }
         public static BlueprintFeature ConfigureEnabled()
         {
-            return FeatureConfigurator.New(feature, featureguid)
+            FeatureConfigurator feat = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
-                .AddNewDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength))
-                .SetHideInUI(true)
-                .Configure();
+                .SetHideInUI(true);
+            if (ModCompat.tttcore)
+            {
+                AddTTTComponents.AddTTAddDamageResistanceHardness(feat, ContextValues.Property(UnitProperty.StatBonusStrength), stacks: true);
+            }
+            else
+            {
+                feat.AddNewDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength));
+            }    
+            return feat.Configure();
         }
     }
 }
