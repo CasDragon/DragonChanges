@@ -1264,6 +1264,17 @@
     },
 
     {
+        "Key": "FTKMemeRing.name",
+        "ProcessTemplates": false,
+        "enGB": "King's Ring"
+    },
+
+    {
+        "Key": "FTKMemeRing.description",
+        "enGB": "Allows the wearer to cast For The King."
+    },
+
+    {
         "Key": "AbundantAIS.name",
         "ProcessTemplates": false,
         "enGB": "Abundant All Is Darkness"
