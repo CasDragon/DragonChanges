@@ -153,6 +153,5 @@
         internal const string guid201 = "00E01260-C849-4418-871D-2D6ABEA07FF9";
         internal const string guid21 = "3D71C593-63E1-4292-9C50-98F54BFB3961";
         internal const string guid22 = "B5A90783-042A-4B3B-830F-3AF33F284E0A";
-        internal const string guid23 = "8D7DDA99-E1A0-451D-98C8-F6BA07415FC2";
     }
 }
