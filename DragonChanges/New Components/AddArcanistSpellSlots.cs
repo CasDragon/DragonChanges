@@ -1,8 +1,9 @@
 ﻿using System;
+using DragonChanges.New_Components.Events;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Blueprints.JsonSystem;
+using Kingmaker.UnitLogic;
 using UnityEngine;
 
 namespace DragonChanges.New_Components
@@ -11,7 +12,7 @@ namespace DragonChanges.New_Components
     [AllowedOn(typeof(BlueprintFeature), false)]
     [TypeId("8D7DDA99-E1A0-451D-98C8-F6BA07415FC2")]
     [Serializable]
-    internal class AddArcanistSpellSlots
+    internal class AddArcanistSpellSlots : UnitFactComponentDelegate, IGetSpellSlotsCountHandler
     {
         /* For Badger
         TypeID is 8D7DDA99-E1A0-451D-98C8-F6BA07415FC2
@@ -26,9 +27,9 @@ namespace DragonChanges.New_Components
         [SerializeField]
         public int[] Levels;
 
-        public void HandleGetSlotsCount(BlueprintSpellbook spellbook, int spellLevel, ref int __result)
+        public void HandleGetSlotsCount(Spellbook spellbook, int spellLevel, ref int __result)
         {
-            if (spellbook.IsArcanist)
+            if (spellbook.Blueprint.IsArcanist)
             {
                 foreach (int num in this.Levels)
                 {
