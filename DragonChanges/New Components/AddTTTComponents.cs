@@ -8,21 +8,48 @@ namespace DragonChanges.New_Components
     {
         public static void AddTTAddDamageResistanceHardness(
             FeatureConfigurator configurator,
-            ContextValue value, 
-            bool stacks=false, 
+            ContextValue value,
+            bool stacks = false,
             bool sourceIsArmor = false,
             bool sourceIsClassFeature = false,
             bool usePool = false,
-            ContextValue pool = null) 
+            ContextValue pool = null,
+            bool isStackable = false,
+            bool isStacksWithFacts = false)
         {
-            configurator.AddComponent( new TTAddDamageResistanceHardness()
+            configurator.AddComponent(new TTAddDamageResistanceHardness()
             {
                 Value = value,
                 AddToAllStacks = stacks,
                 SourceIsArmor = sourceIsArmor,
                 SourceIsClassFeature = sourceIsClassFeature,
                 UsePool = usePool,
-                Pool = pool
+                Pool = pool,
+                IsStacksWithArmor = isStackable,
+                IsStacksWithClassFeatures = isStacksWithFacts
+            });
+        }
+        public static void AddTTAddDamageResistancePhysical(
+            FeatureConfigurator configurator,
+            ContextValue value,
+            bool stacks = false,
+            bool sourceIsArmor = false,
+            bool sourceIsClassFeature = false,
+            bool usePool = false,
+            ContextValue pool = null, 
+            bool isStackable = false,
+            bool isStacksWithFacts = false)
+        {
+            configurator.AddComponent(new TTAddDamageResistancePhysical()
+            {
+                Value = value,
+                AddToAllStacks = stacks,
+                SourceIsArmor = sourceIsArmor,
+                SourceIsClassFeature = sourceIsClassFeature,
+                UsePool = usePool,
+                Pool = pool,
+                IsStacksWithArmor = isStackable,
+                IsStacksWithClassFeatures = isStacksWithFacts
             });
         }
     }

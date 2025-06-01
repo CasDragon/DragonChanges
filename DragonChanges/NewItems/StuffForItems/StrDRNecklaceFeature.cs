@@ -35,7 +35,8 @@ namespace DragonChanges.NewItems.StuffForItems
                 .SetHideInUI(true);
             if (ModCompat.tttcore)
             {
-                AddTTTComponents.AddTTAddDamageResistanceHardness(feat, ContextValues.Property(UnitProperty.StatBonusStrength), stacks: true);
+                AddTTTComponents.AddTTAddDamageResistancePhysical(feat, ContextValues.Property(UnitProperty.StatBonusStrength), stacks: true, 
+                    isStacksWithFacts: true, isStackable: true, sourceIsArmor: true);
             }
             else
             {
