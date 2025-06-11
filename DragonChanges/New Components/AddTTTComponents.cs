@@ -6,7 +6,7 @@ using TabletopTweaks.Core.NewComponents.OwlcatReplacements.DamageResistance;
 
 namespace DragonChanges.New_Components
 {
-    internal class AddTTTComponents
+    public static class AddTTTComponents
     {
         public static void AddTTAddDamageResistanceHardness(
             FeatureConfigurator configurator,
@@ -31,8 +31,8 @@ namespace DragonChanges.New_Components
                 IsStacksWithClassFeatures = isStacksWithFacts
             });
         }
-        public static void AddTTAddDamageResistancePhysical(
-            FeatureConfigurator configurator,
+        public static FeatureConfigurator AddTTAddDamageResistancePhysical(
+            this FeatureConfigurator configurator,
             ContextValue value,
             bool stacks = false,
             bool sourceIsArmor = false,
@@ -85,6 +85,7 @@ namespace DragonChanges.New_Components
                 BypassedByEpic = bypassedByEpic,
                 m_CheckedFactMythic = m_CheckedFactMythic
             });
+            return configurator;
         }
     }
 }

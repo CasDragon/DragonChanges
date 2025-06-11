@@ -29,12 +29,18 @@ namespace DragonChanges.NewItems.StuffForItems
         }
         public static BlueprintFeature ConfigureEnabled()
         {
-            return FeatureConfigurator.New(feature, featureguid)
+            FeatureConfigurator feat = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
-                .SetHideInUI(true)
-                .AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false)
-                .Configure();
+                .SetHideInUI(true);
+            if (ModCompat.tttbase)
+            {
+                Main.log.Log("DR test thing, adding TTT version");
+                feat.AddTTAddDamageResistancePhysical(ContextValues.Property(UnitProperty.StatBonusStrength), stacks: true);
+            }
+            else
+                feat.AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false);
+            return feat.Configure();
         }
     }
 }
