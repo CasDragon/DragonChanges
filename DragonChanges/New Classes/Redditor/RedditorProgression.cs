@@ -16,6 +16,25 @@ namespace DragonChanges.New_Classes.Redditor
 
         public static BlueprintProgression ConfigureDummy()
         {
+            CHAToStat.ConfigureAC();
+            CHAToStat.ConfigureINT();
+            CHAToStat.ConfigureSTR();
+            CHAToStat.ConfigureDEX();
+            CHAToStat.ConfigureCON();
+            CHAToStat.ConfigureWIS();
+            CHAToStat.ConfigureCHA();
+            CHAToStat.ConfigureSAVES();
+            CHAToStat.ConfigureINIT();
+            CHAToStat.ConfigureSPEED();
+            CHAToStat.ConfigureBAB();
+            CHAToStat.ConfigureDAM();
+            CHAToStat.ConfigureSKILLS();
+            CHAToStat.ConfigureCRIT();
+            CHAToStat.ConfigureSR();
+            CHAToStat.ConfigureDR();
+            CHAToStat.ConfigureSpellPen();
+            CHAToStat.ConfigureSpellDC();
+            CHAToStat.ConfigureCHA_CAP();
             return ProgressionConfigurator.New(progressionname, progressionguid).Configure();
         }
         public static BlueprintProgression Configure()
