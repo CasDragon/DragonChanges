@@ -29,20 +29,12 @@ namespace DragonChanges.NewItems.StuffForItems
         }
         public static BlueprintFeature ConfigureEnabled()
         {
-            FeatureConfigurator feat = FeatureConfigurator.New(feature, featureguid)
+            return FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
-                .SetHideInUI(true);
-            if (ModCompat.tttcore)
-            {
-                AddTTTComponents.AddTTAddDamageResistancePhysical(feat, ContextValues.Property(UnitProperty.StatBonusStrength), stacks: true, 
-                    isStacksWithFacts: true, isStackable: true, sourceIsArmor: true);
-            }
-            else
-            {
-                feat.AddNewDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength));
-            }    
-            return feat.Configure();
+                .SetHideInUI(true)
+                .AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false)
+                .Configure();
         }
     }
 }

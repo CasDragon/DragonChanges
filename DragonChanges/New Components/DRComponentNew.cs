@@ -15,7 +15,7 @@ namespace DragonChanges.NewItems
     [AllowMultipleComponents]
     [TypeId("7F9C12C0-F358-480F-AB89-F66B7D4E7E80")]
     [Serializable]
-    internal class DRComponentNew: AddDamageResistanceHardness
+    internal class DRComponentNew: AddDamageResistancePhysical
     {
         public bool stackable = true;
 

@@ -3,10 +3,16 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using DragonChanges.New_Components;
 using DragonChanges.NewItems;
 using DragonChanges.NewStuff;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
+using Kingmaker.RuleSystem;
+using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics;
+using Owlcat.Runtime.Visual.RenderPipeline.PostProcess.HBAO;
+using UnityEngine;
 
 namespace DragonChanges.BPCoreExtensions
 {
@@ -24,32 +30,52 @@ namespace DragonChanges.BPCoreExtensions
         }
         public static FeatureConfigurator AddDRComponent(
             this FeatureConfigurator configurator,
-            StatType? stat = StatType.Charisma,
-            bool? stackable = true,
-            int? multiplier = 1)
-        {
-            var element = new DRComponent();
-            element.Stat = stat ?? element.Stat;
-            element.m_IsStackable = stackable ?? element.m_IsStackable;
-            element.Multiplier = multiplier ?? element.Multiplier;
-            return configurator.AddComponent(element);
-        }
-        public static FeatureConfigurator AddNewDRComponent(
-            this FeatureConfigurator configurator,
             bool? stackable = true,
             ContextValue? value = null,
-            DamageEnergyTypeFlag? excludedTypes = null,
-            bool? objectValue = null,
             ContextValue pool = null,
-            bool? usePool = null)
+            bool? usePool = false, 
+            bool? or = false,
+            bool? bypassByMaterial = false,
+            PhysicalDamageMaterial? material = PhysicalDamageMaterial.Adamantite,
+            bool? bypassedByForm = false,
+            PhysicalDamageForm? form = PhysicalDamageForm.Bludgeoning,
+            bool? bypassedByMagic = false,
+            int? minEnhancementBonus = 1,
+            bool? bypassedByAlignement = false,
+            DamageAlignment? alignment = DamageAlignment.Good,
+            bool? bypassedByReality = false,
+            DamageRealityType? reality = DamageRealityType.Ghost,
+            bool? bypassedByWeaponType = false,
+            BlueprintWeaponTypeReference m_weaponType = null,
+            bool? bypassedByMeleeWeapon = false,
+            bool? bypassedByEpic = false,
+            BlueprintUnitFactReference m_CheckedFactMythic = null,
+            AddDamageResistancePhysical.WeaponFactFilter weaponFactFilter = AddDamageResistancePhysical.WeaponFactFilter.Any,
+            AttackTypeFlag ValidWeaponAttackTypes = (AttackTypeFlag) (-1))
         {
-            var element = new DRComponentNew();
-            element.stackable = stackable ?? element.stackable;
+            var element = new AddDamageResistancePhysical();
             element.Value = value ?? element.Value;
-            element.m_ExcludedTypes = excludedTypes ?? element.m_ExcludedTypes;
-            element.m_Object = objectValue ?? element.m_Object;
-            element.Pool = pool ?? element.Pool;
             element.UsePool = usePool ?? element.UsePool;
+            element.Pool = pool ?? element.Pool;
+            element.m_IsStackable = stackable ?? element.m_IsStackable;
+            element.Or = or ?? element.Or;
+            element.BypassedByMaterial = bypassByMaterial ?? element.BypassedByMaterial;
+            element.Material = material ?? element.Material;
+            element.BypassedByForm = bypassedByForm ?? element.BypassedByForm;
+            element.Form = form ?? element.Form;
+            element.BypassedByMagic = bypassedByMagic ?? element.BypassedByMagic;
+            element.MinEnhancementBonus = minEnhancementBonus ?? element.MinEnhancementBonus;
+            element.BypassedByAlignment = bypassedByAlignement ?? element.BypassedByAlignment;
+            element.Alignment = alignment ?? element.Alignment;
+            element.BypassedByReality = bypassedByReality ?? element.BypassedByReality;
+            element.Reality = reality ?? element.Reality;
+            element.BypassedByWeaponType = bypassedByWeaponType ?? element.BypassedByWeaponType;
+            element.m_WeaponType = m_weaponType ?? element.m_WeaponType;
+            element.BypassedByMeleeWeapon = bypassedByMeleeWeapon ?? element.BypassedByMeleeWeapon;
+            element.BypassedByEpic = bypassedByEpic ?? element.BypassedByEpic;
+            element.m_CheckedFactMythic = m_CheckedFactMythic ?? element.m_CheckedFactMythic;
+            element.ValidWeaponFact = weaponFactFilter;
+            element.ValidWeaponAttackTypes = ValidWeaponAttackTypes;
             return configurator.AddComponent(element);
         }
     }

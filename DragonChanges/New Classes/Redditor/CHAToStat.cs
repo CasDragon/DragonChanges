@@ -263,8 +263,7 @@ namespace DragonChanges.New_Classes.Redditor
             BlueprintFeature feature = FeatureConfigurator.New(featurenamedr, Guids.chatodr)
                 .SetDisplayName(displaynamedr)
                 .SetDescription(displaydescriptiondr)
-                //.AddComponent<DRComponent>()
-                .AddNewDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma))
+                .AddDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma))
                 .AddRecalculateOnStatChange(stat: StatType.Charisma)
                 .Configure();
             return feature;
