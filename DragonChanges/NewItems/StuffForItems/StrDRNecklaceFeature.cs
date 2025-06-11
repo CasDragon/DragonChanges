@@ -9,6 +9,7 @@ using DragonChanges.BPCoreExtensions;
 using DragonChanges.New_Components;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.EntitySystem.Stats;
 using Kingmaker.UnitLogic.Mechanics.Properties;
 
 namespace DragonChanges.NewItems.StuffForItems
@@ -32,14 +33,17 @@ namespace DragonChanges.NewItems.StuffForItems
             FeatureConfigurator feat = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
+                .AddRecalculateOnStatChange(stat: StatType.Strength)
                 .SetHideInUI(true);
             if (ModCompat.tttbase)
             {
                 Main.log.Log("DR test thing, adding TTT version");
-                feat.AddTTAddDamageResistancePhysical(ContextValues.Property(UnitProperty.StatBonusStrength), stacks: true);
+                feat.AddTTAddDamageResistancePhysicalNew(value: ContextValues.Property(UnitProperty.StatBonusStrength), stackable: true);
             }
             else
+            {
                 feat.AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false);
+            }
             return feat.Configure();
         }
     }

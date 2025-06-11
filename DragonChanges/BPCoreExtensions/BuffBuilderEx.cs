@@ -1,39 +1,26 @@
-﻿using BlueprintCore.Blueprints.Configurators.Facts;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using DragonChanges.New_Components;
-using DragonChanges.NewItems;
-using DragonChanges.NewStuff;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using Kingmaker.Blueprints;
-using Kingmaker.Blueprints.Items.Weapons;
-using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics;
-using Owlcat.Runtime.Visual.RenderPipeline.PostProcess.HBAO;
-using UnityEngine;
 
 namespace DragonChanges.BPCoreExtensions
 {
-    public static class FeatureBuilderEx
+    public static class BuffBuilderEx
     {
-        public static FeatureConfigurator AddWorkingAttackStatReplacementForWeaponGroup(
-            this FeatureConfigurator configurator,
-            StatType? ReplacementStat = StatType.Charisma,
-            WeaponFighterGroupFlags? FighterGroupFlag = WeaponFighterGroupFlags.Natural)
-        {
-            var element = new AttackStatReplacementForWeaponGroup();
-            element.ReplacementStat = ReplacementStat ?? element.ReplacementStat;
-            element.FighterGroupFlag = FighterGroupFlag ?? element.FighterGroupFlag;
-            return configurator.AddComponent(element);
-        }
-        public static FeatureConfigurator AddDRComponent(
-            this FeatureConfigurator configurator,
+        public static BuffConfigurator AddDRComponent(
+            this BuffConfigurator configurator,
             bool? stackable = true,
             ContextValue value = null,
             ContextValue pool = null,
-            bool? usePool = false, 
+            bool? usePool = false,
             bool? or = false,
             bool? bypassByMaterial = false,
             PhysicalDamageMaterial? material = PhysicalDamageMaterial.Adamantite,
@@ -51,7 +38,7 @@ namespace DragonChanges.BPCoreExtensions
             bool? bypassedByEpic = false,
             BlueprintUnitFactReference m_CheckedFactMythic = null,
             AddDamageResistancePhysical.WeaponFactFilter weaponFactFilter = AddDamageResistancePhysical.WeaponFactFilter.Any,
-            AttackTypeFlag ValidWeaponAttackTypes = (AttackTypeFlag) (-1))
+            AttackTypeFlag ValidWeaponAttackTypes = (AttackTypeFlag)(-1))
         {
             var element = new AddDamageResistancePhysical();
             element.Value = value ?? element.Value;

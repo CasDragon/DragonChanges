@@ -260,13 +260,15 @@ namespace DragonChanges.New_Classes.Redditor
         private const string displaydescriptiondr = "ChaToDR.Description";
         public static BlueprintFeature ConfigureDR()
         {
-            BlueprintFeature feature = FeatureConfigurator.New(featurenamedr, Guids.chatodr)
+            FeatureConfigurator feature = FeatureConfigurator.New(featurenamedr, Guids.chatodr)
                 .SetDisplayName(displaynamedr)
                 .SetDescription(displaydescriptiondr)
-                .AddDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma))
-                .AddRecalculateOnStatChange(stat: StatType.Charisma)
-                .Configure();
-            return feature;
+                .AddRecalculateOnStatChange(stat: StatType.Charisma);
+            if (ModCompat.tttbase)
+                feature.AddTTAddDamageResistancePhysical(ContextValues.Property(UnitProperty.StatBonusCharisma), true, false, true);
+            else
+                feature.AddDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma));
+            return feature.Configure();
         }
         private const string featurenamesr = "ChaToSR";
         private const string displaynamesr = "ChaToSR.Name";
