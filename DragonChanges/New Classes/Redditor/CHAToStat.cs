@@ -246,7 +246,6 @@ namespace DragonChanges.New_Classes.Redditor
         private const string displaydescriptioncrit = "ChaToCrit.Description";
         public static BlueprintFeature ConfigureCRIT()
         {
-
             BlueprintFeature feature = FeatureConfigurator.New(featurenamecrit, Guids.chatocrit)
                 .SetDisplayName(displaynamecrit)
                 .SetDescription(displaydescriptioncrit)
@@ -265,7 +264,7 @@ namespace DragonChanges.New_Classes.Redditor
                 .SetDescription(displaydescriptiondr)
                 .AddRecalculateOnStatChange(stat: StatType.Charisma);
             if (ModCompat.tttbase)
-                feature.AddTTAddDamageResistancePhysical(ContextValues.Property(UnitProperty.StatBonusCharisma), true, false, true);
+                feature.AddTTAddDamageResistancePhysicalTest(ContextValues.Property(UnitProperty.StatBonusCharisma), true);
             else
                 feature.AddDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma));
             return feature.Configure();

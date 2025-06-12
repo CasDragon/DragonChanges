@@ -1,9 +1,13 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils.Types;
+using DragonChanges.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Enums.Damage;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.UnitLogic.Mechanics.Properties;
 using TabletopTweaks.Base.MechanicsChanges;
 using TabletopTweaks.Core.NewComponents.OwlcatReplacements.DamageResistance;
 
@@ -142,6 +146,15 @@ namespace DragonChanges.New_Components
             TTAddDamageResistancePhysical newElement = (TTAddDamageResistancePhysical)DRRework.BlueprintFact_CollectComponents_Patch.CreateFromVanillaDamageResistance(element);
             newElement.AddToAllStacks = true;
             return configurator.AddComponent(newElement);
+        }
+        public static FeatureConfigurator AddTTAddDamageResistancePhysicalTest(
+            this FeatureConfigurator configurator,
+            ContextValue value = null,
+            bool? stackable =  null)
+        {
+            AddDamageResistancePhysical component = TTTHelpers.CreateCopy(BuffRefs.ArmorFocusHeavyMythicFeatureVar1SubBuff.Reference.Get().GetComponent<AddDamageResistancePhysical>());
+            component.Value = value ??  component.Value;
+            return configurator.AddComponent(component);
         }
     }
 }
