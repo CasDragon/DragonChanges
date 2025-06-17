@@ -138,8 +138,8 @@
         internal const string FTKMemeRing = "0B97997E-5787-4A50-B34A-DD644AFE4F16";
         internal const string AbundantAIS = "F4914512-A36D-4F24-93A1-1F95785B2BCE";
         internal const string StrToDRNecklaceBuff = "063792B5-5C49-4482-A624-4CD8C02525D1";
-        internal const string guid8 = "9D296899-6287-4B03-A3AF-C15DBF2FCDCC";
-        internal const string guid9 = "8700B5D4-46F2-40D4-BFE7-DB1B5A0CBAF6";
+        internal const string RangedCleaveBracers = "9D296899-6287-4B03-A3AF-C15DBF2FCDCC";
+        internal const string RangedCleaveBracersFeature = "8700B5D4-46F2-40D4-BFE7-DB1B5A0CBAF6";
         internal const string guid10 = "90C61E78-DB92-4E13-BE2B-23CCFC09F82B";
         internal const string guid11 = "C40184E7-64DF-4249-ADA2-C1DAC5202A20";
         internal const string guid12 = "2ABE4E0F-52E1-4900-8C0E-7F2B085896B7";
