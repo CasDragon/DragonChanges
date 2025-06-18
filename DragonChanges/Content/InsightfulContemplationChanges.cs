@@ -14,7 +14,7 @@ namespace DragonChanges.Content
     internal class InsightfulContemplationChanges
     {
         const string settingName = "cyrix-wis-buff";
-        const string settingDescription = "Adds a WIS buff to Insightful Contemplation, added for Cyric";
+        const string settingDescription = "Adds a WIS buff to Insightful Contemplation, added for Cyrix";
         [DragonConfigure]
         [DragonSetting(settingCategories.Various, settingName, settingDescription)]
         public static void Configure()

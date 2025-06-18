@@ -10,7 +10,7 @@ namespace DragonChanges.New_Backgrounds
         internal const string feature = "Wanderer";
         internal const string featureguid = Guids.CursedBackground;
         internal const string settingName = "wanderer";
-        internal const string settingDescription = "Enable the Lycanothrpy background";
+        internal const string settingDescription = "Enable the Lycanthropy background";
         // don't edit
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
