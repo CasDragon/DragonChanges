@@ -1339,4 +1339,9 @@
         "Key": "SpellFailureRingFeature2.description",
         "enGB": "not implemented"
     }
+
+    {
+        "Key": "InsightfulContemplation.description",
+        "enGB": "At 1st level, affected allies gain a +2 morale {g|Encyclopedia:Bonus}bonus{/g} to {g|Encyclopedia:Intelligence}Intelligence{/g}, {g|Encyclopedia:Intelligence}Wisdom{/g} and {g|Encyclopedia:Charisma}Charisma{/g} and a +1 morale bonus on {g|Encyclopedia:Saving_Throw}Will saving throws{/g}, but they also take a –1 {g|Encyclopedia:Penalty}penalty{/g} to {g|Encyclopedia:Armor_Class}AC{/g}. At 4th level and every 4 skald levels thereafter, the song's bonus on Will saves increases by 1; the penalty to AC doesn't change. At 8th and 16th levels, the song's bonuses to Intelligence, Wisdom, and Charisma increase by 2. (Unlike the barbarian's rage ability, those affected are not {g|ConditionFatigued}fatigued{/g} after the song ends.)"
+    }
 ]
