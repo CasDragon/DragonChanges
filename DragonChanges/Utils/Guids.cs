@@ -140,9 +140,9 @@
         internal const string StrToDRNecklaceBuff = "063792B5-5C49-4482-A624-4CD8C02525D1";
         internal const string RangedCleaveBracers = "9D296899-6287-4B03-A3AF-C15DBF2FCDCC";
         internal const string RangedCleaveBracersFeature = "8700B5D4-46F2-40D4-BFE7-DB1B5A0CBAF6";
-        internal const string guid10 = "90C61E78-DB92-4E13-BE2B-23CCFC09F82B";
-        internal const string guid11 = "C40184E7-64DF-4249-ADA2-C1DAC5202A20";
-        internal const string guid12 = "2ABE4E0F-52E1-4900-8C0E-7F2B085896B7";
+        internal const string SpellFailureRing = "90C61E78-DB92-4E13-BE2B-23CCFC09F82B";
+        internal const string SpellFailureRingFeature = "C40184E7-64DF-4249-ADA2-C1DAC5202A20";
+        internal const string SpellFailureRingFeature2 = "2ABE4E0F-52E1-4900-8C0E-7F2B085896B7";
         internal const string guid13 = "F6F48809-76A7-4E68-9DC4-34B1BC0A7F3E";
         internal const string guid14 = "A42B91CE-8A01-404A-AA12-9EBE4BD14F98";
         internal const string guid15 = "9A76A153-C624-491A-8B0E-71C3839B5925";

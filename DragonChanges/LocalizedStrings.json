@@ -1305,5 +1305,38 @@
     {
         "Key": "RangedCleaveBracersFeature.description",
         "enGB": "not implemented"
+    },
+
+    {
+        "Key": "SpellFailureRing.name",
+        "ProcessTemplates": false,
+        "enGB": "Ring of Arcane Success"
+    },
+
+    {
+        "Key": "SpellFailureRing.description",
+        "enGB": "This ring is imbued with the willpower of a very successful mage.\nLowers arcane spell failure by 25."
+    },
+
+    {
+        "Key": "SpellFailureRingFeature.name",
+        "ProcessTemplates": false,
+        "enGB": "not implemented"
+    },
+
+    {
+        "Key": "SpellFailureRingFeature.description",
+        "enGB": "not implemented"
+    },
+
+    {
+        "Key": "SpellFailureRingFeature2.name",
+        "ProcessTemplates": false,
+        "enGB": "not implemented"
+    },
+
+    {
+        "Key": "SpellFailureRingFeature2.description",
+        "enGB": "not implemented"
     }
 ]

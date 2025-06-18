@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BlueprintCore.Blueprints.Configurators.Items;
 using BlueprintCore.Blueprints.Configurators.Items.Equipment;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewItems.StuffForItems;
@@ -10,18 +13,16 @@ using Kingmaker.Blueprints.Items.Equipment;
 
 namespace DragonChanges.NewItems
 {
-    internal class RangedCleaveBracers
+    internal class SpellFailureRing
     {
         // edit
-        internal const string item = "RangedCleaveBracers";
-        internal const string itemguid = Guids.RangedCleaveBracers;
-        internal const string settingName = "rangedcleavebracers";
-        internal const string settingDescription = "Enable the Bracers of Cleaving Rafanat";
+        internal const string item = "SpellFailureRing";
+        internal const string itemguid = Guids.SpellFailureRing;
+        internal const string settingName = "memerings";
         // don't edit
         internal const string itemname = $"{item}.name";
         internal const string itemdescription = $"{item}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewItems, settingName, settingDescription)]
         public static void Configure()
         {
             if (NewSettings.GetSetting<bool>(settingName))
@@ -37,26 +38,26 @@ namespace DragonChanges.NewItems
         }
         public static void ConfigureDummy()
         {
-            ItemEquipmentWristConfigurator.New(item, itemguid).Configure();
-            RangedCleaveBracersFeature.ConfigureDummy();
+            ItemEquipmentRingConfigurator.New(item, itemguid).Configure();
+            SpellFailureRingFeature.ConfigureDummy();
         }
         public static void ConfigureEnabled()
         {
-            BlueprintItemEquipmentWrist bracer = ItemEquipmentWristConfigurator.New(item, itemguid)
+            BlueprintItemEquipmentRing ring = ItemEquipmentRingConfigurator.New(item, itemguid)
                 .SetDisplayNameText(itemname)
                 .SetDescriptionText(itemdescription)
-                .SetIcon(ItemEquipmentWristRefs.BracersOfArchery.Reference.Get().Icon)
+                .SetIcon(ItemEquipmentRingRefs.CopperRing.Reference.Get().Icon)
                 .SetCost(35000)
-                .SetWeight(2)
+                .SetWeight(1)
                 .SetDestructible(false)
                 .SetInventoryEquipSound("ArmorPlateEquip")
-                .SetInventoryPutSound("ArmorPlatePut")
-                .SetInventoryTakeSound("ArmorPlateTake")
+                .SetInventoryPutSound("RingPut")
+                .SetInventoryTakeSound("RingTake")
                 .SetCR(10)
-                .AddFactToEquipmentWielder(RangedCleaveBracersFeature.ConfigureEnabled())
-                .SetEquipmentEntity(ItemEquipmentWristRefs.BracersOfArchery.Reference.Get().m_EquipmentEntity)
+                .AddFactToEquipmentWielder(SpellFailureRingFeature.ConfigureEnabled())
+                .AddFactToEquipmentWielder(SpellFailureRingFeature2.ConfigureEnabled())
                 .Configure();
-            AneviaVendor.AddItem(bracer);
+            AneviaVendor.AddItem(ring);
         }
     }
 }
