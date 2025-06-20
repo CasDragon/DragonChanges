@@ -1,8 +1,10 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.Configurators.Facts;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Facts;
 using Kingmaker.Enums.Damage;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.FactLogic;
@@ -15,8 +17,8 @@ namespace DragonChanges.New_Components
 {
     public static class AddTTTComponents
     {
-        public static FeatureConfigurator AddTTAddDamageResistanceHardness(
-            this FeatureConfigurator configurator,
+        /*public static TBuilder AddTTAddDamageResistanceHardness<T1, TBuilder>(
+            this BaseUnitFactConfigurator<T1, TBuilder> configurator,
             ContextValue value,
             bool stacks = false,
             bool sourceIsArmor = false,
@@ -25,8 +27,10 @@ namespace DragonChanges.New_Components
             ContextValue pool = null,
             bool isStackable = false,
             bool isStacksWithFacts = false)
+            where T1 : BlueprintUnitFact
+            where TBuilder : BaseUnitFactConfigurator<T1, TBuilder>
         {
-            configurator.AddComponent(new TTAddDamageResistanceHardness()
+            return configurator.AddComponent(new TTAddDamageResistanceHardness()
             {
                 Value = value,
                 AddToAllStacks = stacks,
@@ -37,7 +41,6 @@ namespace DragonChanges.New_Components
                 IsStacksWithArmor = isStackable,
                 IsStacksWithClassFeatures = isStacksWithFacts
             });
-            return configurator;
         }
         public static FeatureConfigurator AddTTAddDamageResistancePhysical(
             this FeatureConfigurator configurator,
@@ -146,11 +149,12 @@ namespace DragonChanges.New_Components
             TTAddDamageResistancePhysical newElement = (TTAddDamageResistancePhysical)DRRework.BlueprintFact_CollectComponents_Patch.CreateFromVanillaDamageResistance(element);
             newElement.AddToAllStacks = true;
             return configurator.AddComponent(newElement);
-        }
-        public static FeatureConfigurator AddTTAddDamageResistancePhysicalTest(
-            this FeatureConfigurator configurator,
-            ContextValue value = null,
-            bool? stackable =  null)
+        }*/
+        public static TBuilder AddTTAddDamageResistancePhysicalTest<T1, TBuilder>(
+            this BaseUnitFactConfigurator<T1, TBuilder> configurator,
+            ContextValue value = null)
+            where T1 : BlueprintUnitFact
+            where TBuilder : BaseUnitFactConfigurator<T1, TBuilder>
         {
             AddDamageResistancePhysical component = TTTHelpers.CreateCopy(BuffRefs.ArmorFocusHeavyMythicFeatureVar1SubBuff.Reference.Get().GetComponent<AddDamageResistancePhysical>());
             component.Value = value ??  component.Value;

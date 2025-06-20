@@ -41,7 +41,7 @@ namespace DragonChanges.NewItems.StuffForItems
                     .SetDescription(featuredescription)
                     .AddRecalculateOnStatChange(stat: StatType.Strength)
                     .SetHideInUI(true)
-                    .AddTTAddDamageResistancePhysicalTest(value: ContextValues.Property(UnitProperty.StatBonusStrength), stackable: true)
+                    .AddTTAddDamageResistancePhysicalTest(value: ContextValues.Property(UnitProperty.StatBonusStrength))
                     .Configure();
             }
             else

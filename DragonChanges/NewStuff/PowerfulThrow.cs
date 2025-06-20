@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.BPCoreExtensions;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -47,9 +48,10 @@ namespace DragonChanges.NewStuff
             strcomponet.FighterGroupFlag = WeaponFighterGroupFlags.Thrown;
             strcomponet.ReplacementStat = StatType.Strength;
             FeatureConfigurator.New(feature, featureguid)
+                .AddWorkingAttackStatReplacementForWeaponGroup(ReplacementStat: StatType.Strength, FighterGroupFlag: WeaponFighterGroupFlags.Thrown)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
-                .AddComponent(strcomponet)
+                //.AddComponent(strcomponet)
                 .AddPrerequisiteFeature(FeatureRefs.PowerAttackFeature.Reference.Get())
                 .AddPrerequisiteStatValue(StatType.BaseAttackBonus, 1)
                 .AddRecommendationStatComparison(higherStat: StatType.Strength, lowerStat: StatType.Dexterity, diff: 4)

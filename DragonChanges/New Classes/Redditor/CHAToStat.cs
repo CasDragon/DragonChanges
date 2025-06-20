@@ -264,7 +264,7 @@ namespace DragonChanges.New_Classes.Redditor
                 .SetDescription(displaydescriptiondr)
                 .AddRecalculateOnStatChange(stat: StatType.Charisma);
             if (ModCompat.tttbase)
-                feature.AddTTAddDamageResistancePhysicalTest(ContextValues.Property(UnitProperty.StatBonusCharisma), true);
+                feature.AddTTAddDamageResistancePhysicalTest(ContextValues.Property(UnitProperty.StatBonusCharisma));
             else
                 feature.AddDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma));
             return feature.Configure();

@@ -1,9 +1,12 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Facts;
+using BlueprintCore.Blueprints.Configurators.Root;
+using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using DragonChanges.New_Components;
 using DragonChanges.NewItems;
 using DragonChanges.NewStuff;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
@@ -11,14 +14,24 @@ using Kingmaker.Enums.Damage;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics;
-using Owlcat.Runtime.Visual.RenderPipeline.PostProcess.HBAO;
-using UnityEngine;
 
 namespace DragonChanges.BPCoreExtensions
 {
     public static class FeatureBuilderEx
     {
-        public static FeatureConfigurator AddWorkingAttackStatReplacementForWeaponGroup(
+        public static TBuilder AddWorkingAttackStatReplacementForWeaponGroup<T1, TBuilder>(
+            this BaseUnitFactConfigurator<T1, TBuilder> configurator,
+            StatType? ReplacementStat = StatType.Charisma,
+            WeaponFighterGroupFlags? FighterGroupFlag = WeaponFighterGroupFlags.Natural)
+            where T1 : BlueprintUnitFact
+            where TBuilder : BaseUnitFactConfigurator<T1, TBuilder>
+        {
+            var element = new AttackStatReplacementForWeaponGroup();
+            element.ReplacementStat = ReplacementStat ?? element.ReplacementStat;
+            element.FighterGroupFlag = FighterGroupFlag ?? element.FighterGroupFlag;
+            return configurator.AddComponent(element);
+        }
+        /*public static FeatureConfigurator AddWorkingAttackStatReplacementForWeaponGroup(
             this FeatureConfigurator configurator,
             StatType? ReplacementStat = StatType.Charisma,
             WeaponFighterGroupFlags? FighterGroupFlag = WeaponFighterGroupFlags.Natural)
@@ -27,9 +40,9 @@ namespace DragonChanges.BPCoreExtensions
             element.ReplacementStat = ReplacementStat ?? element.ReplacementStat;
             element.FighterGroupFlag = FighterGroupFlag ?? element.FighterGroupFlag;
             return configurator.AddComponent(element);
-        }
-        public static FeatureConfigurator AddDRComponent(
-            this FeatureConfigurator configurator,
+        }*/
+        public static TBuilder AddDRComponent<T1, TBuilder>(
+            this BaseUnitFactConfigurator<T1, TBuilder> configurator,
             bool? stackable = true,
             ContextValue value = null,
             ContextValue pool = null,
@@ -52,6 +65,8 @@ namespace DragonChanges.BPCoreExtensions
             BlueprintUnitFactReference m_CheckedFactMythic = null,
             AddDamageResistancePhysical.WeaponFactFilter weaponFactFilter = AddDamageResistancePhysical.WeaponFactFilter.Any,
             AttackTypeFlag ValidWeaponAttackTypes = (AttackTypeFlag) (-1))
+            where T1 : BlueprintUnitFact
+            where TBuilder : BaseUnitFactConfigurator<T1, TBuilder>
         {
             var element = new AddDamageResistancePhysical();
             element.Value = value ?? element.Value;

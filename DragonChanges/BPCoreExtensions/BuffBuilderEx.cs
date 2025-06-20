@@ -15,7 +15,7 @@ namespace DragonChanges.BPCoreExtensions
 {
     public static class BuffBuilderEx
     {
-        public static BuffConfigurator AddDRComponent(
+        /*public static BuffConfigurator AddDRComponent(
             this BuffConfigurator configurator,
             bool? stackable = true,
             ContextValue value = null,
@@ -64,6 +64,6 @@ namespace DragonChanges.BPCoreExtensions
             element.ValidWeaponFact = weaponFactFilter;
             element.ValidWeaponAttackTypes = ValidWeaponAttackTypes;
             return configurator.AddComponent(element);
-        }
+        }*/
     }
 }
