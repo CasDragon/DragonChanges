@@ -46,7 +46,7 @@ namespace DragonChanges.NewItems
                 .SetDisplayNameText(itemname)
                 .SetDescriptionText(itemdescription)
                 .SetIcon(ItemEquipmentWristRefs.BracersOfArchery.Reference.Get().Icon)
-                .SetCost(35000)
+                .SetCost(70000)
                 .SetWeight(2)
                 .SetDestructible(false)
                 .SetInventoryEquipSound("ArmorPlateEquip")

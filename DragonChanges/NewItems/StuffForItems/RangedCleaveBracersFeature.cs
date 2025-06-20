@@ -26,7 +26,7 @@ namespace DragonChanges.NewItems.StuffForItems
             return FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
-                .AddRangedCleave(range: new Feet(30))
+                .AddRangedCleave(range: new Feet(15))
                 .SetHideInUI(true)
                 .Configure();
         }

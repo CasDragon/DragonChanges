@@ -1293,7 +1293,7 @@
 
     {
         "Key": "RangedCleaveBracers.description",
-        "enGB": "These bracers were crafted by a blacksmith for those strange people who try to hit multiple people with one arrow.\nAllows the user to cleave with ranged weapons in a 30ft radius of themself."
+        "enGB": "These bracers were crafted by a blacksmith for those strange people who try to hit multiple people with one arrow.\nAllows the user to cleave with ranged weapons in a 15ft radius of themself."
     },
 
     {
