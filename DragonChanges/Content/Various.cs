@@ -114,6 +114,8 @@ namespace DragonChanges.Content
             AneviaVendor.AddItem(ItemShieldRefs.WallsOfTheSanctuaryShieldItem.Reference.Get());
             Main.log.Log("Adding Helmet of Guiding Light to anevia vendor");
             AneviaVendor.AddItem(ItemEquipmentHeadRefs.HelmetOfTheGuidingLight.Reference.Get());
+            Main.log.Log("Adding The Priceless Woe to anevia vendor");
+            AneviaVendor.AddItem(ItemWeaponRefs.DLC3_NahyndrianVorpalBladeWeaponItem.Reference.Get());
         }
     }
 }
