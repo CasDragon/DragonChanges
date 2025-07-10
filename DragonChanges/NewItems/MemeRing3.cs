@@ -52,7 +52,7 @@ namespace DragonChanges.NewItems
                 .SetInventoryPutSound("RingPut")
                 .SetInventoryTakeSound("RingTake")
                 .SetCR(10)
-                .AddFactToEquipmentWielder(AbilityRefs.CavalierForTheKingAbility.Reference.Get())
+                .AddFactToEquipmentWielder(FeatureRefs.CavalierForTheKing.Reference.Get())
                 .Configure();
             AneviaVendor.AddItem(ring);
         }
