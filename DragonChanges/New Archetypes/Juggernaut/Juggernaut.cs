@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
@@ -19,8 +14,8 @@ namespace DragonChanges.New_Archetypes.Juggernaut
         internal const string settingName = "juggernaut";
         internal const string settingDescription = "Enables the Juggernaut archetype";
         internal const string archetypename = "Juggernaut";
-        internal const string archetypedescription = "Juggernaut, DR focused Barbarian";
-        internal const string archetypeshortdescription = "Juggernaut, DR focused Barbarian";
+        internal const string archetypedescription = "Juggernaut, DR focused Barbarian. Inspired by Rafantat on Discord";
+        internal const string archetypeshortdescription = "Juggernaut, DR focused Barbarian. Inspired by Rafantat on Discord";
 
         // don't edit
         [DragonLocalizedString(archetypenamekey, archetypename)]
