@@ -96,16 +96,28 @@ namespace DragonChanges.Content
                 }
             }
         }
+        const string codsettingname = "carrierofdisease";
+        const string codsettingdescription = "Adds the Plague hex to Extra Hex and regular Hex selections for Shaman";
         [DragonConfigure]
+        [DragonSetting(settingCategories.Various, codsettingname, codsettingdescription)]
         public static void CarrierofDisease()
         {
-            Main.log.Log("Adding Carrier of Disease to Extra Hex");
-            FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraWitchHexSelection)
-                .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
-                .Configure();
-            FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraShamanHexSelection)
-                .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
-                .Configure();
+            if (NewSettings.GetSetting<bool>(codsettingname))
+            {
+                Main.log.Log("Adding Carrier of Disease to Extra Hex");
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraShamanHexSelection)
+                    .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                    .Configure();
+                FeatureSelectionConfigurator.For(FeatureSelectionRefs.ShamanHexSelection)
+                    .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                    .Configure();
+                if (ModCompat.tttbase)
+                {
+                    FeatureSelectionConfigurator.For("08d9f686b2944ba6b3f7763882c0ded4")
+                        .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                        .Configure();
+                }
+            }
         }
         [DragonConfigure]
         public static void ItemStuffs()
