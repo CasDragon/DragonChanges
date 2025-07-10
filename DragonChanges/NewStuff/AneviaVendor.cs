@@ -24,9 +24,10 @@ namespace DragonChanges.NewStuff
         // don't edit
         internal const string answertext = $"{answer}.text";
         internal static SharedVendorTableConfigurator aneviatable = null;
-        internal static BlueprintCore.Utils.Blueprint<BlueprintReference<BlueprintUnit>>[] aneviaunits = 
+        internal static BlueprintCore.Utils.Blueprint<BlueprintReference<BlueprintUnit>>[] aneviaunits =
                 [UnitRefs.AneviaTirabade, UnitRefs.AneviaTirabade_DH, UnitRefs.AneviaTirabade_DrezenCapital,
-                UnitRefs.AneviaTirabade_GorgoyleAttack, UnitRefs.AneviaTirabade_LostChapel];
+                //UnitRefs.AneviaTirabade_GorgoyleAttack, UnitRefs.AneviaTirabade_LostChapel];
+                ];
         internal static string[] answerlists = ["3e6231392987747479e12f77e8f44611", "33960c7f7af40cd43b7f801a76c87a0b"];
 
         public static void ConfigureStart()

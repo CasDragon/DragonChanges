@@ -116,6 +116,8 @@ namespace DragonChanges.Content
             AneviaVendor.AddItem(ItemEquipmentHeadRefs.HelmetOfTheGuidingLight.Reference.Get());
             Main.log.Log("Adding The Priceless Woe to anevia vendor");
             AneviaVendor.AddItem(ItemWeaponRefs.DLC3_NahyndrianVorpalBladeWeaponItem.Reference.Get());
+            Main.log.Log("Add Butchers Cleaver (DLC3) to anevia vendor");
+            AneviaVendor.AddItem(ItemWeaponRefs.ButcherCleaver_Item.Reference.Get());
         }
     }
 }

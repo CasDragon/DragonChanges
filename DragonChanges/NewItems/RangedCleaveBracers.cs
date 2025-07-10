@@ -17,9 +17,13 @@ namespace DragonChanges.NewItems
         internal const string itemguid = Guids.RangedCleaveBracers;
         internal const string settingName = "rangedcleavebracers";
         internal const string settingDescription = "Enable the Bracers of Cleaving Rafanat";
+        internal const string itemname = "Bracers of Cleaving Rafanat";
+        internal const string itemdescription = "These bracers were crafted by a blacksmith for those strange people who try to hit multiple people with one arrow.\nAllows the user to cleave with ranged weapons in a 15ft radius of themself.";
         // don't edit
-        internal const string itemname = $"{item}.name";
-        internal const string itemdescription = $"{item}.description";
+        [DragonLocalizedString(itemnamekey, itemname)]
+        internal const string itemnamekey = $"{item}.name";
+        [DragonLocalizedString(itemdescriptionkey, itemdescription, true)]
+        internal const string itemdescriptionkey = $"{item}.description";
         [DragonConfigure]
         [DragonSetting(settingCategories.NewItems, settingName, settingDescription)]
         public static void Configure()
@@ -37,14 +41,17 @@ namespace DragonChanges.NewItems
         }
         public static void ConfigureDummy()
         {
-            ItemEquipmentWristConfigurator.New(item, itemguid).Configure();
+            ItemEquipmentWristConfigurator.New(item, itemguid)
+                .SetDisplayNameText(itemnamekey)
+                .SetDescriptionText(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
             RangedCleaveBracersFeature.ConfigureDummy();
         }
         public static void ConfigureEnabled()
         {
             BlueprintItemEquipmentWrist bracer = ItemEquipmentWristConfigurator.New(item, itemguid)
-                .SetDisplayNameText(itemname)
-                .SetDescriptionText(itemdescription)
+                .SetDisplayNameText(itemnamekey)
+                .SetDescriptionText(itemdescriptionkey)
                 .SetIcon(ItemEquipmentWristRefs.BracersOfArchery.Reference.Get().Icon)
                 .SetCost(70000)
                 .SetWeight(2)

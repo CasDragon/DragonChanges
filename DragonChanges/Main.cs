@@ -1,10 +1,11 @@
-﻿using BlueprintCore.Blueprints.Configurators.Items;
+﻿using System;
+using System.IO;
+using System.Reflection;
+using BlueprintCore.Utils;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
-using System;
-using System.Reflection;
 using UnityModManagerNet;
 
 namespace DragonChanges
@@ -47,6 +48,12 @@ namespace DragonChanges
                         return;
                     }
                     Initialized = true;
+
+                    string modfolder = LocalizedStringHelper.GetModFolderPath();
+                    LocalizedStringHelper.CreateLocalizationFile(modfolder);
+                    LocalizationTool.LoadLocalizationPacks(
+                        Path.Combine(modfolder, "NewLocalizedStrings.json"), 
+                        Path.Combine(modfolder, "LocalizedStrings.json"));
 
                     log.Log("Checking for mods for compatibility patches");
                     ModCompat.CheckForMods();

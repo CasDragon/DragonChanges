@@ -11,9 +11,13 @@ namespace DragonChanges.templates
         internal const string featureguid = Guids.Template;
         internal const string settingName = "";
         internal const string settingDescription = "";
+        internal const string featurename = "";
+        internal const string featuredescription = "";
         // don't edit
-        internal const string featurename = $"{feature}.name";
-        internal const string featuredescription = $"{feature}.description";
+        //[DragonLocalizedString(featurenamekey, featurename)]
+        internal const string featurenamekey = $"{feature}.name";
+        //[DragonLocalizedString(featuredescriptionkey, featuredescription)]
+        internal const string featuredescriptionkey = $"{feature}.description";
         //[DragonConfigure]
         //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
@@ -31,7 +35,10 @@ namespace DragonChanges.templates
         }
         public static void ConfigureDummy()
         {
-            FeatureConfigurator.New(feature, featureguid).Configure();
+            FeatureConfigurator.New(feature, featureguid)
+                .SetDisplayName(featurename)
+                .SetDescription(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
         }
         public static void ConfigureEnabled()
         {

@@ -1286,28 +1286,6 @@
     },
 
     {
-        "Key": "RangedCleaveBracers.name",
-        "ProcessTemplates": false,
-        "enGB": "Bracers of Cleaving Rafanat"
-    },
-
-    {
-        "Key": "RangedCleaveBracers.description",
-        "enGB": "These bracers were crafted by a blacksmith for those strange people who try to hit multiple people with one arrow.\nAllows the user to cleave with ranged weapons in a 15ft radius of themself."
-    },
-
-    {
-        "Key": "RangedCleaveBracersFeature.name",
-        "ProcessTemplates": false,
-        "enGB": "not implemented"
-    },
-
-    {
-        "Key": "RangedCleaveBracersFeature.description",
-        "enGB": "not implemented"
-    },
-
-    {
         "Key": "SpellFailureRing.name",
         "ProcessTemplates": false,
         "enGB": "Ring of Arcane Success"

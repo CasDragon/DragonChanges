@@ -56,7 +56,11 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
         }
         public static void ConfigureDummy()
         {
-            ArchetypeConfigurator.New(archetypeprefix, archetypeguid).Configure();
+            ArchetypeConfigurator.New(archetypeprefix, archetypeguid)
+                .SetLocalizedName(archetypename)
+                .SetLocalizedDescription(LocalizedStringHelper.disabledcontentstring)
+                .SetLocalizedDescriptionShort(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
         }
         public static void ConfigureArchetype(BlueprintFeatureSelection featureSelection)
         {

@@ -143,9 +143,9 @@
         internal const string SpellFailureRing = "90C61E78-DB92-4E13-BE2B-23CCFC09F82B";
         internal const string SpellFailureRingFeature = "C40184E7-64DF-4249-ADA2-C1DAC5202A20";
         internal const string SpellFailureRingFeature2 = "2ABE4E0F-52E1-4900-8C0E-7F2B085896B7";
-        internal const string guid13 = "F6F48809-76A7-4E68-9DC4-34B1BC0A7F3E";
-        internal const string guid14 = "A42B91CE-8A01-404A-AA12-9EBE4BD14F98";
-        internal const string guid15 = "9A76A153-C624-491A-8B0E-71C3839B5925";
+        internal const string Juggernaut = "F6F48809-76A7-4E68-9DC4-34B1BC0A7F3E";
+        internal const string JuggernautInvincibleFeature = "A42B91CE-8A01-404A-AA12-9EBE4BD14F98";
+        internal const string JuggernautProficiencies = "9A76A153-C624-491A-8B0E-71C3839B5925";
         internal const string guid16 = "29203865-D8BA-436C-8F50-B3E38795C444";
         internal const string guid17 = "EBE68138-497F-4712-A316-FBC6DD32C5F5";
         internal const string guid181 = "309AF2F3-8F27-4D16-A457-9ACEE588BEC4";
