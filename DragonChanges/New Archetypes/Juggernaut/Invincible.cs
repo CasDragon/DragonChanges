@@ -17,7 +17,7 @@ namespace DragonChanges.New_Archetypes.Juggernaut
     internal class Invincible
     {
         // edit
-        internal const string feature = "JuggernautInvincible";
+        internal const string feature = "Invincible";
         internal const string featureguid = Guids.JuggernautInvincibleFeature;
         internal const string featurename = "Invincible";
         internal const string featuredescription = "The Juggernaut's bodily consituation is so great, she can shrug off attacks.\nAt 2nd level, she gains DR/- equal to her CON bonus. This stacks with other sources of DR/-.";
@@ -49,8 +49,8 @@ namespace DragonChanges.New_Archetypes.Juggernaut
             else
             {
                 feat = FeatureConfigurator.New(feature, featureguid)
-                    .SetDisplayName(featurename)
-                    .SetDescription(featuredescription)
+                    .SetDisplayName(featurenamekey)
+                    .SetDescription(featuredescriptionkey)
                     .AddRecalculateOnStatChange(stat: StatType.Constitution)
                     .AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusConstitution), usePool: false)
                     .SetIsClassFeature(true)
