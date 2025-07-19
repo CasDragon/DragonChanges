@@ -26,15 +26,15 @@ namespace DragonChanges.NewStuff
         public static void ConfigureDummy()
         {
             FeatureConfigurator.New(feature, featureguid)
-                .SetDisplayName(featurename)
+                .SetDisplayName(featurenamekey)
                 .SetDescription(LocalizedStringHelper.disabledcontentstring)
                 .Configure();
         }
         public static BlueprintFeature ConfigureEnabled(BlueprintFeature prereq)
         {
             return FeatureConfigurator.New(feature, featureguid)
-                .SetDisplayName(featurename)
-                .SetDescription(featuredescription)
+                .SetDisplayName(featurenamekey)
+                .SetDescription(featuredescriptionkey)
                 .AddIncreaseAllSpellsDC(descriptor: Kingmaker.Enums.ModifierDescriptor.UntypedStackable, spellsOnly: true,
                     value: ContextValues.Constant(6))
                 .AddToGroups(FeatureGroup.MythicFeat)

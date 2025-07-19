@@ -36,15 +36,15 @@ namespace DragonChanges.templates
         public static void ConfigureDummy()
         {
             FeatureConfigurator.New(feature, featureguid)
-                .SetDisplayName(featurename)
+                .SetDisplayName(featurenamekey)
                 .SetDescription(LocalizedStringHelper.disabledcontentstring)
                 .Configure();
         }
         public static void ConfigureEnabled()
         {
             FeatureConfigurator.New(feature, featureguid)
-                .SetDisplayName(featurename)
-                .SetDescription(featuredescription)
+                .SetDisplayName(featurenamekey)
+                .SetDescription(featuredescriptionkey)
                 .Configure();
         }
     }
