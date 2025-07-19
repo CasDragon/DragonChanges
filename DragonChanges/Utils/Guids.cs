@@ -146,10 +146,10 @@
         internal const string Juggernaut = "F6F48809-76A7-4E68-9DC4-34B1BC0A7F3E";
         internal const string JuggernautInvincibleFeature = "A42B91CE-8A01-404A-AA12-9EBE4BD14F98";
         internal const string JuggernautProficiencies = "9A76A153-C624-491A-8B0E-71C3839B5925";
-        internal const string guid16 = "29203865-D8BA-436C-8F50-B3E38795C444";
-        internal const string guid17 = "EBE68138-497F-4712-A316-FBC6DD32C5F5";
-        internal const string guid181 = "309AF2F3-8F27-4D16-A457-9ACEE588BEC4";
-        internal const string guid191 = "E20286B6-E62F-4E02-BBE6-5735B8BAE69E";
+        internal const string StudentOfNethys = "29203865-D8BA-436C-8F50-B3E38795C444";
+        internal const string ScholarOfNethys = "EBE68138-497F-4712-A316-FBC6DD32C5F5";
+        internal const string ProfessorOfNethys = "309AF2F3-8F27-4D16-A457-9ACEE588BEC4";
+        internal const string MythicNethysSupport = "E20286B6-E62F-4E02-BBE6-5735B8BAE69E";
         internal const string guid201 = "00E01260-C849-4418-871D-2D6ABEA07FF9";
         internal const string guid21 = "3D71C593-63E1-4292-9C50-98F54BFB3961";
         internal const string guid22 = "B5A90783-042A-4B3B-830F-3AF33F284E0A";
