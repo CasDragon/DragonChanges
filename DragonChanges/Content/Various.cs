@@ -130,6 +130,12 @@ namespace DragonChanges.Content
             AneviaVendor.AddItem(ItemWeaponRefs.DLC3_NahyndrianVorpalBladeWeaponItem.Reference.Get());
             Main.log.Log("Add Butchers Cleaver (DLC3) to anevia vendor");
             AneviaVendor.AddItem(ItemWeaponRefs.ButcherCleaver_Item.Reference.Get());
+            Main.log.Log("Add Martyrs Blade to anevia vendor");
+            AneviaVendor.AddItem(ItemWeaponRefs.MartyrsBladeItem.Reference.Get());
+            Main.log.Log("Add OpressorBastardSword to anevia vendor");
+            AneviaVendor.AddItem(ItemWeaponRefs.TheOpressorBastardSwordItem.Reference.Get());
+            Main.log.Log("Add JagannathKhanda to anevia vendor");
+            AneviaVendor.AddItem(ItemWeaponRefs.JagannathKhanda.Reference.Get());
         }
     }
 }
