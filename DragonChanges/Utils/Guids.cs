@@ -150,8 +150,8 @@
         internal const string ScholarOfNethys = "EBE68138-497F-4712-A316-FBC6DD32C5F5";
         internal const string ProfessorOfNethys = "309AF2F3-8F27-4D16-A457-9ACEE588BEC4";
         internal const string MythicNethysSupport = "E20286B6-E62F-4E02-BBE6-5735B8BAE69E";
-        internal const string guid201 = "00E01260-C849-4418-871D-2D6ABEA07FF9";
-        internal const string guid21 = "3D71C593-63E1-4292-9C50-98F54BFB3961";
+        internal const string BuildsEnjoyerClass = "00E01260-C849-4418-871D-2D6ABEA07FF9";
+        internal const string BuildsEnjoyerProgression = "3D71C593-63E1-4292-9C50-98F54BFB3961";
         internal const string guid22 = "B5A90783-042A-4B3B-830F-3AF33F284E0A";
     }
 }
