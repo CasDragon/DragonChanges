@@ -113,6 +113,7 @@ namespace DragonChanges.New_Classes.Redditor
             return ProgressionConfigurator.New(progressionname, progressionguid)
                 .SetIsClassFeature(true)
                 .SetLevelEntries(entries)
+                .SetClasses([Guids.redditorcharacterclass])
                 .Configure();
         }
     }

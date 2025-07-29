@@ -23,23 +23,23 @@ namespace DragonChanges.New_Classes.BuildsEnjoyer
         internal const string classprefix = "buildsenjoyer";
         internal const string classguid = Guids.BuildsEnjoyerClass;
         internal const string settingName = "buildsenjoyer";
-        internal const string settingDescription = "(WIP) Enable the Builds Enjoyer class (which is a meme class I made, don't take too seriously)";
+        internal const string settingDescription = "Enable the Builds Enjoyer class (which is a meme class I made, don't take too seriously)";
         // don't edit
         [DragonLocalizedString(classname, "BuildsEnjoyer")]
         internal const string classname = $"{classprefix}.name";
         [DragonLocalizedString(classdescription, "Builds Enjoyer combines Inciter, Dronk, and Marine archetypes into one handy class!")]
         internal const string classdescription = $"{classprefix}.description";
-        [DragonLocalizedString(classshortdescription, "Builds Enjoyer combines Inciter, Dronk, and Marine archetypes into one handy class!")]
+        [DragonLocalizedString(classshortdescription, "Builds Enjoyer combines Inciter, Drunken Monk, and Sable Marine archetypes into one handy class! Also gives Magic Deceiver spellbook at KC's request!")]
         internal const string classshortdescription = $"{classprefix}.shortdescription";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewClasses, settingName, settingDescription)]
+        [DragonSetting(settingCategories.NewClasses, settingName, settingDescription, false)]
         public static void Configure()
         {
             if (NewSettings.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
                 BlueprintProgression progression = BuildsEnjoyerProgression.ConfigureEnabled();
-                ConfigureCharacterClass(progression);
+                ConfigureCharacterClass(progression, SpellbookRefs.MagicDeceiverSpellbook.Reference.Get());
                 Main.log.Log($"{classprefix} configuration done!");
             }
             else
