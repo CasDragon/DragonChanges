@@ -17,7 +17,7 @@ namespace DragonChanges.Content
         const string DJSettingName = "mc-deadly-juggernaut-dr";
         const string DJSettingDescription = "Allow Deadly Juggernaut spell to have stacking DR.";
         [DragonConfigure]
-        [DragonSetting(settingCategories.ModCompatability, DJSettingName, DJSettingDescription)]
+        [DragonSetting(settingCategories.ModCompatability, DJSettingName, DJSettingDescription, false)]
         public static void PatchDeadlyJuggernaut()
         {
 

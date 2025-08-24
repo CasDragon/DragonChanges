@@ -52,6 +52,7 @@
 			<Files Include="$(TargetDir)\**\*.*" />
 			<Files Remove="$(TargetDir)\**\*.dll" />
 			<Files Remove="$(TargetDir)\**\*.pdb" />
+			<Files Remove="$(TargetDir)\**\*.cache" />
 			<Files Remove="$(TargetDir)\**\UnityModManager.xml" />
 			<Files Include="$(TargetDir)\**\$(AssemblyName).dll" />
 			<Files Include="$(TargetDir)\**\$(AssemblyName).pdb" />
