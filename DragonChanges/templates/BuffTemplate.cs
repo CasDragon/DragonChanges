@@ -17,7 +17,9 @@ namespace DragonChanges.templates
         internal const string settingName = "";
         internal const string settingDescription = "";
         // don't edit
+        //[DragonLocalizedString(buffname, "")]
         internal const string buffname = $"{buff}.name";
+        //[DragonLocalizedString(buffdescription, "")]
         internal const string buffdescription = $"{buff}.description";
         //[DragonConfigure]
         //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
@@ -36,7 +38,10 @@ namespace DragonChanges.templates
         }
         public static void ConfigureDummy()
         {
-            BuffConfigurator.New(buff, buffguid).Configure();
+            BuffConfigurator.New(buff, buffguid)
+                .SetDisplayName(buffname)
+                .SetDescription(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
         }
         public static void ConfigureEnabled()
         {

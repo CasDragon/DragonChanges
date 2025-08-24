@@ -18,7 +18,9 @@ namespace DragonChanges.templates
         internal const string settingName = "";
         internal const string settingDescription = "";
         // don't edit
+        //[DragonLocalizedString(abilityname, "")]
         internal const string abilityname = $"{ability}.name";
+        //[DragonLocalizedString(abilitydescription, "")]
         internal const string abilitydescription = $"{ability}.description";
         //[DragonConfigure]
         //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]

@@ -1,4 +1,5 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.New_Components;
 using DragonChanges.Utils;
@@ -37,7 +38,7 @@ namespace DragonChanges.NewStuff
         }
         public static void ConfigureEnabled()
         {
-            FeatureConfigurator.New(feature, featureguid)
+            BlueprintFeature x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddComponent(new CritMulti())
@@ -45,6 +46,9 @@ namespace DragonChanges.NewStuff
                 .AddToGroups(FeatureGroup.MythicFeat)
                 .AddPrerequisiteFeature(ParametrizedFeatureRefs.ImprovedCritical.Reference.Get())
                 .AddPrerequisiteFeature(ParametrizedFeatureRefs.ImprovedCriticalMythicFeat.Reference.Get())
+                .Configure();
+            FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraFeatMythicFeat)
+                .AddToAllFeatures(x)
                 .Configure();
         }
     }

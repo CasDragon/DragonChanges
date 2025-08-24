@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
+using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
@@ -32,7 +34,7 @@ namespace DragonChanges.NewStuff
         }
         public static BlueprintFeature ConfigureEnabled(BlueprintFeature prereq)
         {
-            return FeatureConfigurator.New(feature, featureguid)
+            BlueprintFeature x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurenamekey)
                 .SetDescription(featuredescriptionkey)
                 .AddIncreaseAllSpellsDC(descriptor: Kingmaker.Enums.ModifierDescriptor.UntypedStackable, spellsOnly: true,
@@ -42,6 +44,10 @@ namespace DragonChanges.NewStuff
                 .AddFeatureTagsComponent(FeatureTag.Magic)
                 .AddPrerequisiteFeature(prereq)
                 .Configure();
+            FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraFeatMythicFeat)
+                .AddToAllFeatures(x)
+                .Configure();
+            return x;
         }
     }
 }

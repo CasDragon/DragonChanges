@@ -152,6 +152,31 @@
         internal const string MythicNethysSupport = "E20286B6-E62F-4E02-BBE6-5735B8BAE69E";
         internal const string BuildsEnjoyerClass = "00E01260-C849-4418-871D-2D6ABEA07FF9";
         internal const string BuildsEnjoyerProgression = "3D71C593-63E1-4292-9C50-98F54BFB3961";
-        internal const string guid22 = "B5A90783-042A-4B3B-830F-3AF33F284E0A";
+        internal const string AmberSpindleItem = "B5A90783-042A-4B3B-830F-3AF33F284E0A";
+        internal const string AmberSpindleAbility = "59543426-9d81-480c-b046-d65291233ec8";
+        internal const string AmberSpindleBuff = "5cde001e-d4fd-425a-ad43-2beacf83c27d";
+        internal const string CrimsonSphereItem = "e0c2f5f5-73d2-41b7-88a6-d5d75ab78b48";
+        internal const string CrimsonSphereAbility = "d2e3f1a9-2aaf-4244-9466-25fa26f9c53f";
+        internal const string CrimsonSphereBuff = "022c2e95-c8f2-4d6f-af36-e0c8255bc95e";
+        internal const string DarkBlueRhomboidItem = "25ee1b7b-a600-40ff-888c-cb4ef4e552d0";
+        internal const string DarkBlueRhomboidAbility = "3ab59e8a-0843-45a1-9940-158df253887c";
+        internal const string DarkBlueRhomboidBuff = "27aab8f6-1698-4ce0-841c-67eedbc288c4";
+        internal const string DeepRedSphereItem = "29bbbcd9-d060-49dd-b48f-01321f40ede2";
+        internal const string DeepRedSphereAbility = "f93792f6-fb5c-4457-88ec-a70bc977019a";
+        internal const string DeepRedSphereBuff = "c77e980f-d843-4e8d-a4c0-4135684979be";
+        internal const string guid11 = "a10d32cd-facd-4c6e-9282-dabf4323424d";
+        internal const string guid12 = "148fe221-4d85-4764-bfb5-9dfb9224031f";
+        internal const string guid13 = "70afb4b2-6551-48af-9f15-79f5edfda159";
+        internal const string guid14 = "8a02a92a-ced1-497f-a402-724315a77db0";
+        internal const string guid15 = "0d1911ca-cdd8-437c-b3d0-a253bbd39215";
+        internal const string guid16 = "132eec2a-20f5-46d8-a78d-5af27d9fa40f";
+        internal const string guid17 = "d925498f-905a-4bbd-b6f3-249b18fe6891";
+        internal const string guid18 = "be205b75-a572-4c78-b225-b856c86f288d";
+        internal const string guid19 = "935a46fc-05dd-4726-8488-c45dd4d1f9b8";
+        internal const string guid20 = "1a274703-85b5-4b3a-b2c1-58ee37a8ced2";
+        internal const string guid21 = "9b7ea419-25d8-4479-a682-5fdbfd725edf";
+        internal const string guid22 = "058e6ee5-abec-4c69-ae30-e43230c516d6";
+        internal const string guid23 = "12e5e503-967a-4ee6-ba4e-5a9b42d01e77";
+        internal const string guid24 = "c8a952f8-619a-4e8b-9e9a-de4b84c34f09";
     }
 }

@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
+using DragonChanges.NewItems.IounStones.Buffs;
+using DragonChanges.Utils;
+using Kingmaker.UnitLogic.ActivatableAbilities;
+using Kingmaker.UnitLogic.Commands.Base;
+
+namespace DragonChanges.NewItems.IounStones.Abilities
+{
+    internal class DarkBlueRhomboidAbility
+    {
+        // edit
+        internal const string ability = "DarkBlueRhomboidAbility";
+        internal const string abilityguid = Guids.DarkBlueRhomboidAbility;
+        // don't edit
+        [DragonLocalizedString(abilityname, "Dark Blue Rhomboid")]
+        internal const string abilityname = $"{ability}.name";
+        [DragonLocalizedString(abilitydescription, "This stone grants the wearer the effects of the Alertness feat.")]
+        internal const string abilitydescription = $"{ability}.description";
+        public static BlueprintActivatableAbility ConfigureDummy()
+        {
+            return ActivatableAbilityConfigurator.New(ability, abilityguid)
+                .SetDisplayName(abilityname)
+                .SetDescription(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
+        }
+        public static BlueprintActivatableAbility ConfigureEnabled()
+        {
+            return ActivatableAbilityConfigurator.New(ability, abilityguid)
+                .SetDisplayName(abilityname)
+                .SetDescription(abilitydescription)
+                .SetDeactivateIfCombatEnded(false)
+                .SetDeactivateImmediately(false)
+                .SetDeactivateIfOwnerUnconscious(false)
+                .SetOnlyInCombat(false)
+                .SetActivationType(AbilityActivationType.Immediately)
+                .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
+                .SetBuff(DarkBlueRhomboidBuff.ConfigureEnabled())
+                //.SetIcon("Assets/Modifications/DragonChanges 1/AutoBolster.png".ToLower())
+                .Configure();
+        }
+    }
+}
