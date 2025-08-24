@@ -1,11 +1,49 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils.Types;
+using DragonChanges.BPCoreExtensions;
+using DragonChanges.New_Components;
 using DragonChanges.Utils;
+using Kingmaker.Blueprints;
+using Kingmaker.UnitLogic.Buffs.Blueprints;
+using Kingmaker.UnitLogic.FactLogic;
 
 namespace DragonChanges.Content
 {
     internal class AlterMod
     {
+        const string DJSettingName = "mc-deadly-juggernaut-dr";
+        const string DJSettingDescription = "Allow Deadly Juggernaut spell to have stacking DR.";
+        [DragonConfigure]
+        [DragonSetting(settingCategories.ModCompatability, DJSettingName, DJSettingDescription)]
+        public static void PatchDeadlyJuggernaut()
+        {
+
+            if (NewSettings.GetSetting<bool>(settingName))
+            {
+                if (ModCompat.microscopic)
+                {
+                    Main.log.Log("Patching Alter's Deadly Juggernaut spell to allow DR stacking");
+                    BlueprintBuff buff = ResourcesLibrary.TryGetBlueprint<BlueprintBuff>("b8c22a15f4c64737810c690ec502703c");
+                    LibraryStuff.RemoveComponent<AddDamageResistancePhysical>(buff);
+                    if (ModCompat.tttbase)
+                    {
+                        BuffConfigurator.For(buff)
+                            .AddTTAddDamageResistancePhysicalTest(ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal))
+                            .Configure();
+                    }
+                    else
+                    {
+                        BuffConfigurator.For(buff)
+                            .AddDRComponent(stackable: true, value: ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal))
+                            .Configure();
+                    }
+                }
+            }
+        }
+
         const string settingName = "mc-microscopic-horse";
         const string settingDescription = "Adds the Nightmare animal companion (MicroscopicContent) to other pet lists";
         [DragonConfigure]
