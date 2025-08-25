@@ -8,6 +8,7 @@ using BlueprintCore.Actions.Builder.ContextEx;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
+using DragonChanges.NewItems.Scrolls;
 using DragonChanges.Utils;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
@@ -44,6 +45,7 @@ namespace DragonChanges.NewSpells
         }
         public static BlueprintAbility ConfigureDummy()
         {
+            CommunalDeathWardScroll.ConfigureDummy();
             return AbilityConfigurator.New(ability, abilityguid)
                 .SetDisplayName(abilityname)
                 .SetDescription(LocalizedStringHelper.disabledcontentstring)
@@ -51,7 +53,7 @@ namespace DragonChanges.NewSpells
         }
         public static BlueprintAbility ConfigureEnabled()
         {
-            return AbilityConfigurator.New(ability, abilityguid)
+            BlueprintAbility x = AbilityConfigurator.New(ability, abilityguid)
                 .SetDisplayName(abilityname)
                 .SetDescription(abilitydescription)
                 .AddSpellComponent(Kingmaker.Blueprints.Classes.Spells.SpellSchool.Necromancy)
@@ -133,6 +135,8 @@ namespace DragonChanges.NewSpells
                 .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Standard)
                 .SetAvailableMetamagic(Metamagic.Quicken | Metamagic.Extend | Metamagic.Heighten | Metamagic.Reach | Metamagic.CompletelyNormal)
                 .Configure();
+            CommunalDeathWardScroll.ConfigureEnabled(x);
+            return x;
         }
     }
 }

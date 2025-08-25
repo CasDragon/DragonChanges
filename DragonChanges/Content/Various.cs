@@ -136,6 +136,8 @@ namespace DragonChanges.Content
             AneviaVendor.AddItem(ItemWeaponRefs.TheOpressorBastardSwordItem.Reference.Get());
             Main.log.Log("Add JagannathKhanda to anevia vendor");
             AneviaVendor.AddItem(ItemWeaponRefs.JagannathKhanda.Reference.Get());
+            Main.log.Log("Add GreaterMagicWeaponScroll to anevia vendor");
+            AneviaVendor.AddItem(ItemEquipmentUsableRefs.ScrollOfMagicWeaponGreaterPrimary.Reference.Get(), 99);
         }
     }
 }

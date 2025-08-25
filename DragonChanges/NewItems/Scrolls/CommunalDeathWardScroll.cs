@@ -9,6 +9,7 @@ using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Equipment;
 using Kingmaker.Enums;
+using Kingmaker.UnitLogic.Abilities.Blueprints;
 
 namespace DragonChanges.NewItems.Scrolls
 {
@@ -18,25 +19,11 @@ namespace DragonChanges.NewItems.Scrolls
         internal const string item = "CommunalDeathWardScroll";
         internal const string itemguid = Guids.CommunalDeathWardScroll;
         internal const string settingName = "communaldeathward";
-        [DragonConfigure(1)]
-        public static void Configure()
-        {
-            if (NewSettings.GetSetting<bool>(settingName))
-            {
-                Main.log.Log($"{item} item enabled, configuring");
-                ConfigureEnabled();
-            }
-            else
-            {
-                Main.log.Log($"{item} disabled, configuring dummy");
-                ConfigureDummy();
-            }
-        }
         public static void ConfigureDummy()
         {
             ItemEquipmentUsableConfigurator.New(item, itemguid).Configure();
         }
-        public static void ConfigureEnabled()
+        public static void ConfigureEnabled(BlueprintAbility ability)
         {
             BlueprintItemEquipmentUsable scroll = ItemEquipmentUsableConfigurator.New(item, itemguid)
                 .SetCost(2650)
@@ -46,7 +33,7 @@ namespace DragonChanges.NewItems.Scrolls
                 .SetInventoryPutSound("ScrollPut")
                 .SetInventoryTakeSound("ScrollTake")
                 .SetTrashLootTypes(TrashLootType.Scrolls | TrashLootType.Scrolls_RE)
-                .SetAbility(Guids.CommunalDeathWard)
+                .SetAbility(ability)
                 .SetSpendCharges(true)
                 .SetCharges(1)
                 .SetCasterLevel(11)
