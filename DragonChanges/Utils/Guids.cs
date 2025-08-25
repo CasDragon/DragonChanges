@@ -164,8 +164,8 @@
         internal const string DeepRedSphereItem = "29bbbcd9-d060-49dd-b48f-01321f40ede2";
         internal const string DeepRedSphereAbility = "f93792f6-fb5c-4457-88ec-a70bc977019a";
         internal const string DeepRedSphereBuff = "c77e980f-d843-4e8d-a4c0-4135684979be";
-        internal const string guid11 = "a10d32cd-facd-4c6e-9282-dabf4323424d";
-        internal const string guid12 = "148fe221-4d85-4764-bfb5-9dfb9224031f";
+        internal const string CommunalDeathWard = "a10d32cd-facd-4c6e-9282-dabf4323424d";
+        internal const string CommunalDeathWardScroll = "148fe221-4d85-4764-bfb5-9dfb9224031f";
         internal const string guid13 = "70afb4b2-6551-48af-9f15-79f5edfda159";
         internal const string guid14 = "8a02a92a-ced1-497f-a402-724315a77db0";
         internal const string guid15 = "0d1911ca-cdd8-437c-b3d0-a253bbd39215";
