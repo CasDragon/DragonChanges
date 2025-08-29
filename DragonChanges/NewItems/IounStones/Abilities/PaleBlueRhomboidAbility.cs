@@ -11,15 +11,15 @@ using Kingmaker.UnitLogic.Commands.Base;
 
 namespace DragonChanges.NewItems.IounStones.Abilities
 {
-    internal class CrackDustyRosePrismAbility
+    internal class PaleBlueRhomboidAbility
     {
         // edit
-        internal const string ability = "CrackDustyRosePrismAbility";
-        internal const string abilityguid = Guids.CrackDustyRosePrismAbility;
+        internal const string ability = "PaleBlueRhomboidAbility";
+        internal const string abilityguid = Guids.PaleBlueRhomboidAbility;
         // don't edit
-        [DragonLocalizedString(abilityname, "Cracked Dusty Rose Prism")]
+        [DragonLocalizedString(abilityname, "Pale Blue Rhomboid")]
         internal const string abilityname = $"{ability}.name";
-        [DragonLocalizedString(abilitydescription, "This stone grants a +1 competence bonus on initiative checks.")]
+        [DragonLocalizedString(abilitydescription, "This stone grants you a +2 enhancement bonus to Strength.")]
         internal const string abilitydescription = $"{ability}.description";
         public static BlueprintActivatableAbility ConfigureDummy()
         {
@@ -39,7 +39,7 @@ namespace DragonChanges.NewItems.IounStones.Abilities
                 .SetOnlyInCombat(false)
                 .SetActivationType(AbilityActivationType.Immediately)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Free)
-                .SetBuff(CrackDustyRosePrismBuff.ConfigureEnabled())
+                .SetBuff(PaleBlueRhomboidBuff.ConfigureEnabled())
                 //.SetIcon("Assets/Modifications/DragonChanges 1/AutoBolster.png".ToLower())
                 .Configure();
         }

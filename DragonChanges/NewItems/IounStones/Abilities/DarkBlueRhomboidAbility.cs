@@ -38,7 +38,7 @@ namespace DragonChanges.NewItems.IounStones.Abilities
                 .SetDeactivateIfOwnerUnconscious(false)
                 .SetOnlyInCombat(false)
                 .SetActivationType(AbilityActivationType.Immediately)
-                .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
+                .SetActivateWithUnitCommand(UnitCommand.CommandType.Free)
                 .SetBuff(DarkBlueRhomboidBuff.ConfigureEnabled())
                 //.SetIcon("Assets/Modifications/DragonChanges 1/AutoBolster.png".ToLower())
                 .Configure();
