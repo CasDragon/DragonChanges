@@ -1,4 +1,6 @@
-﻿namespace DragonChanges.Utils
+﻿using Owlcat.Runtime.Visual.RenderPipeline.PostProcess.HBAO;
+
+namespace DragonChanges.Utils
 {
     internal class Guids
     {
@@ -166,17 +168,17 @@
         internal const string DeepRedSphereBuff = "c77e980f-d843-4e8d-a4c0-4135684979be";
         internal const string CommunalDeathWard = "a10d32cd-facd-4c6e-9282-dabf4323424d";
         internal const string CommunalDeathWardScroll = "148fe221-4d85-4764-bfb5-9dfb9224031f";
-        internal const string guid13 = "70afb4b2-6551-48af-9f15-79f5edfda159";
-        internal const string guid14 = "8a02a92a-ced1-497f-a402-724315a77db0";
-        internal const string guid15 = "0d1911ca-cdd8-437c-b3d0-a253bbd39215";
-        internal const string guid16 = "132eec2a-20f5-46d8-a78d-5af27d9fa40f";
-        internal const string guid17 = "d925498f-905a-4bbd-b6f3-249b18fe6891";
-        internal const string guid18 = "be205b75-a572-4c78-b225-b856c86f288d";
-        internal const string guid19 = "935a46fc-05dd-4726-8488-c45dd4d1f9b8";
-        internal const string guid20 = "1a274703-85b5-4b3a-b2c1-58ee37a8ced2";
-        internal const string guid21 = "9b7ea419-25d8-4479-a682-5fdbfd725edf";
-        internal const string guid22 = "058e6ee5-abec-4c69-ae30-e43230c516d6";
-        internal const string guid23 = "12e5e503-967a-4ee6-ba4e-5a9b42d01e77";
-        internal const string guid24 = "c8a952f8-619a-4e8b-9e9a-de4b84c34f09";
+        internal const string DustyRosePrismItem = "70afb4b2-6551-48af-9f15-79f5edfda159";
+        internal const string DustyRosePrismAbility = "8a02a92a-ced1-497f-a402-724315a77db0";
+        internal const string DustyRosePrismBuff = "0d1911ca-cdd8-437c-b3d0-a253bbd39215";
+        internal const string CrackDustyRosePrismItem = "132eec2a-20f5-46d8-a78d-5af27d9fa40f";
+        internal const string CrackDustyRosePrismAbility = "d925498f-905a-4bbd-b6f3-249b18fe6891";
+        internal const string CrackDustyRosePrismBuff = "be205b75-a572-4c78-b225-b856c86f288d";
+        internal const string IncandescentBlueSphereItem = "935a46fc-05dd-4726-8488-c45dd4d1f9b8";
+        internal const string IncandescentBlueSphereAbility = "1a274703-85b5-4b3a-b2c1-58ee37a8ced2";
+        internal const string IncandescentBlueSphereBuff = "9b7ea419-25d8-4479-a682-5fdbfd725edf";
+        internal const string OnyxRhomboidItem = "058e6ee5-abec-4c69-ae30-e43230c516d6";
+        internal const string OnyxRhomboidAbility = "12e5e503-967a-4ee6-ba4e-5a9b42d01e77";
+        internal const string OnyxRhomboidBuff = "c8a952f8-619a-4e8b-9e9a-de4b84c34f09";
     }
 }
