@@ -13,7 +13,7 @@ namespace DragonChanges.NewItems.IounStones.Buffs
     {
         // edit
         internal const string buff = "CrackDustyRosePrismBuff";
-        internal const string buffguid = Guids.CrimsonSphereBuff;
+        internal const string buffguid = Guids.CrackDustyRosePrismBuff;
         // don't edit
         [DragonLocalizedString(buffname, "Cracked Dusty Rose Prism(buff)")]
         internal const string buffname = $"{buff}.name";
