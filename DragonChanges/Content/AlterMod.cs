@@ -21,7 +21,7 @@ namespace DragonChanges.Content
         public static void PatchDeadlyJuggernaut()
         {
 
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (NewSettings.GetSetting<bool>(DJSettingName))
             {
                 if (ModCompat.microscopic)
                 {
