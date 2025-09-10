@@ -187,7 +187,7 @@ namespace DragonChanges.Utils
         internal const string PaleBlueRhomboidAbility = "52dbd699-5c80-4f56-aa70-e89422c5543c";
         internal const string PaleBlueRhomboidBuff = "9f33fd21-68f5-486d-836f-c8b17c98bd05";
         internal const string MyThiccFeat = "1609da4a-3c82-4beb-945b-ae2d6fb97351";
-        internal const string guid7 = "9d414931-8196-4874-875f-a71732a2ea02";
+        internal const string ExoticWeaponProficiency = "9d414931-8196-4874-875f-a71732a2ea02";
         internal const string guid8 = "26ef7b07-b8b3-4e49-860a-4764181e8499";
         internal const string guid9 = "5a04e609-9661-41fa-b1e6-cb85417c5f66";
         internal const string guid10 = "05d93278-8f86-45a8-af0b-4d51b66a10cd";

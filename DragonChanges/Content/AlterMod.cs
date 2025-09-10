@@ -130,6 +130,9 @@ namespace DragonChanges.Content
                         FeatureSelectionConfigurator.For("d9b99d9c48d2425894b565733e96c7e3")
                             .AddToAllFeatures(nightmare)
                             .Configure();
+                        FeatureSelectionConfigurator.For("ecf97b544d584edb8bb0ba9e7de20751")
+                            .AddToAllFeatures(nightmare)
+                            .Configure();
                     }
                 }
                 else
