@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
+using static Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite;
 
 namespace DragonChanges.New_Backgrounds
 {
@@ -43,12 +44,13 @@ namespace DragonChanges.New_Backgrounds
                 .AddToFeatureSelection(FeatureSelectionRefs.BackgroundsWandererSelection.Reference.Get())
                 .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillPerception)
                 .AddClassSkill(Kingmaker.EntitySystem.Stats.StatType.SkillMobility)
+                .SetIsClassFeature(true)
                 .Configure();
 
             if (ModCompat.homebrewarchetypes)
             {
                 FeatureSelectionConfigurator.For("2d153d12aab2d1d47b8d1015f83f5894")
-                    .AddPrerequisiteFeature(x)
+                    .AddPrerequisiteFeature(x, group: GroupType.Any)
                     .Configure();
             }
         }

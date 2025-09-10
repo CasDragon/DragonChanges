@@ -12,7 +12,7 @@ namespace DragonChanges.NewStuff
         // edit
         internal const string feature = "ExoticWeaponMaster";
         internal const string featureguid = Guids.ExoticWeaponProficiency;
-        internal const string settingName = "ExoticWeaponProficiency";
+        internal const string settingName = "exoticweaponproficiency";
         internal const string settingDescription = "Adds a feat that gives all Exotic weapon proficiencies.";
         internal const string featurename = "Exotic Weapon Master";
         internal const string featuredescription = "Allows you to use all exotic weapons.";
