@@ -8,6 +8,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using DragonChanges.New_Classes.Redditor;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Classes.Spells;
@@ -32,10 +33,10 @@ namespace DragonChanges.New_Classes.BuildsEnjoyer
         [DragonLocalizedString(classshortdescription, "Builds Enjoyer combines Inciter, Drunken Monk, and Sable Marine archetypes into one handy class! Also gives Magic Deceiver spellbook at KC's request!")]
         internal const string classshortdescription = $"{classprefix}.shortdescription";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewClasses, settingName, settingDescription, false)]
+        [DragonSetting(SettingCategories.NewClasses, settingName, settingDescription, false)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
                 BlueprintProgression progression = BuildsEnjoyerProgression.ConfigureEnabled();

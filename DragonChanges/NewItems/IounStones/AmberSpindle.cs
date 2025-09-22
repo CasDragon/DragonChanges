@@ -10,6 +10,7 @@ using DragonChanges.NewItems.IounStones.Abilities;
 using DragonChanges.NewItems.IounStones.Buffs;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Items.Equipment;
 
 namespace DragonChanges.NewItems.IounStones
@@ -27,10 +28,10 @@ namespace DragonChanges.NewItems.IounStones
         [DragonLocalizedString(itemdescription, "This stone grants you a +1 resistance bonus on saving throws. The bonuses from multiple amber spindles stack  (up to a maximum of a +5 resistance bonus to saving throws).")]
         internal const string itemdescription = $"{item}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();

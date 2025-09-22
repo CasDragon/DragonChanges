@@ -1,16 +1,17 @@
-﻿using BlueprintCore.Blueprints.Configurators.Items;
-using BlueprintCore.Blueprints.Configurators.Items.Equipment;
-using BlueprintCore.Blueprints.References;
-using DragonChanges.NewStuff;
-using DragonChanges.Utils;
-using Kingmaker.Blueprints.Items.Equipment;
-using Kingmaker.Enums;
-using Kingmaker.UI.SettingsUI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BlueprintCore.Blueprints.Configurators.Items;
+using BlueprintCore.Blueprints.Configurators.Items.Equipment;
+using BlueprintCore.Blueprints.References;
+using DragonChanges.NewStuff;
+using DragonChanges.Utils;
+using DragonLibrary.Utils;
+using Kingmaker.Blueprints.Items.Equipment;
+using Kingmaker.Enums;
+using Kingmaker.UI.SettingsUI;
 
 namespace DragonChanges.NewItems.Scrolls
 {
@@ -20,10 +21,10 @@ namespace DragonChanges.NewItems.Scrolls
         internal const string item = "HeavenFireRayscroll";
         internal const string itemguid = Guids.HeavenFireScroll;
         internal const string settingName = "heavenray";
-        [DragonConfigure(1)]
+        [DragonConfigure(priority: ConfigurePriority.Last)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.UnitLogic.Mechanics;
 
@@ -16,10 +17,10 @@ namespace DragonChanges.Content
         const string settingName = "cyrix-wis-buff";
         const string settingDescription = "Adds a WIS buff to Insightful Contemplation, added for Cyrix";
         [DragonConfigure]
-        [DragonSetting(settingCategories.Various, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.Various, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching InsightfulComtemplationSngEffectBuff to include WIS buff");
                 BuffConfigurator.For(BuffRefs.InsightfulContemplationSongEffectBuff)

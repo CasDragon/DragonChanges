@@ -67,7 +67,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
                 .SetGroup((ActivatableAbilityGroup)ActivatableAbilityGroupPatch.DCActivatableAbilityGroup.TenguSwordmasterTrance)
                 .SetBuff(ConfigureBuff())
-                .SetIcon("Assets/Modifications/DragonChanges 1/LeopardTrance.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.LeopardTrance.png"))
                 .Configure();
         }
         // edit
@@ -95,7 +95,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu.Features
                 .SetRanks(0)
                 .SetTickEachSecond(false)
                 .SetFrequency(Kingmaker.UnitLogic.Mechanics.DurationRate.Rounds)
-                .SetIcon("Assets/Modifications/DragonChanges 1/LeopardTrance.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.LeopardTrance.png"))
                 .Configure();
         }
     }

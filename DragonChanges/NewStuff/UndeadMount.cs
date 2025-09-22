@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
@@ -16,18 +17,23 @@ namespace DragonChanges.NewStuff
     internal class UndeadMount
     {
         internal const string UndeadUnit = "undeadmountunit";
-        internal const string UndeadFeatureName = "undeadmountfeature.name";
-        internal const string UndeadFeatureDescription = "undeadmountfeature.description";
         internal const string UndeadFeature = "UndeadHorse-feature";
         internal const string UndeadMountPortrait = "undeadmountportrait";
         internal const string settingName = "undeadmount";
         internal const string settingDescription = "Adds a new undead mount, and then adds it to mount selections";
+        internal const string featurename = "Animal Companion - Undead Horse";
+        internal const string featuredescription = "{g|Encyclopedia:Size}Size{/g}: Large\n{g|Encyclopedia:Speed}Speed{/g}: 50 ft.\n{g|Encyclopedia:Armor_Class}AC{/g}: +4 natural armor\n{g|Encyclopedia:Attack}Attacks{/g}: bite ({g|Encyclopedia:Dice}1d4{/g}), 2 hooves (1d6)\n{g|Encyclopedia:Ability_Scores}Ability scores{/g}: {g|Encyclopedia:Strength}Str{/g} 16, {g|Encyclopedia:Dexterity}Dex{/g} 13, {g|Encyclopedia:Constitution}Con{/g} 15, {g|Encyclopedia:Intelligence}Int{/g} 2, {g|Encyclopedia:Wisdom}Wis{/g} 12, {g|Encyclopedia:Charisma}Cha{/g} 6\nSpecial qualities: {g|Encyclopedia:Scent}scent{/g}\nAt 4th level, a horse gains Str +2 and Con +2 and its hoof attacks become primary.\nWhen riding a horse, you gain a +1 {g|Encyclopedia:Bonus}bonus{/g} to AC and on attack rolls against enemies of Medium size or smaller.";
+        // 
+        [DragonLocalizedString(UndeadFeatureName, featurename)]
+        internal const string UndeadFeatureName = "undeadmountfeature.name";
+        [DragonLocalizedString(UndeadFeatureDescription, featuredescription, true)]
+        internal const string UndeadFeatureDescription = "undeadmountfeature.description";
 
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Configuring undead mount");
                 BlueprintUnit unit = CreateUndeadMount();
@@ -218,7 +224,7 @@ namespace DragonChanges.NewStuff
         }
         public static void AddUndeadMountToSelections(BlueprintFeature mountfeature)
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching various animal selections to include undead mount");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)

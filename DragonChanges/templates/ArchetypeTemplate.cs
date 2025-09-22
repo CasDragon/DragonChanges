@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 
 namespace DragonChanges.templates
 {
@@ -24,10 +25,10 @@ namespace DragonChanges.templates
         //[DragonLocalizedString(archetypedescriptionkey, archetypedescription, true)]
         internal const string archetypeshortdescriptionkey = $"{archetype}.shortdescription";
         //[DragonConfigure]
-        //[DragonSetting(settingCategories.NewArchetypes, settingName, settingDescription)]
+        //[DragonSetting(SettingCategories.NewArchetypes, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{archetype} archetype enabled, configuring");
                 ConfigureEnabled();

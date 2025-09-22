@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 
 namespace DragonChanges.NewItems.IounStones.Buffs

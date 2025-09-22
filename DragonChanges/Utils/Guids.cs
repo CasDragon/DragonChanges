@@ -203,7 +203,6 @@ namespace DragonChanges.Utils
         internal const string guid20 = "d42258e2-dc0d-4b2e-829a-44b19c0d82ad";
         internal const string guid21 = "b2dd5709-9324-4237-8b8c-27a64e243a60";
         internal const string guid22 = "d324befa-34fa-4aef-881e-8af9e569fbb8";
-        internal const string guid23 = "2f80d83c-70b7-402d-8dec-6aee57df9043";
-        internal const string guid24 = "b0b250f5-7957-482c-b46a-5188179eea28";
+        internal const string guid23 = "";
     }
 }

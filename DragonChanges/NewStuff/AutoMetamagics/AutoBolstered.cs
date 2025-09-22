@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.ActivatableAbilities;
@@ -22,10 +23,10 @@ namespace DragonChanges.NewStuff.AutoMetamagics
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewSpells, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewSpells, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();
@@ -79,7 +80,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
                 .SetActivationType(AbilityActivationType.Immediately)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
                 .SetBuff(ConfigureBuff())
-                .SetIcon("Assets/Modifications/DragonChanges 1/AutoBolster.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.AutoBolster.png"))
                 .Configure();
         }
         // edit
@@ -103,7 +104,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
                 .SetIsClassFeature(true)
                 .SetStacking(StackingType.Ignore)
                 .SetRanks(0)
-                .SetIcon("Assets/Modifications/DragonChanges 1/AutoBolster.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.AutoBolster.png"))
                 .Configure();
         }
     }

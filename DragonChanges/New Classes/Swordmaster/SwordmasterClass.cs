@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Root;
@@ -22,10 +23,10 @@ namespace DragonChanges.New_Classes.Swordmaster
         internal static string classdescription = $"{classprefix}.class.description";
         internal static string classshortdescription = $"{classprefix}.class.shortdescription";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewClasses, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewClasses, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
                 BlueprintProgression progression = SwordmasterProgression.Configure();

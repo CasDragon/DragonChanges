@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
-using DragonChanges.BPCoreExtensions;
 using DragonChanges.Utils;
-using Kingmaker.Blueprints.Items.Weapons;
+using DragonLibrary.Utils;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
 
@@ -24,10 +18,10 @@ namespace DragonChanges.NewStuff
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

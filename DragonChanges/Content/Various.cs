@@ -4,6 +4,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 namespace DragonChanges.Content
 {
@@ -12,10 +13,10 @@ namespace DragonChanges.Content
         const string settingName = "hippogriff";
         const string settingDescription = "Adds the Hippogriff animal companion to other pet lists";
         [DragonConfigure]
-        [DragonSetting(settingCategories.ModCompatability, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.ModCompatability, settingName, settingDescription)]
         public static void PatchHippogriff()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching various animal selections to include Hippogriff");
                 BlueprintFeature hippo = FeatureRefs.SableMarineHippogriffCompanionFeature.Reference.Get();
@@ -102,10 +103,10 @@ namespace DragonChanges.Content
         const string codsettingname = "carrierofdisease";
         const string codsettingdescription = "Adds the Plague hex to Extra Hex and regular Hex selections for Shaman";
         [DragonConfigure]
-        [DragonSetting(settingCategories.Various, codsettingname, codsettingdescription)]
+        [DragonSetting(SettingCategories.Various, codsettingname, codsettingdescription)]
         public static void CarrierofDisease()
         {
-            if (NewSettings.GetSetting<bool>(codsettingname))
+            if (SettingsAction.GetSetting<bool>(codsettingname))
             {
                 Main.log.Log("Adding Carrier of Disease to Extra Hex");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraShamanHexSelection)

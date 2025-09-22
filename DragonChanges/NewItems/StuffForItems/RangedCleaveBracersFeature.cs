@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Utility;
 
 namespace DragonChanges.NewItems.StuffForItems

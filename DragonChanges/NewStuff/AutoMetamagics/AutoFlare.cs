@@ -4,6 +4,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Abilities;
@@ -25,7 +26,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
         [DragonConfigure]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>("autometamagics"))
+            if (SettingsAction.GetSetting<bool>("autometamagics"))
             {
                 if (ModCompat.tttbase)
                 {
@@ -88,7 +89,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
                 .SetActivationType(AbilityActivationType.Immediately)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
                 .SetBuff(ConfigureBuff())
-                .SetIcon("Assets/Modifications/DragonChanges 1/AutoFlare.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.AutoFlare.png"))
                 .Configure();
         }
         // edit
@@ -112,7 +113,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
                 .SetIsClassFeature(true)
                 .SetStacking(StackingType.Ignore)
                 .SetRanks(0)
-                .SetIcon("Assets/Modifications/DragonChanges 1/AutoFlare.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.AutoFlare.png"))
                 .Configure();
         }
     }

@@ -6,8 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using static DragonChanges.Utils.TTTHelpers;
 using UnityEngine;
+using DragonLibrary.Utils;
 
 namespace DragonChanges.Utils
 {
@@ -88,7 +88,7 @@ namespace DragonChanges.Utils
         public static TBlueprint CloneBlueprint<TBlueprint>(TBlueprint blueprint, BlueprintGuid guid, string? name = null, bool addToLibrary = true)
             where TBlueprint : SimpleBlueprint
         {
-            blueprint = (ObjectDeepCopier.Clone(blueprint) as TBlueprint)!;
+            blueprint = (TTTHelpers.ObjectDeepCopier.Clone(blueprint) as TBlueprint)!;
 
             if (blueprint is BlueprintScriptableObject bso)
             {

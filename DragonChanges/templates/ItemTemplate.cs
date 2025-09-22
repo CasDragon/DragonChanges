@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 using BlueprintCore.Blueprints.Configurators.Items;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,18 @@ namespace DragonChanges.templates
         internal const string itemguid = Guids.Template;
         internal const string settingName = "";
         internal const string settingDescription = "";
+        internal const string itemname = "";
+        internal const string itemdescription = "";
         // don't edit
-        internal const string itemname = $"{item}.name";
-        internal const string itemdescription = $"{item}.description";
+        //[DragonLocalizedString(itemnamekey, itemname)]
+        internal const string itemnamekey = $"{item}.name";
+        //[DragonLocalizedString(itemdescriptioney, itemdescription)]
+        internal const string itemdescriptionkey = $"{item}.description";
         //[DragonConfigure]
-        //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
+        //[DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();

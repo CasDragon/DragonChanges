@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
-using DragonChanges.BPCoreExtensions;
-using DragonChanges.New_Components;
 using DragonChanges.Utils;
-using Kingmaker.Blueprints;
+using DragonLibrary.BPCoreExtensions;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Mechanics.Properties;
 
 namespace DragonChanges.NewItems.StuffForItems
@@ -41,7 +34,7 @@ namespace DragonChanges.NewItems.StuffForItems
                     .SetDescription(featuredescription)
                     .AddRecalculateOnStatChange(stat: StatType.Strength)
                     .SetHideInUI(true)
-                    .AddTTAddDamageResistancePhysicalTest(value: ContextValues.Property(UnitProperty.StatBonusStrength))
+                    .AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusStrength))
                     .Configure();
             }
             else

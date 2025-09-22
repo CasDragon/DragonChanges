@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.References;
 using DragonChanges.NewItems.StuffForItems;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Items.Equipment;
 
 namespace DragonChanges.NewItems
@@ -19,7 +20,7 @@ namespace DragonChanges.NewItems
         [DragonConfigure]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(itemsettingname))
+            if (SettingsAction.GetSetting<bool>(itemsettingname))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();

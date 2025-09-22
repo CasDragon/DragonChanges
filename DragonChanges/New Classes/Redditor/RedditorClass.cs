@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Classes.Spells;
@@ -18,15 +19,21 @@ namespace DragonChanges.New_Classes.Redditor
         internal const string classguid = Guids.redditorcharacterclass;
         internal const string settingName = "redditor";
         internal const string settingDescription = "Enable the Redditor class  (which is a meme class I made, don't take too seriously)";
+        internal const string classname1 = "Redditor";
+        internal const string classdescription1 = "Reddit's own character class. CHA TO EVERYTHING! \nBasically Fighter class with +CHA to all stats and CHA spellcasting. (This is a meme class I made, don't take it too seriously)";
+        internal const string classshortdescription1 = "Reddit's own character class. CHA TO EVERYTHING!";
         // don't edit
+        [DragonLocalizedString(classname, classname1)]
         internal const string classname = $"{classprefix}.name";
+        [DragonLocalizedString(classdescription, classdescription1)]
         internal const string classdescription = $"{classprefix}.description";
+        [DragonLocalizedString(classshortdescription, classshortdescription1)]
         internal const string classshortdescription = $"{classprefix}.shortdescription";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewClasses, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewClasses, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
                 BlueprintProgression progression = RedditorProgression.Configure();

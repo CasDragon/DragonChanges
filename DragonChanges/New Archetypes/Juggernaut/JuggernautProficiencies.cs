@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 
 namespace DragonChanges.New_Archetypes.Juggernaut
 {

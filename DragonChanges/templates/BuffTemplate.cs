@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 
 namespace DragonChanges.templates
 {
@@ -22,10 +23,10 @@ namespace DragonChanges.templates
         //[DragonLocalizedString(buffdescription, "")]
         internal const string buffdescription = $"{buff}.description";
         //[DragonConfigure]
-        //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
+        //[DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{buff} feature enabled, configuring");
                 ConfigureEnabled();

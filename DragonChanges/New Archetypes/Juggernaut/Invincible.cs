@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Utils.Types;
-using DragonChanges.BPCoreExtensions;
-using DragonChanges.New_Components;
 using DragonChanges.Utils;
+using DragonLibrary.BPCoreExtensions;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.UnitLogic.Mechanics.Properties;
@@ -42,7 +42,7 @@ namespace DragonChanges.New_Archetypes.Juggernaut
                     .SetDisplayName(featurenamekey)
                     .SetDescription(featuredescriptionkey)
                     .AddRecalculateOnStatChange(stat: StatType.Constitution)
-                    .AddTTAddDamageResistancePhysicalTest(value: ContextValues.Property(UnitProperty.StatBonusConstitution))
+                    .AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusConstitution))
                     .SetIsClassFeature(true)
                     .Configure();
             }

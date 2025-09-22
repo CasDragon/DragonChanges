@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.ActivatableAbilities;
@@ -21,7 +22,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
         [DragonConfigure]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>("autometamagics"))
+            if (SettingsAction.GetSetting<bool>("autometamagics"))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();
@@ -75,7 +76,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
                 .SetActivationType(AbilityActivationType.Immediately)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
                 .SetBuff(ConfigureBuff())
-                .SetIcon("Assets/Modifications/DragonChanges 1/AutoReach.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.AutoReach.png"))
                 .Configure();
         }
         // edit
@@ -99,7 +100,7 @@ namespace DragonChanges.NewStuff.AutoMetamagics
                 .SetIsClassFeature(true)
                 .SetStacking(StackingType.Ignore)
                 .SetRanks(0)
-                .SetIcon("Assets/Modifications/DragonChanges 1/AutoReach.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.AutoReach.png"))
                 .Configure();
         }
     }

@@ -7,6 +7,7 @@ using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Items.Weapons;
 
 namespace DragonChanges.Content
@@ -16,10 +17,10 @@ namespace DragonChanges.Content
         const string settingName = "ruinstaff";
         const string settingDescription = "Enables the Ruin quarterstaff item";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewItems, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewItems, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{settingName} item enabled, configuring");
                 ConfigureEnabled();

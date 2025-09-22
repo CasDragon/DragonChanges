@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 
 namespace DragonChanges.NewStuff
 {
@@ -23,10 +24,10 @@ namespace DragonChanges.NewStuff
         [DragonLocalizedString(featuredescriptionkey, featuredescription)]
         internal const string featuredescriptionkey = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription, false)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription, false)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

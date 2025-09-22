@@ -1,30 +1,31 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using System.Linq;
+using BlueprintCore.Actions.Builder;
+using BlueprintCore.Actions.Builder.BasicEx;
+using BlueprintCore.Actions.Builder.ContextEx;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
-using DragonChanges.Utils;
-using Kingmaker.Enums;
-using Kingmaker.Blueprints.Classes.Spells;
-using Kingmaker.Utility;
-using BlueprintCore.Actions.Builder;
-using Kingmaker.UnitLogic.Mechanics.Actions;
-using Kingmaker.RuleSystem.Rules.Damage;
-using Kingmaker.UnitLogic.Mechanics;
-using Kingmaker.UnitLogic.Abilities;
-using Kingmaker.UnitLogic.Mechanics.Properties;
-using Kingmaker.RuleSystem;
-using BlueprintCore.Actions.Builder.BasicEx;
 using BlueprintCore.Utils.Types;
+using DragonChanges.Utils;
+using DragonLibrary.Utils;
+using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Spells;
+using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
-using BlueprintCore.Actions.Builder.ContextEx;
+using Kingmaker.RuleSystem;
+using Kingmaker.RuleSystem.Rules.Damage;
+using Kingmaker.UI.SettingsUI;
+using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
+using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.UnitLogic.Mechanics.Components;
+using Kingmaker.UnitLogic.Mechanics.Properties;
+using Kingmaker.Utility;
 using Kingmaker.View.Animation;
 using Kingmaker.Visual.Animation.Kingmaker.Actions;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
-using System.Linq;
 using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
-using Kingmaker.UI.SettingsUI;
-using Kingmaker.Blueprints;
-using Kingmaker.UnitLogic.Mechanics.Components;
 
 namespace DragonChanges.NewSpells
 {
@@ -39,10 +40,10 @@ namespace DragonChanges.NewSpells
         internal const string spellname = $"{spell}.name";
         internal const string spelldescription = $"{spell}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewSpells, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewSpells, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{spell} feature enabled, configuring");
                 ConfigureEnabled();
@@ -125,7 +126,7 @@ namespace DragonChanges.NewSpells
                     aOEType: Kingmaker.Craft.CraftAOE.None,
                     savingThrow: Kingmaker.Craft.CraftSavingThrow.None,
                     spellType: Kingmaker.Craft.CraftSpellType.Damage)
-                .SetIcon("Assets/Modifications/DragonChanges 1/HeavenFireRay.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.HeavenFireRay.png"))
                 .Configure();
         }
     }

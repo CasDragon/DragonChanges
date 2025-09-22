@@ -5,6 +5,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.New_Archetypes.Swordmaster_Tengu.Features;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes.Selection;
 using Kingmaker.UI.SettingsUI;
@@ -34,10 +35,10 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
 
         internal static BlueprintAbilityResource abilityResource;
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewArchetypes, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewArchetypes, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{archetypeprefix} archetype enabled, configuring started");
                 abilityResource = ConfigureAbilityResource();

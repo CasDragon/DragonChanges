@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Classes.Selection;
 
@@ -26,10 +27,10 @@ namespace DragonChanges.NewStuff
         [DragonLocalizedString(featuredescriptionkey, featuredescription)]
         internal const string featuredescriptionkey = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 BlueprintFeature feat = ConfigureEnabled();

@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Patches;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 
 namespace DragonChanges.NewStuff
@@ -18,7 +19,7 @@ namespace DragonChanges.NewStuff
         [DragonConfigure]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>("swordmastertengu"))
+            if (SettingsAction.GetSetting<bool>("swordmastertengu"))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();

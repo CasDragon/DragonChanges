@@ -4,6 +4,7 @@ using DragonChanges.New_Archetypes.Swordmaster_Tengu;
 using DragonChanges.NewEnchantments;
 using DragonChanges.Patches;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 using Kingmaker.UnitLogic.Commands.Base;
@@ -23,10 +24,10 @@ namespace DragonChanges.templates
         //[DragonLocalizedString(abilitydescription, "")]
         internal const string abilitydescription = $"{ability}.description";
         //[DragonConfigure]
-        //[DragonSetting(settingCategories.NewAbilities, settingName, settingDescription)]
+        //[DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{ability} item enabled, configuring");
                 ConfigureEnabled();

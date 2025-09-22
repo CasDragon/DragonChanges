@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.EntitySystem.Stats;
 
 namespace DragonChanges.New_Archetypes.Juggernaut
@@ -25,10 +26,10 @@ namespace DragonChanges.New_Archetypes.Juggernaut
         [DragonLocalizedString(archetypeshortdescriptionkey, archetypeshortdescription, true)]
         internal const string archetypeshortdescriptionkey = $"{archetype}.shortdescription";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewArchetypes, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewArchetypes, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{archetype} archetype enabled, configuring");
                 ConfigureEnabled();

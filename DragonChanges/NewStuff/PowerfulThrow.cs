@@ -1,14 +1,14 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
-using DragonChanges.BPCoreExtensions;
 using DragonChanges.Utils;
+using DragonLibrary.BPCoreExtensions;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.UI.SettingsUI;
 using Kingmaker.UnitLogic.Mechanics.Components;
 
 namespace DragonChanges.NewStuff
@@ -20,14 +20,18 @@ namespace DragonChanges.NewStuff
         internal const string featureguid = Guids.PowerfulThrowFeature;
         internal const string settingName = "powerfulthrow";
         internal const string settingDescription = "Adds the feat Powerful Throw\"";
+        internal const string featurename = "Powerful Throw";
+        internal const string featuredescription = "You may use your {g}Strength{/g} modifier in place of your {g}Dexterity{/g} modifier for your attack rolls when making a ranged attack with thrown weapons. You may also use the Power Attack feat instead of the Deadly Aim feat when attacking with thrown weapons.";
         // don't edit
-        internal const string featurename = $"{feature}.name";
-        internal const string featuredescription = $"{feature}.description";
+        [DragonLocalizedString(featurenamekey, featurename)]
+        internal const string featurenamekey = $"{feature}.name";
+        [DragonLocalizedString(featuredescriptionkey, featuredescription, true)]
+        internal const string featuredescriptionkey = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();
@@ -40,18 +44,17 @@ namespace DragonChanges.NewStuff
         }
         public static void ConfigureDummy()
         {
-            FeatureConfigurator.New(feature, featureguid).Configure();
+            FeatureConfigurator.New(feature, featureguid)
+                .SetDisplayName(featurenamekey)
+                .SetDescription(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
         }
         public static void ConfigureEnabled()
         {
-            AttackStatReplacementForWeaponGroup strcomponet = new AttackStatReplacementForWeaponGroup();
-            strcomponet.FighterGroupFlag = WeaponFighterGroupFlags.Thrown;
-            strcomponet.ReplacementStat = StatType.Strength;
             FeatureConfigurator.New(feature, featureguid)
                 .AddWorkingAttackStatReplacementForWeaponGroup(ReplacementStat: StatType.Strength, FighterGroupFlag: WeaponFighterGroupFlags.Thrown)
-                .SetDisplayName(featurename)
-                .SetDescription(featuredescription)
-                //.AddComponent(strcomponet)
+                .SetDisplayName(featurenamekey)
+                .SetDescription(featuredescriptionkey)
                 .AddPrerequisiteFeature(FeatureRefs.PowerAttackFeature.Reference.Get())
                 .AddPrerequisiteStatValue(StatType.BaseAttackBonus, 1)
                 .AddRecommendationStatComparison(higherStat: StatType.Strength, lowerStat: StatType.Dexterity, diff: 4)

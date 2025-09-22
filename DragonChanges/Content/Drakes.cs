@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 
 namespace DragonChanges.Content
 {
@@ -8,10 +9,10 @@ namespace DragonChanges.Content
         const string settingName = "ec-drakes";
         const string settingDescription = "Super secret option to buff drakes from Expanded Content";
         [DragonConfigure]
-        [DragonSetting(settingCategories.ModCompatability, settingName, settingDescription, false)]
+        [DragonSetting(SettingCategories.ModCompatability, settingName, settingDescription, false)]
         public static void PatchDrakes()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 if (ModCompat.expandedcontent)
                 {

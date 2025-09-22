@@ -4,7 +4,7 @@
   "Author": "CascadingDragon",
   "Version": "1.15.0",
   "ManagerVersion": "0.27.11",
-  "Requirements": [ "ModMenu-2.0.0" ],
+    "Requirements": [ "ModMenu-2.0.0", "DragonLibrary" ],
   "AssemblyName": "DragonChanges.dll",
   "EntryMethod": "DragonChanges.Main.Load",
   "HomePage": "https://github.com/CasDragon/DragonChanges",

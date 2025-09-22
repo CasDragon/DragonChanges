@@ -1,8 +1,10 @@
-﻿using BlueprintCore.Blueprints.Configurators;
+﻿using System.Linq;
+using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -17,7 +19,6 @@ using Kingmaker.Utility;
 using Kingmaker.View;
 using Kingmaker.Visual.Mounts;
 using Owlcat.Runtime.Core.Utils;
-using System.Linq;
 using UnityEngine;
 
 namespace DragonChanges.NewStuff
@@ -25,19 +26,23 @@ namespace DragonChanges.NewStuff
     internal class GriffonMount
     {
         internal const string GriffonUnit = "GriffonMount";
-        internal const string GriffonFeatureName = "griffonmountfeature.name";
-        internal const string GriffonFeatureDescription = "griffonmountfeature.description";
         internal const string GriffonFeature = "GriffonMount-feature";
         internal const string GriffonMountPortrait = "griffonmountportrait";
-        internal static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
         internal const string settingName = "griffonmount";
         internal const string settingDescription = "Adds a new griffon mount, and then adds it to mount selections";
+        internal const string featurename = "Animal Companion - Griffon";
+        internal const string featuredescription = "MOUNTING IS VISUALLY BROKEN\nTODO";
+        //
+        [DragonLocalizedString(GriffonFeatureName, featurename)]
+        internal const string GriffonFeatureName = "griffonmountfeature.name";
+        [DragonLocalizedString(GriffonFeatureDescription, featuredescription, true)]
+        internal const string GriffonFeatureDescription = "griffonmountfeature.description";
 
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Configuring griffon mount");
                 BlueprintUnit unit = CreateGriffonMount();
@@ -169,7 +174,7 @@ namespace DragonChanges.NewStuff
             skills.KnowledgeArcana = 0;
             return UnitConfigurator.New(GriffonUnit, Guids.GriffonMountUnit)
                 //.CopyFrom(oghorse)
-                .SetPrefab(griffonprefab)
+                .SetPrefab(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId)
                 .SetType(UnitTypeRefs.EagleGiant.Reference.Get())
                 .SetPortrait(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Portrait)
                 .AddSecondaryAttacks(ItemWeaponRefs.Talon1d4.Reference.Get(), ItemWeaponRefs.Talon1d4.Reference.Get())
@@ -225,7 +230,7 @@ namespace DragonChanges.NewStuff
         }
         public static void AddGriffonMountToSelections(BlueprintFeature mountfeature)
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching various animal selections to include griffon mount");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)
@@ -303,6 +308,8 @@ namespace DragonChanges.NewStuff
         [HarmonyPatch(typeof(OwlcatModificationsManager))]
         public static class PatchUnicornOnLoad
         {
+            internal static string griffonprefab = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId;
+
             [HarmonyPostfix]
             [HarmonyPatch(nameof(OwlcatModificationsManager.OnResourceLoaded))]
             public static void OnResourceLoaded_UnicornPatch(object resource, string guid)

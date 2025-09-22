@@ -67,7 +67,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
                 .SetGroup((ActivatableAbilityGroup)ActivatableAbilityGroupPatch.DCActivatableAbilityGroup.TenguSwordmasterTrance)
                 .SetBuff(ConfigureBuff())
-                .SetIcon("Assets/Modifications/DragonChanges 1/CraneTrance.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.CraneTrance.png"))
                 .Configure();
         }
         // edit
@@ -95,7 +95,7 @@ namespace DragonChanges.New_Archetypes.Swordmaster_Tengu
                 .SetRanks(0)
                 .SetTickEachSecond(false)
                 .SetFrequency(Kingmaker.UnitLogic.Mechanics.DurationRate.Rounds)
-                .SetIcon("Assets/Modifications/DragonChanges 1/CraneTrance.png".ToLower())
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.CraneTrance.png"))
                 .Configure();
         }
     }

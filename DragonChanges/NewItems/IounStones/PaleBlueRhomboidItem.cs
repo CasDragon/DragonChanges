@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using BlueprintCore.Blueprints.Configurators.Items.Equipment;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.NewItems.IounStones.Abilities;
 using DragonChanges.NewItems.IounStones.Buffs;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Items.Equipment;
 
-namespace DragonChanges.NewItems.IounStones.Abilities
+namespace DragonChanges.NewItems.IounStones
 {
     internal class PaleBlueRhomboidItem
     {
@@ -26,7 +28,7 @@ namespace DragonChanges.NewItems.IounStones.Abilities
         [DragonConfigure]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{item} item enabled, configuring");
                 ConfigureEnabled();

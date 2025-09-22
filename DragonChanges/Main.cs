@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using BlueprintCore.Utils;
 using DragonChanges.NewStuff;
-using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using UnityModManagerNet;
@@ -37,6 +37,7 @@ namespace DragonChanges
             private static bool Initialized = false;
 
             [HarmonyPriority(Priority.Last)]
+            [HarmonyAfter("DragonLibrary")]
             [HarmonyPatch(nameof(BlueprintsCache.Init)), HarmonyPostfix]
             public static void Init_Postfix()
             {
@@ -49,18 +50,18 @@ namespace DragonChanges
                     }
                     Initialized = true;
 
-                    string modfolder = LocalizedStringHelper.GetModFolderPath();
-                    LocalizedStringHelper.CreateLocalizationFile(modfolder);
+                    log.Log("Getting mod folder path for localization ");
+                    string modfolder = new FileInfo(entry.Assembly.Location).Directory.FullName;
+                    log.Log("Creating localization file");
+                    LocalizedStringHelper.CreateLocalizationFile(modfolder, entry);
                     LocalizationTool.LoadLocalizationPacks(
-                        Path.Combine(modfolder, "NewLocalizedStrings.json"), 
+                        Path.Combine(modfolder, "NewLocalizedStrings.json"),
                         Path.Combine(modfolder, "LocalizedStrings.json"));
 
-                    log.Log("Checking for mods for compatibility patches");
-                    ModCompat.CheckForMods();
-                    NewSettings.InitializeSettings();
+                    SettingsAction.InitializeSettings("dragonchanges", "DragonChanges", entry);
                     log.Log("Patching blueprints.");
                     AneviaVendor.ConfigureStart();
-                    Thingy.DoPatches();
+                    DragonConfigureAction.DoPatches(entry);
                     AneviaVendor.ConfigureEnd();
                 }
                 catch (Exception e)

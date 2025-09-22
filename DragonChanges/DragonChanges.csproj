@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>DragonChanges</AssemblyName>
 		<Description>DragonChanges</Description>
-		<Version>1.15.0</Version>
+		<Version>1.16.0</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>DragonChanges</RootNamespace>
@@ -26,28 +26,67 @@
 		<Reference Include="$(WrathInstallDir)\Mods\TabletopTweaks-Core\TabletopTweaks-Core.dll" />
 		<Reference Include="$(WrathInstallDir)\Mods\TabletopTweaks-Base\TabletopTweaks-Base.dll*" Publicize="true" />
 		<Reference Include="$(WrathInstallDir)\Mods\WrathScalingItemDCs\WrathScalingItemDCs.dll" />
+		<Reference Include="$(WrathInstallDir)\Mods\DragonLibrary\DragonLibrary.dll" Publicize="true" />
 	</ItemGroup>
 	<ItemGroup>
+		<None Remove="Icons\Abilities\AutoBolster.png" />
+		<None Remove="Icons\Abilities\AutoBurning.png" />
+		<None Remove="Icons\Abilities\AutoEmpower.png" />
+		<None Remove="Icons\Abilities\AutoEncourage.png" />
+		<None Remove="Icons\Abilities\AutoExtend.png" />
+		<None Remove="Icons\Abilities\AutoFlare.png" />
+		<None Remove="Icons\Abilities\AutoIntensified.png" />
+		<None Remove="Icons\Abilities\AutoMaximize.png" />
+		<None Remove="Icons\Abilities\AutoPersistent.png" />
+		<None Remove="Icons\Abilities\AutoPiercing.png" />
+		<None Remove="Icons\Abilities\AutoQuicken.png" />
+		<None Remove="Icons\Abilities\AutoReach.png" />
+		<None Remove="Icons\Abilities\AutoRime.png" />
+		<None Remove="Icons\Abilities\AutoSelective.png" />
+		<None Remove="Icons\Abilities\AutoSolidShadows.png" />
+		<None Remove="Icons\Abilities\CraneTrance.png" />
+		<None Remove="Icons\Abilities\DragonTrance.png" />
+		<None Remove="Icons\Abilities\HeavenFireRay.png" />
+		<None Remove="Icons\Abilities\HellBall.png" />
+		<None Remove="Icons\Abilities\HellBallWrong.png" />
+		<None Remove="Icons\Abilities\LeopardTrance.png" />
+		<None Remove="Icons\Abilities\MonkeyTrance.png" />
+		<None Remove="Icons\Abilities\SerpentTrance.png" />
 		<None Remove="Icons\Abilities\StorvalsThunder.png" />
+		<None Remove="Icons\Abilities\TigerTrance.png" />
 		<None Remove="Icons\Deities\RadiantPrism.png" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
-		<None Include="LocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
-		<None Include="dragonchanges_assets" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="NewLocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
+		<EmbeddedResource Include="Icons\Abilities\AutoBolster.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoBurning.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoEmpower.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoEncourage.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoExtend.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoFlare.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoIntensified.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoMaximize.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoPersistent.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoPiercing.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoQuicken.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoReach.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoRime.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoSelective.png" />
+		<EmbeddedResource Include="Icons\Abilities\AutoSolidShadows.png" />
+		<EmbeddedResource Include="Icons\Abilities\CraneTrance.png" />
+		<EmbeddedResource Include="Icons\Abilities\DragonTrance.png" />
+		<EmbeddedResource Include="Icons\Abilities\HeavenFireRay.png" />
+		<EmbeddedResource Include="Icons\Abilities\HellBall.png" />
+		<EmbeddedResource Include="Icons\Abilities\HellBallWrong.png" />
+		<EmbeddedResource Include="Icons\Abilities\LeopardTrance.png" />
+		<EmbeddedResource Include="Icons\Abilities\MonkeyTrance.png" />
+		<EmbeddedResource Include="Icons\Abilities\SerpentTrance.png" />
 		<EmbeddedResource Include="Icons\Abilities\StorvalsThunder.png" />
+		<EmbeddedResource Include="Icons\Abilities\TigerTrance.png" />
 		<EmbeddedResource Include="Icons\Deities\RadiantPrism.png" />
 	</ItemGroup>
-	<Target Name="ILRepack" AfterTargets="Build">
-		<ItemGroup>
-			<InputAssemblies Include="BlueprintCore.dll" />
-			<InputAssemblies Include="$(AssemblyName).dll" />
-			<OutputAssembly Include="$(AssemblyName).dll" />
-		</ItemGroup>
-		<Message Text="Merging: @(InputAssemblies) into @(OutputAssembly)" Importance="High" />
-		<ILRepack OutputType="Dll" MainAssembly="@(OutputAssembly)" OutputAssembly="@(OutputAssembly)" InputAssemblies="@(InputAssemblies)" WorkingDirectory="$(OutputPath)" />
-	</Target>
-	<Target Name="Deploy" AfterTargets="ILRepack">
+	<Target Name="Deploy" AfterTargets="Build">
 		<ItemGroup>
 			<Files Include="$(TargetDir)\**\*.*" />
 			<Files Remove="$(TargetDir)\**\*.dll" />
@@ -67,9 +106,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
 		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" IncludeAssets="build; contentfiles" Version="0.4.2" PrivateAssets="all" />
-		<PackageReference Include="ILRepack.MSBuild.Task" Version="2.*" />
 		<PackageReference Include="MicroUtils.HarmonyAnalyzers" Version="*" />
-		<PackageReference Include="WW-Blueprint-Core" Version="*" />
 	</ItemGroup>	  
 
 	<Target Name="GenerateCustomPropsFile" Condition="$(WrathInstallDir) == ''">

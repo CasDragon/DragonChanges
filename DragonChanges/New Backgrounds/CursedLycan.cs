@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using static Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite;
 
@@ -18,10 +19,10 @@ namespace DragonChanges.New_Backgrounds
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewBackgrounds, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewBackgrounds, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"Cursed background feature enabled, configuring");
                 ConfigureEnabled();

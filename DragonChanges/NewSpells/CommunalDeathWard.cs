@@ -10,6 +10,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.NewItems.Scrolls;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components.Base;
@@ -29,10 +30,10 @@ namespace DragonChanges.NewSpells
         [DragonLocalizedString(abilitydescription, "This {g|Encyclopedia:Spell}spell{/g} functions like Death Ward, except it affects all party members and it lasts for 4 hours.")]
         internal const string abilitydescription = $"{ability}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewSpells, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewSpells, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{ability} enabled, configuring");
                 ConfigureEnabled();

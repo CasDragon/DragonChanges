@@ -1,11 +1,10 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
-using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
-using DragonChanges.BPCoreExtensions;
-using DragonChanges.New_Components;
 using DragonChanges.Utils;
+using DragonLibrary.BPCoreExtensions;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.FactLogic;
@@ -17,21 +16,21 @@ namespace DragonChanges.Content
         const string DJSettingName = "mc-deadly-juggernaut-dr";
         const string DJSettingDescription = "Allow Deadly Juggernaut spell to have stacking DR.";
         [DragonConfigure]
-        [DragonSetting(settingCategories.ModCompatability, DJSettingName, DJSettingDescription, false)]
+        [DragonSetting(SettingCategories.ModCompatability, DJSettingName, DJSettingDescription, false)]
         public static void PatchDeadlyJuggernaut()
         {
 
-            if (NewSettings.GetSetting<bool>(DJSettingName))
+            if (SettingsAction.GetSetting<bool>(DJSettingName))
             {
                 if (ModCompat.microscopic)
                 {
                     Main.log.Log("Patching Alter's Deadly Juggernaut spell to allow DR stacking");
                     BlueprintBuff buff = ResourcesLibrary.TryGetBlueprint<BlueprintBuff>("b8c22a15f4c64737810c690ec502703c");
-                    LibraryStuff.RemoveComponent<AddDamageResistancePhysical>(buff);
+                    DragonHelpers.RemoveComponent<AddDamageResistancePhysical>(buff);
                     if (ModCompat.tttbase)
                     {
                         BuffConfigurator.For(buff)
-                            .AddTTAddDamageResistancePhysicalTest(ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal))
+                            .AddTTTAddDamageResistancePhysical(ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal))
                             .Configure();
                     }
                     else
@@ -47,10 +46,10 @@ namespace DragonChanges.Content
         const string settingName = "mc-microscopic-horse";
         const string settingDescription = "Adds the Nightmare animal companion (MicroscopicContent) to other pet lists";
         [DragonConfigure]
-        [DragonSetting(settingCategories.ModCompatability, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.ModCompatability, settingName, settingDescription)]
         public static void PatchHorse()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 if (ModCompat.microscopic)
                 {

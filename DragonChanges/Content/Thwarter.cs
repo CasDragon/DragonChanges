@@ -1,14 +1,15 @@
-﻿using BlueprintCore.Blueprints.Configurators.Items;
-using BlueprintCore.Blueprints.Configurators.Items.Weapons;
-using BlueprintCore.Blueprints.References;
-using DragonChanges.NewStuff;
-using DragonChanges.Utils;
-using Kingmaker.Blueprints.Items.Weapons;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BlueprintCore.Blueprints.Configurators.Items;
+using BlueprintCore.Blueprints.Configurators.Items.Weapons;
+using BlueprintCore.Blueprints.References;
+using DragonChanges.NewStuff;
+using DragonChanges.Utils;
+using DragonLibrary.Utils;
+using Kingmaker.Blueprints.Items.Weapons;
 
 namespace DragonChanges.Content
 {
@@ -17,10 +18,10 @@ namespace DragonChanges.Content
         const string settingName = "thwarter";
         const string settingDescription = "Enables the Thwarter tongi item";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewItems, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewItems, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{settingName} item enabled, configuring");
                 ConfigureEnabled();

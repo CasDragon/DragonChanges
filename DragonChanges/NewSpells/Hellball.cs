@@ -1,24 +1,26 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Actions.Builder;
+using BlueprintCore.Actions.Builder.BasicEx;
+using BlueprintCore.Actions.Builder.ContextEx;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
-using DragonChanges.Utils;
-using Kingmaker.Blueprints.Classes.Spells;
-using Kingmaker.Utility;
-using BlueprintCore.Actions.Builder;
-using Kingmaker.UnitLogic.Mechanics.Actions;
-using Kingmaker.UnitLogic.Abilities;
-using Kingmaker.RuleSystem;
-using BlueprintCore.Actions.Builder.BasicEx;
 using BlueprintCore.Utils.Types;
+using DragonChanges.New_Components;
+using DragonChanges.Utils;
+using DragonLibrary.NewComponents;
+using DragonLibrary.Utils;
+using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Enums.Damage;
-using BlueprintCore.Actions.Builder.ContextEx;
+using Kingmaker.RuleSystem;
+using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
+using Kingmaker.UnitLogic.Abilities.Components;
+using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.Utility;
 using Kingmaker.Visual.Animation.Kingmaker.Actions;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
-using DragonChanges.New_Components;
-using Kingmaker.UnitLogic.Abilities.Components;
-using Kingmaker.Blueprints;
 
 namespace DragonChanges.NewSpells
 {
@@ -36,10 +38,10 @@ namespace DragonChanges.NewSpells
         internal const string spelldescription = $"{spell}.description";
 
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewSpells, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewSpells, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{spell} feature enabled, configuring");
                 BlueprintAbility newspell = ConfigureEnabled();
@@ -56,7 +58,7 @@ namespace DragonChanges.NewSpells
         {
             AbilityConfigurator.New(spell, spellguid).Configure();
         }
-        [DragonSetting(settingCategories.NewSpells, settingiconName, settingiconDescription)]
+        [DragonSetting(SettingCategories.NewSpells, settingiconName, settingiconDescription)]
         public static BlueprintAbility ConfigureEnabled()
         {
             Metamagic metas = AbilityRefs.HellfireRay.Reference.Get().AvailableMetamagic;
@@ -66,10 +68,11 @@ namespace DragonChanges.NewSpells
                     CustomMetamagic.ElementalCold | CustomMetamagic.ElementalElectricity |
                     CustomMetamagic.ElementalFire | CustomMetamagic.Flaring | CustomMetamagic.Rime);
             }
-            string spellicon = "Assets/Modifications/DragonChanges 1/HellBall.png".ToLower();
-            if (NewSettings.GetSetting<bool>("hellballicon"))
+            string spellicon = "Abilities.HellBall.png";
+            if (SettingsAction.GetSetting<bool>("hellballicon"))
             {
-                spellicon = "Assets/Modifications/DragonChanges 1/HellBallWrong.png".ToLower();
+                
+                spellicon = "Abilities.HellBallWrong.png";
             }
             return AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Acid | SpellDescriptor.Sonic | SpellDescriptor.Electricity)
                 .SetDisplayName(spellname)
@@ -77,7 +80,7 @@ namespace DragonChanges.NewSpells
                 // components
                 .AddAbilityDeliverProjectile(
                         projectiles: [ProjectileRefs.Fireball00.Reference.Get()],
-                        type: Kingmaker.UnitLogic.Abilities.Components.AbilityProjectileType.Simple,
+                        type: AbilityProjectileType.Simple,
                         needAttackRoll: false)
                 .AddAbilityEffectRunAction(
                         savingThrowType: Kingmaker.EntitySystem.Stats.SavingThrowType.Reflex,
@@ -129,7 +132,7 @@ namespace DragonChanges.NewSpells
                     aOEType: Kingmaker.Craft.CraftAOE.AOE,
                     savingThrow: Kingmaker.Craft.CraftSavingThrow.Reflex,
                     spellType: Kingmaker.Craft.CraftSpellType.Damage)
-                .SetIcon(spellicon)
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite(spellicon))
                 .Configure();
         }
 

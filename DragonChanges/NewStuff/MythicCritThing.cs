@@ -3,6 +3,8 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.New_Components;
 using DragonChanges.Utils;
+using DragonLibrary.BPCoreExtensions;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 
 namespace DragonChanges.NewStuff
@@ -18,10 +20,10 @@ namespace DragonChanges.NewStuff
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";
         [DragonConfigure]
-        [DragonSetting(settingCategories.NewFeatures, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
         public static void Configure()
         {
-            if (NewSettings.GetSetting<bool>(settingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
                 ConfigureEnabled();
@@ -41,8 +43,8 @@ namespace DragonChanges.NewStuff
             BlueprintFeature x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
-                .AddComponent(new CritMulti())
-                .AddComponent(new CritRange())
+                .AddCriticalMultiplierBonus(1)
+                .AddCriticalRangeBonus(1)
                 .AddToGroups(FeatureGroup.MythicFeat)
                 .AddPrerequisiteFeature(ParametrizedFeatureRefs.ImprovedCritical.Reference.Get())
                 .AddPrerequisiteFeature(ParametrizedFeatureRefs.ImprovedCriticalMythicFeat.Reference.Get())

@@ -1,8 +1,9 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Utils.Types;
-using DragonChanges.BPCoreExtensions;
 using DragonChanges.New_Components;
 using DragonChanges.Utils;
+using DragonLibrary.BPCoreExtensions;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
@@ -15,7 +16,11 @@ namespace DragonChanges.New_Classes.Redditor
         private static ModifierDescriptor buffdescriptor = ModifierDescriptor.Inherent;
 
         private const string featurenamecha = "ChaToCha";
+        private const string displaynamecha1 = "Redditor Charisma";
+        private const string displaydescriptioncha1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}.";
+        [DragonLocalizedString(displaynamecha, displaynamecha1)]
         private const string displaynamecha = "ChaToCha.Name";
+        [DragonLocalizedString(displaydescriptioncha, displaydescriptioncha1, true)]
         private const string displaydescriptioncha = "ChaToCha.Description";
         public static BlueprintFeature ConfigureCHA()
         {
@@ -45,7 +50,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenameac = "ChaToAC";
+        private const string displaynameac1 = "Redditor Armor";
+        private const string displaydescriptionac1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Armor_Class}AC{/g}.";
+        [DragonLocalizedString(displaynameac, displaynameac1)]
         private const string displaynameac = "ChaToAC.Name";
+        [DragonLocalizedString(displaydescriptionac, displaydescriptionac1, true)]
         private const string displaydescriptionac = "ChaToAC.Description";
         public static BlueprintFeature ConfigureAC()
         {
@@ -60,7 +69,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenamestr = "ChaToStr";
+        private const string displaynamestr1 = "Redditor Strength";
+        private const string displaydescriptionstr1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Strength}Strength{/g}.";
+        [DragonLocalizedString(displaynamestr, displaynamestr1)]
         private const string displaynamestr = "ChaToStr.Name";
+        [DragonLocalizedString(displaydescriptionstr, displaydescriptionstr1 ,true)]
         private const string displaydescriptionstr = "ChaToStr.Description";
         public static BlueprintFeature ConfigureSTR()
         {
@@ -75,7 +88,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenamedex = "ChaToDex";
+        private const string displaynamedex1 = "Redditor Dexterity";
+        private const string displaydescriptiondex1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Dexterity}Dexterity{/g}.";
+        [DragonLocalizedString(displaynamedex, displaynamedex1)]
         private const string displaynamedex = "ChaToDex.Name";
+        [DragonLocalizedString(displaydescriptiondex, displaydescriptiondex1, true)]
         private const string displaydescriptiondex = "ChaToDex.Description";
         public static BlueprintFeature ConfigureDEX()
         {
@@ -90,7 +107,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenamecon = "ChaToCon";
+        private const string displaynamecon1 = "Redditor Constitution";
+        private const string displaydescriptioncon1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Constitution}Constitution{/g}.";
+        [DragonLocalizedString(displaynamecon, displaynamecon1)]
         private const string displaynamecon = "ChaToCon.Name";
+        [DragonLocalizedString(displaydescriptioncon, displaydescriptioncon1, true)]
         private const string displaydescriptioncon = "ChaToCon.Description";
         public static BlueprintFeature ConfigureCON()
         {
@@ -105,7 +126,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenameint = "ChaToInt";
+        private const string displaynameint1 = "Redditor Intelligence";
+        private const string displaydescriptionint1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Intelligence}Intelligence{/g}.";
+        [DragonLocalizedString(displaynameint, displaynameint1)]
         private const string displaynameint = "ChaToInt.Name";
+        [DragonLocalizedString(displaydescriptionint, displaydescriptionint1, true)]
         private const string displaydescriptionint = "ChaToInt.Description";
         public static BlueprintFeature ConfigureINT()
         {
@@ -120,7 +145,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenamewis = "ChaToWis";
+        private const string displaynamewis1 = "Redditor Wisdom";
+        private const string displaydescriptionwis1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Wisdom}Wisdom{/g}.";
+        [DragonLocalizedString(displaynamewis, displaynamewis1)]
         private const string displaynamewis = "ChaToWis.Name";
+        [DragonLocalizedString(displaydescriptionwis, displaydescriptionwis1, true)]
         private const string displaydescriptionwis = "ChaToWis.Description";
         public static BlueprintFeature ConfigureWIS()
         {
@@ -135,7 +164,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenamesaves = "ChaToSaves";
+        private const string displaynamesaves1 = "Redditor Saving Throws";
+        private const string displaydescriptionsaves1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:SaveFortitude}Fortitude{/g}, {g|Encyclopedia:SaveReflex}Reflex{/g}, and {g|Encyclopedia:SaveWill}Will{/g} saves.";
+        [DragonLocalizedString(displaynamesaves, displaynamesaves1)]
         private const string displaynamesaves = "ChaToSaves.Name";
+        [DragonLocalizedString(displaydescriptionsaves, displaydescriptionsaves1, true)]
         private const string displaydescriptionsaves = "ChaToSaves.Description";
         public static BlueprintFeature ConfigureSAVES()
         {
@@ -156,7 +189,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenameinit = "ChaToInit";
+        private const string displaynameinit1 = "Redditor Initiative";
+        private const string displaydescriptioninit1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Initiative}Initiative{/g}.";
+        [DragonLocalizedString(displaynameinit, displaynameinit1)]
         private const string displaynameinit = "ChaToInit.Name";
+        [DragonLocalizedString(displaydescriptioninit, displaydescriptioninit1, true)]
         private const string displaydescriptioninit = "ChaToInit.Description";
         public static BlueprintFeature ConfigureINIT()
         {
@@ -201,7 +238,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenamepspeed = "ChaToSpeed";
+        private const string displaynamespeed1 = "Redditor Speed";
+        private const string displaydescriptionspeed1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Speed}Speed{/g}.";
+        [DragonLocalizedString(displaynamespeed, displaynamespeed1)]
         private const string displaynamespeed = "ChaToSpeed.Name";
+        [DragonLocalizedString(displaydescriptionspeed, displaydescriptionspeed1, true)]
         private const string displaydescriptionspeed = "ChaToSpeed.Description";
         public static BlueprintFeature ConfigureSPEED()
         {
@@ -264,7 +305,7 @@ namespace DragonChanges.New_Classes.Redditor
                 .SetDescription(displaydescriptiondr)
                 .AddRecalculateOnStatChange(stat: StatType.Charisma);
             if (ModCompat.tttbase)
-                feature.AddTTAddDamageResistancePhysicalTest(ContextValues.Property(UnitProperty.StatBonusCharisma));
+                feature.AddTTTAddDamageResistancePhysical(ContextValues.Property(UnitProperty.StatBonusCharisma));
             else
                 feature.AddDRComponent(true, ContextValues.Property(UnitProperty.StatBonusCharisma));
             return feature.Configure();
@@ -284,7 +325,11 @@ namespace DragonChanges.New_Classes.Redditor
             return feature;
         }
         private const string featurenameskill = "ChaToSkills";
+        private const string displaynameskill1 = "Redditor Skills";
+        private const string displaydescriptionskill1 = "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his skills.";
+        [DragonLocalizedString(displaynameskill, displaynameskill1)]
         private const string displaynameskill = "ChaToSkills.Name";
+        [DragonLocalizedString(displaydescriptionskill, displaydescriptionskill1, true)]
         private const string displaydescriptionskill = "ChaToSkills.Description";
         public static BlueprintFeature ConfigureSKILLS()
         {
