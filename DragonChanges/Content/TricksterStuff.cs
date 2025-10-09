@@ -12,8 +12,9 @@ namespace DragonChanges.Content
 {
     internal class TricksterStuff
     {
-        const string settingName = "statfocusspeedbuff";
-        const string settingDescription = "Buffs Stat Focus - Speed (Trickster feat) from a +1 bonus to speed to a +10.";
+        const string settingName = "statfocusbuff";
+        const string settingDescription = "Buffs Stat Focus (Trickster feat) useless variants, such as Speed and Hit Points (Seriously, just a +1 to speed?) .";
+        const string updatedDescription = "You gain a +15 mythic {g|Encyclopedia:Bonus}bonus{/g} to your speed.";
         [DragonConfigure]
         [DragonSetting(SettingCategories.Various, settingName, settingDescription)]
         public static void PatchTricksterStatFocusSpeed()
@@ -22,20 +23,20 @@ namespace DragonChanges.Content
             {
                 Main.log.Log("Patching TricksterStatFocusSpeed to actually be useful.");
                 FeatureConfigurator.For(FeatureRefs.TricksterStatFocusSpeed)
+                    .SetDescription(updatedDescription)
                     .EditComponent<AddStatBonus>(c => c.Value = 15)
                     .Configure();
             }
         }
-        const string hpsettingName = "statfocushpbuff";
-        const string hpsettingDescription = "Buffs Stat Focus - HP (Trickster feat) from a +1 bonus to hit points to a +10.";
+        const string hpupdatedDescription = "You gain a +10 mythic {g|Encyclopedia:Bonus}bonus{/g} to your hit points.";
         [DragonConfigure]
-        [DragonSetting(SettingCategories.Various, hpsettingName, hpsettingDescription)]
         public static void PatchTricksterStatFocusHP()
         {
-            if (SettingsAction.GetSetting<bool>(hpsettingName))
+            if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Patching TricksterStatFocusSpeed to actually be useful.");
                 FeatureConfigurator.For(FeatureRefs.TricksterStatFocusHP)
+                    .SetDescription(hpupdatedDescription)
                     .EditComponent<AddStatBonus>(c => c.Value = 10)
                     .Configure();
             }
