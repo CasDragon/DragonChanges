@@ -22,6 +22,20 @@ namespace DragonChanges.Content
             {
                 Main.log.Log("Patching TricksterStatFocusSpeed to actually be useful.");
                 FeatureConfigurator.For(FeatureRefs.TricksterStatFocusSpeed)
+                    .EditComponent<AddStatBonus>(c => c.Value = 15)
+                    .Configure();
+            }
+        }
+        const string hpsettingName = "statfocushpbuff";
+        const string hpsettingDescription = "Buffs Stat Focus - HP (Trickster feat) from a +1 bonus to hit points to a +10.";
+        [DragonConfigure]
+        [DragonSetting(SettingCategories.Various, hpsettingName, hpsettingDescription)]
+        public static void PatchTricksterStatFocusHP()
+        {
+            if (SettingsAction.GetSetting<bool>(hpsettingName))
+            {
+                Main.log.Log("Patching TricksterStatFocusSpeed to actually be useful.");
+                FeatureConfigurator.For(FeatureRefs.TricksterStatFocusHP)
                     .EditComponent<AddStatBonus>(c => c.Value = 10)
                     .Configure();
             }
