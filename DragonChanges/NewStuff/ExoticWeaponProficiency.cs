@@ -52,7 +52,7 @@ namespace DragonChanges.NewStuff
                 .AddProficiencies(weaponProficiencies: [WeaponCategory.BastardSword, WeaponCategory.DuelingSword, WeaponCategory.DwarvenWaraxe,
                         WeaponCategory.ElvenCurvedBlade, WeaponCategory.Estoc, WeaponCategory.Falcata, WeaponCategory.Fauchard, WeaponCategory.Kama,
                         WeaponCategory.Sai, WeaponCategory.Tongi, WeaponCategory.SlingStaff, WeaponCategory.DoubleAxe, WeaponCategory.DoubleSword,
-                        WeaponCategory.Urgrosh, WeaponCategory.HookedHammer, WeaponCategory.Nunchaku])
+                        WeaponCategory.Urgrosh, WeaponCategory.HookedHammer, WeaponCategory.Nunchaku, WeaponCategory.SawtoothSabre])
                 .AddFeatureTagsComponent(featureTags: FeatureTag.Melee | FeatureTag.Ranged)
                 .AddPrerequisiteClassLevel(CharacterClassRefs.AnimalCompanionClass.Reference.Get(), level: 1, not: true, hideInUI: true)
                 .AddPrerequisiteFeature(FeatureRefs.MartialWeaponProficiency.Reference.Get())
