@@ -19,7 +19,7 @@ namespace DragonChanges.templates
         //[DragonLocalizedString(featuredescriptionkey, featuredescription)]
         internal const string featuredescriptionkey = $"{feature}.description";
         //[DragonConfigure]
-        [DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
+        //[DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
         {
             if (SettingsAction.GetSetting<bool>(settingName))

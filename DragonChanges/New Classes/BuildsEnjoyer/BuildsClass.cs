@@ -40,7 +40,8 @@ namespace DragonChanges.New_Classes.BuildsEnjoyer
             {
                 Main.log.Log($"{classprefix} class enabled, configuring started");
                 BlueprintProgression progression = BuildsEnjoyerProgression.ConfigureEnabled();
-                ConfigureCharacterClass(progression, SpellbookRefs.MagicDeceiverSpellbook.Reference.Get());
+                BlueprintCharacterClassReference cclass = ConfigureCharacterClass(progression, SpellbookRefs.MagicDeceiverSpellbook.Reference.Get());
+                Fixes.DoFixes(cclass);
                 Main.log.Log($"{classprefix} configuration done!");
             }
             else
@@ -54,7 +55,7 @@ namespace DragonChanges.New_Classes.BuildsEnjoyer
         {
             CharacterClassConfigurator.New(classprefix, classguid).Configure();
         }
-        public static void ConfigureCharacterClass(BlueprintProgression progression, BlueprintSpellbook spellbook = null)
+        public static BlueprintCharacterClassReference ConfigureCharacterClass(BlueprintProgression progression, BlueprintSpellbook spellbook = null)
         {
             var x = CharacterClassConfigurator.New(classprefix, classguid)
                 .SetLocalizedName(classname)
@@ -105,6 +106,7 @@ namespace DragonChanges.New_Classes.BuildsEnjoyer
             BlueprintCharacterClassReference cclass = x.Configure().ToReference<BlueprintCharacterClassReference>();
             BlueprintRoot root = BlueprintTool.Get<BlueprintRoot>("2d77316c72b9ed44f888ceefc2a131f6");
             root.Progression.m_CharacterClasses = CommonTool.Append(root.Progression.m_CharacterClasses, cclass);
+            return cclass;
         }
     }
 }

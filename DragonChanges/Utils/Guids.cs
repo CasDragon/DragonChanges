@@ -188,8 +188,8 @@ namespace DragonChanges.Utils
         internal const string PaleBlueRhomboidBuff = "9f33fd21-68f5-486d-836f-c8b17c98bd05";
         internal const string MyThiccFeat = "1609da4a-3c82-4beb-945b-ae2d6fb97351";
         internal const string ExoticWeaponProficiency = "9d414931-8196-4874-875f-a71732a2ea02";
-        internal const string guid8 = "26ef7b07-b8b3-4e49-860a-4764181e8499";
-        internal const string guid9 = "5a04e609-9661-41fa-b1e6-cb85417c5f66";
+        internal const string snakeladfeature = "26ef7b07-b8b3-4e49-860a-4764181e8499";
+        internal const string snakeladunit = "5a04e609-9661-41fa-b1e6-cb85417c5f66";
         internal const string guid10 = "05d93278-8f86-45a8-af0b-4d51b66a10cd";
         internal const string guid11 = "50714a6d-e833-433a-b2f2-f3e9021cc1b0";
         internal const string guid12 = "1fbf3414-c346-4fad-9d91-26b5248e6a3c";
@@ -203,6 +203,5 @@ namespace DragonChanges.Utils
         internal const string guid20 = "d42258e2-dc0d-4b2e-829a-44b19c0d82ad";
         internal const string guid21 = "b2dd5709-9324-4237-8b8c-27a64e243a60";
         internal const string guid22 = "d324befa-34fa-4aef-881e-8af9e569fbb8";
-        internal const string guid23 = "";
     }
 }
