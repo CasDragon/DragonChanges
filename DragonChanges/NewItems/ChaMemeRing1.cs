@@ -62,7 +62,7 @@ namespace DragonChanges.NewItems
                .SetCR(10)
                .AddFactToEquipmentWielder(MemeRing1Feature.ConfigureEnabled());
             if (SettingsAction.GetSetting<bool>("darthicons"))
-                ringconfig.SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Darth.Tomeks_Ring_03.png"));
+                ringconfig.SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Darth.Tomeks_Ring_04.png"));
             else
                 ringconfig.SetIcon(ItemEquipmentRingRefs.CopperRing.Reference.Get().Icon);
             BlueprintItemEquipmentRing ring = ringconfig.Configure();
