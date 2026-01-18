@@ -50,19 +50,22 @@ namespace DragonChanges.NewItems
         }
         public static void ConfigureEnabled()
         {
-            BlueprintItemEquipmentRing ring = ItemEquipmentRingConfigurator.New(item, itemguid)
-                .SetDisplayNameText(itemname)
-                .SetDescriptionText(itemdescription)
-                .SetIcon(ItemEquipmentRingRefs.CopperRing.Reference.Get().Icon)
-                .SetCost(50000)
-                .SetWeight(1)
-                .SetDestructible(false)
-                .SetInventoryEquipSound("ArmorPlateEquip")
-                .SetInventoryPutSound("RingPut")
-                .SetInventoryTakeSound("RingTake")
-                .SetCR(10)
-                .AddFactToEquipmentWielder(MemeRing1Feature.ConfigureEnabled())
-                .Configure();
+            var ringconfig = ItemEquipmentRingConfigurator.New(item, itemguid)
+               .SetDisplayNameText(itemname)
+               .SetDescriptionText(itemdescription)
+               .SetCost(50000)
+               .SetWeight(1)
+               .SetDestructible(false)
+               .SetInventoryEquipSound("ArmorPlateEquip")
+               .SetInventoryPutSound("RingPut")
+               .SetInventoryTakeSound("RingTake")
+               .SetCR(10)
+               .AddFactToEquipmentWielder(MemeRing1Feature.ConfigureEnabled());
+            if (SettingsAction.GetSetting<bool>("darthicons"))
+                ringconfig.SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Darth.Tomeks_Ring_03.png"));
+            else
+                ringconfig.SetIcon(ItemEquipmentRingRefs.CopperRing.Reference.Get().Icon);
+            BlueprintItemEquipmentRing ring = ringconfig.Configure();
             AneviaVendor.AddItem(ring);
         }
     }

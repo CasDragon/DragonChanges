@@ -41,7 +41,7 @@ namespace DragonChanges.NewItems.Scrolls
         }
         public static void ConfigureEnabled()
         {
-            BlueprintItemEquipmentUsable scroll = ItemEquipmentUsableConfigurator.New(item, itemguid)
+            var scrollconfig = ItemEquipmentUsableConfigurator.New(item, itemguid)
                 .SetCost(1650)
                 .SetWeight(0.2f)
                 .SetDestructible(true)
@@ -55,9 +55,12 @@ namespace DragonChanges.NewItems.Scrolls
                 .SetCasterLevel(11)
                 .SetSpellLevel(6)
                 .SetType(UsableItemType.Scroll)
-                .AddCopyScroll()
-                .SetIcon(ItemEquipmentUsableRefs.ScrollOfHellfireRay.Reference.Get().Icon)
-                .Configure();
+                .AddCopyScroll();
+            if (SettingsAction.GetSetting<bool>("darthicons"))
+                scrollconfig.SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Darth.HeavenfireRay_Scroll.png"));
+            else
+                scrollconfig.SetIcon(ItemEquipmentUsableRefs.ScrollOfHellfireRay.Reference.Get().Icon);
+            var scroll = scrollconfig.Configure();
             AneviaVendor.AddItem(scroll, 99);
         }
     }

@@ -29,62 +29,16 @@
 		<Reference Include="$(WrathInstallDir)\Mods\DragonLibrary\DragonLibrary.dll*" Publicize="true" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Remove="Icons\Abilities\AutoBolster.png" />
-		<None Remove="Icons\Abilities\AutoBurning.png" />
-		<None Remove="Icons\Abilities\AutoEmpower.png" />
-		<None Remove="Icons\Abilities\AutoEncourage.png" />
-		<None Remove="Icons\Abilities\AutoExtend.png" />
-		<None Remove="Icons\Abilities\AutoFlare.png" />
-		<None Remove="Icons\Abilities\AutoIntensified.png" />
-		<None Remove="Icons\Abilities\AutoMaximize.png" />
-		<None Remove="Icons\Abilities\AutoPersistent.png" />
-		<None Remove="Icons\Abilities\AutoPiercing.png" />
-		<None Remove="Icons\Abilities\AutoQuicken.png" />
-		<None Remove="Icons\Abilities\AutoReach.png" />
-		<None Remove="Icons\Abilities\AutoRime.png" />
-		<None Remove="Icons\Abilities\AutoSelective.png" />
-		<None Remove="Icons\Abilities\AutoSolidShadows.png" />
-		<None Remove="Icons\Abilities\CraneTrance.png" />
-		<None Remove="Icons\Abilities\DragonTrance.png" />
-		<None Remove="Icons\Abilities\HeavenFireRay.png" />
-		<None Remove="Icons\Abilities\HellBall.png" />
-		<None Remove="Icons\Abilities\HellBallWrong.png" />
-		<None Remove="Icons\Abilities\LeopardTrance.png" />
-		<None Remove="Icons\Abilities\MonkeyTrance.png" />
-		<None Remove="Icons\Abilities\SerpentTrance.png" />
-		<None Remove="Icons\Abilities\StorvalsThunder.png" />
-		<None Remove="Icons\Abilities\TigerTrance.png" />
-		<None Remove="Icons\Deities\RadiantPrism.png" />
+		<None Remove="Icons\Abilities\*.png" />
+		<None Remove="Icons\Deities\*.png" />
+		<None Remove="Icons\Darth\*.png" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="NewLocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
-		<EmbeddedResource Include="Icons\Abilities\AutoBolster.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoBurning.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoEmpower.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoEncourage.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoExtend.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoFlare.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoIntensified.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoMaximize.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoPersistent.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoPiercing.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoQuicken.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoReach.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoRime.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoSelective.png" />
-		<EmbeddedResource Include="Icons\Abilities\AutoSolidShadows.png" />
-		<EmbeddedResource Include="Icons\Abilities\CraneTrance.png" />
-		<EmbeddedResource Include="Icons\Abilities\DragonTrance.png" />
-		<EmbeddedResource Include="Icons\Abilities\HeavenFireRay.png" />
-		<EmbeddedResource Include="Icons\Abilities\HellBall.png" />
-		<EmbeddedResource Include="Icons\Abilities\HellBallWrong.png" />
-		<EmbeddedResource Include="Icons\Abilities\LeopardTrance.png" />
-		<EmbeddedResource Include="Icons\Abilities\MonkeyTrance.png" />
-		<EmbeddedResource Include="Icons\Abilities\SerpentTrance.png" />
-		<EmbeddedResource Include="Icons\Abilities\StorvalsThunder.png" />
-		<EmbeddedResource Include="Icons\Abilities\TigerTrance.png" />
-		<EmbeddedResource Include="Icons\Deities\RadiantPrism.png" />
+		<EmbeddedResource Include="Icons\Abilities\*.png" />
+		<EmbeddedResource Include="Icons\Deities\*.png" />
+		<EmbeddedResource Include="Icons\Darth\*.png" />
 	</ItemGroup>
 	<Target Name="Deploy" AfterTargets="Build">
 		<ItemGroup>

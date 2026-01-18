@@ -16,6 +16,7 @@ namespace DragonChanges
         internal static UnityModManager.ModEntry.ModLogger log;
         internal static UnityModManager.ModEntry entry;
 
+        [DragonSetting(SettingCategories.Various, "darthicons", "Enable replacing my perfect icons with icons that DarthParametric has provided me.", false)]
         public static bool Load(UnityModManager.ModEntry modEntry)
         {
             log = modEntry.Logger;

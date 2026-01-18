@@ -68,6 +68,9 @@ namespace DragonChanges.NewSpells
                     CustomMetamagic.ElementalCold | CustomMetamagic.ElementalElectricity |
                     CustomMetamagic.ElementalFire | CustomMetamagic.Flaring);
             }
+            string spritepath = "Abilities.HeavenFireRay.png";
+            if (SettingsAction.GetSetting<bool>("darthicons"))
+                spritepath = "Darth.HeavenfireRay.png";
             ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount));
             ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default));
             AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
@@ -126,7 +129,7 @@ namespace DragonChanges.NewSpells
                     aOEType: Kingmaker.Craft.CraftAOE.None,
                     savingThrow: Kingmaker.Craft.CraftSavingThrow.None,
                     spellType: Kingmaker.Craft.CraftSpellType.Damage)
-                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.HeavenFireRay.png"))
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite(spritepath))
                 .Configure();
         }
     }

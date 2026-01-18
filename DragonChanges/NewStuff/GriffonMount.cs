@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using BlueprintCore.Blueprints.Configurators;
+﻿using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
@@ -9,6 +8,7 @@ using HarmonyLib;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Root;
+using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Modding;
 using Kingmaker.RuleSystem.Rules;
@@ -19,6 +19,7 @@ using Kingmaker.Utility;
 using Kingmaker.View;
 using Kingmaker.Visual.Mounts;
 using Owlcat.Runtime.Core.Utils;
+using System.Linq;
 using UnityEngine;
 
 namespace DragonChanges.NewStuff
@@ -94,89 +95,12 @@ namespace DragonChanges.NewStuff
         {
             Main.log.Log("Creating griffon mount unit");
             BlueprintUnit oghorse = TTTHelpers.CreateCopy<BlueprintUnit>(UnitRefs.AnimalCompanionUnitHorse.Reference.Get());
-            SelectionEntry entry1 = new SelectionEntry();
-            entry1.IsParametrizedFeature = false;
-            entry1.IsFeatureSelectMythicSpellbook = false;
-            entry1.m_Selection = FeatureSelectionRefs.BasicFeatSelection.Reference.Get().ToReference<BlueprintFeatureSelectionReference>();
-            entry1.m_Features = [FeatureRefs.Dodge.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.Toughness.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                ParametrizedFeatureRefs.WeaponFocus.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.IronWill.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.CombatReflexes.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.CriticalFocus.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                ParametrizedFeatureRefs.ImprovedCritical.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.GreatFortitude.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.StaggeringCriticalFeature.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.Mobility.Reference.Get().ToReference<BlueprintFeatureReference>()];
-            entry1.ParamSpellSchool = Kingmaker.Blueprints.Classes.Spells.SpellSchool.None;
-            entry1.ParamWeaponCategory = Kingmaker.Enums.WeaponCategory.UnarmedStrike;
-            entry1.Stat = StatType.Unknown;
-            SelectionEntry entry2 = new SelectionEntry();
-            entry2.IsParametrizedFeature = true;
-            entry2.IsFeatureSelectMythicSpellbook = false;
-            entry2.m_Selection = FeatureSelectionRefs.BasicFeatSelection.Reference.Get().ToReference<BlueprintFeatureSelectionReference>();
-            entry2.m_Features = [FeatureRefs.Dodge.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.Toughness.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                ParametrizedFeatureRefs.WeaponFocus.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.IronWill.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.CombatReflexes.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.CriticalFocus.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                ParametrizedFeatureRefs.ImprovedCritical.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.GreatFortitude.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.PowerAttackFeature.Reference.Get().ToReference<BlueprintFeatureReference>()];
-            entry2.m_ParametrizedFeature = ParametrizedFeatureRefs.WeaponFocus.Reference.Get().ToReference<BlueprintParametrizedFeatureReference>();
-            entry2.ParamSpellSchool = Kingmaker.Blueprints.Classes.Spells.SpellSchool.None;
-            entry2.ParamWeaponCategory = Kingmaker.Enums.WeaponCategory.Hoof;
-            entry2.Stat = StatType.Unknown;
-            SelectionEntry entry3 = new SelectionEntry();
-            entry3.IsParametrizedFeature = true;
-            entry3.IsFeatureSelectMythicSpellbook = false;
-            entry3.m_Selection = FeatureSelectionRefs.BasicFeatSelection.Reference.Get().ToReference<BlueprintFeatureSelectionReference>();
-            entry3.m_Features = [FeatureRefs.Dodge.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.Toughness.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                ParametrizedFeatureRefs.WeaponFocus.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.IronWill.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.CombatReflexes.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.CriticalFocus.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                ParametrizedFeatureRefs.ImprovedCritical.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.GreatFortitude.Reference.Get().ToReference<BlueprintFeatureReference>(),
-                                FeatureRefs.PowerAttackFeature.Reference.Get().ToReference<BlueprintFeatureReference>()];
-            entry3.m_ParametrizedFeature = ParametrizedFeatureRefs.ImprovedCritical.Reference.Get().ToReference<BlueprintParametrizedFeatureReference>();
-            entry3.ParamSpellSchool = Kingmaker.Blueprints.Classes.Spells.SpellSchool.None;
-            entry3.ParamWeaponCategory = Kingmaker.Enums.WeaponCategory.UnarmedStrike;
-            entry3.Stat = StatType.Unknown;
-            ContextValue cmdvalue = new ContextValue();
-            cmdvalue.ValueType = ContextValueType.Simple;
-            cmdvalue.Value = 4;
-            cmdvalue.ValueRank = Kingmaker.Enums.AbilityRankType.Default;
-            cmdvalue.ValueShared = Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Damage;
-            cmdvalue.Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None;
-            cmdvalue.PropertyName = Kingmaker.Enums.ContextPropertyName.Value1;
-            cmdvalue.m_AbilityParameter = AbilityParameterType.Level;
-            BlueprintUnit.UnitBody body = new BlueprintUnit.UnitBody();
-            body.DisableHands = false;
-            body.m_EmptyHandWeapon = ItemWeaponRefs.WeaponEmptyHand.Reference.Get().ToReference<BlueprintItemWeaponReference>();
-            body.m_PrimaryHand = ItemWeaponRefs.Bite1d4Large.Reference.Get().ToReference<BlueprintItemEquipmentHandReference>();
-            body.m_PrimaryHandAlternative1 = ItemWeaponRefs.Bite1d4Large.Reference.Get().ToReference<BlueprintItemEquipmentHandReference>();
-            body.m_PrimaryHandAlternative2 = ItemWeaponRefs.Bite1d4Large.Reference.Get().ToReference<BlueprintItemEquipmentHandReference>();
-            body.m_PrimaryHandAlternative3 = ItemWeaponRefs.Bite1d4Large.Reference.Get().ToReference<BlueprintItemEquipmentHandReference>();
-            body.ActiveHandSet = 0;
-            BlueprintUnit.UnitSkills skills = new BlueprintUnit.UnitSkills();
-            skills.Acrobatics = 0;
-            skills.Physique = 0;
-            skills.Diplomacy = 0;
-            skills.Thievery = 0;
-            skills.LoreNature = 0;
-            skills.Perception = 0;
-            skills.Stealth = 0;
-            skills.UseMagicDevice = 0;
-            skills.LoreReligion = 0;
-            skills.KnowledgeArcana = 0;
+            Polymorph phorse = BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>();
             return UnitConfigurator.New(GriffonUnit, Guids.GriffonMountUnit)
-                //.CopyFrom(oghorse)
-                .SetPrefab(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Prefab.AssetId)
+                .CopyFrom(oghorse, typeof(AddClassLevels), typeof(CMDBonusAgainstManeuvers))
+                .SetPrefab(phorse.m_Prefab.AssetId)
                 .SetType(UnitTypeRefs.EagleGiant.Reference.Get())
-                .SetPortrait(BuffRefs.ShifterWildShapeGriffonBuff.Reference.Get().GetComponent<Polymorph>().m_Portrait)
+                .SetPortrait(phorse.m_Portrait)
                 .AddSecondaryAttacks(ItemWeaponRefs.Talon1d4.Reference.Get(), ItemWeaponRefs.Talon1d4.Reference.Get())
                 .SetStrength(10)
                 .SetDexterity(17)
@@ -187,21 +111,11 @@ namespace DragonChanges.NewStuff
                 .AddClassSkill(StatType.SkillAthletics)
                 .AddClassSkill(StatType.SkillPerception)
                 .SetSpeed(new Feet(50))
-                .AddClassLevels(characterClass: CharacterClassRefs.AnimalCompanionClass.Reference.Get(),
-                    levels: 0,
-                    raceStat: StatType.Constitution,
-                    levelsStat: StatType.Strength,
-                    skills: [StatType.SkillPerception],
-                    selections: [entry1, entry2, entry3])
                 .AddAllowDyingCondition()
                 .AddResurrectOnRest()
                 .AddLockEquipmentSlot(slotType: LockEquipmentSlot.SlotType.MainHand)
                 .AddLockEquipmentSlot(slotType: LockEquipmentSlot.SlotType.OffHand)
-                .AddCMDBonusAgainstManeuvers(descriptor: Kingmaker.Enums.ModifierDescriptor.Racial,
-                    value: cmdvalue,
-                    maneuvers: [CombatManeuver.Trip, CombatManeuver.BullRush, CombatManeuver.Pull])
                 .AddFacts(facts: [FeatureRefs.HeadLocatorFeature.Reference.Get()])
-                .SetType(UnitTypeRefs.PlagueBeast_Horse.Reference.Get())
                 .SetGender(Gender.Male)
                 .SetSize(Kingmaker.Enums.Size.Large)
                 .SetIsLeftHanded(false)
@@ -212,7 +126,7 @@ namespace DragonChanges.NewStuff
                 .SetMaxHP(0)
                 .SetIsCheater(false)
                 .SetIsFake(false)
-                .SetSkills(skills)
+                .SetSkills(oghorse.Skills)
                 .SetAddFacts([UnitFactRefs.NaturalArmor4.Reference.Get(),
                                 UnitFactRefs.ReducedReach.Reference.Get(),
                                 FeatureRefs.TripDefenseFourLegs.Reference.Get(),
@@ -222,7 +136,7 @@ namespace DragonChanges.NewStuff
                                 FeatureRefs.AnimalCompanionScent30.Reference.Get()])
                 .SetColor(new Color(0.15f, 0.15f, 0.15f, 1.0f))
                 .SetVisual(oghorse.Visual)
-                .SetBody(body)
+                .SetBody(oghorse.Body)
                 .SetFactionOverrides(new FactionOverrides())
                 .SetAlternativeBrains()
                 .SetAdditionalTemplates()
@@ -411,10 +325,12 @@ namespace DragonChanges.NewStuff
                 }
                     ];
                 offsets.OffsetsConfig = offsetConfig;
-                /*var horse = ResourcesLibrary.TryGetResource<UnitEntityView>(UnitRefs.AnimalCompanionUnitHorse_Large.Reference.Get().Prefab.AssetId);
+                var horse = ResourcesLibrary.TryGetResource<UnitEntityView>(UnitRefs.SableMarineAnimalCompanionHippogriff.Reference.Get().Prefab.AssetId);
                 var horseobj = UnityEngine.Object.Instantiate(horse.GetComponent<MountOffsets>());
+                //offsets.OffsetsConfig = horseobj.OffsetsConfig;
+                offsets.MediumOffsetsConfig = horseobj.MediumOffsetsConfig;
                 offsets.LargeOffsetsConfig = horseobj.LargeOffsetsConfig;
-                offsets.MediumOffsetsConfig = horseobj.MediumOffsetsConfig;*/
+                offsets.MediumOffsetsConfig = horseobj.MediumOffsetsConfig;
             }
         }
     }
