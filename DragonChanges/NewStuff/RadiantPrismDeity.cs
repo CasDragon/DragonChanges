@@ -4,6 +4,7 @@ using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes.Prerequisites;
 using Kingmaker.UnitLogic.Alignments;
+using UnityEngine;
 
 namespace DragonChanges.NewStuff
 {
@@ -32,12 +33,16 @@ namespace DragonChanges.NewStuff
                 ConfigureDummy();
             }
         }
+        [DragonSetting(SettingCategories.Various, "newdeities.poly-icon", "Change Radient Prism icon to the official icon, which looks ugly as sin.")]
         public static void ConfigureDummy()
         {
             FeatureConfigurator.New(feature, featureguid).Configure();
         }
         public static void ConfigureEnabled()
         {
+            Sprite icon = MicroAssetUtil.GetAssemblyResourceSprite("Deities.RadiantPrism.png");
+            if (SettingsAction.GetSetting<bool>("newdeities.poly-icon"))
+                icon = MicroAssetUtil.GetAssemblyResourceSprite("Deities.RadiantPrism2.png");
             AlignmentMaskType alignments = AlignmentMaskType.Good | AlignmentMaskType.TrueNeutral | AlignmentMaskType.NeutralGood |
                 AlignmentMaskType.ChaoticGood | AlignmentMaskType.ChaoticNeutral;
             FeatureConfigurator.New(feature, featureguid)
@@ -59,8 +64,9 @@ namespace DragonChanges.NewStuff
                     clazz: CharacterClassRefs.ClericClass.Reference.Get(),
                     level: 1,
                     feature: FeatureRefs.ScimitarProficiency.Reference.Get())
-                .AddFacts([FeatureRefs.GoodDomainAllowed.Reference.Get(), 
+                .AddFacts([FeatureRefs.GoodDomainAllowed.Reference.Get(),
                             FeatureRefs.LuckDomainAllowed.Reference.Get(),
+                            FeatureRefs.CharmDomainAllowed.Reference.Get(),
                             FeatureRefs.ChannelPositiveAllowed.Reference.Get(),
                             FeatureRefs.ProtectionDomainAllowed.Reference.Get(),
                             FeatureRefs.AirDomainAllowed.Reference.Get(),
@@ -145,7 +151,7 @@ namespace DragonChanges.NewStuff
                 .SetGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Deities)
                 .SetRanks(1)
                 .SetIsClassFeature(true)
-                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Deities.RadiantPrism.png"))
+                .SetIcon(icon)
                 .Configure();
         }
     }
