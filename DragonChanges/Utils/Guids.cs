@@ -190,8 +190,8 @@ namespace DragonChanges.Utils
         internal const string ExoticWeaponProficiency = "9d414931-8196-4874-875f-a71732a2ea02";
         internal const string snakeladfeature = "26ef7b07-b8b3-4e49-860a-4764181e8499";
         internal const string snakeladunit = "5a04e609-9661-41fa-b1e6-cb85417c5f66";
-        internal const string guid10 = "05d93278-8f86-45a8-af0b-4d51b66a10cd";
-        internal const string guid11 = "50714a6d-e833-433a-b2f2-f3e9021cc1b0";
+        internal const string CommnualSenseVitals = "05d93278-8f86-45a8-af0b-4d51b66a10cd";
+        internal const string CommnualSenseVitalsScroll = "50714a6d-e833-433a-b2f2-f3e9021cc1b0";
         internal const string guid12 = "1fbf3414-c346-4fad-9d91-26b5248e6a3c";
         internal const string guid13 = "c01df094-ad5c-4814-8e18-3676841942f3";
         internal const string guid14 = "6c3a35d1-1d29-4a0a-b54d-005ba2cd18da";
