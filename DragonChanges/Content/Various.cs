@@ -5,7 +5,9 @@ using BlueprintCore.Utils.Types;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.UnitLogic.Mechanics.Components;
 namespace DragonChanges.Content
 {
     internal class Various
@@ -123,25 +125,53 @@ namespace DragonChanges.Content
                 }
             }
         }
+        const string itemsttingname = "addexistingitems";
+        const string itemsettingdescription = "Adds various items from the base game/dlc that people have asked me about to Anevia vendor.";
         [DragonConfigure]
+        [DragonSetting(SettingCategories.Various, itemsttingname, itemsettingdescription)]
         public static void ItemStuffs()
         {
-            Main.log.Log("Adding Walls of Sanctuary to anevia vendor");
-            AneviaVendor.AddItem(ItemShieldRefs.WallsOfTheSanctuaryShieldItem.Reference.Get());
-            Main.log.Log("Adding Helmet of Guiding Light to anevia vendor");
-            AneviaVendor.AddItem(ItemEquipmentHeadRefs.HelmetOfTheGuidingLight.Reference.Get());
-            Main.log.Log("Adding The Priceless Woe to anevia vendor");
-            AneviaVendor.AddItem(ItemWeaponRefs.DLC3_NahyndrianVorpalBladeWeaponItem.Reference.Get());
-            Main.log.Log("Add Butchers Cleaver (DLC3) to anevia vendor");
-            AneviaVendor.AddItem(ItemWeaponRefs.ButcherCleaver_Item.Reference.Get());
-            Main.log.Log("Add Martyrs Blade to anevia vendor");
-            AneviaVendor.AddItem(ItemWeaponRefs.MartyrsBladeItem.Reference.Get());
-            Main.log.Log("Add OpressorBastardSword to anevia vendor");
-            AneviaVendor.AddItem(ItemWeaponRefs.TheOpressorBastardSwordItem.Reference.Get());
-            Main.log.Log("Add JagannathKhanda to anevia vendor");
-            AneviaVendor.AddItem(ItemWeaponRefs.JagannathKhanda.Reference.Get());
-            Main.log.Log("Add GreaterMagicWeaponScroll to anevia vendor");
-            AneviaVendor.AddItem(ItemEquipmentUsableRefs.ScrollOfMagicWeaponGreaterPrimary.Reference.Get(), 99);
+            if (SettingsAction.GetSetting<bool>(itemsttingname))
+            {
+                Main.log.Log("Adding Walls of Sanctuary to anevia vendor");
+                AneviaVendor.AddItem(ItemShieldRefs.WallsOfTheSanctuaryShieldItem.Reference.Get());
+                Main.log.Log("Adding Helmet of Guiding Light to anevia vendor");
+                AneviaVendor.AddItem(ItemEquipmentHeadRefs.HelmetOfTheGuidingLight.Reference.Get());
+                Main.log.Log("Adding The Priceless Woe to anevia vendor");
+                AneviaVendor.AddItem(ItemWeaponRefs.DLC3_NahyndrianVorpalBladeWeaponItem.Reference.Get());
+                Main.log.Log("Add Butchers Cleaver (DLC3) to anevia vendor");
+                AneviaVendor.AddItem(ItemWeaponRefs.ButcherCleaver_Item.Reference.Get());
+                Main.log.Log("Add Martyrs Blade to anevia vendor");
+                AneviaVendor.AddItem(ItemWeaponRefs.MartyrsBladeItem.Reference.Get());
+                Main.log.Log("Add OpressorBastardSword to anevia vendor");
+                AneviaVendor.AddItem(ItemWeaponRefs.TheOpressorBastardSwordItem.Reference.Get());
+                Main.log.Log("Add JagannathKhanda to anevia vendor");
+                AneviaVendor.AddItem(ItemWeaponRefs.JagannathKhanda.Reference.Get());
+                Main.log.Log("Add GreaterMagicWeaponScroll to anevia vendor");
+                AneviaVendor.AddItem(ItemEquipmentUsableRefs.ScrollOfMagicWeaponGreaterPrimary.Reference.Get(), 99);
+            }
+        }
+
+        const string baphttingname = "baphitembuff";
+        const string baphsettingdescription = "Buffs  Call of Fiery Things to work on SLAs.";
+        [DragonConfigure]
+        [DragonSetting(SettingCategories.Various, baphttingname, baphsettingdescription)]
+        public static void BuffBaphometFireCloth_AnimalisticFireFeature()
+        {
+            if (SettingsAction.GetSetting<bool>(itemsttingname))
+            {
+                Main.log.Log("Buffing Call of Fiery Things to work on SLAs.");
+                BlueprintFeature x = FeatureRefs.BaphometFireCloth_AnimalisticFireFeature.Reference.Get();
+                AddOutgoingDamageTrigger comp = x.GetComponent<AddOutgoingDamageTrigger>();
+                AddOutgoingDamageTrigger y = (AddOutgoingDamageTrigger)TTTHelpers.ObjectDeepCopier.Clone(comp);
+                y.m_AbilityType = Kingmaker.UnitLogic.Abilities.Blueprints.AbilityType.Supernatural;
+                AddOutgoingDamageTrigger z = (AddOutgoingDamageTrigger)TTTHelpers.ObjectDeepCopier.Clone(comp);
+                z.m_AbilityType = Kingmaker.UnitLogic.Abilities.Blueprints.AbilityType.SpellLike;
+                FeatureConfigurator.For(x)
+                    .AddComponent(y)
+                    .AddComponent(z)
+                    .Configure();
+            }
         }
     }
 }
