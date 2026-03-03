@@ -37,7 +37,7 @@ namespace DragonChanges.NewItems.Scrolls
                 .SetSpendCharges(true)
                 .SetCharges(1)
                 .SetCasterLevel(11)
-                .SetSpellLevel(7)
+                .SetSpellLevel(6)
                 .SetType(UsableItemType.Scroll)
                 .AddCopyScroll()
                 .SetIcon(ItemEquipmentUsableRefs.ScrollOfSenseVitals.Reference.Get().Icon)

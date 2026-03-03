@@ -61,7 +61,6 @@ namespace DragonChanges.NewSpells
                 .SetDisplayName(abilityname)
                 .SetDescription(abilitydescription)
                 .AddSpellComponent(Kingmaker.Blueprints.Classes.Spells.SpellSchool.Divination)
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
                         .ApplyBuff(BuffRefs.SenseVitalsBuff.Reference.Get(),
@@ -113,10 +112,10 @@ namespace DragonChanges.NewSpells
                                     m_IsExtendable = true
                                 },
                                 isFromSpell: true)))
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.BardSpellList.Reference.Get())
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.RangerSpellList.Reference.Get())
-                .AddSpellListComponent(spellLevel: 6, spellList: SpellListRefs.HunterSpelllist.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.BardSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.RangerSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.HunterSpelllist.Reference.Get())
                 .AddContextRankConfig(crc)
                 .AddAbilitySpawnFx(AbilitySpawnFxAnchor.SelectedTarget, orientationMode: AbilitySpawnFxOrientation.Copy, time: AbilitySpawnFxTime.OnApplyEffect, prefabLink: "c388856d0e8855f429a83ccba67944ba")
                 .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.AOE)
@@ -133,6 +132,7 @@ namespace DragonChanges.NewSpells
                 .SetAvailableMetamagic(Metamagic.Quicken | Metamagic.Extend | Metamagic.Heighten | Metamagic.Reach | Metamagic.CompletelyNormal)
                 .Configure();
             CommnualSenseVitalsScroll.ConfigureEnabled(x);
-            return x;      }
+            return x;
+        }
     }
 }
