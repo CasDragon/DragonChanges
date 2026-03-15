@@ -192,9 +192,9 @@ namespace DragonChanges.Utils
         internal const string snakeladunit = "5a04e609-9661-41fa-b1e6-cb85417c5f66";
         internal const string CommnualSenseVitals = "05d93278-8f86-45a8-af0b-4d51b66a10cd";
         internal const string CommnualSenseVitalsScroll = "50714a6d-e833-433a-b2f2-f3e9021cc1b0";
-        internal const string guid12 = "1fbf3414-c346-4fad-9d91-26b5248e6a3c";
-        internal const string guid13 = "c01df094-ad5c-4814-8e18-3676841942f3";
-        internal const string guid14 = "6c3a35d1-1d29-4a0a-b54d-005ba2cd18da";
+        internal const string SuperLongArmSpell = "1fbf3414-c346-4fad-9d91-26b5248e6a3c";
+        internal const string SuperLongArmBuff = "c01df094-ad5c-4814-8e18-3676841942f3";
+        internal const string SuperLongArmScroll = "6c3a35d1-1d29-4a0a-b54d-005ba2cd18da";
         internal const string guid15 = "c15c6bea-8814-4a9b-91c7-b610b8e2d41e";
         internal const string guid16 = "fa5540f6-23e2-4ddd-bf8c-6d4baf5eb5c4";
         internal const string guid17 = "d5e7b9b0-df4f-4354-b480-85a9a9373674";
