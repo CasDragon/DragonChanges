@@ -22,7 +22,7 @@ namespace DragonChanges.templates
         // don't edit
         //[DragonLocalizedString(itemnamekey, itemname)]
         internal const string itemnamekey = $"{item}.name";
-        //[DragonLocalizedString(itemdescriptioney, itemdescription)]
+        //[DragonLocalizedString(itemdescriptionkey, itemdescription)]
         internal const string itemdescriptionkey = $"{item}.description";
         //[DragonConfigure]
         //[DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
@@ -41,13 +41,16 @@ namespace DragonChanges.templates
         }
         public static void ConfigureDummy()
         {
-            ItemConfigurator.New(item, itemguid).Configure();
+            ItemConfigurator.New(item, itemguid)
+                .SetDisplayNameText(itemnamekey)
+                .SetDescriptionText(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
         }
         public static void ConfigureEnabled()
         {
             ItemConfigurator.New(item, itemguid)
-                .SetDisplayNameText(itemname)
-                .SetDescriptionText(itemdescription)
+                .SetDisplayNameText(itemnamekey)
+                .SetDescriptionText(itemdescriptionkey)
                 .Configure();
         }
     }
