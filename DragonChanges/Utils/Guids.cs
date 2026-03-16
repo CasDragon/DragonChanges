@@ -207,8 +207,8 @@ namespace DragonChanges.Utils
         internal const string mithfullbarding3 = "2b76a4c6-5af8-4a4a-95e6-b90a92258bb7";
         internal const string mithfullbarding4 = "a5f4aa5b-ebd3-4eaa-9b04-0511f6349060";
         internal const string mithfullbarding5 = "46093e97-7b41-43e8-81df-ed0d50f637dd";
-        internal const string guid4 = "fcaf3952-ac5e-4e16-96fd-4a2cee83a88a";
-        internal const string guid5 = "2adccc1a-dc25-44a4-9e54-5c3e5cee3c4d";
+        internal const string haramakichainbarding = "fcaf3952-ac5e-4e16-96fd-4a2cee83a88a";
+        internal const string haramakifullbarding = "2adccc1a-dc25-44a4-9e54-5c3e5cee3c4d";
         internal const string guid6 = "44f00d5e-7d8d-4cf9-9d84-35d68ad9d240";
         internal const string guid7 = "99b53471-992c-4487-a54b-5e626191590c";
         internal const string guid8 = "9e099fa9-b04d-411f-ae15-3f6ae6a77a93";

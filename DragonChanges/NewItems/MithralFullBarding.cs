@@ -36,6 +36,9 @@ namespace DragonChanges.NewItems
         internal const string itemplus5 = "mithfullbardingplus5";
         internal const string itemguidplus5 = Guids.mithfullbarding5;
         internal const string itemnameplus5 = "Mithral Full Barding +5";
+        internal const string itemmarakai = "haramakifullbarding";
+        internal const string itemmarakaiguid = Guids.haramakifullbarding;
+        internal const string itemmarakainame = "Haramaki Full Barding";
         // don't edit
         [DragonLocalizedString(itemnamekey, itemname)]
         internal const string itemnamekey = $"{item}.name";
@@ -49,6 +52,8 @@ namespace DragonChanges.NewItems
         internal const string itemnamekeyplus4 = $"{itemplus4}.name";
         [DragonLocalizedString(itemnamekeyplus5, itemnameplus5)]
         internal const string itemnamekeyplus5 = $"{itemplus5}.name";
+        [DragonLocalizedString(itemmarakaikey, itemmarakainame)]
+        internal const string itemmarakaikey = $"{itemmarakai}.name";
         [DragonConfigure]
         [DragonSetting(SettingCategories.NewItems, settingName, settingDescription)]
         public static void Configure()
@@ -164,12 +169,25 @@ namespace DragonChanges.NewItems
                 .SetEnchantments([mithralenchant,
                     ArmorEnchantmentRefs.ArmorEnhancementBonus5.Reference.Get()])
                 .Configure();
+            var item7 = ItemArmorConfigurator.New(itemmarakai, itemmarakaiguid)
+                .SetDisplayNameText(itemmarakaikey)
+                .AddEquipmentRestrictionHasAnyClassFromList([CharacterClassRefs.AnimalCompanionClass.Reference.Get(),
+                    CharacterClassRefs.DragonClass.Reference.Get()])
+                .SetIcon(itemref.Icon)
+                .SetCost(2000)
+                .SetWeight(0.0f)
+                .SetTrashLootTypes(Kingmaker.Enums.TrashLootType.Equipment_RE | Kingmaker.Enums.TrashLootType.Equipment_Trickster)
+                .SetCR(5)
+                .SetEquipmentEntity(itemref.m_EquipmentEntity)
+                .SetType(ArmorTypeRefs.HaramakiType.Reference.Get())
+                .Configure();
             AneviaVendor.AddItem(item1, 10);
             AneviaVendor.AddItem(item2, 10);
             AneviaVendor.AddItem(item3, 10);
             AneviaVendor.AddItem(item4, 10);
             AneviaVendor.AddItem(item5, 10);
             AneviaVendor.AddItem(item6, 10);
+            AneviaVendor.AddItem(item7, 10);
         }
     }
 }
