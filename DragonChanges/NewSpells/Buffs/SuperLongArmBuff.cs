@@ -38,7 +38,7 @@ namespace DragonChanges.NewSpells.Buffs
                 .AddStatBonus(descriptor: ModifierDescriptor.Enhancement, 
                     stat: StatType.Reach,
                     value: 15)
-                //.SetIcon()
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.SuperLongArms.png"))
                 .SetFlags(BlueprintBuff.Flags.IsFromSpell)
                 .Configure();
         }

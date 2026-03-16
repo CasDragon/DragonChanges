@@ -95,7 +95,7 @@ namespace DragonChanges.NewSpells
                 .AddToSpellList(4, SpellListRefs.WitchSpellList.Reference.Get())
                 .AddToSpellList(4, SpellListRefs.MagicDeceiverSpellList.Reference.Get())
                 .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.AOE)
-                //.SetIcon(AbilityRefs.DeathWardCast.Reference.Get().Icon)
+                .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.SuperLongArms.png"))
                 .SetType(AbilityType.Spell)
                 .SetRange(AbilityRange.Personal)
                 .SetCanTargetEnemies(false)
