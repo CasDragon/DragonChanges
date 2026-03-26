@@ -27,18 +27,23 @@ namespace DragonChanges.Content
                     Main.log.Log("Patching Alter's Deadly Juggernaut spell to allow DR stacking");
                     BlueprintBuff buff = ResourcesLibrary.TryGetBlueprint<BlueprintBuff>("b8c22a15f4c64737810c690ec502703c");
                     DragonHelpers.RemoveComponent<AddDamageResistancePhysical>(buff);
+                    var x = BuffConfigurator.For(buff);
                     if (ModCompat.tttbase)
                     {
-                        BuffConfigurator.For(buff)
-                            .AddTTTAddDamageResistancePhysical(ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal))
-                            .Configure();
+                        try
+                        {
+                            x.AddTTTAddDamageResistancePhysical(ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal));
+                        }
+                        catch
+                        {
+                            x.AddDRComponent(stackable: true, value: ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal));
+                        }
                     }
                     else
                     {
-                        BuffConfigurator.For(buff)
-                            .AddDRComponent(stackable: true, value: ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal))
-                            .Configure();
+                        x.AddDRComponent(stackable: true, value: ContextValues.Shared(Kingmaker.UnitLogic.Abilities.AbilitySharedValue.Heal));
                     }
+                    x.Configure();
                 }
             }
         }

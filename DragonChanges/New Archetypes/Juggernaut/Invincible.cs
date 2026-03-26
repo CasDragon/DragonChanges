@@ -38,13 +38,19 @@ namespace DragonChanges.New_Archetypes.Juggernaut
             BlueprintFeature feat;
             if (ModCompat.tttbase)
             {
-                feat = FeatureConfigurator.New(feature, featureguid)
-                    .SetDisplayName(featurenamekey)
-                    .SetDescription(featuredescriptionkey)
-                    .AddRecalculateOnStatChange(stat: StatType.Constitution)
-                    .AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusConstitution))
-                    .SetIsClassFeature(true)
-                    .Configure();
+                FeatureConfigurator x = FeatureConfigurator.New(feature, featureguid)
+                    .SetDisplayName(featurename)
+                    .SetDescription(featuredescription)
+                    .AddRecalculateOnStatChange(stat: StatType.Constitution);
+                try
+                {
+                    x.AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusStrength));
+                }
+                catch
+                {
+                    x.AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false);
+                }
+                feat = x.Configure();
             }
             else
             {

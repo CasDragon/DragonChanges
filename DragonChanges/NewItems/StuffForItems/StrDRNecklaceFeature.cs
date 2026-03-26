@@ -29,27 +29,20 @@ namespace DragonChanges.NewItems.StuffForItems
             BlueprintFeature feat;
             if (ModCompat.tttbase)
             {
+                FeatureConfigurator x = FeatureConfigurator.New(feature, featureguid)
+                    .SetDisplayName(featurename)
+                    .SetDescription(featuredescription)
+                    .AddRecalculateOnStatChange(stat: StatType.Strength)
+                    .SetHideInUI(true);
                 try
                 {
-                    feat = FeatureConfigurator.New(feature, featureguid)
-                        .SetDisplayName(featurename)
-                        .SetDescription(featuredescription)
-                        .AddRecalculateOnStatChange(stat: StatType.Strength)
-                        .SetHideInUI(true)
-                        .AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusStrength))
-                        .Configure();
+                    x.AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusStrength));
                 }
                 catch
                 {
-
-                    feat = FeatureConfigurator.New(feature, featureguid)
-                        .SetDisplayName(featurename)
-                        .SetDescription(featuredescription)
-                        .AddRecalculateOnStatChange(stat: StatType.Strength)
-                        .SetHideInUI(true)
-                        .AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false)
-                        .Configure();
+                    x.AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false);
                 }
+                feat = x.Configure();
             }
             else
             {

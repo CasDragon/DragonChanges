@@ -33,7 +33,7 @@ namespace DragonChanges.NewItems
         internal const string itemplus5 = "mithchainbardingplus5";
         internal const string itemguidplus5 = Guids.mithchainbarding5;
         internal const string itemnameplus5 = "Mithral Chainmail Barding +5";
-        internal const string itemmarakai = "haramakifullbarding";
+        internal const string itemmarakai = "haramakichainbarding";
         internal const string itemmarakaiguid = Guids.haramakichainbarding;
         internal const string itemmarakainame = "Haramaki Chainmail Barding";
         // don't edit
