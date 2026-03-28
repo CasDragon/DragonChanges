@@ -4,6 +4,7 @@ using DragonLibrary.BPCoreExtensions;
 using DragonLibrary.NewComponents;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums;
 namespace DragonChanges.Content
@@ -20,18 +21,22 @@ namespace DragonChanges.Content
             if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log("Buffing Mythic WF/WS");
+                var x = ParametrizedFeatureRefs.WeaponFocus.Reference.Get();
+                x.GetComponent<WeaponFocusParametrized>().m_MythicFocus = null;
+                var z = ParametrizedFeatureRefs.WeaponFocusGreater.Reference.Get();
+                x.GetComponent<WeaponFocusParametrized>().m_MythicFocus = null;
                 ParametrizedFeatureConfigurator.For(ParametrizedFeatureRefs.WeaponFocusMythicFeat)
                     .AddComponent( new FeatMythicScaling()
                         {
                         Value = 1,
                         Stat = StatType.AdditionalAttackBonus,
-                        ParametrizedFeature = ParametrizedFeatureRefs.WeaponFocus.Reference.Get().ToReference<BlueprintParametrizedFeatureReference>(),
-                        MythicParametrizedFeature = ParametrizedFeatureRefs.WeaponFocusGreater.Reference.Get().ToReference<BlueprintParametrizedFeatureReference>(),
+                        ParametrizedFeature = x.ToReference<BlueprintParametrizedFeatureReference>(),
+                        MythicParametrizedFeature = z.ToReference<BlueprintParametrizedFeatureReference>(),
                         ScalingType = "Half",
                         Descriptor = ModifierDescriptor.UntypedStackable
                         })
                     .Configure();
-                ParametrizedFeatureConfigurator.For(ParametrizedFeatureRefs.WeaponSpecializationMythicFeat)
+                var y = ParametrizedFeatureConfigurator.For(ParametrizedFeatureRefs.WeaponSpecializationMythicFeat)
                     .AddComponent(new FeatMythicScaling()
                     {
                         Value = 1,
@@ -42,6 +47,7 @@ namespace DragonChanges.Content
                         Descriptor = ModifierDescriptor.UntypedStackable
                     })
                     .Configure();
+                DragonHelpers.RemoveComponent<WeaponSpecializationParametrized>(y);
             }
         }
     }
