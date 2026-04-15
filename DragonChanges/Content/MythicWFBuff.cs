@@ -1,4 +1,5 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Classes.Selection;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using DragonLibrary.BPCoreExtensions;
 using DragonLibrary.NewComponents;
@@ -49,6 +50,35 @@ namespace DragonChanges.Content
                     .Configure();
                 DragonHelpers.RemoveComponent<WeaponSpecializationParametrized>(y);
             }
+        }
+
+        internal const string settingNameViggy = "buffmythiclightarmorviggy";
+        internal const string settingDescriptionViggy = "For Viggy, buffs Mythic Light Armor Assualt to work with Fighter's Finesse. Basically cheating.";
+        [DragonConfigure]
+        [DragonSetting(SettingCategories.Various, settingNameViggy, settingDescriptionViggy, false)]
+        public static void MythicLightArmorBuff()
+        {
+            if (SettingsAction.GetSetting<bool>(settingNameViggy))
+            {
+                Main.log.Log("Buffing Mythic Assault for Light Armor.");
+                BlueprintFeatureReference finesseref = FeatureRefs.FightersFinesse.Reference.Get().ToReference<BlueprintFeatureReference>();
+                BuffConfigurator.For(BuffRefs.ArmorFocusLightMythicOffenceSubBuff)
+                    .EditComponent<WeaponParametersAttackBonus>(c => dothingy(c, finesseref))
+                    .EditComponent<WeaponParametersDamageBonus>(c => dothingy2(c, finesseref))
+                    .Configure();
+            }
+        }
+
+        public static void dothingy(WeaponParametersAttackBonus component, BlueprintFeatureReference refthingy)
+        {
+            component.CanBeUsedWithFightersFinesse = true;
+            component.m_FightersFinesse = refthingy;
+        }
+
+        public static void dothingy2(WeaponParametersDamageBonus component, BlueprintFeatureReference refthingy)
+        {
+            component.CanBeUsedWithFightersFinesse = true;
+            component.m_FightersFinesse = refthingy;
         }
     }
 }

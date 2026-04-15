@@ -84,7 +84,7 @@ namespace DragonChanges.NewSpells
                             },
                             isFromSpell: true)
                         .PartyMembers(ActionsBuilder.New()
-                            .ApplyBuff(BuffRefs.DeathWardBuff.Reference.Get(),
+                            .ApplyBuff(BuffRefs.EaglesoulBuff.Reference.Get(),
                                 new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
                                 {
                                     Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,

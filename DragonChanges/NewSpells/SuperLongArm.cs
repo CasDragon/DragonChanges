@@ -67,7 +67,7 @@ namespace DragonChanges.NewSpells
                         .ApplyBuff(SuperLongArmBuff.ConfigureEnabled(),
                             new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
                             {
-                                Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,
+                                Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Minutes,
                                 DiceType = Kingmaker.RuleSystem.DiceType.Zero,
                                 DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
                                 {
@@ -79,8 +79,8 @@ namespace DragonChanges.NewSpells
                                 },
                                 BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
                                 {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 4,
+                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Rank,
+                                    Value = 1,
                                     ValueRank = Kingmaker.Enums.AbilityRankType.Default,
                                     ValueShared = AbilitySharedValue.Damage,
                                     Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
@@ -95,7 +95,8 @@ namespace DragonChanges.NewSpells
                 .AddToSpellList(4, SpellListRefs.WitchSpellList.Reference.Get())
                 .AddToSpellList(4, SpellListRefs.MagicDeceiverSpellList.Reference.Get())
                 .AddToSpellList(4, SpellListRefs.TricksterSpelllist.Reference.Get())
-                .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.AOE)
+                .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.None)
+                .SetLocalizedDuration(Duration.MinutePerLevel)
                 .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.SuperLongArms.png"))
                 .SetType(AbilityType.Spell)
                 .SetRange(AbilityRange.Personal)
