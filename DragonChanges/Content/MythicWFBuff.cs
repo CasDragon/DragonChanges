@@ -15,6 +15,13 @@ namespace DragonChanges.Content
 
         internal const string settingName = "buffmythicweaponfocus";
         internal const string settingDescription = "Buffs Mythic Weapon Focus/Weapon Specialization to add a scaling bonus equal to half your Mythic Rank.";
+        internal const string wfkey = "dragonweaponfocus";
+        internal const string wskey = "dragonweaponspecial";
+        [DragonLocalizedString(wfkey, weaponfocusdescription)]
+        internal const string weaponfocusdescription = "When using your chosen weapon, you gain a bonus equal to one plus half your mythic rank on attack rolls. If you have Greater Weapon Focus, the bonus is equal to one plus your full mythic rank instead. This stacks with the bonus from Weapon Focus and Greater Weapon Focus.";
+        [DragonLocalizedString(wskey, weaponspecialdescription)]
+        internal const string weaponspecialdescription = "When using your chosen weapon, you gain a bonus equal to one plus half your mythic rank on damage rolls. If you have Greater Weapon Specialization, the bonus is equal to one plus your full mythic rank instead. This stacks with the bonus from Weapon Specialization and Greater Weapon Specialization.";
+
         [DragonConfigure]
         [DragonSetting(SettingCategories.Various, settingName, settingDescription)]
         public static void Configure()
@@ -36,6 +43,7 @@ namespace DragonChanges.Content
                         ScalingType = "Half",
                         Descriptor = ModifierDescriptor.UntypedStackable
                         })
+                    .SetDescription(wfkey)
                     .Configure();
                 var y = ParametrizedFeatureConfigurator.For(ParametrizedFeatureRefs.WeaponSpecializationMythicFeat)
                     .AddComponent(new FeatMythicScaling()
@@ -47,6 +55,7 @@ namespace DragonChanges.Content
                         ScalingType = "Half",
                         Descriptor = ModifierDescriptor.UntypedStackable
                     })
+                    .SetDescription(wskey)
                     .Configure();
                 DragonHelpers.RemoveComponent<WeaponSpecializationParametrized>(y);
             }
