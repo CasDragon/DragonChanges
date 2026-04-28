@@ -403,7 +403,7 @@
 
     {
         "Key": "AutoMaximize-ability.description",
-        "enGB": "Enable to give your spells Maximum through your mythic power!"
+        "enGB": "Enable to apply Maximize metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -414,7 +414,7 @@
 
     {
         "Key": "AutoMaximize-buff.description",
-        "enGB": "Spells will have Maximum applied to them"
+        "enGB": "Spells will have Maximize metamagic applied to them"
     },
 
     {
@@ -436,7 +436,7 @@
 
     {
         "Key": "AutoExtend-ability.description",
-        "enGB": "Enable to give your spells Extend through your mythic power!"
+        "enGB": "Enable to apply Extend metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -447,7 +447,7 @@
 
     {
         "Key": "AutoExtend-buff.description",
-        "enGB": "Spells will have Extend applied to them"
+        "enGB": "Spells will have Extend metamagic applied to them"
     },
 
     {
@@ -469,7 +469,7 @@
 
     {
         "Key": "AutoEmpower-ability.description",
-        "enGB": "Enable to give your spells Empower through your mythic power!"
+        "enGB": "Enable to apply Empower metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -480,7 +480,7 @@
 
     {
         "Key": "AutoEmpower-buff.description",
-        "enGB": "Spells will have Empower applied to them"
+        "enGB": "Spells will have Empower metamagic applied to them"
     },
 
     {
@@ -502,7 +502,7 @@
 
     {
         "Key": "AutoQuicken-ability.description",
-        "enGB": "Enable to give your spells Quicken through your mythic power!"
+        "enGB": "Enable to apply Quicken metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -513,7 +513,7 @@
 
     {
         "Key": "AutoQuicken-buff.description",
-        "enGB": "Spells will have Quicken applied to them"
+        "enGB": "Spells will have Quicken metamagic applied to them"
     },
 
     {
@@ -535,7 +535,7 @@
 
     {
         "Key": "AutoReach-ability.description",
-        "enGB": "Enable to give your spells Reach through your mythic power!"
+        "enGB": "Enable to apply Reach metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -546,7 +546,7 @@
 
     {
         "Key": "AutoReach-buff.description",
-        "enGB": "Spells will have Reach applied to them"
+        "enGB": "Spells will have Reach metamagic applied to them"
     },
 
     {
@@ -568,7 +568,7 @@
 
     {
         "Key": "AutoBolstered-ability.description",
-        "enGB": "Enable to give your spells Bolster through your mythic power!"
+        "enGB": "Enable to apply Bolster metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -579,7 +579,7 @@
 
     {
         "Key": "AutoBolstered-buff.description",
-        "enGB": "Spells will have Bolster applied to them"
+        "enGB": "Spells will have Bolster metamagic applied to them"
     },
 
     {
@@ -601,7 +601,7 @@
 
     {
         "Key": "AutoSelective-ability.description",
-        "enGB": "Enable to give your spells Selective through your mythic power!"
+        "enGB": "Enable to apply Selective metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -612,7 +612,7 @@
 
     {
         "Key": "AutoSelective-buff.description",
-        "enGB": "Spells will have Selective applied to them"
+        "enGB": "Spells will have Selective metamagic applied to them"
     },
 
     {
@@ -634,7 +634,7 @@
 
     {
         "Key": "AutoPersistent-ability.description",
-        "enGB": "Enable to give your spells Persistent through your mythic power!"
+        "enGB": "Enable to apply Persistent metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -645,7 +645,7 @@
 
     {
         "Key": "AutoPersistent-buff.description",
-        "enGB": "Spells will have Persistent applied to them"
+        "enGB": "Spells will have Persistent metamagic applied to them"
     },
 
     {
@@ -667,7 +667,7 @@
 
     {
         "Key": "AutoIntensified-ability.description",
-        "enGB": "Enable to give your spells Intensify through your mythic power!"
+        "enGB": "Enable to apply Itensify metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -678,7 +678,7 @@
 
     {
         "Key": "AutoIntensified-buff.description",
-        "enGB": "Spells will have Intensify applied to them"
+        "enGB": "Spells will have Intensify metamagic applied to them"
     },
 
     {
@@ -700,7 +700,7 @@
 
     {
         "Key": "AutoPiercing-ability.description",
-        "enGB": "Enable to give your spells Piercing through your mythic power!"
+        "enGB": "Enable to apply Piercing metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -711,7 +711,7 @@
 
     {
         "Key": "AutoPiercing-buff.description",
-        "enGB": "Spells will have Piercing applied to them"
+        "enGB": "Spells will have Piercing metamagic applied to them"
     },
 
     {
@@ -733,7 +733,7 @@
 
     {
         "Key": "AutoBurning-ability.description",
-        "enGB": "Enable to give your spells Burning through your mythic power!"
+        "enGB": "Enable to apply Burning metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -744,7 +744,7 @@
 
     {
         "Key": "AutoBurning-buff.description",
-        "enGB": "Spells will have Burning applied to them"
+        "enGB": "Spells will have Burning metamagic applied to them"
     },
 
     {
@@ -766,7 +766,7 @@
 
     {
         "Key": "AutoEncourage-ability.description",
-        "enGB": "Enable to give your spells Encouraging through your mythic power!"
+        "enGB": "Enable to apply Encouraging metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -777,7 +777,7 @@
 
     {
         "Key": "AutoEncourage-buff.description",
-        "enGB": "Spells will have Encouraging applied to them"
+        "enGB": "Spells will have Encouraging metamagic applied to them"
     },
 
     {
@@ -799,7 +799,7 @@
 
     {
         "Key": "AutoFlare-ability.description",
-        "enGB": "Enable to give your spells Flaring through your mythic power!"
+        "enGB": "Enable to apply Flaring metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -810,7 +810,7 @@
 
     {
         "Key": "AutoFlare-buff.description",
-        "enGB": "Spells will have Flaring applied to them"
+        "enGB": "Spells will have Flaring metamagic applied to them"
     },
 
     {
@@ -832,7 +832,7 @@
 
     {
         "Key": "AutoRime-ability.description",
-        "enGB": "Enable to give your spells Rime through your mythic power!"
+        "enGB": "Enable to apply Rime metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -843,7 +843,7 @@
 
     {
         "Key": "AutoRime-buff.description",
-        "enGB": "Spells will have Rime applied to them"
+        "enGB": "Spells will have Rime metamagic applied to them"
     },
 
     {
@@ -865,7 +865,7 @@
 
     {
         "Key": "AutoSolidShadows-ability.description",
-        "enGB": "Enable to give your spells Solid Shadows through your mythic power!"
+        "enGB": "Enable to apply Solid Shadows metamagic to all spells without increasing casting time or using a higher-level spell slot."
     },
 
     {
@@ -876,7 +876,7 @@
 
     {
         "Key": "AutoSolidShadows-buff.description",
-        "enGB": "Spells will have Solid Shadows applied to them"
+        "enGB": "Spells will have Solid Shadows metamagic applied to them"
     },
 
     {
@@ -893,7 +893,7 @@
     {
         "Key": "HellBall.name",
         "ProcessTemplates": false,
-        "enGB": "HellBall"
+        "enGB": "Hellball"
     },
 
     {
@@ -904,12 +904,12 @@
     {
         "Key": "HellBall-feature.name",
         "ProcessTemplates": false,
-        "enGB": "HellBall Spell"
+        "enGB": "Hellball Spell"
     },
 
     {
         "Key": "HellBall-feature.description",
-        "enGB": "Grants you a new powerful spell called Hellbell, which does 10d6 damage of multiple elements! Requires being able to cast spell level 9."
+        "enGB": "Grants you a new powerful spell called Hellball, which deals 20d6 each of fire, acid, electrical, and sonic damage. Hellball is a 9th-level spell."
     },
 
     {
@@ -937,12 +937,12 @@
     {
         "Key": "GraveSingerPlus.name",
         "ProcessTemplates": false,
-        "enGB": "Grave Singer Plus"
+        "enGB": "Ascendant Critical"
     },
 
     {
         "Key": "GraveSingerPlus.description",
-        "enGB": "Gives you +1 bonus to both crit range and crit multiplier. (Gives these bonuses for all weapons/unarmed, despite needing Improved Crit & Improved Crit Mythic)"
+        "enGB": "Your mastery of critical strikes is unmatched.\nYour critical threat range and critical damage multiplier for all weapons, including unarmed strikes and natural weapons, are both increased by 1, stacking with all other similar effects."
     },
 
     {
@@ -1053,12 +1053,12 @@
     {
         "Key": "SuperDexShot.name",
         "ProcessTemplates": false,
-        "enGB": "Super Dextrous Shot"
+        "enGB": "Mythic Archer"
     },
 
     {
         "Key": "SuperDexShot.description",
-        "enGB": "With your Mythic PowerTM, you can now add your Dex bonus to your attack's damage with long bows and short bows, replacing your Str bonus."
+        "enGB": "When using longbows or shortbows, you may use your Dexterity modifier instead of your Strength modifier on your damage rolls, if the former is higher."
     },
 
     {
