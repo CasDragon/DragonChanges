@@ -43,6 +43,9 @@ Current features include
 
 
 Special thanks to AlterAsc for letting me steal his code, and Vek for also letting me steal his code. 
+
 Special thanks to DarthParametric, for providing the alternate icons for several of my custom nonsense
+
+Thanks to ViggyJ to improving some of my localizations.
 
 Thanks to everyone on the Owlcat Discord for putting up with my nonsense, especially Micro / Kuru / ADDB / AlterAsc / Bittercrabapple
