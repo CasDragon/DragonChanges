@@ -211,7 +211,7 @@ namespace DragonChanges.Utils
         internal const string haramakifullbarding = "2adccc1a-dc25-44a4-9e54-5c3e5cee3c4d";
         internal const string communaleaglesoul = "44f00d5e-7d8d-4cf9-9d84-35d68ad9d240";
         internal const string communaleaglesoulscroll = "99b53471-992c-4487-a54b-5e626191590c";
-        internal const string guid8 = "9e099fa9-b04d-411f-ae15-3f6ae6a77a93";
+        internal const string VaelFeat1 = "9e099fa9-b04d-411f-ae15-3f6ae6a77a93";
         internal const string guid9 = "aed9678a-559b-497a-aea7-5a335195e55d";
         internal const string guid10 = "2b43e550-fcf5-4883-8567-32c3eb9a2d85";
         internal const string guid11 = "897aca67-11e7-4930-8b9a-b04b1a1b86d1";
