@@ -19,8 +19,8 @@ namespace DragonChanges.NewStuff
         // edit
         internal const string feature = "MythicSupportNethys";
         internal const string featureguid = Guids.MythicNethysSupport;
-        internal const string featurename = "Mythic Support of Nethys";
-        internal const string featuredescription = "Nethys is so impressed with your dedication to his teachings, that he helps your spells difficult class grow even more. Bonus of +6";
+        internal const string featurename = "Potent Spellcasting (Mythic)";
+        internal const string featuredescription = "Mythic power makes your spells almost impossible to resist.\nAdd +6 to the Difficulty Class for all saving throws against spells you cast. This bonus stacks with the bonus from Potent Spellcasting and Greater Potent Spellcasting.";
         // don't edit
         [DragonLocalizedString(featurenamekey, featurename)]
         internal const string featurenamekey = $"{feature}.name";

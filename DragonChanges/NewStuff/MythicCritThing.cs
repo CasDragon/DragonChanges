@@ -15,7 +15,7 @@ namespace DragonChanges.NewStuff
         internal const string feature = "GraveSingerPlus";
         internal const string featureguid = Guids.MythicCritThingy;
         internal const string settingName = "gravesingerplus";
-        internal const string settingDescription = "Adds the feat GraveSingerPlus";
+        internal const string settingDescription = "Adds the mythic feat Ascendant Critical (increases critical threat range and multiplier with all weapons by 1)";
         // don't edit
         internal const string featurename = $"{feature}.name";
         internal const string featuredescription = $"{feature}.description";

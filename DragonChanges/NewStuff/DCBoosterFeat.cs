@@ -18,9 +18,9 @@ namespace DragonChanges.NewStuff
         internal const string feature = "StudentOfNethys";
         internal const string featureguid = Guids.StudentOfNethys;
         internal const string settingName = "dcboosting";
-        internal const string settingDescription = "Feat line that grants increased DC by the caster.";
-        internal const string featurename = "Student Of Nethys";
-        internal const string featuredescription = "By studying the teachings of Nethys, your spells have an increased difficulty class, with a bonus of 2.";
+        internal const string settingDescription = "Adds the homebrew "Potent Spellcasting" feat line that grants increased spell save DC.";
+        internal const string featurename = "Potent Spellcasting";
+        internal const string featuredescription = "Your spells are more difficult to resist.\nAdd +2 to the Difficulty Class for all saving throws against spells you cast.";
         // don't edit
         [DragonLocalizedString(featurenamekey, featurename)]
         internal const string featurenamekey = $"{feature}.name";
