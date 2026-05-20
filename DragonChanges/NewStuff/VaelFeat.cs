@@ -21,9 +21,9 @@ namespace DragonChanges.NewStuff
         internal const string feature = "VaelsSuperSpecialFeat";
         internal const string featureguid = Guids.VaelFeat1;
         internal const string settingName = "vaelmythicscalingfeat";
-        internal const string settingDescription = "Adds 'Mythic Body and Mind', a meme feat for Vael in Discord, which gives +1 per MR as an untyped bonus to all ability scores.";
+        internal const string settingDescription = "Adds 'Mythic Body and Mind', a meme feat for Vael in Discord, which gives (1 + MR/2) as an untyped bonus to all ability scores.";
         internal const string featurename = "Mythic Body and Mind";
-        internal const string featuredescription = "Your baseline attributes grow alongside your mythic powers.\nYou gain a bonus to all ability scores equal to your mythic rank.";
+        internal const string featuredescription = "Your baseline attributes grow alongside your mythic powers.\nYou gain a bonus to all ability scores equal to 1 + half of your mythic rank.";
         // don't edit
         [DragonLocalizedString(featurenamekey, featurename)]
         internal const string featurenamekey = $"{feature}.name";
@@ -56,7 +56,7 @@ namespace DragonChanges.NewStuff
             FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurenamekey)
                 .SetDescription(featuredescriptionkey)
-                .AddContextRankConfig(ContextRankConfigs.MythicLevel())
+                .AddContextRankConfig(ContextRankConfigs.MythicLevel().WithOnePlusDiv2Progression())
                 .AddContextStatBonus(descriptor: ModifierDescriptor.UntypedStackable,
                     stat: StatType.Strength,
                     value: ContextValues.Rank())

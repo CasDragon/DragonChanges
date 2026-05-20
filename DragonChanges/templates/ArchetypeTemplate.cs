@@ -22,7 +22,7 @@ namespace DragonChanges.templates
         internal const string archetypenamekey = $"{archetype}.name";
         //[DragonLocalizedString(archetypedescriptionkey, archetypedescription, true)]
         internal const string archetypedescriptionkey = $"{archetype}.description";
-        //[DragonLocalizedString(archetypedescriptionkey, archetypedescription, true)]
+        //[DragonLocalizedString(archetypeshortdescriptionkey, archetypeshortdescription, true)]
         internal const string archetypeshortdescriptionkey = $"{archetype}.shortdescription";
         //[DragonConfigure]
         //[DragonSetting(SettingCategories.NewArchetypes, settingName, settingDescription)]
