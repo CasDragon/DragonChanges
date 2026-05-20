@@ -212,9 +212,9 @@ namespace DragonChanges.Utils
         internal const string communaleaglesoul = "44f00d5e-7d8d-4cf9-9d84-35d68ad9d240";
         internal const string communaleaglesoulscroll = "99b53471-992c-4487-a54b-5e626191590c";
         internal const string VaelFeat1 = "9e099fa9-b04d-411f-ae15-3f6ae6a77a93";
-        internal const string guid9 = "aed9678a-559b-497a-aea7-5a335195e55d";
-        internal const string guid10 = "2b43e550-fcf5-4883-8567-32c3eb9a2d85";
-        internal const string guid11 = "897aca67-11e7-4930-8b9a-b04b1a1b86d1";
+        internal const string chargingthrowability = "aed9678a-559b-497a-aea7-5a335195e55d";
+        internal const string chargingthrowfeat = "2b43e550-fcf5-4883-8567-32c3eb9a2d85";
+        internal const string presenceofmind = "897aca67-11e7-4930-8b9a-b04b1a1b86d1";
         internal const string guid12 = "d54cc08e-3a0c-4a21-a085-66c59185172c";
         internal const string guid13 = "e6bf7d74-4b20-46a3-b56e-f449ce995514";
         internal const string guid14 = "f18864ce-f29a-4a26-8c18-b42b8a6c962d";

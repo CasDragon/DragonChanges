@@ -41,6 +41,8 @@ namespace DragonChanges.templates
         public static BlueprintAbility ConfigureDummy()
         {
             return AbilityConfigurator.New(ability, abilityguid)
+                .SetDisplayName(abilityname)
+                .SetDescription(LocalizedStringHelper.disabledcontentstring)
                 .Configure();
         }
         public static BlueprintAbility ConfigureEnabled()
