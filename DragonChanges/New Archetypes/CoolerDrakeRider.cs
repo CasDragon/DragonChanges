@@ -30,11 +30,14 @@ namespace DragonChanges.New_Archetypes
         internal const string archetypedescriptionkey = $"{archetype}.description";
         [DragonLocalizedString(archetypeshortdescriptionkey, archetypeshortdescription, true)]
         internal const string archetypeshortdescriptionkey = $"{archetype}.shortdescription";
+        internal const string respecthis = "resepc.key";
+        [DragonLocalizedString(respecthis, respecthisnow, true)]
+        internal const string respecthisnow = "Respec this, content was removed.";
         [DragonConfigure]
-        [DragonSetting(SettingCategories.NewArchetypes, settingName, settingDescription)]
+        //[DragonSetting(SettingCategories.NewArchetypes, settingName, settingDescription)]
         public static void Configure()
         {
-            if (SettingsAction.GetSetting<bool>(settingName))
+            /*if (SettingsAction.GetSetting<bool>(settingName))
             {
                 if (!ModCompat.expandedcontent)
                 {
@@ -47,16 +50,16 @@ namespace DragonChanges.New_Archetypes
             }
             else
             {
-                Main.log.Log($"{archetype} disabled, configuring dummy");
+                Main.log.Log($"{archetype} disabled, configuring dummy");*/
                 ConfigureDummy();
-            }
+            //}
         }
         public static void ConfigureDummy()
         {
             ArchetypeConfigurator.New(archetype, archetypeguid)
-                .SetLocalizedName(archetypenamekey)
-                .SetLocalizedDescription(LocalizedStringHelper.disabledcontentstring)
-                .SetLocalizedDescriptionShort(LocalizedStringHelper.disabledcontentstring)
+                .SetLocalizedName(respecthis)
+                .SetLocalizedDescription(respecthis)
+                .SetLocalizedDescriptionShort(respecthis)
                 .Configure();
         }
         public static void ConfigureEnabled()
