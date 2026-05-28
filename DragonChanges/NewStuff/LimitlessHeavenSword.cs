@@ -1,8 +1,11 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
+using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.EntitySystem.Stats;
+using Kingmaker.UnitLogic.Abilities.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +14,15 @@ using System.Threading.Tasks;
 
 namespace DragonChanges.NewStuff
 {
-    internal class PresenceOfMind
-    {        // edit
-        internal const string feature = "PresenceofMind";
-        internal const string featureguid = Guids.presenceofmind;
-        internal const string settingName = "presenceofmind";
-        internal const string settingDescription = "Adds the 3rd party feat, Presence of Mind";
-        internal const string featurename = "Presence of Mind";
-        internal const string featuredescription = "You add your Intelligence modifier to initiative checks. This is in addition to other modifiers to initiative checks, like the bonus provided by a high Dexterity or the Improved Initiative feat.";
+    internal class LimitlessHeavenSword
+    {
+        // edit
+        internal const string feature = "LimitlessSwordOfHeaven";
+        internal const string featureguid = Guids.LimitlessSwordOfHeaven;
+        internal const string settingName = "limitlessheavensword";
+        internal const string settingDescription = "Adds a new Mythic Ability, Limitless Sword of Heaven, which gives Sword of Heaven (Angel mythic ability) unlimited rounds.";
+        internal const string featurename = "Limitless Sword of Heaven";
+        internal const string featuredescription = "Your Angelic Sword knows neither limits. Benefit: The number of {g|Encyclopedia:Combat_Round}rounds{/g} per day for your Sword of Heaven ability is no longer limited.";
         // don't edit
         [DragonLocalizedString(featurenamekey, featurename)]
         internal const string featurenamekey = $"{feature}.name";
@@ -48,14 +52,14 @@ namespace DragonChanges.NewStuff
         }
         public static void ConfigureEnabled()
         {
-            FeatureConfigurator.New(feature, featureguid)
+            BlueprintFeature x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurenamekey)
                 .SetDescription(featuredescriptionkey)
-                .AddDerivativeStatBonus(baseStat: StatType.Intelligence,
-                    descriptor: Kingmaker.Enums.ModifierDescriptor.UntypedStackable,
-                    derivativeStat: StatType.Initiative)
-                .AddRecalculateOnStatChange(stat: StatType.Intelligence)
-                .AddToGroups(FeatureGroup.Feat, FeatureGroup.CombatFeat)
+                .AddPrerequisiteFeature(FeatureRefs.AngelSwordFeature.ToString())
+                .AddToGroups(FeatureGroup.MythicAbility)
+                .Configure();
+            AbilityConfigurator.For(AbilityRefs.AngelSwordSwitchAbility)
+                .EditComponent<AbilityResourceLogic>(c => c.ResourceCostDecreasingFacts = [.. c.ResourceCostDecreasingFacts, x.ToReference<BlueprintUnitFactReference>()])
                 .Configure();
         }
     }
