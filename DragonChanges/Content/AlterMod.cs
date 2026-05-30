@@ -26,7 +26,14 @@ namespace DragonChanges.Content
                 {
                     Main.log.Log("Patching Alter's Deadly Juggernaut spell to allow DR stacking");
                     BlueprintBuff buff = ResourcesLibrary.TryGetBlueprint<BlueprintBuff>("b8c22a15f4c64737810c690ec502703c");
-                    DragonHelpers.RemoveComponent<AddDamageResistancePhysical>(buff);
+                    try
+                    {
+                        DragonHelpers.RemoveComponent<AddDamageResistancePhysical>(buff);
+                    }
+                    catch
+                    {
+                        Main.log.Log("Error removing the DR component from Deadly Juggernaut, skipping that");
+                    }
                     var x = BuffConfigurator.For(buff);
                     if (ModCompat.tttbase)
                     {
