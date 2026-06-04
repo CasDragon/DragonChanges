@@ -38,7 +38,7 @@ namespace DragonChanges
             private static bool Initialized = false;
 
             [HarmonyPriority(Priority.Last)]
-            [HarmonyAfter("DragonLibrary")]
+            [HarmonyAfter("DragonLibrary", "MicroscopicContentExpansion")]
             [HarmonyPatch(nameof(BlueprintsCache.Init)), HarmonyPostfix]
             public static void Init_Postfix()
             {
