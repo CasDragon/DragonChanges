@@ -2,7 +2,7 @@
 	<Import Project="$(SolutionDir)GamePath.props" Condition="Exists('$(SolutionDir)GamePath.props')" />
 
 	<PropertyGroup>
-		<TargetFramework>net481</TargetFramework>
+		<TargetFramework>net48</TargetFramework>
 		<AssemblyName>DragonChanges</AssemblyName>
 		<Description>DragonChanges</Description>
 		<Version>1.19.1</Version>
@@ -26,7 +26,8 @@
 		<Reference Include="$(WrathInstallDir)\Mods\TabletopTweaks-Core\TabletopTweaks-Core.dll" />
 		<Reference Include="$(WrathInstallDir)\Mods\TabletopTweaks-Base\TabletopTweaks-Base.dll" Publicize="true" />
 		<Reference Include="$(WrathInstallDir)\Mods\WrathScalingItemDCs\WrathScalingItemDCs.dll" />
-		<Reference Include="$(WrathInstallDir)\Mods\DragonLibrary\DragonLibrary.dll" Publicize="true" />
+		<Reference Include="$(WrathInstallDir)\Mods\DragonLibrary\DragonLibrary.dll" Publicize="true"/>
+		<Reference Include="$(WrathInstallDir)\Mods\DragonLibrary\BlueprintCore.dll" Publicize="true"/>
 	</ItemGroup>
 	<ItemGroup>
 		<None Remove="Icons\Abilities\*.png" />

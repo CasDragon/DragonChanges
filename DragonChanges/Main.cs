@@ -21,15 +21,9 @@ namespace DragonChanges
         {
             log = modEntry.Logger;
             entry = modEntry;
-            modEntry.OnGUI = OnGUI;
             HarmonyInstance = new Harmony(modEntry.Info.Id);
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
             return true;
-        }
-
-        public static void OnGUI(UnityModManager.ModEntry modEntry)
-        {
-
         }
 
         [HarmonyPatch(typeof(BlueprintsCache))]

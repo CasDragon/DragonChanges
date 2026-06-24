@@ -44,11 +44,11 @@ namespace DragonChanges.New_Archetypes.Juggernaut
                     .AddRecalculateOnStatChange(stat: StatType.Constitution);
                 try
                 {
-                    x.AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusStrength));
+                    x.AddTTTAddDamageResistancePhysical(value: ContextValues.Property(UnitProperty.StatBonusConstitution));
                 }
                 catch
                 {
-                    x.AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusStrength), usePool: false);
+                    x.AddDRComponent(stackable: true, value: ContextValues.Property(UnitProperty.StatBonusConstitution), usePool: false);
                 }
                 feat = x.Configure();
             }
