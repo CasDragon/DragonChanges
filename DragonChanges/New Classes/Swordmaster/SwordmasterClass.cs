@@ -42,7 +42,11 @@ namespace DragonChanges.New_Classes.Swordmaster
         }
         public static void ConfigureDummy()
         {
-            CharacterClassConfigurator.New(classprefix, classguid).Configure();
+            CharacterClassConfigurator.New(classprefix, classguid)
+                .SetLocalizedName(classname)
+                .SetLocalizedDescription(LocalizedStringHelper.disabledcontentstring)
+                .SetLocalizedDescriptionShort(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
         }
         public static BlueprintCharacterClass ConfigureCharacterClass(BlueprintProgression progression)
         {

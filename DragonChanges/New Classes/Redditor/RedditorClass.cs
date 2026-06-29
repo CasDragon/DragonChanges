@@ -51,7 +51,11 @@ namespace DragonChanges.New_Classes.Redditor
         }
         public static void ConfigureDummy()
         {
-            CharacterClassConfigurator.New(classprefix, classguid).Configure();
+            CharacterClassConfigurator.New(classprefix, classguid)
+                .SetLocalizedName(classname)
+                .SetLocalizedDescription(LocalizedStringHelper.disabledcontentstring)
+                .SetLocalizedDescriptionShort(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
         }
         public static void ConfigureCharacterClass(BlueprintProgression progression, BlueprintSpellbook spellbook = null)
         {

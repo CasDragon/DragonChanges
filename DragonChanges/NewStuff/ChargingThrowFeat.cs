@@ -5,11 +5,6 @@ using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonChanges.NewStuff
 {
@@ -34,13 +29,13 @@ namespace DragonChanges.NewStuff
             if (SettingsAction.GetSetting<bool>(settingName))
             {
                 Main.log.Log($"{feature} feature enabled, configuring");
-                BlueprintAbility x = ChargingThrow.ConfigureEnabled();
+                BlueprintAbility x = ChargingThrowAbiliy.ConfigureEnabled();
                 ConfigureEnabled(x);
             }
             else
             {
                 Main.log.Log($"{feature} disabled, configuring dummy");
-                ChargingThrow.ConfigureDummy();
+                ChargingThrowAbiliy.ConfigureDummy();
                 ConfigureDummy();
             }
         }

@@ -13,16 +13,16 @@ using BlueprintCore.Blueprints.References;
 
 namespace DragonChanges.NewAbilities
 {
-    internal class ChargingThrow
+    internal class ChargingThrowAbiliy
     {
         // edit
-        internal const string ability = "ChargingHurler";
-        internal const string abilityguid = Guids.chargingthrowability;
+        private const string ability = "ChargingHurler";
+        private const string abilityguid = Guids.chargingthrowability;
         // don't edit
         [DragonLocalizedString(abilityname, "Charging Hurler")]
-        internal const string abilityname = $"{ability}.name";
+        private const string abilityname = $"{ability}.name";
         [DragonLocalizedString(abilitydescription, "You can use the charge rules to make a thrown weapon attack. All the parameters of a charge apply, except that you must only move closer to your opponent, and you must end your movement within 30 feet of that opponent. If you do, you can make a single thrown weapon attack against that opponent, gaining the +2 bonus on the attack roll and taking a –2 penalty to your AC until the start of your next turn.")]
-        internal const string abilitydescription = $"{ability}.description";
+        private const string abilitydescription = $"{ability}.description";
         public static BlueprintAbility ConfigureDummy()
         {
             return AbilityConfigurator.New(ability, abilityguid)
@@ -44,7 +44,7 @@ namespace DragonChanges.NewAbilities
                 .AddAbilityIsFullRoundInTurnBased(fullRoundIfTurnBased: true)
                 .AddAbilityRequirementCanMove()
                 .AddHideDCFromTooltip()
-                .SetIcon(AbilityRefs.ChargeAbility.Reference.Get().Icon)
+                .SetIcon(AbilityRefs.ChargeAbility.Reference.Get().Icon!)
                 .SetType(AbilityType.Physical)
                 .SetRange(AbilityRange.DoubleMove)
                 .SetCanTargetPoint(false)

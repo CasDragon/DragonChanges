@@ -19,7 +19,9 @@ namespace DragonChanges.New_Classes.Redditor
         internal static string spellbookperday = $"{spellbook}.perday";
         public static void ConfigureDummy()
         {
-            SpellbookConfigurator.New(spellbook, spellbookguid).Configure();
+            SpellbookConfigurator.New(spellbook, spellbookguid)
+                .SetName(spellbookname)
+                .Configure();
             SpellsTableConfigurator.New(spellbookperday, spellsperdayguid).Configure();
         }
         public static BlueprintSpellbook Configure()

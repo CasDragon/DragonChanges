@@ -46,7 +46,7 @@ namespace DragonChanges
                     Initialized = true;
 
                     log.Log("Getting mod folder path for localization ");
-                    string modfolder = new FileInfo(entry.Assembly.Location).Directory.FullName;
+                    string modfolder = new FileInfo(entry.Assembly.Location).Directory!.FullName;
                     log.Log("Creating localization file");
                     LocalizedStringHelper.CreateLocalizationFile(modfolder, entry);
                     LocalizationTool.LoadLocalizationPacks(
