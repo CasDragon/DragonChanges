@@ -1,4 +1,5 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
@@ -45,7 +46,7 @@ namespace DragonChanges.NewStuff
                 icon = MicroAssetUtil.GetAssemblyResourceSprite("Deities.RadiantPrism2.png");
             AlignmentMaskType alignments = AlignmentMaskType.Good | AlignmentMaskType.TrueNeutral | AlignmentMaskType.NeutralGood |
                 AlignmentMaskType.ChaoticGood | AlignmentMaskType.ChaoticNeutral;
-            FeatureConfigurator.New(feature, featureguid)
+            var x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurename)
                 .SetDescription(featuredescription)
                 .AddPrerequisiteAlignment(group: Prerequisite.GroupType.All,
@@ -148,10 +149,13 @@ namespace DragonChanges.NewStuff
                     DeityNonsense.SeparatistAllowed.WaterDomainAllowedSeparatist,
                     DeityNonsense.SeparatistAllowed.WeatherDomainAllowedSeparatist,
                     DeityNonsense.SeparatistAllowed.ScalykindDomainAllowedSeparatist])
-                .SetGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Deities)
+                //.SetGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Deities)
                 .SetRanks(1)
                 .SetIsClassFeature(true)
                 .SetIcon(icon)
+                .Configure();
+            FeatureSelectionConfigurator.For(FeatureSelectionRefs.DeitySelection)
+                .AddToAllFeatures([x])
                 .Configure();
         }
     }
