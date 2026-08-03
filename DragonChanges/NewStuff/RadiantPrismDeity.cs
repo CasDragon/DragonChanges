@@ -1,8 +1,10 @@
-﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+﻿using BlueprintCore.Blueprints.Configurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes.Prerequisites;
 using Kingmaker.UnitLogic.Alignments;
 using UnityEngine;
@@ -156,6 +158,10 @@ namespace DragonChanges.NewStuff
                 .Configure();
             FeatureSelectionConfigurator.For(FeatureSelectionRefs.DeitySelection)
                 .AddToAllFeatures([x])
+                .Configure();
+            CharacterClassConfigurator.For(CharacterClassRefs.PaladinClass)
+                .EditComponent<PrerequisiteFeaturesFromList>(c => 
+                    c.m_Features = [.. c.m_Features, x.ToReference<BlueprintFeatureReference>()])
                 .Configure();
         }
     }
