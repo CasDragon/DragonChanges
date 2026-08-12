@@ -217,11 +217,11 @@ namespace DragonChanges.Utils
         internal const string presenceofmind = "897aca67-11e7-4930-8b9a-b04b1a1b86d1";
         internal const string drakecavarchetype = "d54cc08e-3a0c-4a21-a085-66c59185172c";
         internal const string LimitlessSwordOfHeaven = "e6bf7d74-4b20-46a3-b56e-f449ce995514";
-        internal const string guid14 = "f18864ce-f29a-4a26-8c18-b42b8a6c962d";
-        internal const string guid15 = "81b59454-c59d-440a-8724-d3125794d041";
-        internal const string guid16 = "27b221ce-03ec-417f-af8d-02ee4ff0550a";
-        internal const string guid17 = "3ddbe40c-653d-4d53-bbc4-2a593a594eff";
-        internal const string guid18 = "98b189a4-c8c2-4540-b8be-3665bf183fde";
+        internal const string CastingStatToDCFeature = "f18864ce-f29a-4a26-8c18-b42b8a6c962d";
+        internal const string CastingStatToDamageFeature = "81b59454-c59d-440a-8724-d3125794d041";
+        internal const string AcidRay = "27b221ce-03ec-417f-af8d-02ee4ff0550a";
+        internal const string ElectricRay = "3ddbe40c-653d-4d53-bbc4-2a593a594eff";
+        internal const string ColdRay = "98b189a4-c8c2-4540-b8be-3665bf183fde";
         internal const string guid19 = "68e1d6e0-4cee-4b67-8a46-c9ccea51d381";
         internal const string guid20 = "5a116f0a-9f1a-43de-ae04-35276e9fa163";
         internal const string guid21 = "9cc2cb93-b1fb-4d02-baef-9c79cc6e7ebd";
