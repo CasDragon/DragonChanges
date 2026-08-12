@@ -67,7 +67,7 @@ public class ColdRay
                     MetamagicExtention.CustomMetamagic.ElementalCold | MetamagicExtention.CustomMetamagic.ElementalElectricity |
                     MetamagicExtention.CustomMetamagic.ElementalFire | MetamagicExtention.CustomMetamagic.Flaring);
             }
-            string spritepath = "Abilities.HeavenFireRay.png";
+            string spritepath = "Abilities.HellIceRay.png";
             //if (SettingsAction.GetSetting<bool>("darthicons"))
             //    spritepath = "Darth.HeavenfireRay.png";
             ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount));

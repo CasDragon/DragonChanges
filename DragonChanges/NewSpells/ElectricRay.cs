@@ -27,7 +27,7 @@ public class ElectricRay
         internal const string spellguid = Guids.ElectricRay;
         internal const string settingName = "elementalray";
         // don't edit
-        [DragonLocalizedString(spellname, "Hellacid Ray")]
+        [DragonLocalizedString(spellname, "Hellshock Ray")]
         internal const string spellname = $"{spell}.name";
         [DragonLocalizedString(spelldescription, sdescription)]
         internal const string spelldescription = $"{spell}.description";
@@ -67,7 +67,7 @@ public class ElectricRay
                     MetamagicExtention.CustomMetamagic.ElementalCold | MetamagicExtention.CustomMetamagic.ElementalElectricity |
                     MetamagicExtention.CustomMetamagic.ElementalFire | MetamagicExtention.CustomMetamagic.Flaring);
             }
-            string spritepath = "Abilities.HeavenFireRay.png";
+            string spritepath = "Abilities.HellShockRay.png";
             //if (SettingsAction.GetSetting<bool>("darthicons"))
             //    spritepath = "Darth.HeavenfireRay.png";
             ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount));

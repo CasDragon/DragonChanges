@@ -38,7 +38,7 @@ namespace DragonChanges.NewStuff
                 .SetDescription(featuredescriptionkey)
                 .AddIncreaseAllSpellsDC(descriptor: Kingmaker.Enums.ModifierDescriptor.UntypedStackable, spellsOnly: true,
                     value: ContextValues.Constant(4))
-                .AddToGroups(FeatureGroup.Feat)
+                .AddToGroups(FeatureGroup.Feat, FeatureGroup.WizardFeat)
                 .AddRecommendationRequiresSpellbook()
                 .AddFeatureTagsComponent(FeatureTag.Magic)
                 .AddPrerequisiteFeature(prereq)
