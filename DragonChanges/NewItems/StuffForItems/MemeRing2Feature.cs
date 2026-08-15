@@ -1,9 +1,8 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using DragonChanges.New_Components;
+using DragonChanges.New_Components.RedditorComponents;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Enums;
 
 namespace DragonChanges.NewItems.StuffForItems
 {

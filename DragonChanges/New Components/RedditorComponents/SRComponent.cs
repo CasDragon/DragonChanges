@@ -8,7 +8,7 @@ using Kingmaker.UnitLogic.FactLogic;
 using Kingmaker.UnitLogic.Parts;
 using Kingmaker.Utility;
 
-namespace DragonChanges.New_Components
+namespace DragonChanges.New_Components.RedditorComponents
 {
     [AllowedOn(typeof(BlueprintFact), false)]
     [TypeId("4CA4807D-DD7B-4CCB-A495-69F12E5EF676")]
@@ -30,10 +30,10 @@ namespace DragonChanges.New_Components
             //ContextValue value = Value;
             //IFactContextOwner factContextOwner = base.Fact as IFactContextOwner;
             //int num = value.Calculate((factContextOwner != null) ? factContextOwner.Context : null);
-            int num = base.Owner.Stats.GetStat(Stat).CalculatePermanentValue() / 2 - 5;
+            int num = Owner.Stats.GetStat(Stat).CalculatePermanentValue() / 2 - 5;
             if (AddCR)
             {
-                Experience component = base.Owner.Blueprint.GetComponent<Experience>();
+                Experience component = Owner.Blueprint.GetComponent<Experience>()!;
                 if (component)
                 {
                     num += component.CR;
@@ -41,40 +41,36 @@ namespace DragonChanges.New_Components
             }
             if (AddBonusToResistance)
             {
-                base.Data.AppliedId = new int?(base.Owner.Ensure<UnitPartSpellResistance>().SetBonus(num));
-                base.Data.AppliedId = new int?(base.Owner.Ensure<UnitPartSpellResistance>().AddResistance(0, base.Fact.UniqueId, null, null, null));
+                Data.AppliedId = Owner.Ensure<UnitPartSpellResistance>().SetBonus(num);
+                Data.AppliedId = Owner.Ensure<UnitPartSpellResistance>().AddResistance(0, Fact.UniqueId, null, null, null);
                 return;
             }
             if (!AllSpellResistancePenaltyDoNotUse)
             {
-                base.Data.AppliedId = new int?(base.Owner.Ensure<UnitPartSpellResistance>().AddResistance(num, base.Fact.UniqueId, null, null, null));
+                Data.AppliedId = Owner.Ensure<UnitPartSpellResistance>().AddResistance(num, Fact.UniqueId, null, null, null);
                 return;
             }
-            base.Owner.Ensure<UnitPartSpellResistance>().SetAllSRPenalty(num);
+            Owner.Ensure<UnitPartSpellResistance>().SetAllSRPenalty(num);
         }
         public override void OnTurnOff()
         {
             if (AddBonusToResistance && base.Data.AppliedId != null)
             {
-                base.Owner.Ensure<UnitPartSpellResistance>().RemoveBonus(base.Data.AppliedId.Value);
+                Owner.Ensure<UnitPartSpellResistance>().RemoveBonus(base.Data.AppliedId.Value);
                 return;
             }
             if (!AllSpellResistancePenaltyDoNotUse)
             {
                 if (base.Data.AppliedId != null)
                 {
-                    UnitPartSpellResistance unitPartSpellResistance = base.Owner.Get<UnitPartSpellResistance>();
-                    if (unitPartSpellResistance != null)
-                    {
-                        unitPartSpellResistance.Remove(base.Data.AppliedId.Value);
-                    }
-                    base.Data.AppliedId = null;
-                    return;
+                    UnitPartSpellResistance? unitPartSpellResistance = Owner.Get<UnitPartSpellResistance>();
+                    unitPartSpellResistance?.Remove(Data.AppliedId.Value);
+                    Data.AppliedId = null;
                 }
             }
             else
             {
-                base.Owner.Ensure<UnitPartSpellResistance>().SetAllSRPenalty(0);
+                Owner.Ensure<UnitPartSpellResistance>().SetAllSRPenalty(0);
             }
         }
         public class ComponentData

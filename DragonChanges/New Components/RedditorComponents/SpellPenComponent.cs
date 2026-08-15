@@ -7,7 +7,7 @@ using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic;
 
-namespace DragonChanges.New_Components
+namespace DragonChanges.New_Components.RedditorComponents
 {
     [AllowedOn(typeof(BlueprintUnitFact), false)]
     [TypeId("d3942470-7eff-4819-b12d-73072e9d7581")]
@@ -23,20 +23,16 @@ namespace DragonChanges.New_Components
             get
             {
                 BlueprintUnitFactReference requiredFact = m_RequiredFact;
-                if (requiredFact == null)
-                {
-                    return null;
-                }
-                return requiredFact.Get();
+                return requiredFact == null ? null : requiredFact.Get();
             }
         }
         public void OnEventAboutToTrigger(RuleSpellResistanceCheck evt)
         {
-            if (!this.CheckFact || evt.Initiator.Descriptor.HasFact(this.RequiredFact))
+            if (!CheckFact || evt.Initiator.Descriptor.HasFact(RequiredFact))
             {
-                int statPermanent = base.Owner.Stats.GetStat(stat).CalculatePermanentValue();
+                int statPermanent = Owner.Stats.GetStat(stat).CalculatePermanentValue();
                 int num = statPermanent / 2 - 5;
-                evt.AddSpellPenetration(num, this.Descriptor);
+                evt.AddSpellPenetration(num, Descriptor);
             }
         }
         public void OnEventDidTrigger(RuleSpellResistanceCheck evt)

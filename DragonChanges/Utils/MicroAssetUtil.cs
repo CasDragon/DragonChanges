@@ -1,9 +1,5 @@
 ﻿using Kingmaker.Blueprints.JsonSystem.Converters;
 using Kingmaker.Blueprints;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
 using UnityEngine;
@@ -11,7 +7,7 @@ using DragonLibrary.Utils;
 
 namespace DragonChanges.Utils
 {
-    internal class MicroAssetUtil
+    internal static class MicroAssetUtil
     {
         public static Sprite GetAssemblyResourceSprite(string name) =>
             GetSpriteAssemblyResource(Assembly.GetExecutingAssembly(), $"{nameof(DragonChanges)}.Icons.{name}")!;
@@ -113,26 +109,24 @@ namespace DragonChanges.Utils
         /// <exclude />
         static AssetBundle LoadBundleFromResource(string name)
         {
-            if (!loadedBundles.ContainsKey(name))
+            if (loadedBundles.ContainsKey(name)) return loadedBundles[name];
+            using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(name);
+
+            if (stream is null)
             {
-                using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(name);
+                var sb = new StringBuilder();
+                sb.AppendLine($"No resource with name {name}");
+                sb.AppendLine($"Assembly resource names:");
 
-                if (stream is null)
+                foreach (var n in Assembly.GetExecutingAssembly().GetManifestResourceNames())
                 {
-                    var sb = new StringBuilder();
-                    sb.AppendLine($"No resource with name {name}");
-                    sb.AppendLine($"Assembly resource names:");
-
-                    foreach (var n in Assembly.GetExecutingAssembly().GetManifestResourceNames())
-                    {
-                        sb.AppendLine($"  {n}");
-                    }
-
-                    throw new ArgumentException(sb.ToString());
+                    sb.AppendLine($"  {n}");
                 }
 
-                loadedBundles[name] = AssetBundle.LoadFromStream(stream);
+                throw new ArgumentException(sb.ToString());
             }
+
+            loadedBundles[name] = AssetBundle.LoadFromStream(stream);
 
             return loadedBundles[name];
         }

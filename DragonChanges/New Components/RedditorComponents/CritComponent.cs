@@ -6,7 +6,7 @@ using Kingmaker.PubSubSystem;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic;
 
-namespace DragonChanges.New_Components
+namespace DragonChanges.New_Components.RedditorComponents
 {
     [AllowedOn(typeof(BlueprintFact), false)]
     [TypeId("CE9B8477-90C8-4D9A-8626-A00F432C4B7B")]

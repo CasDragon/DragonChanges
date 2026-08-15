@@ -1,17 +1,13 @@
-﻿using System;
-using Kingmaker.Blueprints;
+﻿using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Facts;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.Enums.Damage;
 using Kingmaker.Items;
 using Kingmaker.RuleSystem.Rules.Damage;
-using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.FactLogic;
-using Kingmaker.UnitLogic.Mechanics;
 using UnityEngine;
 
-namespace DragonChanges.New_Components
+namespace DragonChanges.New_Components.RedditorComponents
 {
     [AllowedOn(typeof(BlueprintFact), false)]
     [AllowedOn(typeof(BlueprintUnitFact), false)]
@@ -34,15 +30,9 @@ namespace DragonChanges.New_Components
         public override int CalculateValue(AddDamageResistanceBase.ComponentRuntime runtime)
         {
             int x = runtime.Owner.Stats.GetStat(this.Stat).CalculatePermanentValue() / 2 - 5;
-            x *= this.Multiplier;
+            x *= Multiplier;
             return x;
         }
-        public override bool IsStackable
-        {
-            get
-            {
-                return this.m_IsStackable;
-            }
-        }
+        public override bool IsStackable => m_IsStackable;
     }
 }
