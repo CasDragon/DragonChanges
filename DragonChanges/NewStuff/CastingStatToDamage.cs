@@ -14,7 +14,7 @@ public class CastingStatToDamage
     // edit
     internal const string feature = "SpellcasterDelights-Damage";
     internal const string featureguid = Guids.CastingStatToDamageFeature;
-    internal const string settingName = "spellcasterdelightsdamage";
+    internal const string settingName = "spellcasterdelights";
     internal const string featurename = "Spellcaster Delights - Damage";
     internal const string featuredescription = "Your spells become even more powerful. Adds your spellcasting attribute bonus to your spell's damage.";
     // don't edit
