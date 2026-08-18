@@ -2,9 +2,11 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Classes.Prerequisites;
 using Kingmaker.UnitLogic.Alignments;
 using UnityEngine;
@@ -151,18 +153,30 @@ namespace DragonChanges.NewStuff
                     DeityNonsense.SeparatistAllowed.WaterDomainAllowedSeparatist,
                     DeityNonsense.SeparatistAllowed.WeatherDomainAllowedSeparatist,
                     DeityNonsense.SeparatistAllowed.ScalykindDomainAllowedSeparatist])
-                //.SetGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Deities)
+                .SetGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Deities)
                 .SetRanks(1)
                 .SetIsClassFeature(true)
                 .SetIcon(icon)
                 .Configure();
-            FeatureSelectionConfigurator.For(FeatureSelectionRefs.DeitySelection)
+            /*FeatureSelectionConfigurator.For(FeatureSelectionRefs.DeitySelection)
                 .AddToAllFeatures([x])
                 .Configure();
             CharacterClassConfigurator.For(CharacterClassRefs.PaladinClass)
                 .EditComponent<PrerequisiteFeaturesFromList>(c => 
                     c.m_Features = [.. c.m_Features, x.ToReference<BlueprintFeatureReference>()])
-                .Configure();
+                .Configure();*/
+            var pala = CharacterClassRefs.PaladinClass.Reference.Get();
+            var comp = pala.GetComponent<PrerequisiteFeaturesFromList>();
+            BlueprintFeatureReference[] feats = [.. comp!.m_Features, x.ToReference<BlueprintFeatureReference>()];
+            var newcomp = new PrerequisiteFeaturesFromList
+            {
+                HideInUI = true,
+                Group = Prerequisite.GroupType.All,
+                m_Features = [.. feats.OrderBy(f => f.NameSafe())]
+            };
+            DragonHelpers.RemoveComponent<PrerequisiteFeaturesFromList>(pala);
+            pala.AddComponents(newcomp);
+            
         }
     }
 }
