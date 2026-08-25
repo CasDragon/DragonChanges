@@ -93,31 +93,15 @@ namespace DragonChanges.Content
                     .Configure();
                 if (ModCompat.tttbase)
                 {
-                    AnimalAllyCompat.AddToAnimalAlly(hippo);
+                    FeatureSelectionConfigurator.For("d9b99d9c48d2425894b565733e96c7e3")
+                        .AddToAllFeatures(hippo)
+                        .Configure();
+                    FeatureSelectionConfigurator.For("ecf97b544d584edb8bb0ba9e7de20751")
+                        .AddToAllFeatures(hippo)
+                        .Configure();
                 }
             }
         }
-
-        [DragonConfigure]
-        public static void PatchTriceratopsAnimalAlly()
-        {
-            if (!ModCompat.tttbase)
-                return;
-
-            BlueprintFeature triceratops = AnimalAllyCompat.FindByBlueprintName(
-                FeatureSelectionRefs.AnimalCompanionSelectionDruid.Reference.Get(),
-                "Triceratops");
-
-            if (triceratops == null)
-            {
-                Main.log.Log("Animal Ally compatibility: Triceratops was not found in the Druid companion selection; skipping");
-                return;
-            }
-
-            Main.log.Log("Adding Triceratops to Tabletop Tweaks Animal Ally");
-            AnimalAllyCompat.AddToAnimalAlly(triceratops);
-        }
-
         const string codsettingname = "carrierofdisease";
         const string codsettingdescription = "Adds the Plague hex to Extra Hex and regular Hex selections for Shaman";
         [DragonConfigure]

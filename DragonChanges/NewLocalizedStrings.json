@@ -1,1145 +1,1146 @@
-[
+﻿[
     {
         "Key": "ChaToDamage.Name",
         "ProcessTemplates": false,
-        "enGB": "Redditor Damage"
+        "enGB": "Redditor Damage",
+        "esES": "Daño de Redditor"
     },
-
     {
         "Key": "ChaToDamage.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his damage."
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his damage.",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a su daño."
     },
-
     {
         "Key": "ChaToBAB.Name",
         "ProcessTemplates": false,
-        "enGB": "Redditor BAB"
+        "enGB": "Redditor BAB",
+        "esES": "BBA de Redditor"
     },
-
     {
         "Key": "ChaToBAB.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:BaseAttackBonus}Base Attack Bonus{/g}."
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:BaseAttackBonus}Base Attack Bonus{/g}.",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a su {g|Encyclopedia:BaseAttackBonus}bonificador de ataque base{/g}."
     },
-
     {
         "Key": "ChaToCrit.Name",
         "ProcessTemplates": false,
-        "enGB": "Redditor Critical"
+        "enGB": "Redditor Critical",
+        "esES": "Crítico de Redditor"
     },
-
     {
         "Key": "ChaToCrit.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Critical bonus."
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Critical bonus.",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a su bonificador de crítico."
     },
-
     {
         "Key": "ChaToSR.Name",
         "ProcessTemplates": false,
-        "enGB": "Redditor Spell Resistance"
+        "enGB": "Redditor Spell Resistance",
+        "esES": "Resistencia a conjuros de Redditor"
     },
-
     {
         "Key": "ChaToSR.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Resistance."
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Resistance.",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a su resistencia a conjuros."
     },
-
     {
         "Key": "ChaToDR.Name",
         "ProcessTemplates": false,
-        "enGB": "Redditor Damage Reduction"
+        "enGB": "Redditor Damage Reduction",
+        "esES": "Reducción de daño de Redditor"
     },
-
     {
         "Key": "ChaToDR.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Damage Reduction."
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Damage Reduction.",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a su reducción de daño."
     },
-
     {
         "Key": "ChaToSpellPen.Name",
         "ProcessTemplates": false,
-        "enGB": "Redditor Spell Penetration"
+        "enGB": "Redditor Spell Penetration",
+        "esES": "Penetración de conjuros de Redditor"
     },
-
     {
         "Key": "ChaToSpellPen.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Penetration. "
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his Spell Penetration. ",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a su penetración de conjuros."
     },
-
     {
         "Key": "ChaToSpellDC.Name",
         "ProcessTemplates": false,
-        "enGB": "Redditor Spell DC"
+        "enGB": "Redditor Spell DC",
+        "esES": "CD de conjuros de Redditor"
     },
-
     {
         "Key": "ChaToSpellDC.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his spell's DC. "
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his spell's DC. ",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a la CD de sus conjuros."
     },
-
     {
         "Key": "ChaToChaCap.Name",
         "ProcessTemplates": false,
-        "enGB": "Reddit Moderator Charisma"
+        "enGB": "Reddit Moderator Charisma",
+        "esES": "Carisma de moderador de Reddit"
     },
-
     {
         "Key": "ChaToChaCap.Description",
-        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}, again!."
+        "enGB": "The Redditor adds his {g|Encyclopedia:Charisma}Charisma{/g} bonus (if any) to his {g|Encyclopedia:Charisma}Charisma{/g}, again!.",
+        "esES": "El Redditor añade su bonificador de {g|Encyclopedia:Charisma}Carisma{/g} (si tiene alguno) a su {g|Encyclopedia:Charisma}Carisma{/g}, ¡otra vez!"
     },
-
     {
         "Key": "redditor.spellbook.name",
         "ProcessTemplates": false,
-        "enGB": "Redditor Spell Book"
+        "enGB": "Redditor Spell Book",
+        "esES": "Libro de conjuros de Redditor"
     },
-
     {
         "Key": "swordmaster.class.name",
         "ProcessTemplates": false,
-        "enGB": "Swordmaster (WIP)"
+        "enGB": "Swordmaster (WIP)",
+        "esES": "Maestro de la espada (WIP)"
     },
-
     {
         "Key": "swordmaster.class.description",
-        "enGB": "TODO Swordmaster description"
+        "enGB": "TODO Swordmaster description",
+        "esES": "PENDIENTE: descripción del Maestro de la espada"
     },
-
     {
         "Key": "swordmaster.class.shortdescription",
-        "enGB": "TODO Swordmaster description"
+        "enGB": "TODO Swordmaster description",
+        "esES": "PENDIENTE: descripción del Maestro de la espada"
     },
-
     {
         "Key": "swordmaster.progression.name",
         "ProcessTemplates": false,
-        "enGB": "Swordmaster Progression"
+        "enGB": "Swordmaster Progression",
+        "esES": "Progresión del Maestro de la espada"
     },
-
     {
         "Key": "swordmaster.prociencies.name",
         "ProcessTemplates": false,
-        "enGB": "Swordmaster Proficiencies"
+        "enGB": "Swordmaster Proficiencies",
+        "esES": "Competencias del Maestro de la espada"
     },
-
     {
         "Key": "swordmaster.prociencies.description",
-        "enGB": "Swordmasters are proficient with all simpe and martial swords, plut the quarterstaff. They are proficient with light armor, but not with shields."
+        "enGB": "Swordmasters are proficient with all simpe and martial swords, plut the quarterstaff. They are proficient with light armor, but not with shields.",
+        "esES": "Los Maestros de la espada son competentes con todas las espadas simples y marciales, además del bastón. Son competentes con armaduras ligeras, pero no con escudos."
     },
-
     {
         "Key": "PowerfulWings.name",
         "ProcessTemplates": false,
-        "enGB": "Powerful Wings"
+        "enGB": "Powerful Wings",
+        "esES": "Alas poderosas"
     },
-
     {
         "Key": "PowerfulWings.description",
-        "enGB": "You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage "
+        "enGB": "You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage ",
+        "esES": "Obtienes dos ataques de ala. Son ataques naturales secundarios que infligen 2d8 de daño cada uno."
     },
-
     {
         "Key": "swordmaster-tengu.archetype.name",
         "ProcessTemplates": false,
-        "enGB": "Swordmaster"
+        "enGB": "Swordmaster",
+        "esES": "Maestro de la espada"
     },
-
     {
         "Key": "swordmaster-tengu.archetype.description",
-        "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
+        "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances.",
+        "esES": "Un maestro de la espada medita para fortalecer su conexión espiritual con su hoja. Busca perfeccionar sus habilidades dominando seis trances mortíferos."
     },
-
     {
         "Key": "swordmaster-tengu.archetype.shortdescription",
-        "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances."
+        "enGB": "A swordmaster meditates to strengthen her spiritual connection to her blade. She strives to perfect her skills by mastering six deadly trances.",
+        "esES": "Un maestro de la espada medita para fortalecer su conexión espiritual con su hoja. Busca perfeccionar sus habilidades dominando seis trances mortíferos."
     },
-
     {
         "Key": "TranceSelection.name",
         "ProcessTemplates": false,
-        "enGB": "Trance Selection"
+        "enGB": "Trance Selection",
+        "esES": "Selección de trance"
     },
-
     {
         "Key": "TranceSelection.description",
-        "enGB": "At 3rd level, the swordmaster chooses one trance from the list below. She chooses another trance at 6th, 9th, 12th, 15th, and 18th level. She can only use one type of trance at a time."
+        "enGB": "At 3rd level, the swordmaster chooses one trance from the list below. She chooses another trance at 6th, 9th, 12th, 15th, and 18th level. She can only use one type of trance at a time.",
+        "esES": "A nivel 3, el maestro de la espada elige un trance de la lista siguiente. Elige otro trance a los niveles 6, 9, 12, 15 y 18. Solo puede usar un tipo de trance a la vez."
     },
-
     {
         "Key": "CraneTrance.name",
         "ProcessTemplates": false,
-        "enGB": "Crane Trance"
+        "enGB": "Crane Trance",
+        "esES": "Trance de la grulla"
     },
-
     {
         "Key": "CraneTrance.description",
-        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat.",
+        "esES": "La hoja del maestro de la espada asciende y desciende con los elegantes arcos de una grulla de montaña. Mientras está en este trance, obtiene los beneficios de la dote Estilo de la grulla."
     },
-
     {
         "Key": "swordmaster-tengu.cranetrance.ability.name",
         "ProcessTemplates": false,
-        "enGB": "Crane Trance (Ability)"
+        "enGB": "Crane Trance (Ability)",
+        "esES": "Trance de la grulla (aptitud)"
     },
-
     {
         "Key": "swordmaster-tengu.cranetrance.ability.description",
-        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat.",
+        "esES": "La hoja del maestro de la espada asciende y desciende con los elegantes arcos de una grulla de montaña. Mientras está en este trance, obtiene los beneficios de la dote Estilo de la grulla."
     },
-
     {
         "Key": "swordmaster-tengu.cranetrance.buff.name",
         "ProcessTemplates": false,
-        "enGB": "Crane Trance Buff"
+        "enGB": "Crane Trance Buff",
+        "esES": "Trance de la grulla"
     },
-
     {
         "Key": "swordmaster-tengu.cranetrance.buff.description",
-        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat."
+        "enGB": "The swordmaster’s blade rises and falls with the graceful sweeping arcs of the mountain crane. When in this trance, a swordmaster gains the benefits of the Crane Style feat.",
+        "esES": "La hoja del maestro de la espada asciende y desciende con los elegantes arcos de una grulla de montaña. Mientras está en este trance, obtiene los beneficios de la dote Estilo de la grulla."
     },
-
     {
         "Key": "DragonTrance.name",
         "ProcessTemplates": false,
-        "enGB": "Dragon Trance"
+        "enGB": "Dragon Trance",
+        "esES": "Trance del dragón"
     },
-
     {
         "Key": "DragonTrance.description",
-        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat.",
+        "esES": "Como el dragón, el maestro de la espada ha perfeccionado la firmeza de su mente y su cuerpo. Mientras está en este trance, obtiene los beneficios de la dote Estilo del dragón."
     },
-
     {
         "Key": "swordmaster-tengu.dragontrance.ability.name",
         "ProcessTemplates": false,
-        "enGB": "Dragon Trance (Ability)"
+        "enGB": "Dragon Trance (Ability)",
+        "esES": "Trance del dragón (aptitud)"
     },
-
     {
         "Key": "swordmaster-tengu.dragontrance.ability.description",
-        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat.",
+        "esES": "Como el dragón, el maestro de la espada ha perfeccionado la firmeza de su mente y su cuerpo. Mientras está en este trance, obtiene los beneficios de la dote Estilo del dragón."
     },
-
     {
         "Key": "swordmaster-tengu.dragontrance.buff.name",
         "ProcessTemplates": false,
-        "enGB": "Dragon Trance Buff"
+        "enGB": "Dragon Trance Buff",
+        "esES": "Trance del dragón"
     },
-
     {
         "Key": "swordmaster-tengu.dragontrance.buff.description",
-        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat."
+        "enGB": "Like the dragon, the swordmaster has honed the steadiness of her mind and body. When in this trance, a swordmaster gains the benefits of the Dragon Style feat.",
+        "esES": "Como el dragón, el maestro de la espada ha perfeccionado la firmeza de su mente y su cuerpo. Mientras está en este trance, obtiene los beneficios de la dote Estilo del dragón."
     },
-
     {
         "Key": "LeopardTrance.name",
         "ProcessTemplates": false,
-        "enGB": "Leopard Trance"
+        "enGB": "Leopard Trance",
+        "esES": "Trance del leopardo"
     },
-
     {
         "Key": "LeopardTrance.description",
-        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat.",
+        "esES": "Valiéndose de la rapidez del leopardo, el juego de pies evasivo del maestro de la espada confunde a sus adversarios. Mientras está en este trance, obtiene los beneficios de la dote Movilidad."
     },
-
     {
         "Key": "swordmaster-tengu.leopardtrance.ability.name",
         "ProcessTemplates": false,
-        "enGB": "Leopard Trance (Ability)"
+        "enGB": "Leopard Trance (Ability)",
+        "esES": "Trance del leopardo (aptitud)"
     },
-
     {
         "Key": "swordmaster-tengu.leopardtrance.ability.description",
-        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat.",
+        "esES": "Valiéndose de la rapidez del leopardo, el juego de pies evasivo del maestro de la espada confunde a sus adversarios. Mientras está en este trance, obtiene los beneficios de la dote Movilidad."
     },
-
     {
         "Key": "swordmaster-tengu.leopardtrance.buff.name",
         "ProcessTemplates": false,
-        "enGB": "Leopard Trance Buff"
+        "enGB": "Leopard Trance Buff",
+        "esES": "Trance del leopardo"
     },
-
     {
         "Key": "swordmaster-tengu.leopardtrance.buff.description",
-        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat."
+        "enGB": "Using the swiftness of the leopard, a swordmaster’s evasive footwork confuses her opponents. When in this trance, a swordmaster gains the benefits of the Mobility feat.",
+        "esES": "Valiéndose de la rapidez del leopardo, el juego de pies evasivo del maestro de la espada confunde a sus adversarios. Mientras está en este trance, obtiene los beneficios de la dote Movilidad."
     },
-
     {
         "Key": "MonkeyTrance.name",
         "ProcessTemplates": false,
-        "enGB": "Monkey Trance"
+        "enGB": "Monkey Trance",
+        "esES": "Trance del mono"
     },
-
     {
         "Key": "MonkeyTrance.description",
-        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
+        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat.",
+        "esES": "Como el mono al saltar, el maestro de la espada se escapa del alcance de sus enemigos. Mientras está en este trance, obtiene los beneficios de las dotes Derribo y Caída de la furia."
     },
-
     {
         "Key": "swordmaster-tengu.monkeytrance.ability.name",
         "ProcessTemplates": false,
-        "enGB": "Monkey Trance (Ability)"
+        "enGB": "Monkey Trance (Ability)",
+        "esES": "Trance del mono (aptitud)"
     },
-
     {
         "Key": "swordmaster-tengu.monkeytrance.ability.description",
-        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
+        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat.",
+        "esES": "Como el mono al saltar, el maestro de la espada se escapa del alcance de sus enemigos. Mientras está en este trance, obtiene los beneficios de las dotes Derribo y Caída de la furia."
     },
-
     {
         "Key": "swordmaster-tengu.monkeytrance.buff.name",
         "ProcessTemplates": false,
-        "enGB": "Monkey Trance Buff"
+        "enGB": "Monkey Trance Buff",
+        "esES": "Trance del mono"
     },
-
     {
         "Key": "swordmaster-tengu.monkeytrance.buff.description",
-        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat."
+        "enGB": "As the monkey springs, the swordmaster leaps from the reach of her enemies. While in this trance, a swordmaster gains the benefits of the Trip feat and Fury's Fall feat.",
+        "esES": "Como el mono al saltar, el maestro de la espada se escapa del alcance de sus enemigos. Mientras está en este trance, obtiene los beneficios de las dotes Derribo y Caída de la furia."
     },
-
     {
         "Key": "SerpentTrance.name",
         "ProcessTemplates": false,
-        "enGB": "Serpent Trance"
+        "enGB": "Serpent Trance",
+        "esES": "Trance de la serpiente"
     },
-
     {
         "Key": "SerpentTrance.description",
-        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
+        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint.",
+        "esES": "Como la serpiente, los rápidos movimientos del maestro de la espada le permiten pillar desprevenido a su oponente. Mientras está en este trance, obtiene los beneficios de la dote Finta y un bonificador +4 a Finta."
     },
-
     {
         "Key": "swordmaster-tengu.serpenttrance.ability.name",
         "ProcessTemplates": false,
-        "enGB": "Serpent Trance (Ability)"
+        "enGB": "Serpent Trance (Ability)",
+        "esES": "Trance de la serpiente (aptitud)"
     },
-
     {
         "Key": "swordmaster-tengu.serpenttrance.ability.description",
-        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
+        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint.",
+        "esES": "Como la serpiente, los rápidos movimientos del maestro de la espada le permiten pillar desprevenido a su oponente. Mientras está en este trance, obtiene los beneficios de la dote Finta y un bonificador +4 a Finta."
     },
-
     {
         "Key": "swordmaster-tengu.serpenttrance.buff.name",
         "ProcessTemplates": false,
-        "enGB": "Serpent Trance Buff"
+        "enGB": "Serpent Trance Buff",
+        "esES": "Trance de la serpiente"
     },
-
     {
         "Key": "swordmaster-tengu.serpenttrance.buff.description",
-        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint."
+        "enGB": "Like the serpent, the swordmaster’s quick movements allow her to catch her opponent unawares. While in this trance, a swordmaster gains the benefits of the Feint feat with a +4 bonus to Feint.",
+        "esES": "Como la serpiente, los rápidos movimientos del maestro de la espada le permiten pillar desprevenido a su oponente. Mientras está en este trance, obtiene los beneficios de la dote Finta y un bonificador +4 a Finta."
     },
-
     {
         "Key": "TigerTrance.name",
         "ProcessTemplates": false,
-        "enGB": "Tiger Trance"
+        "enGB": "Tiger Trance",
+        "esES": "Trance del tigre"
     },
-
     {
         "Key": "TigerTrance.description",
-        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
+        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat.",
+        "esES": "El maestro de la espada se abalanza sobre sus oponentes, golpeando con la ferocidad y la fuerza bruta de un tigre salvaje. Mientras está en este trance, obtiene los beneficios de la aptitud Abalanzarse."
     },
-
     {
         "Key": "swordmaster-tengu.tigertrance.ability.name",
         "ProcessTemplates": false,
-        "enGB": "Tiger Trance (Ability)"
+        "enGB": "Tiger Trance (Ability)",
+        "esES": "Trance del tigre (aptitud)"
     },
-
     {
         "Key": "swordmaster-tengu.tigertrance.ability.description",
-        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
+        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat.",
+        "esES": "El maestro de la espada se abalanza sobre sus oponentes, golpeando con la ferocidad y la fuerza bruta de un tigre salvaje. Mientras está en este trance, obtiene los beneficios de la aptitud Abalanzarse."
     },
-
     {
         "Key": "swordmaster-tengu.tigertrance.buff.name",
         "ProcessTemplates": false,
-        "enGB": "Tiger Trance Buff"
+        "enGB": "Tiger Trance Buff",
+        "esES": "Trance del tigre"
     },
-
     {
         "Key": "swordmaster-tengu.tigertrance.buff.description",
-        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat."
+        "enGB": "The swordmaster pounces upon her opponents, striking with the ferocity and brute force of a wild tiger. While in this trance, a swordmaster gains the benefits of the Pounce feat.",
+        "esES": "El maestro de la espada se abalanza sobre sus oponentes, golpeando con la ferocidad y la fuerza bruta de un tigre salvaje. Mientras está en este trance, obtiene los beneficios de la aptitud Abalanzarse."
     },
-
     {
         "Key": "Wanderer.name",
         "ProcessTemplates": false,
-        "enGB": "Cursed (lycanthropy)"
+        "enGB": "Cursed (lycanthropy)",
+        "esES": "Maldito (licantropía)"
     },
-
     {
         "Key": "Wanderer.description",
-        "enGB": "Adds Perception and Mobility to list of class skills. She also is able to use her curse to qualify for feats that require lycanthropy. (Such as Aspect of the Beast, from Homebrew Archetypes.)"
+        "enGB": "Adds Perception and Mobility to list of class skills. She also is able to use her curse to qualify for feats that require lycanthropy. (Such as Aspect of the Beast, from Homebrew Archetypes.)",
+        "esES": "Añade Percepción y Movilidad a la lista de habilidades de clase. También puede usar su maldición para cumplir los requisitos de dotes que exijan licantropía (como Aspecto de la bestia, de Homebrew Archetypes)."
     },
-
     {
         "Key": "TranceMaster.name",
         "ProcessTemplates": false,
-        "enGB": "Trance Master"
+        "enGB": "Trance Master",
+        "esES": "Maestro del trance"
     },
-
     {
         "Key": "TranceMaster.description",
-        "enGB": "Allows the Swordmaster to enter 2 trances at a time"
+        "enGB": "Allows the Swordmaster to enter 2 trances at a time",
+        "esES": "Permite al Maestro de la espada entrar en 2 trances a la vez."
     },
-
     {
         "Key": "AutoMaximize.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Maximize"
+        "enGB": "Auto-Maximize",
+        "esES": "Auto-Maximizar"
     },
-
     {
         "Key": "AutoMaximize.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoMaximize-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Maximize"
+        "enGB": "Auto-Maximize",
+        "esES": "Auto-Maximizar"
     },
-
     {
         "Key": "AutoMaximize-ability.description",
-        "enGB": "Enable to apply Maximize metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Maximize metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Maximizar a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoMaximize-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Maximize"
+        "enGB": "Auto-Maximize",
+        "esES": "Auto-Maximizar"
     },
-
     {
         "Key": "AutoMaximize-buff.description",
-        "enGB": "Spells will have Maximize metamagic applied to them"
+        "enGB": "Spells will have Maximize metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Maximizar."
     },
-
     {
         "Key": "AutoExtend.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Extend"
+        "enGB": "Auto-Extend",
+        "esES": "Auto-Prolongar"
     },
-
     {
         "Key": "AutoExtend.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoExtend-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Extend"
+        "enGB": "Auto-Extend",
+        "esES": "Auto-Prolongar"
     },
-
     {
         "Key": "AutoExtend-ability.description",
-        "enGB": "Enable to apply Extend metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Extend metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Prolongar a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoExtend-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Extend"
+        "enGB": "Auto-Extend",
+        "esES": "Auto-Prolongar"
     },
-
     {
         "Key": "AutoExtend-buff.description",
-        "enGB": "Spells will have Extend metamagic applied to them"
+        "enGB": "Spells will have Extend metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Prolongar."
     },
-
     {
         "Key": "AutoEmpower.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Empower"
+        "enGB": "Auto-Empower",
+        "esES": "Auto-Potenciar"
     },
-
     {
         "Key": "AutoEmpower.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoEmpower-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Empower"
+        "enGB": "Auto-Empower",
+        "esES": "Auto-Potenciar"
     },
-
     {
         "Key": "AutoEmpower-ability.description",
-        "enGB": "Enable to apply Empower metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Empower metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Potenciar a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoEmpower-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Empower"
+        "enGB": "Auto-Empower",
+        "esES": "Auto-Potenciar"
     },
-
     {
         "Key": "AutoEmpower-buff.description",
-        "enGB": "Spells will have Empower metamagic applied to them"
+        "enGB": "Spells will have Empower metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Potenciar."
     },
-
     {
         "Key": "AutoQuicken.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Quicken"
+        "enGB": "Auto-Quicken",
+        "esES": "Auto-Acelerar"
     },
-
     {
         "Key": "AutoQuicken.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoQuicken-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Quicken"
+        "enGB": "Auto-Quicken",
+        "esES": "Auto-Acelerar"
     },
-
     {
         "Key": "AutoQuicken-ability.description",
-        "enGB": "Enable to apply Quicken metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Quicken metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Acelerar a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoQuicken-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Quicken"
+        "enGB": "Auto-Quicken",
+        "esES": "Auto-Acelerar"
     },
-
     {
         "Key": "AutoQuicken-buff.description",
-        "enGB": "Spells will have Quicken metamagic applied to them"
+        "enGB": "Spells will have Quicken metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Acelerar."
     },
-
     {
         "Key": "AutoReach.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Reach"
+        "enGB": "Auto-Reach",
+        "esES": "Auto-Alcance"
     },
-
     {
         "Key": "AutoReach.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoReach-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Reach"
+        "enGB": "Auto-Reach",
+        "esES": "Auto-Alcance"
     },
-
     {
         "Key": "AutoReach-ability.description",
-        "enGB": "Enable to apply Reach metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Reach metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Alcance a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoReach-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Reach"
+        "enGB": "Auto-Reach",
+        "esES": "Auto-Alcance"
     },
-
     {
         "Key": "AutoReach-buff.description",
-        "enGB": "Spells will have Reach metamagic applied to them"
+        "enGB": "Spells will have Reach metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Alcance."
     },
-
     {
         "Key": "AutoBolstered.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Bolster"
+        "enGB": "Auto-Bolster",
+        "esES": "Auto-Reforzar"
     },
-
     {
         "Key": "AutoBolstered.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoBolstered-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Bolster"
+        "enGB": "Auto-Bolster",
+        "esES": "Auto-Reforzar"
     },
-
     {
         "Key": "AutoBolstered-ability.description",
-        "enGB": "Enable to apply Bolster metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Bolster metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Reforzar a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoBolstered-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Bolster"
+        "enGB": "Auto-Bolster",
+        "esES": "Auto-Reforzar"
     },
-
     {
         "Key": "AutoBolstered-buff.description",
-        "enGB": "Spells will have Bolster metamagic applied to them"
+        "enGB": "Spells will have Bolster metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Reforzar."
     },
-
     {
         "Key": "AutoSelective.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Selective"
+        "enGB": "Auto-Selective",
+        "esES": "Auto-Selectiva"
     },
-
     {
         "Key": "AutoSelective.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoSelective-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Selective"
+        "enGB": "Auto-Selective",
+        "esES": "Auto-Selectiva"
     },
-
     {
         "Key": "AutoSelective-ability.description",
-        "enGB": "Enable to apply Selective metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Selective metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Selectiva a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoSelective-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Selective"
+        "enGB": "Auto-Selective",
+        "esES": "Auto-Selectiva"
     },
-
     {
         "Key": "AutoSelective-buff.description",
-        "enGB": "Spells will have Selective metamagic applied to them"
+        "enGB": "Spells will have Selective metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Selectiva."
     },
-
     {
         "Key": "AutoPersistent.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Persistent"
+        "enGB": "Auto-Persistent",
+        "esES": "Auto-Persistente"
     },
-
     {
         "Key": "AutoPersistent.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoPersistent-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Persistent"
+        "enGB": "Auto-Persistent",
+        "esES": "Auto-Persistente"
     },
-
     {
         "Key": "AutoPersistent-ability.description",
-        "enGB": "Enable to apply Persistent metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Persistent metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Persistente a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoPersistent-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Persistent"
+        "enGB": "Auto-Persistent",
+        "esES": "Auto-Persistente"
     },
-
     {
         "Key": "AutoPersistent-buff.description",
-        "enGB": "Spells will have Persistent metamagic applied to them"
+        "enGB": "Spells will have Persistent metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Persistente."
     },
-
     {
         "Key": "AutoIntensified.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Intensify"
+        "enGB": "Auto-Intensify",
+        "esES": "Auto-Intensificar"
     },
-
     {
         "Key": "AutoIntensified.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoIntensified-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Intensify"
+        "enGB": "Auto-Intensify",
+        "esES": "Auto-Intensificar"
     },
-
     {
         "Key": "AutoIntensified-ability.description",
-        "enGB": "Enable to apply Itensify metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Itensify metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Intensificar a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoIntensified-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Intensify"
+        "enGB": "Auto-Intensify",
+        "esES": "Auto-Intensificar"
     },
-
     {
         "Key": "AutoIntensified-buff.description",
-        "enGB": "Spells will have Intensify metamagic applied to them"
+        "enGB": "Spells will have Intensify metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Intensificar."
     },
-
     {
         "Key": "AutoPiercing.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Piercing"
+        "enGB": "Auto-Piercing",
+        "esES": "Auto-Penetrante"
     },
-
     {
         "Key": "AutoPiercing.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoPiercing-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Piercing"
+        "enGB": "Auto-Piercing",
+        "esES": "Auto-Penetrante"
     },
-
     {
         "Key": "AutoPiercing-ability.description",
-        "enGB": "Enable to apply Piercing metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Piercing metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Penetrante a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoPiercing-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Piercing"
+        "enGB": "Auto-Piercing",
+        "esES": "Auto-Penetrante"
     },
-
     {
         "Key": "AutoPiercing-buff.description",
-        "enGB": "Spells will have Piercing metamagic applied to them"
+        "enGB": "Spells will have Piercing metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Penetrante."
     },
-
     {
         "Key": "AutoBurning.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Burning"
+        "enGB": "Auto-Burning",
+        "esES": "Auto-Ardiente"
     },
-
     {
         "Key": "AutoBurning.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoBurning-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Burning"
+        "enGB": "Auto-Burning",
+        "esES": "Auto-Ardiente"
     },
-
     {
         "Key": "AutoBurning-ability.description",
-        "enGB": "Enable to apply Burning metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Burning metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Ardiente a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoBurning-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Burning"
+        "enGB": "Auto-Burning",
+        "esES": "Auto-Ardiente"
     },
-
     {
         "Key": "AutoBurning-buff.description",
-        "enGB": "Spells will have Burning metamagic applied to them"
+        "enGB": "Spells will have Burning metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Ardiente."
     },
-
     {
         "Key": "AutoEncourage.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Encouraging"
+        "enGB": "Auto-Encouraging",
+        "esES": "Auto-Alentadora"
     },
-
     {
         "Key": "AutoEncourage.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoEncourage-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Encouraging"
+        "enGB": "Auto-Encouraging",
+        "esES": "Auto-Alentadora"
     },
-
     {
         "Key": "AutoEncourage-ability.description",
-        "enGB": "Enable to apply Encouraging metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Encouraging metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Alentadora a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoEncourage-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Encouraging"
+        "enGB": "Auto-Encouraging",
+        "esES": "Auto-Alentadora"
     },
-
     {
         "Key": "AutoEncourage-buff.description",
-        "enGB": "Spells will have Encouraging metamagic applied to them"
+        "enGB": "Spells will have Encouraging metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Alentadora."
     },
-
     {
         "Key": "AutoFlare.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Flaring"
+        "enGB": "Auto-Flaring",
+        "esES": "Auto-Destellante"
     },
-
     {
         "Key": "AutoFlare.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoFlare-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Flaring"
+        "enGB": "Auto-Flaring",
+        "esES": "Auto-Destellante"
     },
-
     {
         "Key": "AutoFlare-ability.description",
-        "enGB": "Enable to apply Flaring metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Flaring metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Destellante a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoFlare-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Flaring"
+        "enGB": "Auto-Flaring",
+        "esES": "Auto-Destellante"
     },
-
     {
         "Key": "AutoFlare-buff.description",
-        "enGB": "Spells will have Flaring metamagic applied to them"
+        "enGB": "Spells will have Flaring metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Destellante."
     },
-
     {
         "Key": "AutoRime.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Rime"
+        "enGB": "Auto-Rime",
+        "esES": "Auto-Escarcha"
     },
-
     {
         "Key": "AutoRime.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoRime-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Rime"
+        "enGB": "Auto-Rime",
+        "esES": "Auto-Escarcha"
     },
-
     {
         "Key": "AutoRime-ability.description",
-        "enGB": "Enable to apply Rime metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Rime metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Escarcha a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoRime-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Rime"
+        "enGB": "Auto-Rime",
+        "esES": "Auto-Escarcha"
     },
-
     {
         "Key": "AutoRime-buff.description",
-        "enGB": "Spells will have Rime metamagic applied to them"
+        "enGB": "Spells will have Rime metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Escarcha."
     },
-
     {
         "Key": "AutoSolidShadows.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Solid-Shadows"
+        "enGB": "Auto-Solid-Shadows",
+        "esES": "Auto-Sombras sólidas"
     },
-
     {
         "Key": "AutoSolidShadows.description",
-        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost."
+        "enGB": "You become so familiar with the metamagic that you can apply it at will with no additional cost.",
+        "esES": "Te has familiarizado tanto con esta metamagia que puedes aplicarla a voluntad sin coste adicional."
     },
-
     {
         "Key": "AutoSolidShadows-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Solid-Shadows"
+        "enGB": "Auto-Solid-Shadows",
+        "esES": "Auto-Sombras sólidas"
     },
-
     {
         "Key": "AutoSolidShadows-ability.description",
-        "enGB": "Enable to apply Solid Shadows metamagic to all spells without increasing casting time or using a higher-level spell slot."
+        "enGB": "Enable to apply Solid Shadows metamagic to all spells without increasing casting time or using a higher-level spell slot.",
+        "esES": "Actívalo para aplicar la metamagia Sombras sólidas a todos los conjuros sin aumentar el tiempo de lanzamiento ni usar un espacio de conjuro de nivel superior."
     },
-
     {
         "Key": "AutoSolidShadows-buff.name",
         "ProcessTemplates": false,
-        "enGB": "Auto-Solid-Shadows"
+        "enGB": "Auto-Solid-Shadows",
+        "esES": "Auto-Sombras sólidas"
     },
-
     {
         "Key": "AutoSolidShadows-buff.description",
-        "enGB": "Spells will have Solid Shadows metamagic applied to them"
+        "enGB": "Spells will have Solid Shadows metamagic applied to them",
+        "esES": "Los conjuros tendrán aplicada la metamagia Sombras sólidas."
     },
-
     {
         "Key": "HeavenRay.name",
         "ProcessTemplates": false,
-        "enGB": "Heavenfire Ray"
+        "enGB": "Heavenfire Ray",
+        "esES": "Rayo de fuego celestial"
     },
-
     {
         "Key": "HeavenRay.description",
-        "enGB": "A blast of heavenfire blazes from your hands. You can fire one ray, plus one additional ray for every 4 {g|Encyclopedia:Caster_Level}caster levels{/g} beyond 11th (to a maximum of three rays at 19th level). Each ray requires a ranged {g|Encyclopedia:TouchAttack}touch attack{/g} to hit and deals {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Damage}damage{/g} per caster level (maximum 15d6). Half the damage is {g|Encyclopedia:Energy_Damage}fire damage{/g}, but the other half results directly from holy power and is therefore not subject to being reduced by fire {g|Encyclopedia:Energy_Resistance}resistance{/g}."
+        "enGB": "A blast of heavenfire blazes from your hands. You can fire one ray, plus one additional ray for every 4 {g|Encyclopedia:Caster_Level}caster levels{/g} beyond 11th (to a maximum of three rays at 19th level). Each ray requires a ranged {g|Encyclopedia:TouchAttack}touch attack{/g} to hit and deals {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Damage}damage{/g} per caster level (maximum 15d6). Half the damage is {g|Encyclopedia:Energy_Damage}fire damage{/g}, but the other half results directly from holy power and is therefore not subject to being reduced by fire {g|Encyclopedia:Energy_Resistance}resistance{/g}.",
+        "esES": "Una descarga de fuego celestial surge de tus manos. Puedes disparar un rayo, más un rayo adicional por cada 4 {g|Encyclopedia:Caster_Level}niveles de lanzador{/g} por encima del 11.º (hasta un máximo de tres rayos a nivel 19). Cada rayo requiere un {g|Encyclopedia:TouchAttack}ataque de toque{/g} a distancia para impactar e inflige {g|Encyclopedia:Dice}1d6{/g} puntos de {g|Encyclopedia:Damage}daño{/g} por nivel de lanzador (máximo 15d6). La mitad del daño es {g|Encyclopedia:Energy_Damage}daño de fuego{/g}, pero la otra mitad procede directamente del poder sagrado y, por tanto, no se reduce mediante {g|Encyclopedia:Energy_Resistance}resistencia{/g} al fuego."
     },
-
     {
         "Key": "HellBall.name",
         "ProcessTemplates": false,
-        "enGB": "Hellball"
+        "enGB": "Hellball",
+        "esES": "Bola infernal"
     },
-
     {
         "Key": "HellBall.description",
-        "enGB": "You unleash a massive blast of energy that detonates upon all in the AoE, dealing 20d6 fire, 20d6 acid, 20d6 electrical and 20d6 sonic damage. A reflex save halves damage."
+        "enGB": "You unleash a massive blast of energy that detonates upon all in the AoE, dealing 20d6 fire, 20d6 acid, 20d6 electrical and 20d6 sonic damage. A reflex save halves damage.",
+        "esES": "Desatas una explosión masiva de energía que detona sobre todas las criaturas del área de efecto e inflige 20d6 de daño de fuego, 20d6 de ácido, 20d6 de electricidad y 20d6 de sónico. Una salvación de Reflejos reduce el daño a la mitad."
     },
-
     {
         "Key": "HellBall-feature.name",
         "ProcessTemplates": false,
-        "enGB": "Hellball Spell"
+        "enGB": "Hellball Spell",
+        "esES": "Conjuro Bola infernal"
     },
-
     {
         "Key": "HellBall-feature.description",
-        "enGB": "Grants you a new powerful spell called Hellball, which deals 20d6 each of fire, acid, electrical, and sonic damage. Hellball is a 9th-level spell."
+        "enGB": "Grants you a new powerful spell called Hellball, which deals 20d6 each of fire, acid, electrical, and sonic damage. Hellball is a 9th-level spell.",
+        "esES": "Te concede un nuevo y poderoso conjuro llamado Bola infernal, que inflige 20d6 de daño de fuego, ácido, electricidad y sónico, respectivamente. Bola infernal es un conjuro de nivel 9."
     },
-
     {
         "Key": "StorvalsThunder.name",
         "ProcessTemplates": false,
-        "enGB": "Storval's Thunder"
+        "enGB": "Storval's Thunder",
+        "esES": "Trueno de Storval"
     },
-
     {
         "Key": "StorvalsThunder.description",
-        "enGB": "The hematite head of this +1 earth breaker crackles with electricity, dealing an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit. 3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round."
+        "enGB": "The hematite head of this +1 earth breaker crackles with electricity, dealing an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit. 3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round.",
+        "esES": "La cabeza de hematita de este quebratierra +1 crepita con electricidad e inflige 1d6 puntos adicionales de daño de electricidad y 1d6 puntos de daño sónico con cada impacto. 3 veces al día, Trueno de Storval puede hacer caer un estampido de trueno sobre un enemigo. Si falla una salvación de Fortaleza contra {g|Encyclopedia:DC}CD{/g} 20, queda aturdido durante un asalto."
     },
-
     {
         "Key": "StorvalsThunder-enchant.name",
         "ProcessTemplates": false,
-        "enGB": "Storval's Thunder"
+        "enGB": "Storval's Thunder",
+        "esES": "Trueno de Storval"
     },
-
     {
         "Key": "StorvalsThunder-enchant.description",
-        "enGB": "Deals an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit."
+        "enGB": "Deals an additional 1d6 points of electricity and 1d6 points of sonic damage on each hit.",
+        "esES": "Inflige 1d6 puntos adicionales de daño de electricidad y 1d6 puntos de daño sónico con cada impacto."
     },
-
     {
         "Key": "GraveSingerPlus.name",
         "ProcessTemplates": false,
-        "enGB": "Ascendant Critical"
+        "enGB": "Ascendant Critical",
+        "esES": "Crítico ascendente"
     },
-
     {
         "Key": "GraveSingerPlus.description",
-        "enGB": "Your mastery of critical strikes is unmatched.\nYour critical threat range and critical damage multiplier for all weapons, including unarmed strikes and natural weapons, are both increased by 1, stacking with all other similar effects."
+        "enGB": "Your mastery of critical strikes is unmatched.\nYour critical threat range and critical damage multiplier for all weapons, including unarmed strikes and natural weapons, are both increased by 1, stacking with all other similar effects.",
+        "esES": "Tu dominio de los golpes críticos no tiene rival.\nTu rango de amenaza de crítico y tu multiplicador de daño crítico con todas las armas, incluidos los ataques sin armas y las armas naturales, aumentan en 1. Este efecto se acumula con todos los demás efectos similares."
     },
-
     {
         "Key": "StorvalsThunder-ability.name",
         "ProcessTemplates": false,
-        "enGB": "Storval's Thunder "
+        "enGB": "Storval's Thunder ",
+        "esES": "Trueno de Storval"
     },
-
     {
         "Key": "StorvalsThunder-ability.description",
-        "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)"
+        "enGB": "3 times per day, Storval's Thunder can call down a thunder clap on an enemy. If they fail a {g|Encyclopedia:DC}DC{/g} 20 Fortitude save, they are stunned for one round. (period for Hero of Cows)",
+        "esES": "3 veces al día, Trueno de Storval puede hacer caer un estampido de trueno sobre un enemigo. Si falla una salvación de Fortaleza contra {g|Encyclopedia:DC}CD{/g} 20, queda aturdido durante un asalto. (punto para Hero of Cows)"
     },
-
     {
         "Key": "StorvalsFang.name",
         "ProcessTemplates": false,
-        "enGB": "Storval's Fang"
+        "enGB": "Storval's Fang",
+        "esES": "Colmillo de Storval"
     },
-
     {
         "Key": "StorvalsFang.description",
-        "enGB": "This metal +1 klar is shaped like the head of a storm roc, whose sharp feathers serve as the klar’s spikes, and it hums and crackles like a distant stormy sky. When used to make a shield bash attack, a Storval’s fang deals an additional 1d6 points of sonic damage. In addition, the wielder gains electricity resistance 10.\nIf the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
+        "enGB": "This metal +1 klar is shaped like the head of a storm roc, whose sharp feathers serve as the klar’s spikes, and it hums and crackles like a distant stormy sky. When used to make a shield bash attack, a Storval’s fang deals an additional 1d6 points of sonic damage. In addition, the wielder gains electricity resistance 10.\nIf the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5.",
+        "esES": "Este klar metálico +1 tiene la forma de la cabeza de un roc de las tormentas, cuyas afiladas plumas forman las púas del klar, y zumba y crepita como un cielo tormentoso en la distancia. Cuando se usa para realizar un ataque de golpetazo con escudo, Colmillo de Storval inflige 1d6 puntos adicionales de daño sónico. Además, su portador obtiene resistencia a la electricidad 10.\nSi el portador de Colmillo de Storval también empuña Trueno de Storval y usa la dote Trueno y Colmillo, Trueno de Storval inflige 2d6 puntos adicionales de daño de electricidad y las CD para negar los efectos de sus golpes críticos aumentan en 5."
     },
-
     {
         "Key": "SpikedLightShieldPlus1Sonic.name",
         "ProcessTemplates": false,
-        "enGB": "Spiked Light Shield Plus 1 Sonic"
+        "enGB": "Spiked Light Shield Plus 1 Sonic",
+        "esES": "Escudo ligero con púas +1 sónico"
     },
-
     {
         "Key": "SpikedLightShieldPlus1Sonic.description",
-        "enGB": "Spiked Light Shield Plus 1 Sonic"
+        "enGB": "Spiked Light Shield Plus 1 Sonic",
+        "esES": "Escudo ligero con púas +1 sónico"
     },
-
     {
         "Key": "StorvalSetBonus.name",
         "ProcessTemplates": false,
-        "enGB": "StorvalSetBonus"
+        "enGB": "StorvalSetBonus",
+        "esES": "Bonificación del conjunto de Storval"
     },
-
     {
         "Key": "StorvalSetBonus.description",
-        "enGB": "If the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5."
+        "enGB": "If the wielder of a Storval’s Fang also wields a Storval’s Thunder and uses the Thunder and Fang feat, Storval’s Thunder deals an additional 2d6 points of electricity damage and the DCs to negate their critical hit effects increase by 5.",
+        "esES": "Si el portador de Colmillo de Storval también empuña Trueno de Storval y usa la dote Trueno y Colmillo, Trueno de Storval inflige 2d6 puntos adicionales de daño de electricidad y las CD para negar los efectos de sus golpes críticos aumentan en 5."
     },
-
     {
         "Key": "AneviaVendorAnswer.text",
         "ProcessTemplates": false,
-        "enGB": "(DragonChanges) Show me your wares!"
+        "enGB": "(DragonChanges) Show me your wares!",
+        "esES": "(DragonChanges) ¡Enséñame tus mercancías!"
     },
-
     {
         "Key": "ChaMemeRingAC.name",
         "ProcessTemplates": false,
-        "enGB": "Tomek's Ring"
+        "enGB": "Tomek's Ring",
+        "esES": "Anillo de Tomek"
     },
-
     {
         "Key": "ChaMemeRingAC.description",
-        "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
+        "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus.",
+        "esES": "Anillo de Tomek, el Eternamente Verde. Su odio es tan refinado que el anillo añade tu modificador de CAR a tu CA como bonificador profano."
     },
-
     {
         "Key": "MemeRing1Feature.name",
         "ProcessTemplates": false,
-        "enGB": "Tomek's Ring"
+        "enGB": "Tomek's Ring",
+        "esES": "Anillo de Tomek"
     },
-
     {
         "Key": "MemeRing1Feature.description",
-        "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus."
+        "enGB": "Ring of Tomek, the Eternally Green. His hatred is so skilled, that his ring adds your CHA modifier to your AC as a Profane bonus.",
+        "esES": "Anillo de Tomek, el Eternamente Verde. Su odio es tan refinado que el anillo añade tu modificador de CAR a tu CA como bonificador profano."
     },
-
     {
         "Key": "LesbianPolyculeDeity.name",
         "ProcessTemplates": false,
-        "enGB": "Radiant Prism"
+        "enGB": "Radiant Prism",
+        "esES": "Prisma radiante"
     },
-
     {
         "Key": "LesbianPolyculeDeity.description",
-        "enGB": "The shining sun of Sarenrae, the twinkling stars of Desna, and the shimmering rainbow of Shelyn come together to form the Radiant Prism, a relatively small pantheon worshipped by those who actively fight against evil to protect the innocent. These three goddesses have been romantically involved with one another from time to time, so it makes sense that they would form a coalition. In addition to defeating the wicked, the Radiant Prism promotes the creation of beautiful works of art to bring more grace to the world.\nThough devotees of the Radiant Prism are tasked with battling all sources of evil, they are encouraged to refrain from becoming ruthless butchers. The wicked must be offered the chance to capitulate once it becomes clear their defeat is inevitable. Sarenrae’s compassion is a major pillar of the pantheon, and priests of the Radiant Prism attempt to redeem their enemies where possible. Of course, some creatures are remorseless in their evil (such as fiends and some undead), and the Radiant Prism doesn’t expect their worshippers to waste their lives trying to save such beings."
+        "enGB": "The shining sun of Sarenrae, the twinkling stars of Desna, and the shimmering rainbow of Shelyn come together to form the Radiant Prism, a relatively small pantheon worshipped by those who actively fight against evil to protect the innocent. These three goddesses have been romantically involved with one another from time to time, so it makes sense that they would form a coalition. In addition to defeating the wicked, the Radiant Prism promotes the creation of beautiful works of art to bring more grace to the world.\nThough devotees of the Radiant Prism are tasked with battling all sources of evil, they are encouraged to refrain from becoming ruthless butchers. The wicked must be offered the chance to capitulate once it becomes clear their defeat is inevitable. Sarenrae’s compassion is a major pillar of the pantheon, and priests of the Radiant Prism attempt to redeem their enemies where possible. Of course, some creatures are remorseless in their evil (such as fiends and some undead), and the Radiant Prism doesn’t expect their worshippers to waste their lives trying to save such beings.",
+        "esES": "El sol resplandeciente de Sarenrae, las estrellas centelleantes de Desna y el arcoíris brillante de Shelyn se unen para formar el Prisma Radiante, un panteón relativamente pequeño venerado por quienes luchan activamente contra el mal para proteger a los inocentes. Estas tres diosas han mantenido relaciones románticas entre sí de vez en cuando, por lo que tiene sentido que formen una coalición. Además de derrotar a los malvados, el Prisma Radiante promueve la creación de hermosas obras de arte que aporten más gracia al mundo.\nAunque los devotos del Prisma Radiante tienen la misión de combatir toda fuente de mal, se les anima a no convertirse en carniceros despiadados. A los malvados se les debe ofrecer la oportunidad de capitular cuando quede claro que su derrota es inevitable. La compasión de Sarenrae es uno de los pilares principales del panteón, y los sacerdotes del Prisma Radiante intentan redimir a sus enemigos cuando es posible. Por supuesto, algunas criaturas no sienten remordimiento alguno por su maldad (como los ajenos malignos y ciertos no-muertos), y el Prisma Radiante no espera que sus fieles desperdicien la vida intentando salvar a tales seres."
     },
-
     {
         "Key": "MemeRing2.name",
         "ProcessTemplates": false,
-        "enGB": "Ring of Heavy Body"
+        "enGB": "Ring of Heavy Body",
+        "esES": "Anillo del cuerpo pesado"
     },
-
     {
         "Key": "MemeRing2.description",
-        "enGB": "The ring is imbued with the hope that having a heavy body will make your attacks better.\nAdds your CON bonus to your Critical range."
+        "enGB": "The ring is imbued with the hope that having a heavy body will make your attacks better.\nAdds your CON bonus to your Critical range.",
+        "esES": "El anillo está imbuido con la esperanza de que tener un cuerpo pesado haga mejores tus ataques.\nAñade tu bonificador de CON a tu rango de crítico."
     },
-
     {
         "Key": "MemeRing2Feature.name",
         "ProcessTemplates": false,
-        "enGB": "not implemented"
+        "enGB": "not implemented",
+        "esES": "no implementado"
     },
-
     {
         "Key": "MemeRing2Feature.description",
-        "enGB": "not implemented"
+        "enGB": "not implemented",
+        "esES": "no implementado"
     },
-
     {
         "Key": "SuperDexShot.name",
         "ProcessTemplates": false,
-        "enGB": "Mythic Archer"
+        "enGB": "Mythic Archer",
+        "esES": "Arquero mítico"
     },
-
     {
         "Key": "SuperDexShot.description",
-        "enGB": "When using longbows or shortbows, you may use your Dexterity modifier instead of your Strength modifier on your damage rolls, if the former is higher."
+        "enGB": "When using longbows or shortbows, you may use your Dexterity modifier instead of your Strength modifier on your damage rolls, if the former is higher.",
+        "esES": "Cuando uses arcos largos o arcos cortos, puedes usar tu modificador de Destreza en lugar de tu modificador de Fuerza en las tiradas de daño si el primero es mayor."
     },
-
     {
         "Key": "Str2DRNecklace.name",
         "ProcessTemplates": false,
-        "enGB": "Strongman's Necklace"
+        "enGB": "Strongman's Necklace",
+        "esES": "Collar del forzudo"
     },
-
     {
         "Key": "Str2DRNecklace.description",
-        "enGB": "Strongman's Necklace make's it's user's skin as tough as their Strength!\nAdds STR bonus to DR."
+        "enGB": "Strongman's Necklace make's it's user's skin as tough as their Strength!\nAdds STR bonus to DR.",
+        "esES": "¡El Collar del forzudo hace que la piel de su portador sea tan dura como su Fuerza!\nAñade el bonificador de FUE a la RD."
     },
-
     {
         "Key": "Str2DRNecklaceFeature.name",
         "ProcessTemplates": false,
-        "enGB": "Strongman's Necklace"
+        "enGB": "Strongman's Necklace",
+        "esES": "Collar del forzudo"
     },
-
     {
         "Key": "Str2DRNecklaceFeature.description",
-        "enGB": "Strongman's Necklace"
+        "enGB": "Strongman's Necklace",
+        "esES": "Collar del forzudo"
     },
-
     {
         "Key": "FTKMemeRing.name",
         "ProcessTemplates": false,
-        "enGB": "King's Ring"
+        "enGB": "King's Ring",
+        "esES": "Anillo del rey"
     },
-
     {
         "Key": "FTKMemeRing.description",
-        "enGB": "Allows the wearer to cast For The King."
+        "enGB": "Allows the wearer to cast For The King.",
+        "esES": "Permite al portador usar Por el rey."
     },
-
     {
         "Key": "AbundantAIS.name",
         "ProcessTemplates": false,
-        "enGB": "Abundant All Is Darkness"
+        "enGB": "Abundant All Is Darkness",
+        "esES": "Todo es oscuridad abundante"
     },
-
     {
         "Key": "AbundantAIS.description",
-        "enGB": "You've learned a way to increase the number of uses of your All is Darkness ability.\nBenefit: You can use All is Darnkess a number of additional times per day equal to half your mythic rank."
+        "enGB": "You've learned a way to increase the number of uses of your All is Darkness ability.\nBenefit: You can use All is Darnkess a number of additional times per day equal to half your mythic rank.",
+        "esES": "Has aprendido una forma de aumentar el número de usos de tu aptitud Todo es oscuridad.\nBeneficio: puedes usar Todo es oscuridad un número adicional de veces al día igual a la mitad de tu rango mítico."
     },
-
     {
         "Key": "SpellFailureRing.name",
         "ProcessTemplates": false,
-        "enGB": "Ring of Arcane Success"
+        "enGB": "Ring of Arcane Success",
+        "esES": "Anillo del éxito arcano"
     },
-
     {
         "Key": "SpellFailureRing.description",
-        "enGB": "This ring is imbued with the willpower of a very successful mage.\nLowers arcane spell failure by 25."
+        "enGB": "This ring is imbued with the willpower of a very successful mage.\nLowers arcane spell failure by 25.",
+        "esES": "Este anillo está imbuido con la fuerza de voluntad de un mago de enorme éxito.\nReduce en 25 el fallo de conjuro arcano."
     },
-
     {
         "Key": "SpellFailureRingFeature.name",
         "ProcessTemplates": false,
-        "enGB": "not implemented"
+        "enGB": "not implemented",
+        "esES": "no implementado"
     },
-
     {
         "Key": "SpellFailureRingFeature.description",
-        "enGB": "not implemented"
+        "enGB": "not implemented",
+        "esES": "no implementado"
     },
-
     {
         "Key": "SpellFailureRingFeature2.name",
         "ProcessTemplates": false,
-        "enGB": "not implemented"
+        "enGB": "not implemented",
+        "esES": "no implementado"
     },
-
     {
         "Key": "SpellFailureRingFeature2.description",
-        "enGB": "not implemented"
+        "enGB": "not implemented",
+        "esES": "no implementado"
     },
-
     {
         "Key": "InsightfulContemplation.description",
-        "enGB": "At 1st level, affected allies gain a +2 morale {g|Encyclopedia:Bonus}bonus{/g} to {g|Encyclopedia:Intelligence}Intelligence{/g}, {g|Encyclopedia:Intelligence}Wisdom{/g} and {g|Encyclopedia:Charisma}Charisma{/g} and a +1 morale bonus on {g|Encyclopedia:Saving_Throw}Will saving throws{/g}, but they also take a –1 {g|Encyclopedia:Penalty}penalty{/g} to {g|Encyclopedia:Armor_Class}AC{/g}. At 4th level and every 4 skald levels thereafter, the song's bonus on Will saves increases by 1; the penalty to AC doesn't change. At 8th and 16th levels, the song's bonuses to Intelligence, Wisdom, and Charisma increase by 2. (Unlike the barbarian's rage ability, those affected are not {g|ConditionFatigued}fatigued{/g} after the song ends.)"
+        "enGB": "At 1st level, affected allies gain a +2 morale {g|Encyclopedia:Bonus}bonus{/g} to {g|Encyclopedia:Intelligence}Intelligence{/g}, {g|Encyclopedia:Intelligence}Wisdom{/g} and {g|Encyclopedia:Charisma}Charisma{/g} and a +1 morale bonus on {g|Encyclopedia:Saving_Throw}Will saving throws{/g}, but they also take a –1 {g|Encyclopedia:Penalty}penalty{/g} to {g|Encyclopedia:Armor_Class}AC{/g}. At 4th level and every 4 skald levels thereafter, the song's bonus on Will saves increases by 1; the penalty to AC doesn't change. At 8th and 16th levels, the song's bonuses to Intelligence, Wisdom, and Charisma increase by 2. (Unlike the barbarian's rage ability, those affected are not {g|ConditionFatigued}fatigued{/g} after the song ends.)",
+        "esES": "A nivel 1, los aliados afectados obtienen un {g|Encyclopedia:Bonus}bonificador{/g} de moral +2 a {g|Encyclopedia:Intelligence}Inteligencia{/g}, {g|Encyclopedia:Intelligence}Sabiduría{/g} y {g|Encyclopedia:Charisma}Carisma{/g}, y un bonificador de moral +1 a las {g|Encyclopedia:Saving_Throw}tiradas de salvación{/g} de Voluntad, pero también sufren una {g|Encyclopedia:Penalty}penalización{/g} de –1 a la {g|Encyclopedia:Armor_Class}CA{/g}. A nivel 4 y cada 4 niveles de skald posteriores, el bonificador de la canción a las salvaciones de Voluntad aumenta en 1; la penalización a la CA no cambia. A niveles 8 y 16, los bonificadores de la canción a Inteligencia, Sabiduría y Carisma aumentan en 2. (A diferencia de la aptitud de furia del bárbaro, los afectados no quedan {g|ConditionFatigued}fatigados{/g} cuando termina la canción.)"
     }
 ]

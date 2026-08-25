@@ -216,10 +216,6 @@ namespace DragonChanges.NewStuff
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
                     .AddToAllFeatures(mountfeature)
                     .Configure();
-
-                // Tabletop Tweaks: expose Griffon through Animal Ally.
-                // Unicornio deliberadamente excluido.
-                AnimalAllyCompat.AddToAnimalAlly(mountfeature);
             }
         }
 

@@ -211,9 +211,6 @@ namespace DragonChanges.NewStuff
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
                     .AddToAllFeatures(mountfeature)
                     .Configure();
-
-                // Tabletop Tweaks: Nature Soul -> Animal Ally.
-                AnimalAllyCompat.AddToAnimalAlly(mountfeature);
             }
         }
     }
