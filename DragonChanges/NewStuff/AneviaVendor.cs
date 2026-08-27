@@ -3,14 +3,19 @@ using BlueprintCore.Actions.Builder.MiscEx;
 using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.Configurators.DialogSystem;
 using BlueprintCore.Blueprints.Configurators.Items;
+using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
+using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Items;
 using Kingmaker.Blueprints.Loot;
 using Kingmaker.Designers.EventConditionActionSystem.Evaluators;
 using Kingmaker.DialogSystem.Blueprints;
 using Kingmaker.EntitySystem.Persistence.Versioning;
+using Kingmaker.PubSubSystem;
+using Kingmaker.UnitLogic.FactLogic;
 
 namespace DragonChanges.NewStuff
 {
@@ -24,17 +29,25 @@ namespace DragonChanges.NewStuff
         // don't edit
         internal const string answertext = $"{answer}.text";
         internal static SharedVendorTableConfigurator aneviatable = null;
-        internal static BlueprintCore.Utils.Blueprint<BlueprintReference<BlueprintUnit>>[] aneviaunits =
-                [UnitRefs.AneviaTirabade, UnitRefs.AneviaTirabade_DH, UnitRefs.AneviaTirabade_DrezenCapital,
+        internal static readonly BlueprintCore.Utils.Blueprint<BlueprintReference<BlueprintUnit>>[] aneviaunits =
+                [UnitRefs.AneviaTirabade, UnitRefs.AneviaTirabade_DH, UnitRefs.AneviaTirabade_DrezenCapital
                 //UnitRefs.AneviaTirabade_GorgoyleAttack, UnitRefs.AneviaTirabade_LostChapel];
                 ];
-        internal static string[] answerlists = ["3e6231392987747479e12f77e8f44611", "33960c7f7af40cd43b7f801a76c87a0b"];
+
+        private static readonly string[] answerlists = ["3e6231392987747479e12f77e8f44611", "33960c7f7af40cd43b7f801a76c87a0b"];
 
         public static void ConfigureStart()
         {
             Main.log.Log("Starting to create Anevia vendor");
             aneviatable = SharedVendorTableConfigurator.New(vending, vendingguid);
-                
+        }
+        //[DragonConfigure]
+        public static void DoDLCSpawner(BlueprintSharedVendorTable loottable)
+        {
+            Main.log.Log("knife emoji");
+            var dlcvendor = VendorUnit.CreateVendorBlueprint(loottable);
+            var vendor = new VendorSpawner();
+            EventBus.Subscribe(vendor);
         }
         public static void ConfigureEnd()
         {
@@ -43,11 +56,12 @@ namespace DragonChanges.NewStuff
             BlueprintUnitUpgrader vendorupgrader = VendorUnitUpgrader.Configure(loottable);
             foreach (var unit in aneviaunits)
             {
-                UnitConfigurator.For(unit.Reference.Get())
+                UnitConfigurator.For(unit)
                     .AddSharedVendor(loottable)
-                    //.AddUnitUpgraderComponent(upgraders: [vendorupgrader])
                     .Configure();
             }
+
+            DoDLCSpawner(loottable);
             BlueprintAnswer newanswer = AnswerConfigurator.New(answer, answerguid)
                 .SetText(answertext)
                 .SetOnSelect(ActionsBuilder.New().StartTrade(new DialogFirstSpeaker()))
@@ -60,7 +74,7 @@ namespace DragonChanges.NewStuff
             }
             Main.log.Log("Anevia vendor created!");
         }
-        public static void AddItem(BlueprintItem item, int amount = 1)
+        public static void AddItem(BlueprintItem? item, int amount = 1)
         {
             if (item == null || amount < 1)
                 return;

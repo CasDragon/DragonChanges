@@ -1,0 +1,92 @@
+{
+    "BundlesLayout": {
+        "m_Guids": [
+            "a4b175da9939a0c4daef9f2502fa844d",
+            "097a146a83290cd428d7411b2546f899",
+            "d05b20e0537d18841b92ce0165e92d97",
+            "82222e842445b7f4a889feb2e3905700",
+            "ea8b691ecde8faf45af01d0e7afa3798",
+            "6156c1f34d9dec044887d934e31ab9c9",
+            "a81861feb525ceb48a149843ea854df2",
+            "23de98490dc66374087f1730174a677b",
+            "2e4434f6bdc7c4048a48d4de7e3b9e68",
+            "976300c10633daf498efece46ebe28fd",
+            "f590c714c036530449fc8eb8d8b5f5bf",
+            "8795c35c447facc43943d1853e4c9f37",
+            "8c6cb44a4d15efa42b8a36f8164115d6"
+        ],
+        "m_Bundles": [
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content",
+            "WoolooMod_content"
+        ]
+    },
+    "BundleDependencies": {
+        "m_List": [
+            {
+                "Key": "WoolooMod_BlueprintDirectReferences",
+                "Value": []
+            },
+            {
+                "Key": "WoolooMod_content",
+                "Value": []
+            }
+        ]
+    },
+    "BlueprintPatches": [
+        {
+            "Guid": "90406c575576aee40a34917a1b429254",
+            "Filename": "Blueprints\\WoolooBasePetSelection.patch"
+        },
+        {
+            "Guid": "f7da602dae8944d499f00074c973c28a",
+            "Filename": "Blueprints\\WoolooBeastRiderPetSelection.patch"
+        },
+        {
+            "Guid": "0605927df6e2fdd42af6ee2424eb89f2",
+            "Filename": "Blueprints\\WoolooCavalierPetSelection.patch"
+        },
+        {
+            "Guid": "8abc5936b95d4983866f3bcace522e23",
+            "Filename": "Blueprints\\WoolooDivineHoundPetSelection.patch"
+        },
+        {
+            "Guid": "2ecd6c64683b59944a7fe544033bb533",
+            "Filename": "Blueprints\\WoolooDomainPetSelection.patch"
+        },
+        {
+            "Guid": "571f8434d98560c43935e132df65fe76",
+            "Filename": "Blueprints\\WoolooDruidPetSelection.patch"
+        },
+        {
+            "Guid": "715ac15eb8bd5e342bc8a0a3c9e3e38f",
+            "Filename": "Blueprints\\WoolooHunterPetSelection.patch"
+        },
+        {
+            "Guid": "7b8b6474cc374a23830341d2a40eecaf",
+            "Filename": "Blueprints\\WoolooOrderOfThePawPetSelection.patch"
+        },
+        {
+            "Guid": "ee63330662126374e8785cc901941ac7",
+            "Filename": "Blueprints\\WoolooRangerPetSelection.patch"
+        },
+        {
+            "Guid": "257375cd139800e459d69ccfe4ca309c",
+            "Filename": "Blueprints\\WoolooUrbanHunterPetSelection.patch"
+        },
+        {
+            "Guid": "164c875d6b27483faba479c7f5261915",
+            "Filename": "Blueprints\\WoolooWillandShamaPetSelection.patch"
+        }
+    ]
+}

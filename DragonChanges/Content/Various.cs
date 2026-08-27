@@ -149,6 +149,8 @@ namespace DragonChanges.Content
                 AneviaVendor.AddItem(ItemWeaponRefs.JagannathKhanda.Reference.Get());
                 Main.log.Log("Add GreaterMagicWeaponScroll to anevia vendor");
                 AneviaVendor.AddItem(ItemEquipmentUsableRefs.ScrollOfMagicWeaponGreaterPrimary.Reference.Get(), 99);
+                Main.log.Log("Add PawsOfTheBearGodItem to anevia vendor");
+                AneviaVendor.AddItem(ItemEquipmentGlovesRefs.PawsOfTheBearGodItem.Reference.Get());
             }
         }
 

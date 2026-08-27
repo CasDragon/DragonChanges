@@ -5,7 +5,7 @@
 		<TargetFramework>net48</TargetFramework>
 		<AssemblyName>DragonChanges</AssemblyName>
 		<Description>DragonChanges</Description>
-		<Version>1.20.1</Version>
+		<Version>1.20.2</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>DragonChanges</RootNamespace>
@@ -39,6 +39,11 @@
 	<ItemGroup>
 		<None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="NewLocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="WoolooBundle\*" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="WoolooBundle\Assemblies\*" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="WoolooBundle\Bundles\*" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="WoolooBundle\Blueprints\*" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="WoolooBundle\Localization\*" CopyToOutputDirectory="PreserveNewest" />
 		<EmbeddedResource Include="Icons\Abilities\*.png" />
 		<EmbeddedResource Include="Icons\Deities\*.png" />
 		<EmbeddedResource Include="Icons\Darth\*.png" />

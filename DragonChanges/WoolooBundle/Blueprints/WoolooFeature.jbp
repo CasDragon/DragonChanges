@@ -1,0 +1,99 @@
+{
+  "AssetId": "c611377a9e9224b45aefabb7564350f6",
+  "Data": {
+    "$type": "cb208b98ceacca84baee15dba53b1979, BlueprintFeature",
+    "PrototypeLink": "",
+    "m_Overrides": [],
+    "Components": [
+      {
+        "$type": "532e804185719b942b52ed141aa10a21, PrerequisiteIsPet",
+        "m_Flags": 0,
+        "name": "$PrerequisiteIsPet$c9ca0bd7-3f0c-4d29-a035-d087f4eee5a1",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "Group": "All",
+        "CheckInProgression": false,
+        "HideInUI": false,
+        "IsFeatureSelectionWhiteList": false,
+        "Not": true
+      },
+      {
+        "$type": "257029ef583e1414e88e21c9f696405f, PrerequisitePet",
+        "m_Flags": 0,
+        "name": "$PrerequisitePet$c8d0fb4c-9436-4f7b-b0d5-f2c263886ff0",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "Group": "All",
+        "CheckInProgression": false,
+        "HideInUI": false,
+        "IsFeatureSelectionWhiteList": false,
+        "Type": "AnimalCompanion",
+        "NoCompanion": true
+      },
+      {
+        "$type": "d918579b19d94c04b4c0baecd11fcb3c, AddPet",
+        "m_Flags": 0,
+        "name": "$AddPet$c245a0da-3db5-4fa4-9784-ff8edd7ffc82",
+        "PrototypeLink": {
+          "guid": "",
+          "name": ""
+        },
+        "Type": "AnimalCompanion",
+        "ProgressionType": "AnimalCompanion",
+        "m_Pet": "!bp_0f1fe8195cdfb4749af7002151dc2d60",
+        "m_UseContextValueLevel": false,
+        "m_LevelRank": "!bp_1670990255e4fe948a863bafd5dbda5d",
+        "m_LevelContextValue": {
+          "ValueType": "Simple",
+          "Value": 0,
+          "ValueRank": "Default",
+          "ValueShared": "Damage",
+          "Property": "None",
+          "m_CustomProperty": null,
+          "m_AbilityParameter": "Level",
+          "PropertyName": "Value1"
+        },
+        "m_ForceAutoLevelup": false,
+        "m_UpgradeFeature": null,
+        "m_DestroyPetOnDeactivate": false,
+        "UpgradeLevel": 0
+      }
+    ],
+    "Comment": "",
+    "m_AllowNonContextActions": false,
+    "m_DisplayName": {
+      "m_Key": "55b88643-c9c7-48b1-bfc1-57fb8ca2e2bb",
+      "Shared": null,
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "m_DisplayName",
+      "m_JsonPath": "Assets/../Strings/Modifications/NewWooloo/Blueprints/WoolooFeature\\m_DisplayName.LocalizedString.json"
+    },
+    "m_Description": {
+      "m_Key": "daa0fd8c-4735-4c95-b344-66f9d8a34cca",
+      "Shared": null,
+      "m_OwnerString": "",
+      "m_OwnerPropertyPath": "m_Description",
+      "m_JsonPath": "Assets/../Strings/Modifications/NewWooloo/Blueprints/WoolooFeature\\m_Description.LocalizedString.json"
+    },
+    "m_DescriptionShort": {
+      "m_Key": "913fe132-9aee-4288-bfb5-3b32c8673abb",
+      "Shared": null,
+      "m_OwnerString": "c611377a9e9224b45aefabb7564350f6",
+      "m_OwnerPropertyPath": "m_DescriptionShort",
+      "m_JsonPath": "Assets/../Strings/Modifications/NewWooloo/Blueprints/WoolooFeature\\m_DescriptionShort.LocalizedString.json"
+    },
+    "m_Icon": null,
+    "HideInUI": false,
+    "HideInCharacterSheetAndLevelUp": false,
+    "HideNotAvailibleInUI": false,
+    "Groups": [],
+    "Ranks": 1,
+    "ReapplyOnLevelUp": false,
+    "IsClassFeature": true,
+    "IsPrerequisiteFor": []
+  }
+}

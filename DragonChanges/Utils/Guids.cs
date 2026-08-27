@@ -221,11 +221,14 @@ namespace DragonChanges.Utils
         internal const string AcidRay = "27b221ce-03ec-417f-af8d-02ee4ff0550a";
         internal const string ElectricRay = "3ddbe40c-653d-4d53-bbc4-2a593a594eff";
         internal const string ColdRay = "98b189a4-c8c2-4540-b8be-3665bf183fde";
-        internal const string guid19 = "68e1d6e0-4cee-4b67-8a46-c9ccea51d381";
-        internal const string guid20 = "5a116f0a-9f1a-43de-ae04-35276e9fa163";
-        internal const string guid21 = "9cc2cb93-b1fb-4d02-baef-9c79cc6e7ebd";
-        internal const string guid22 = "990bb9c7-29bc-4e6d-83aa-88512a58b5e3";
-        internal const string guid23 = "4cceb7f4-d045-436b-8c2c-f7358b665822";
-        internal const string guid24 = "5205c4b9-beb3-433c-9b61-4b81f4e50993";
+        internal const string ArchmageClass = "68e1d6e0-4cee-4b67-8a46-c9ccea51d381";
+        internal const string ArchmageProgression = "5a116f0a-9f1a-43de-ae04-35276e9fa163";
+        internal const string AcidRayScroll = "9cc2cb93-b1fb-4d02-baef-9c79cc6e7ebd";
+        internal const string ElectricRayScroll = "990bb9c7-29bc-4e6d-83aa-88512a58b5e3";
+        internal const string ColdRayScroll = "4cceb7f4-d045-436b-8c2c-f7358b665822";
+        internal const string DLCVendorUnit = "5205c4b9-beb3-433c-9b61-4b81f4e50993";
+        internal const string WoolooFeature = "c611377a9e9224b45aefabb7564350f6";
+        internal const string WoolooUnit = "0f1fe8195cdfb4749af7002151dc2d60";
+        internal const string WoolooPortrait = "7c6a8a6b1a5a9a840889527b940f5bde";
     }
 }

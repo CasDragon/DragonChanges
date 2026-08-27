@@ -2,10 +2,13 @@
 using System.IO;
 using System.Reflection;
 using BlueprintCore.Utils;
+using DragonChanges.Content;
 using DragonChanges.NewStuff;
 using DragonLibrary.Utils;
 using HarmonyLib;
+using Kingmaker;
 using Kingmaker.Blueprints.JsonSystem;
+using Kingmaker.Modding;
 using UnityModManagerNet;
 
 namespace DragonChanges
@@ -52,6 +55,7 @@ namespace DragonChanges
                     LocalizationTool.LoadLocalizationPacks(
                         Path.Combine(modfolder, "NewLocalizedStrings.json"),
                         Path.Combine(modfolder, "LocalizedStrings.json"));
+                    LoadWoolooAssets(modfolder);
 
                     SettingsAction.InitializeSettings("dragonchanges", "DragonChanges", entry);
                     log.Log("Patching blueprints.");
@@ -64,6 +68,43 @@ namespace DragonChanges
                     log.Log(string.Concat("Failed to initialize.", e));
                 }
             }
+        }
+        public static void LoadWoolooAssets(string modPath)
+        {
+            log.Log("Loading wooloo from " + modPath);
+            var path = Path.Combine(modPath, "WoolooBundle");
+            OwlcatModification owlcatModification = OwlcatModification
+                .LoadFromDirectory(path, path);
+            if (owlcatModification == null)
+            {
+                log.Log("Loading wooloo failed, modification is null.");
+            }
+            else
+            {
+                OwlcatModificationManifest manifest = owlcatModification.Manifest;
+                if (manifest == null)
+                {
+                    log.Log("Loading wooloo failed, manifest is null.");
+                }
+                else
+                {
+                    log.Log("Applying wooloo modification.");
+
+                    owlcatModification.Apply();
+                    OwlcatModificationsManager.Instance.m_Modifications =
+                    [
+                        .. OwlcatModificationsManager.Instance.m_Modifications,
+                        owlcatModification
+                    ];
+                    OwlcatModificationsManager.Instance.AppliedModifications =
+                    [
+                        .. OwlcatModificationsManager.Instance.AppliedModifications,
+                        owlcatModification
+                    ];
+                }
+            }
+
+            Wooloo.FixWoolooLocalization();
         }
     }
 }
