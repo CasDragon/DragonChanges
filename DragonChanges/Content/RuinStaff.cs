@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Blueprints.Configurators.Items.Weapons;
+﻿using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff;
-using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Items.Weapons;
 

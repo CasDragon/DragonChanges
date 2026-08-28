@@ -2,6 +2,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.ModRefs;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.UnitLogic.FactLogic;
@@ -35,9 +36,9 @@ public class MythicArcanist
         }
     }
 
-    private static readonly BlueprintAbilityReference MageArmor2Spell = new() {deserializedGuid = BlueprintGuid.Parse(OtherModGuids.MageArmor2Spell)};
-    private static readonly BlueprintAbilityReference MageArmor3Spell = new() {deserializedGuid = BlueprintGuid.Parse(OtherModGuids.MageArmor3Spell)};
-    private static readonly BlueprintAbilityReference MageArmor4Spell = new() {deserializedGuid = BlueprintGuid.Parse(OtherModGuids.MageArmor4Spell)};
+    private static readonly BlueprintAbilityReference MageArmor2Spell = new() {deserializedGuid = BlueprintGuid.Parse(MythicArcanistRefs.MageArmor2)};
+    private static readonly BlueprintAbilityReference MageArmor3Spell = new() {deserializedGuid = BlueprintGuid.Parse(MythicArcanistRefs.MageArmor3)};
+    private static readonly BlueprintAbilityReference MageArmor4Spell = new() {deserializedGuid = BlueprintGuid.Parse(MythicArcanistRefs.MageArmor4)};
 
     private static void doThingy(AddAbilityUseTrigger component)
     {
@@ -47,9 +48,9 @@ public class MythicArcanist
             MageArmor2Spell, MageArmor3Spell, MageArmor4Spell];
     }
 
-    private static readonly BlueprintBuffReference MageArmor2Buff = new() {deserializedGuid = BlueprintGuid.Parse(OtherModGuids.MageArmor2Buff)};
-    private static readonly BlueprintBuffReference MageArmor3Buff = new() {deserializedGuid = BlueprintGuid.Parse(OtherModGuids.MageArmor3Buff)};
-    private static readonly BlueprintBuffReference MageArmor4Buff = new() {deserializedGuid = BlueprintGuid.Parse(OtherModGuids.MageArmor4Buff)};
+    private static readonly BlueprintBuffReference MageArmor2Buff = new() {deserializedGuid = BlueprintGuid.Parse(MythicArcanistRefs.MageArmor2Buff)};
+    private static readonly BlueprintBuffReference MageArmor3Buff = new() {deserializedGuid = BlueprintGuid.Parse(MythicArcanistRefs.MageArmor3Buff)};
+    private static readonly BlueprintBuffReference MageArmor4Buff = new() {deserializedGuid = BlueprintGuid.Parse(MythicArcanistRefs.MageArmor4Buff)};
 
     private static void doOther(SuppressBuffs component)
     {

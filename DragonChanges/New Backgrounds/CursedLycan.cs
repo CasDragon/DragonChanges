@@ -2,6 +2,7 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.Utils;
+using DragonLibrary.ModRefs;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using static Kingmaker.Blueprints.Classes.Prerequisites.Prerequisite;
@@ -50,7 +51,7 @@ namespace DragonChanges.New_Backgrounds
 
             if (ModCompat.homebrewarchetypes)
             {
-                FeatureSelectionConfigurator.For("2d153d12aab2d1d47b8d1015f83f5894")
+                FeatureSelectionConfigurator.For(HomebrewArchetypesRefs.AspectoftheBeastSelection)
                     .AddPrerequisiteFeature(x, group: GroupType.Any)
                     .Configure();
             }

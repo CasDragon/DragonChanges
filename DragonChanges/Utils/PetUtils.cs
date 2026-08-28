@@ -1,5 +1,6 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
+using DragonLibrary.ModRefs;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -19,10 +20,10 @@ public class PetUtils
     public static void AddPetToTTTSelection(BlueprintFeature pet)
     {
         if (!ModCompat.tttbase) return;
-        FeatureSelectionConfigurator.For(OtherModGuids.DivineCommanderCompanionSelection)
+        FeatureSelectionConfigurator.For(TTTBaseRefs.DivineCommanderCompanionSelection)
             .AddToAllFeatures(pet)
             .Configure();
-        FeatureSelectionConfigurator.For(OtherModGuids.AnimalAllyFeatureSelection)
+        FeatureSelectionConfigurator.For(TTTBaseRefs.AnimalAllyFeatureSelection)
             .AddToAllFeatures(pet)
             .Configure();
     }
@@ -30,7 +31,7 @@ public class PetUtils
     public static void AddPetToMCESelection(BlueprintFeature pet)
     {
         if (!ModCompat.microscopic) return;
-        FeatureSelectionConfigurator.For(OtherModGuids.AntipaladinServantSelection)
+        FeatureSelectionConfigurator.For(MicroscopicContentExpansionRefs.AntipaladinServantSelection)
             .AddToAllFeatures(pet)
             .Configure();
     }

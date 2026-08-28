@@ -5,6 +5,7 @@ using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
 using DragonLibrary.BPCoreExtensions;
+using DragonLibrary.ModRefs;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -29,7 +30,7 @@ namespace DragonChanges.Content
                     try
                     {
                         Main.log.Log("Patching Alter's Deadly Juggernaut spell to allow DR stacking");
-                        BlueprintBuff buff = BlueprintTool.Get<BlueprintBuff>(OtherModGuids.DeadlyJuggernautStatBonusBuff);
+                        BlueprintBuff buff = BlueprintTool.Get<BlueprintBuff>(MicroscopicContentExpansionRefs.DeadlyJuggernautStatBonusBuff);
                         DragonHelpers.RemoveComponent<AddDamageResistancePhysical>(buff);
                         var x = BuffConfigurator.For(buff);
                         if (ModCompat.tttbase)
@@ -70,7 +71,7 @@ namespace DragonChanges.Content
                     try
                     {
                         Main.log.Log("Patching various animal selections to include Nightmare horse (Microscopic)");
-                        BlueprintFeature nightmare = BlueprintTool.Get<BlueprintFeature>(OtherModGuids.AnimalCompanionFeatureNightmare);
+                        BlueprintFeature nightmare = BlueprintTool.Get<BlueprintFeature>(MicroscopicContentExpansionRefs.AnimalCompanionFeatureNightmare);
                         PetUtils.AddPetToAll(nightmare);
                     }
                     catch

@@ -1,0 +1,163 @@
+New Content:
+    Wooloo Vendor:
+        A new vendor that sells all my various new items and other items people requested
+    
+    New Archetypes:
+        Juggernaut:
+            A Barbarian archetype focused on stacking DR
+        Swordmaster:
+            A Rogue archetype that adds the Paizo archetype
+            
+    New Backgrounds:
+        Lycan:
+            Mobility/Perception, compat with HA where it qualifies for Aspect of the Beast
+            
+    New Classes:
+        BuildsEnjoyer:
+            A meme class that combines Inciter, Drunken Monk, and Sable Marine archetypes into one handy class
+        Redditor:
+            A meme class that's basically Fighter + Sorcerer spell book + CHA to basically all attributes
+        Swordmaster:
+            Work in progress class, doesn't do anything
+    
+    New Items:
+        Ioun Stones:
+            From tabletop, goes into the item belt slots
+        Storval item set:
+            Adds new warhammer / shield, from tabletop
+        Meme Rings:
+            Tomek's Ring:
+                Cha bonus to AC, profane bonus
+            Ring of Heavy Body:
+                Con bonus to crit range
+            Bracers of Cleaving Rafanat:
+                Allows for Cleaving Finish at range
+            Ring of Arcane Success:
+                Lowers arcane spell failure by 25
+            Strongman's Necklace:
+                Adds STR bonus to DR
+        Mithral Barding:
+            Adds full/chain mithral barding for pets
+            
+    New Spells:
+        Elemental Rays:
+            Cold/electric/acid variants of Hellfire Ray
+        Communal Death Ward:
+            Communal version of Death Ward
+        Communal Eaglesoul:
+            Communal version of Eaglesoul
+        Communal Sense Vitals:
+            Communal version of Sense Vitals
+        Heavenfire Ray:
+            Cold & Holy version of Hellfire Ray
+        Hellball:
+            From... NWN2, I think? Requires taking the mythic ability for it.
+        Super Long Arm:
+            Adds 15ft to your melee range
+            
+    New Pets (yes I know the mount points are fucked):
+        Griffon pet
+        Lann pet:
+            Basically just a clone of Lann (meme option)
+        Plague Horse
+        Unicorn pet
+        
+    New Deities:
+        Radiant Prism:
+            From Pathfinder 2e
+            
+    New Feats:
+        Spellcaster Delights - Damage:
+            Adds caster stat bonus to spell damage
+        Spellcaster Delights - DC:
+            Adds your spellcasting attribute bonus to your spell's DC
+        Charging Hurler:
+            You can use the charge rules to make a thrown weapon attack
+        Potent Spellcasting feat line:
+            Adds +2/+2/+4/+6 to spell dc
+        Exotic Weapon Master:
+            Adds a feat that gives all Exotic weapon proficiencies
+        My Thic Feat:
+            A modder misread "Mythic Feat" as "My Thic Feat" and thus, this meme feat was borne. +2 to Con
+        Powerful Throw:
+            Use Str instead of Dex for thrown weapons
+        Powerful Wings:
+            You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage.
+        Presence of Mind:
+            Int bonus to Initiative
+        
+    New Mythic Feats:
+        Ascendant Critical:
+            Increases both crit range and cringe multiplier by 1
+    
+    New Mythic Abilities:
+        Abundant All Is Darkness:
+            More uses for the ability for Tortured Crusader
+        Mythic Archer:
+            Grants Dex to damage for bows
+        Limitless Sword of Heaven:
+            Gives Sword of Heaven (Angel mythic ability) unlimited rounds
+        Mythic Body and Mind:
+            You gain a bonus to all ability scores equal to 1 + half of your mythic rank.
+           
+-------------------------------------
+
+Other Mod Changes:
+    Microscopic Content Expansion:
+        Add Nightmare pet to other class pet selections (toggeable)
+        Deadly Juggernaut spell DR stacks (toggeable)
+    
+    Character Options Plus:
+        Adds Dimensional Blade to Warpriest spell list
+        
+    Expanded Content:
+         Buffs drake stats to stupid OP levels (meme option) (toggeable) (Disabled by default)
+         
+    Mythic Arcanist:
+        Allows Mage Armor 2/3/4 to work with Archmage Armor (toggeable)
+        
+    Prestige Plus:
+        Adding Blade Lash to Warpriest/Inquist spell list 
+
+--------------------------------
+
+Base Game Changes:
+    Wooloo Vendor:
+        Adds Ruin Staff (toggeable)
+        Adds Thwarter (toggeable)
+        Adds Serpent Prince (toggeable)
+        Adds Twin Crystals (toggeable)
+        Adds Walls of Sanctuary (toggeable)
+        Adds Helmet of Guiding Light (toggeable)
+        Adds The Priceless Woe (toggeable)
+        Adds Butchers Cleaver (DLC3)  (toggeable)
+        Adds Martyrs Blade (toggeable)
+        Adds Oppressor (toggeable)
+        Adds Jagannath Khanda (toggeable)
+        Adds Paws Of The Bear God  (toggeable)
+        Adds Greater Magic Weapon scrolls (99x)  (toggeable)
+        
+    Classes:
+        Dragon Disciple:
+            MasterShapeshifter makes Dragonform free (toggeable)
+            Full spellcasting (doesn't skip levels 1,5,9) (toggeable)
+        Shaman:
+            Adds the Plague hex to Extra Hex and regular Hex selections for Shaman (toggeable)
+    
+    Items:
+        Call of Fiery Things
+            Buffs  Call of Fiery Things to work on SLAs. (toggeable)    
+            
+    Mythic Classes: 
+        Trickster:
+            Buffs Stat Focus (Trickster feat) useless variants, such as Speed and Hit Points (Seriously, just a +1 to speed?) (toggeable)
+            
+           
+    Insightful Comtemplation:
+        Adds a WIS buff to Insightful Contemplation, added for Cyrix (toggeable)
+    Mythic Weapon Focus/Specialization:
+        Buffs Mythic Weapon Focus/Weapon Specialization to add a scaling bonus equal to half your Mythic Rank. (toggeable)
+    Mythic Assault for Light Armor:
+        For Viggy, buffs Mythic Light Armor Assualt to work with Fighter's Finesse. Basically cheating. (toggeable) (Disabled by default)
+    Hippogriff pet:
+        Added to various pet selections (toggeable)

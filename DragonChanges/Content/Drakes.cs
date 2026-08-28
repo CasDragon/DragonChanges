@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
 using DragonChanges.Utils;
+using DragonLibrary.ModRefs;
 using DragonLibrary.Utils;
 
 namespace DragonChanges.Content
@@ -17,12 +18,12 @@ namespace DragonChanges.Content
                 if (ModCompat.expandedcontent)
                 {
                     Main.log.Log("Patching drakes with meme op stats");
-                    string[] drakes = [OtherModGuids.DrakeCompanionUnitBlack,  OtherModGuids.DrakeCompanionUnitWhite,
-                        OtherModGuids.DrakeCompanionUnitBlue, OtherModGuids.DrakeCompanionUnitBrass,
-                        OtherModGuids.DrakeCompanionUnitBronze, OtherModGuids.DrakeCompanionUnitCopper,
-                        OtherModGuids.DrakeCompanionUnitGold, OtherModGuids.DrakeCompanionUnitGreen,
-                        OtherModGuids.DrakeCompanionUnitRed, OtherModGuids.DrakeCompanionUnitSilver,
-                        OtherModGuids.DrakeCompanionUnitUmbral];
+                    string[] drakes = [ExpandedContentRefs.DrakeCompanionUnitBlack,  ExpandedContentRefs.DrakeCompanionUnitWhite,
+                        ExpandedContentRefs.DrakeCompanionUnitBlue, ExpandedContentRefs.DrakeCompanionUnitBrass,
+                        ExpandedContentRefs.DrakeCompanionUnitBronze, ExpandedContentRefs.DrakeCompanionUnitCopper,
+                        ExpandedContentRefs.DrakeCompanionUnitGold, ExpandedContentRefs.DrakeCompanionUnitGreen,
+                        ExpandedContentRefs.DrakeCompanionUnitRed, ExpandedContentRefs.DrakeCompanionUnitSilver,
+                        ExpandedContentRefs.DrakeCompanionUnitUmbral];
                     foreach (string drake in drakes)
                     {
                         UnitConfigurator.For(drake)
