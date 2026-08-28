@@ -89,7 +89,6 @@ namespace DragonChanges
                 else
                 {
                     log.Log("Applying wooloo modification.");
-
                     owlcatModification.Apply();
                     OwlcatModificationsManager.Instance.m_Modifications =
                     [

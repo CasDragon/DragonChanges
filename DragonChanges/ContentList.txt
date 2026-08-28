@@ -6,7 +6,7 @@ New Content:
         Juggernaut:
             A Barbarian archetype focused on stacking DR
         Swordmaster:
-            A Rogue archetype that adds the Paizo archetype
+            A Rogue archetype, Paizo archetype
             
     New Backgrounds:
         Lycan:

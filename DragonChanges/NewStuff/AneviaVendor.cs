@@ -31,47 +31,56 @@ namespace DragonChanges.NewStuff
         internal static SharedVendorTableConfigurator aneviatable = null;
         internal static readonly BlueprintCore.Utils.Blueprint<BlueprintReference<BlueprintUnit>>[] aneviaunits =
                 [UnitRefs.AneviaTirabade, UnitRefs.AneviaTirabade_DH, UnitRefs.AneviaTirabade_DrezenCapital
-                //UnitRefs.AneviaTirabade_GorgoyleAttack, UnitRefs.AneviaTirabade_LostChapel];
                 ];
 
         private static readonly string[] answerlists = ["3e6231392987747479e12f77e8f44611", "33960c7f7af40cd43b7f801a76c87a0b"];
 
         public static void ConfigureStart()
         {
-            Main.log.Log("Starting to create Anevia vendor");
+            Main.log.Log("Starting to create vendor list");
             aneviatable = SharedVendorTableConfigurator.New(vending, vendingguid);
         }
-        //[DragonConfigure]
+        
+        internal const string settingName = "vendor";
+        internal const string settingDescription = "Adds a new vendor to every act, a Wooloo. ";
+        [DragonSetting(SettingCategories.None, settingName, settingDescription)]
         public static void DoDLCSpawner(BlueprintSharedVendorTable loottable)
         {
-            Main.log.Log("knife emoji");
-            var dlcvendor = VendorUnit.CreateVendorBlueprint(loottable);
-            var vendor = new VendorSpawner();
-            EventBus.Subscribe(vendor);
+            if (SettingsAction.GetSetting<bool>(settingName))
+            {
+                Main.log.Log("Wooloo Vendor enabled");
+                var dlcvendor = VendorUnit.CreateVendorBlueprint(loottable);
+                var vendor = new VendorSpawner();
+                EventBus.Subscribe(vendor);
+            }
+            else
+            {
+                Main.log.Log("Wooloo Vendor disabled");
+            }
         }
         public static void ConfigureEnd()
         {
-            Main.log.Log("Attempting to finsh Anevia vendor");
+            Main.log.Log("Attempting to finish vendor list");
             BlueprintSharedVendorTable loottable = aneviatable.Configure();
             BlueprintUnitUpgrader vendorupgrader = VendorUnitUpgrader.Configure(loottable);
-            foreach (var unit in aneviaunits)
+            DoDLCSpawner(loottable);
+            /*foreach (var unit in aneviaunits)
             {
                 UnitConfigurator.For(unit)
                     .AddSharedVendor(loottable)
                     .Configure();
-            }
+            }*/
 
-            DoDLCSpawner(loottable);
             BlueprintAnswer newanswer = AnswerConfigurator.New(answer, answerguid)
                 .SetText(answertext)
                 .SetOnSelect(ActionsBuilder.New().StartTrade(new DialogFirstSpeaker()))
                 .Configure();
-            foreach (string alist in answerlists)
+            /*foreach (string alist in answerlists)
             {
                 AnswersListConfigurator.For(alist)
                     .AddToAnswers(newanswer)
                     .Configure();
-            }
+            }*/
             Main.log.Log("Anevia vendor created!");
         }
         public static void AddItem(BlueprintItem? item, int amount = 1)
