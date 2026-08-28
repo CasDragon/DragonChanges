@@ -23,7 +23,7 @@ public static class VendorUnit
     internal static bool isVendorSpawned = false;
 
     internal const string unitBPName = "dlcvender";
-    [DragonLocalizedString(unitname, "PeePeePooPoo")]
+    [DragonLocalizedString(unitname, "Wooloo the Dragon Trader")]
     internal const string unitname = "dlcvendor.name";
 
     public static BlueprintUnit CreateVendorBlueprint(BlueprintSharedVendorTable loottable)

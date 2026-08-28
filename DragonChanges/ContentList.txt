@@ -1,6 +1,14 @@
 New Content:
     Wooloo Vendor:
         A new vendor that sells all my various new items and other items people requested
+        Just click on it, and it'll load the trade window
+        Locations:
+            Act 1: Outside of tavern, up on Defenders Heart roof (if it doesn't spawn in the first time you load in, save/reload outside of the tavern)
+            Act 2: Left side of Commander's Tent
+            Act 3: Near the Jewelery vendor in Drezen
+            Act 4: In Den of Thousand Delights
+            Act 5: Near the Jewelery vendor in Drezen
+            DLC3: Across from the Chaplin, on the boat side
     
     New Archetypes:
         Juggernaut:
