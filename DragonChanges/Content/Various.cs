@@ -91,15 +91,7 @@ namespace DragonChanges.Content
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
                     .AddToAllFeatures(hippo)
                     .Configure();
-                if (ModCompat.tttbase)
-                {
-                    FeatureSelectionConfigurator.For("d9b99d9c48d2425894b565733e96c7e3")
-                        .AddToAllFeatures(hippo)
-                        .Configure();
-                    FeatureSelectionConfigurator.For("ecf97b544d584edb8bb0ba9e7de20751")
-                        .AddToAllFeatures(hippo)
-                        .Configure();
-                }
+                PetUtils.AddPetToTTTSelection(hippo);
             }
         }
         const string codsettingname = "carrierofdisease";
@@ -112,15 +104,15 @@ namespace DragonChanges.Content
             {
                 Main.log.Log("Adding Carrier of Disease to Extra Hex");
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraShamanHexSelection)
-                    .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                    .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.ToString())
                     .Configure();
                 FeatureSelectionConfigurator.For(FeatureSelectionRefs.ShamanHexSelection)
-                    .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                    .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.ToString())
                     .Configure();
                 if (ModCompat.tttbase)
                 {
-                    FeatureSelectionConfigurator.For("08d9f686b2944ba6b3f7763882c0ded4")
-                        .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.Reference.Get())
+                    FeatureSelectionConfigurator.For(OtherModGuids.ExtraHexShaman)
+                        .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.ToString())
                         .Configure();
                 }
             }
@@ -164,7 +156,7 @@ namespace DragonChanges.Content
             {
                 Main.log.Log("Buffing Call of Fiery Things to work on SLAs.");
                 BlueprintFeature x = FeatureRefs.BaphometFireCloth_AnimalisticFireFeature.Reference.Get();
-                AddOutgoingDamageTrigger comp = x.GetComponent<AddOutgoingDamageTrigger>();
+                AddOutgoingDamageTrigger comp = x.GetComponent<AddOutgoingDamageTrigger>()!;
                 AddOutgoingDamageTrigger y = (AddOutgoingDamageTrigger)TTTHelpers.ObjectDeepCopier.Clone(comp);
                 y.m_AbilityType = Kingmaker.UnitLogic.Abilities.Blueprints.AbilityType.Supernatural;
                 AddOutgoingDamageTrigger z = (AddOutgoingDamageTrigger)TTTHelpers.ObjectDeepCopier.Clone(comp);
