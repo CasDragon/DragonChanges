@@ -22,7 +22,7 @@ public class LannPetFeature
         internal const string featuredescriptionkey = "lannpetfeature.description";
 
         [DragonConfigure]
-        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription, false)]
         public static void Configure()
         {
             if (SettingsAction.GetSetting<bool>(settingName))
