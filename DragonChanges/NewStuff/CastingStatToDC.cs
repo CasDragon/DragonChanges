@@ -1,10 +1,15 @@
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
+using DragonLibrary.BPCoreExtensions;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Classes.Selection;
+using Kingmaker.Designers.Mechanics.Facts;
 using Kingmaker.Enums;
+using Kingmaker.UnitLogic.Abilities;
+using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.UnitLogic.Mechanics.Properties;
 
 namespace DragonChanges.NewStuff;
 
@@ -49,9 +54,7 @@ public class CastingStatToDC
         FeatureConfigurator.New(feature, featureguid)
             .SetDisplayName(featurenamekey)
             .SetDescription(featuredescriptionkey)
-            .AddIncreaseAllSpellsDC(descriptor: ModifierDescriptor.UntypedStackable,
-                spellsOnly: true,
-                value: ContextValues.CasterStatBonus())
+            .AddCasterStatToDC(descriptor: ModifierDescriptor.UntypedStackable)
             .AddToGroups(FeatureGroup.Feat, FeatureGroup.WizardFeat)
             .AddRecommendationRequiresSpellbook()
             .AddFeatureTagsComponent(FeatureTag.Magic)

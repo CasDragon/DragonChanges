@@ -1,18 +1,8 @@
-using BlueprintCore.Blueprints.Configurators;
-using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using DragonChanges.Utils;
-using DragonLibrary.Utils;
 using Kingmaker;
 using Kingmaker.Blueprints;
-using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Classes.Experience;
-using Kingmaker.EntitySystem;
-using Kingmaker.EntitySystem.Entities;
-using Kingmaker.Enums;
 using Kingmaker.PubSubSystem;
-using Kingmaker.UnitLogic;
-using TabletopTweaks.Core.Utilities;
 using UnityEngine;
 
 namespace DragonChanges.NewStuff.VendorStuff;
@@ -21,11 +11,11 @@ public class VendorSpawner: IAreaActivationHandler
 {
     public void OnAreaActivated()
     {
-        /*Main.log.Log("New area loaded");
+        Main.log.Log("New area loaded");
         Main.log.Log($"Current Area - {Game.Instance.CurrentlyLoadedArea.AssetGuid.ToString()}");
         if (Game.Instance.CurrentlyLoadedAreaPart != null)
             Main.log.Log($"Current Area Part - {Game.Instance.CurrentlyLoadedAreaPart.AssetGuid.ToString()}");
-        Main.log.Log("New area loaded - End");*/
+        Main.log.Log("New area loaded - End");
         
         switch (Game.Instance.CurrentlyLoadedArea.AssetGuid.ToString())
         {

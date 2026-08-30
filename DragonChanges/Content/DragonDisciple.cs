@@ -1,4 +1,6 @@
+using BlueprintCore.Blueprints.Configurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
@@ -23,10 +25,15 @@ public class DragonDisciple
         Main.log.Log("Allowing DragonDisciple class to have full spellcasting");
         var cclass = CharacterClassRefs.DragonDiscipleClass.Reference.Get();
         DragonHelpers.RemoveComponent<SkipLevelsForSpellProgression>(cclass);
-        ProgressionConfigurator.For(ProgressionRefs.DragonDiscipleProgression)
-            .AddToLevelEntries(1, FeatureSelectionRefs.DragonDiscipleSpellbookSelection.ToString())
-            .RemoveFromLevelEntries(2, FeatureSelectionRefs.DragonDiscipleSpellbookSelection.ToString())
-            .Configure();
+        var prog = ProgressionRefs.DragonDiscipleProgression.Reference.Get();
+        var selection = FeatureSelectionRefs.DragonDiscipleSpellbookSelection.Reference.Get()
+            .ToReference<BlueprintFeatureBaseReference>();
+        prog.LevelEntries[1].m_Features.Remove(selection);
+        prog.LevelEntries[0].m_Features = [..prog.LevelEntries[0].m_Features, selection];
+        //ProgressionConfigurator.For(ProgressionRefs.DragonDiscipleProgression)
+        //    .AddToLevelEntries(1, FeatureSelectionRefs.DragonDiscipleSpellbookSelection.ToString())
+        //    .RemoveFromLevelEntries(2, FeatureSelectionRefs.DragonDiscipleSpellbookSelection.ToString())
+        //    .Configure();
     }
     private const string settingNameMSS = "ddmastershapeshifter";
     private const string settingDescriptionMSS = "Buffs Dragon Disciple class to allow MasterShapeshifter making Dragonform free";
