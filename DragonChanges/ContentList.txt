@@ -125,7 +125,8 @@ Other Mod Changes:
         Allows Mage Armor 2/3/4 to work with Archmage Armor (toggeable)
         
     Prestige Plus:
-        Adding Blade Lash to Warpriest/Inquist spell list 
+        Adding Blade Lash to Warpriest/Inquist/MD spell list 
+        Remove the Monk requirement from the new combat styles (toggeable) (Disabled by default)
 
 --------------------------------
 
