@@ -55,7 +55,7 @@ namespace DragonChanges
                     LocalizationTool.LoadLocalizationPacks(
                         Path.Combine(modfolder, "NewLocalizedStrings.json"),
                         Path.Combine(modfolder, "LocalizedStrings.json"));
-                    LoadWoolooAssets(modfolder);
+                    Wooloo.FixWoolooLocalization();
 
                     SettingsAction.InitializeSettings("dragonchanges", "DragonChanges", entry);
                     log.Log("Patching blueprints.");
@@ -103,7 +103,6 @@ namespace DragonChanges
                 }
             }
 
-            Wooloo.FixWoolooLocalization();
         }
     }
 }
