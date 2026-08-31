@@ -1,12 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Reflection;
+﻿using System.Reflection;
 using BlueprintCore.Utils;
 using DragonChanges.Content;
 using DragonChanges.NewStuff;
 using DragonLibrary.Utils;
 using HarmonyLib;
-using Kingmaker;
 using Kingmaker.Blueprints.JsonSystem;
 using Kingmaker.Modding;
 using UnityModManagerNet;
@@ -55,6 +52,7 @@ namespace DragonChanges
                     LocalizationTool.LoadLocalizationPacks(
                         Path.Combine(modfolder, "NewLocalizedStrings.json"),
                         Path.Combine(modfolder, "LocalizedStrings.json"));
+                    LoadWoolooAssets(modfolder);
                     Wooloo.FixWoolooLocalization();
 
                     SettingsAction.InitializeSettings("dragonchanges", "DragonChanges", entry);
@@ -100,6 +98,7 @@ namespace DragonChanges
                         .. OwlcatModificationsManager.Instance.AppliedModifications,
                         owlcatModification
                     ];
+                    
                 }
             }
 
