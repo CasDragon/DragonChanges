@@ -98,7 +98,7 @@ namespace DragonChanges
                         .. OwlcatModificationsManager.Instance.AppliedModifications,
                         owlcatModification
                     ];
-                    
+                    SettingsAction.MarkExcludeEntirely("WoolooMod");
                 }
             }
 

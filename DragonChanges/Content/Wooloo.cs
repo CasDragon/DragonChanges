@@ -1,10 +1,20 @@
 ﻿using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
+using DragonChanges;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
+using HarmonyLib;
+using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
+using Kingmaker.Blueprints.Root;
 using Kingmaker.Localization;
+using Kingmaker.Modding;
+using Kingmaker.UnitLogic.Buffs;
+using Kingmaker.View;
+using Kingmaker.Visual.Mounts;
+using Owlcat.Runtime.Core.Utils;
 using UnityEngine;
 
 namespace DragonChanges.Content
