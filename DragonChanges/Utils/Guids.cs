@@ -232,11 +232,11 @@ namespace DragonChanges.Utils
         internal const string WoolooPortrait = "7c6a8a6b1a5a9a840889527b940f5bde";
         internal const string LannPetUnit = "47b37d69-ace3-4b78-8012-b5d513d2ed7f";
         internal const string LannPetFeature = "64cd09a6-4d47-41b4-85b7-d666754f867e";
-        internal const string guid2 = "372b5fea-d564-427b-bc7c-b6844766e735";
-        internal const string guid3 = "47fa8123-06ef-4f16-b37c-53e2ac452ee1";
-        internal const string guid4 = "b8bc5a40-164e-4239-b02a-b1ebeb0abe55";
-        internal const string guid5 = "6387c5b3-5a4d-4ddc-84d7-e3fac2285bac";
-        internal const string guid6 = "71293447-b647-49b6-a7fc-c31249f426a0";
+        internal const string BloodSlugsSpell = "372b5fea-d564-427b-bc7c-b6844766e735";
+        internal const string BloodSlugsBuff = "47fa8123-06ef-4f16-b37c-53e2ac452ee1";
+        internal const string BloodSlugsScroll = "b8bc5a40-164e-4239-b02a-b1ebeb0abe55";
+        internal const string GloryOfFaithSpell = "6387c5b3-5a4d-4ddc-84d7-e3fac2285bac";
+        internal const string GloryOfFaithBuff = "71293447-b647-49b6-a7fc-c31249f426a0";
         internal const string guid7 = "8ce043f8-3ece-4b4c-8594-280eec764924";
         internal const string guid8 = "9d0d0794-e474-4bff-b3c6-4d15133f80b2";
         internal const string guid9 = "46d5f1ca-f461-4205-8897-b1cf6b2e81ea";

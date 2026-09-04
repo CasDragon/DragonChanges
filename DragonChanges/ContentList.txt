@@ -9,6 +9,7 @@ New Content:
             Act 4: In Den of Thousand Delights
             Act 5: Near the Jewelery vendor in Drezen
             DLC3: Across from the Chaplin, on the boat side
+        Toggle for disabling it, and separate toggle for letting Anevia be a vendor again if you hate sheep
     
     New Archetypes:
         Juggernaut:
@@ -62,6 +63,13 @@ New Content:
             From... NWN2, I think? Requires taking the mythic ability for it.
         Super Long Arm:
             Adds 15ft to your melee range
+        Blood Slugs:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/4-winds-fantasy-gaming-3rd-party-spells/blood-slugs/
+            In Druid, Lich and MD spell list
+        Glory of the Faithful:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/4-winds-fantasy-gaming-3rd-party-spells/glory-of-the-faithful/
+            No scroll, only on Paladin list. It's quite nonsense spell
+            
             
     New Pets (yes I know the mount points are fucked):
         Griffon pet

@@ -20,8 +20,6 @@ namespace DragonChanges.NewStuff.VendorStuff;
 
 public static class VendorUnit
 {
-    internal static bool isVendorSpawned = false;
-
     internal const string unitBPName = "dlcvender";
     [DragonLocalizedString(unitname, "Wooloo the Dragon Trader")]
     internal const string unitname = "dlcvendor.name";
@@ -40,7 +38,7 @@ public static class VendorUnit
             .SetPortrait(aivu.PortraitSafe)
             .SetPrefab(aivu.Prefab)
             .SetVisual(aivu.Visual)
-            .SetFaction(aivu.Faction)
+            .SetFaction(FactionRefs.Neutrals.ToString())
             .SetBody(aivu.Body)
             .SetStrength(aivu.Strength)
             .SetIntelligence(aivu.Intelligence)

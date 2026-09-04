@@ -42,20 +42,14 @@ public class VendorSpawner: IAreaActivationHandler
         }
     }
 
-    public void SpawnTheVendor(Vector3 position)
+    private void SpawnTheVendor(Vector3 position)
     {
-        foreach (var unit in Game.Instance.State.Units)
+        if (Game.Instance.State.Units.Any(unit => unit.Blueprint.AssetGuid.ToString() == Guids.DLCVendorUnit))
         {
-            if (unit.Blueprint.AssetGuid.ToString() == Guids.DLCVendorUnit)
-            {
-                VendorUnit.isVendorSpawned = true;
-                break;
-            }
+            return;
         }
 
-        if (VendorUnit.isVendorSpawned) return;
         var unitSpawned = Game.Instance.EntityCreator.SpawnUnit(BlueprintTool.Get<BlueprintUnit>(Guids.DLCVendorUnit),
             position, Quaternion.identity, Game.Instance.State.LoadedAreaState.MainState);
-        VendorUnit.isVendorSpawned = true;
     }
 }

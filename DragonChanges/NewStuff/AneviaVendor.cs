@@ -58,29 +58,36 @@ namespace DragonChanges.NewStuff
                 Main.log.Log("Wooloo Vendor disabled");
             }
         }
+        internal const string asettingName = "vendor-anevia";
+        internal const string asettingDescription = "Also adds the vendor table to Anevia, for those that hate sheep ";
+        [DragonSetting(SettingCategories.None, asettingName, asettingDescription)]
         public static void ConfigureEnd()
         {
             Main.log.Log("Attempting to finish vendor list");
             BlueprintSharedVendorTable loottable = aneviatable.Configure();
             BlueprintUnitUpgrader vendorupgrader = VendorUnitUpgrader.Configure(loottable);
             DoDLCSpawner(loottable);
-            /*foreach (var unit in aneviaunits)
-            {
-                UnitConfigurator.For(unit)
-                    .AddSharedVendor(loottable)
-                    .Configure();
-            }*/
-
             BlueprintAnswer newanswer = AnswerConfigurator.New(answer, answerguid)
                 .SetText(answertext)
                 .SetOnSelect(ActionsBuilder.New().StartTrade(new DialogFirstSpeaker()))
                 .Configure();
-            /*foreach (string alist in answerlists)
+            foreach (var unit in aneviaunits)
             {
-                AnswersListConfigurator.For(alist)
-                    .AddToAnswers(newanswer)
+                UnitConfigurator.For(unit)
+                    .AddSharedVendor(loottable)
                     .Configure();
-            }*/
+            }
+            if (SettingsAction.GetSetting<bool>(asettingName))
+            {
+                Main.log.Log("Adding vendor to Anevia because people hate Wooloo");
+                foreach (string alist in answerlists)
+                {
+                    AnswersListConfigurator.For(alist)
+                        .AddToAnswers(newanswer)
+                        .Configure();
+                }
+            }
+
             Main.log.Log("Anevia vendor created!");
         }
         public static void AddItem(BlueprintItem? item, int amount = 1)
