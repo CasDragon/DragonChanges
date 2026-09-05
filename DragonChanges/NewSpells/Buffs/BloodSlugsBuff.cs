@@ -16,7 +16,7 @@ namespace DragonChanges.NewSpells.Buffs;
 public class BloodSlugsBuff
 {
     // edit
-    internal const string buff = "feature";
+    internal const string buff = "bloodslugsbuff";
     internal const string buffguid = Guids.BloodSlugsBuff;
     // don't edit
     [DragonLocalizedString(buffname, "Blood Slugs")]

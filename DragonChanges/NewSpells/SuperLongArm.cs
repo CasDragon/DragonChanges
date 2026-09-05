@@ -16,6 +16,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BlueprintCore.Utils.Types;
+using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.UnitLogic.Mechanics.Properties;
 
 namespace DragonChanges.NewSpells
 {
@@ -58,43 +61,24 @@ namespace DragonChanges.NewSpells
         }
         public static BlueprintAbility ConfigureEnabled()
         {
-            return AbilityConfigurator.New(ability, abilityguid)
+            var x = AbilityConfigurator.New(ability, abilityguid)
                 .SetDisplayName(abilityname)
                 .SetDescription(abilitydescription)
                 .AddSpellComponent(SpellSchool.Transmutation)
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
                         .ApplyBuff(SuperLongArmBuff.ConfigureEnabled(),
-                            new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
-                            {
-                                Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Minutes,
-                                DiceType = Kingmaker.RuleSystem.DiceType.Zero,
-                                DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 0,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Rank,
-                                    Value = 1,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                m_IsExtendable = true
-                            },
-                            isFromSpell: true))
-                .AddToSpellList(4, SpellListRefs.AlchemistSpellList.Reference.Get())
-                .AddToSpellList(4, SpellListRefs.BloodragerSpellList.Reference.Get())
-                .AddToSpellList(4, SpellListRefs.MagusSpellList.Reference.Get())
-                .AddToSpellList(4, SpellListRefs.WizardSpellList.Reference.Get())
-                .AddToSpellList(4, SpellListRefs.WitchSpellList.Reference.Get())
-                .AddToSpellList(4, SpellListRefs.MagicDeceiverSpellList.Reference.Get())
-                .AddToSpellList(4, SpellListRefs.TricksterSpelllist.Reference.Get())
+                            ContextDuration.Variable(ContextValues.Property(UnitProperty.Level, true), 
+                                DurationRate.Minutes, true),
+                                isFromSpell: true))
+                .AddToSpellList(4, SpellListRefs.AlchemistSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.BloodragerSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.MagusSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.WizardSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.WizardTransmutationSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.WitchSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.MagicDeceiverSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.TricksterSpelllist.ToString())
                 .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.None)
                 .SetLocalizedDuration(Duration.MinutePerLevel)
                 .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.SuperLongArms.png"))
@@ -109,6 +93,8 @@ namespace DragonChanges.NewSpells
                 .SetActionType(UnitCommand.CommandType.Standard)
                 .SetAvailableMetamagic(Metamagic.Extend | Metamagic.Heighten | Metamagic.Quicken | Metamagic.CompletelyNormal)
                 .Configure();
+            RandomHelpers.AddToThassilonian(x, 4);
+            return x;
         }
     }
 }

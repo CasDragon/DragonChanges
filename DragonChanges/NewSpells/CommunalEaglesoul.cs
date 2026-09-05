@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BlueprintCore.Utils.Types;
+using Kingmaker.UnitLogic.Mechanics;
 
 namespace DragonChanges.NewSpells
 {
@@ -60,53 +62,11 @@ namespace DragonChanges.NewSpells
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
                         .ApplyBuff(BuffRefs.EaglesoulBuff.Reference.Get(),
-                            new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
-                            {
-                                Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,
-                                DiceType = Kingmaker.RuleSystem.DiceType.Zero,
-                                DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 0,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 4,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                m_IsExtendable = true
-                            },
+                            ContextDuration.Fixed(4, DurationRate.Hours, true),
                             isFromSpell: true)
                         .PartyMembers(ActionsBuilder.New()
                             .ApplyBuff(BuffRefs.EaglesoulBuff.Reference.Get(),
-                                new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
-                                {
-                                    Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,
-                                    DiceType = Kingmaker.RuleSystem.DiceType.Zero,
-                                    DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                    {
-                                        ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                        Value = 0,
-                                        ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                        ValueShared = AbilitySharedValue.Damage,
-                                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                    },
-                                    BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                    {
-                                        ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                        Value = 4,
-                                        ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                        ValueShared = AbilitySharedValue.Damage,
-                                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                    },
-                                    m_IsExtendable = true
-                                },
+                                ContextDuration.Fixed(4, DurationRate.Hours, true),
                                 isFromSpell: true)))
                 .AddAbilitySpawnFx(AbilitySpawnFxAnchor.SelectedTarget, orientationMode: AbilitySpawnFxOrientation.Copy, time: AbilitySpawnFxTime.OnApplyEffect, prefabLink: "930c1a4aa129b8344a40c8c401d99a04")
                 .AddToSpellList(9, SpellListRefs.ClericSpellList.Reference.Get())

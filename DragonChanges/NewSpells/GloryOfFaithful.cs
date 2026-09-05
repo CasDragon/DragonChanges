@@ -34,6 +34,7 @@ public class GloryOfFaithful
     internal const string abilityname = $"{ability}.name";
     [DragonLocalizedString(abilitydescription, "You are infused with the power and glory of all those faithful to your god, both living and dead. You gain a divine bonus to attack, damage, and AC equal to your caster level.")]
     internal const string abilitydescription = $"{ability}.description";
+    internal static readonly Sprite icon = MicroAssetUtil.GetAssemblyResourceSprite(iconname); 
 
     [DragonConfigure]
     [DragonSetting(SettingCategories.NewSpells, settingName, settingDescription)]
@@ -42,8 +43,7 @@ public class GloryOfFaithful
         if (SettingsAction.GetSetting<bool>(settingName))
         {
             Main.log.Log($"{ability} item enabled, configuring");
-            var icon = MicroAssetUtil.GetAssemblyResourceSprite(iconname); 
-            ConfigureEnabled(icon);
+            ConfigureEnabled();
         }
         else
         {
@@ -60,7 +60,7 @@ public class GloryOfFaithful
             .Configure();
     }
 
-    public static BlueprintAbility ConfigureEnabled(Sprite icon)
+    public static BlueprintAbility ConfigureEnabled()
     {
         return AbilityConfigurator.New(ability, abilityguid)
             .SetDisplayName(abilityname)

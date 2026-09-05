@@ -237,9 +237,9 @@ namespace DragonChanges.Utils
         internal const string BloodSlugsScroll = "b8bc5a40-164e-4239-b02a-b1ebeb0abe55";
         internal const string GloryOfFaithSpell = "6387c5b3-5a4d-4ddc-84d7-e3fac2285bac";
         internal const string GloryOfFaithBuff = "71293447-b647-49b6-a7fc-c31249f426a0";
-        internal const string guid7 = "8ce043f8-3ece-4b4c-8594-280eec764924";
-        internal const string guid8 = "9d0d0794-e474-4bff-b3c6-4d15133f80b2";
-        internal const string guid9 = "46d5f1ca-f461-4205-8897-b1cf6b2e81ea";
+        internal const string IllFortuneSpell = "8ce043f8-3ece-4b4c-8594-280eec764924";
+        internal const string IllFortuneBuff = "9d0d0794-e474-4bff-b3c6-4d15133f80b2";
+        internal const string IllFortuneScroll = "46d5f1ca-f461-4205-8897-b1cf6b2e81ea";
         internal const string guid10 = "1c0193e1-7283-4e10-bc2c-5c922cb08179";
         internal const string guid11 = "cfc2d05b-37f6-4d64-9f1a-1954b999d8d4";
         internal const string guid12 = "bd342332-4342-45e0-bbce-6a3b6075adea";

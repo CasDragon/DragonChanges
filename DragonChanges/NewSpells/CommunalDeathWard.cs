@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Actions.Builder;
+﻿using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
@@ -14,6 +9,7 @@ using DragonLibrary.Utils;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components.Base;
+using Kingmaker.UnitLogic.Mechanics;
 
 namespace DragonChanges.NewSpells
 {
@@ -61,53 +57,11 @@ namespace DragonChanges.NewSpells
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
                         .ApplyBuff(BuffRefs.DeathWardBuff.Reference.Get(),
-                            new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
-                            {
-                                Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,
-                                DiceType = Kingmaker.RuleSystem.DiceType.Zero,
-                                DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 0,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared =  AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 4,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                m_IsExtendable = true
-                            },
+                            ContextDuration.Fixed(4, DurationRate.Hours, true),
                             isFromSpell: true)
                         .PartyMembers(ActionsBuilder.New()
                             .ApplyBuff(BuffRefs.DeathWardBuff.Reference.Get(),
-                                new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
-                                {
-                                    Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,
-                                    DiceType = Kingmaker.RuleSystem.DiceType.Zero,
-                                    DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                    {
-                                        ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                        Value = 0,
-                                        ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                        ValueShared = AbilitySharedValue.Damage,
-                                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                    },
-                                    BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                    {
-                                        ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                        Value = 4,
-                                        ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                        ValueShared = AbilitySharedValue.Damage,
-                                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                    },
-                                    m_IsExtendable = true
-                                },
+                                ContextDuration.Fixed(4, DurationRate.Hours, true),
                                 isFromSpell: true)))
                 .AddAbilitySpawnFx(AbilitySpawnFxAnchor.SelectedTarget, orientationMode: AbilitySpawnFxOrientation.Copy, time: AbilitySpawnFxTime.OnApplyEffect, prefabLink: "cbfe312cb8e63e240a859efaad8e467c")
                 .AddToSpellList(6, SpellListRefs.ClericSpellList.Reference.Get())

@@ -70,13 +70,14 @@ public class ColdRay
             string spritepath = "Abilities.HellIceRay.png";
             //if (SettingsAction.GetSetting<bool>("darthicons"))
             //    spritepath = "Darth.HeavenfireRay.png";
-            ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount));
-            ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default));
-            AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
+            ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount))!;
+            ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default))!;
+            var x = AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)
                 // components
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardEvocationSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.MagusSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.ClericSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WitchSpellList.Reference.Get())
@@ -130,5 +131,6 @@ public class ColdRay
                     spellType: Kingmaker.Craft.CraftSpellType.Damage)
                 .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite(spritepath))
                 .Configure();
+            RandomHelpers.AddToThassilonian(x, 6);
         }
 }

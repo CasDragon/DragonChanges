@@ -8,6 +8,7 @@ using DragonLibrary.Utils;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.ActivatableAbilities;
 using Kingmaker.UnitLogic.Commands.Base;
+using UnityEngine;
 
 namespace DragonChanges.templates
 {
@@ -18,11 +19,13 @@ namespace DragonChanges.templates
         internal const string abilityguid = Guids.Template;
         internal const string settingName = "";
         internal const string settingDescription = "";
+        internal const string iconname = "Abilities.*.png";
         // don't edit
         //[DragonLocalizedString(abilityname, "")]
         internal const string abilityname = $"{ability}.name";
         //[DragonLocalizedString(abilitydescription, "")]
         internal const string abilitydescription = $"{ability}.description";
+        internal static readonly Sprite icon = MicroAssetUtil.GetAssemblyResourceSprite(iconname); 
         //[DragonConfigure]
         //[DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
         public static void Configure()
@@ -50,6 +53,7 @@ namespace DragonChanges.templates
             return AbilityConfigurator.New(ability, abilityguid)
                 .SetDisplayName(abilityname)
                 .SetDescription(abilitydescription)
+                .SetIcon(icon)
                 .Configure();
         }
     }

@@ -8,7 +8,6 @@ using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.EntitySystem.Stats;
-using Kingmaker.UI.Common;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Commands.Base;
@@ -19,19 +18,19 @@ using UnityEngine;
 
 namespace DragonChanges.NewSpells;
 
-public class BloodSlugs
+public class ChildOfIllFortune
 {
     // edit
-    internal const string ability = "bloodslugs";
-    internal const string abilityguid = Guids.BloodSlugsSpell;
-    internal const string settingName = "bloodslugs";
-    internal const string settingDescription = "Adds new spell, Blood Slugs. In Druid, MD, and Demon lists ";
+    internal const string ability = "illfortune";
+    internal const string abilityguid = Guids.IllFortuneSpell;
+    internal const string settingName = "illfortune";
+    internal const string settingDescription = "Adds new spell, Child of Ill Fortune. In Cleric, Oracle, MD, and Angel lists ";
     internal const string iconname = "Abilities.BloodSlugs.png";
     // don't edit
-    internal const string name = "Blood Slugs";
+    internal const string name = "Child of Ill Fortune";
     [DragonLocalizedString(abilityname, name)]
     internal const string abilityname = $"{ability}.name";
-    [DragonLocalizedString(abilitydescription, "You create blood-thirsty slugs that burrow into flesh and settle in veins. The slugs appear on the subject’s body and immediately attempt to penetrate their skin. Targets must make a Fortitude save for each blood slug affecting them. Each failed saving throw deals 1 point of Constitution damage and reduces the target’s speed by 5 feet (minimum 5). The damage from multiple blood slugs stacks.")]
+    [DragonLocalizedString(abilitydescription, "For the spell’s duration, the target suffers -2 penalties to all attack, damage (weapon and spell), skill check and ability check rolls. Any spells cast by the target have their DC decreased by 5. Child of ill fortune lasts a full 24 hours unless removed by dispel magic or remove curse.")]
     internal const string abilitydescription = $"{ability}.description";
     internal static readonly Sprite icon = MicroAssetUtil.GetAssemblyResourceSprite(iconname); 
     [DragonConfigure]
@@ -62,36 +61,35 @@ public class BloodSlugs
         var x = AbilityConfigurator.New(ability, abilityguid)
             .SetDisplayName(abilityname)
             .SetDescription(abilitydescription)
-            .AddSpellComponent(SpellSchool.Conjuration)
+            .AddSpellComponent(SpellSchool.Transmutation)
+            .AddSpellDescriptorComponent(SpellDescriptor.Curse)
             .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
                     .SavingThrow(
-                        SavingThrowType.Fortitude,
+                        SavingThrowType.Will,
                         onResult:
                             new ActionsBuilder()
                                 .ConditionalSaved(
                                     failed: new ActionsBuilder()
-                                        .ApplyBuff(BloodSlugsBuff.ConfigureEnabled(icon),
-                                            ContextDuration.Variable(ContextValues.Property(UnitProperty.Level, true),
-                                            DurationRate.Rounds, true),
+                                        .ApplyBuff(IllFortuneBuff.ConfigureEnabled(icon),
+                                            ContextDuration.Fixed(24, DurationRate.Hours, false),
                                         isFromSpell: true))))
-            .AddToSpellList(4, SpellListRefs.DruidSpellList.ToString())
-            .AddToSpellList(4, SpellListRefs.MagicDeceiverSpellList.ToString())
-            .AddToSpellList(4, SpellListRefs.DemonSpelllist.ToString())
-            .AddToSpellList(4, SpellListRefs.LichMythicSpelllist.ToString())
-            .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Debuff, savingThrow: Kingmaker.Craft.CraftSavingThrow.Fortitude, aOEType: Kingmaker.Craft.CraftAOE.None)
-            .SetLocalizedDuration(Duration.RoundPerLevel)
+            .AddToSpellList(6, SpellListRefs.ClericSpellList.ToString())
+            .AddToSpellList(6, SpellListRefs.MagicDeceiverSpellList.ToString())
+            .AddToSpellList(6, SpellListRefs.AngelMythicSpelllist.ToString())
+            .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Debuff, savingThrow: Kingmaker.Craft.CraftSavingThrow.Will, aOEType: Kingmaker.Craft.CraftAOE.None)
+            .SetLocalizedDuration(Duration.TwentyFourHours)
             .SetIcon(icon)
             .SetType(AbilityType.Spell)
             .SetRange(AbilityRange.Close)
             .SetCanTargetEnemies(true)
-            .SetCanTargetFriends(false)
+            .SetCanTargetFriends(true)
             .SetCanTargetPoint(false)
             .SetCanTargetSelf(false)
             .SetSpellResistance(true)
             .SetAnimation(UnitAnimationActionCastSpell.CastAnimationStyle.Point)
             .SetActionType(UnitCommand.CommandType.Standard)
-            .SetAvailableMetamagic(Metamagic.Extend | Metamagic.Heighten | Metamagic.Quicken | Metamagic.CompletelyNormal)
+            .SetAvailableMetamagic(Metamagic.Heighten | Metamagic.Quicken | Metamagic.CompletelyNormal)
             .Configure();
         return x;
     }

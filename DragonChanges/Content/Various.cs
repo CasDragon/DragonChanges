@@ -4,6 +4,7 @@ using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
 using DragonChanges.NewStuff;
 using DragonChanges.Utils;
+using DragonLibrary.ModRefs;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -111,7 +112,10 @@ namespace DragonChanges.Content
                     .Configure();
                 if (ModCompat.tttbase)
                 {
-                    FeatureSelectionConfigurator.For(OtherModGuids.ExtraHexShaman)
+                    FeatureSelectionConfigurator.For(TTTBaseRefs.ExtraHexShaman)
+                        .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.ToString())
+                        .Configure();
+                    FeatureSelectionConfigurator.For(TTTBaseRefs.ExtraHexWitch)
                         .AddToAllFeatures(FeatureSelectionRefs.PlagueHexSelection.ToString())
                         .Configure();
                 }

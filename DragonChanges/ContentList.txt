@@ -51,26 +51,34 @@ New Content:
     New Spells:
         Elemental Rays:
             Cold/electric/acid variants of Hellfire Ray
+            In spells list that would get Hellfire Ray
         Communal Death Ward:
             Communal version of Death Ward
+            In spells list that would get Deathward
         Communal Eaglesoul:
             Communal version of Eaglesoul
+            In spells list that would get Eaglesoul
         Communal Sense Vitals:
             Communal version of Sense Vitals
+            In spells list that would get Sense Vitals
         Heavenfire Ray:
             Cold & Holy version of Hellfire Ray
+            In spells list that would get Hellfire Ray
         Hellball:
             From... NWN2, I think? Requires taking the mythic ability for it.
         Super Long Arm:
             Adds 15ft to your melee range
+            In Alchemist, Bloodrager, Magus, Wizard, Witch, MD, Trickster spell list
         Blood Slugs:
             https://www.d20pfsrd.com/magic/3rd-party-spells/4-winds-fantasy-gaming-3rd-party-spells/blood-slugs/
-            In Druid, Lich and MD spell list
+            In Druid, Lich, Demon,  MD spell list
         Glory of the Faithful:
             https://www.d20pfsrd.com/magic/3rd-party-spells/4-winds-fantasy-gaming-3rd-party-spells/glory-of-the-faithful/
             No scroll, only on Paladin list. It's quite nonsense spell
-            
-            
+        Child of Ill Fortune:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/4-winds-fantasy-gaming-3rd-party-spells/child-of-ill-fortune/
+            In Cleric, Oracle, MD, Angel spell lists
+                        
     New Pets (yes I know the mount points are fucked):
         Griffon pet
         Lann pet:

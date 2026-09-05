@@ -9,12 +9,12 @@ using Kingmaker.Enums;
 
 namespace DragonChanges.NewItems.Scrolls;
 
-public class BloodSlugScroll
+public class IllFortuneScroll
 {
     // edit
-    private const string item = "bloodslugsscroll";
-    private const string itemguid = Guids.BloodSlugsScroll;
-    private const string settingName = "bloodslugs";
+    private const string item = "illfortunescroll";
+    private const string itemguid = Guids.IllFortuneScroll;
+    private const string settingName = "illfortune";
     [DragonConfigure(priority: ConfigurePriority.Last)]
     public static void Configure()
     {
@@ -43,14 +43,14 @@ public class BloodSlugScroll
             .SetInventoryPutSound("ScrollPut")
             .SetInventoryTakeSound("ScrollTake")
             .SetTrashLootTypes(TrashLootType.Scrolls | TrashLootType.Scrolls_RE)
-            .SetAbility(Guids.BloodSlugsSpell)
+            .SetAbility(Guids.IllFortuneSpell)
             .SetSpendCharges(true)
             .SetCharges(1)
             .SetCasterLevel(11)
-            .SetSpellLevel(4)
+            .SetSpellLevel(6)
             .SetType(UsableItemType.Scroll)
             .AddCopyScroll()
-            .SetIcon(BloodSlugs.icon);
+            .SetIcon(ChildOfIllFortune.icon);
         var scroll = scrollconfig.Configure();
         AneviaVendor.AddItem(scroll, 99);
     }

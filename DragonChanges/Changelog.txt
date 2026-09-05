@@ -1,0 +1,3 @@
+*** 1.21.3
+ - Add new spells, Blood Slugs, Child of Ill Fortune, Glory of the Faithful
+ - Fix: Communal Sense Vitals is allowed to be used in the Wizard Divination special spell slot 

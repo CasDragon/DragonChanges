@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Kingmaker.UnitLogic.Mechanics;
 
 namespace DragonChanges.NewSpells
 {
@@ -64,58 +65,16 @@ namespace DragonChanges.NewSpells
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
                         .ApplyBuff(BuffRefs.SenseVitalsBuff.Reference.Get(),
-                            new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
-                            {
-                                Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,
-                                DiceType = Kingmaker.RuleSystem.DiceType.Zero,
-                                DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 0,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                {
-                                    ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                    Value = 4,
-                                    ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                    ValueShared = AbilitySharedValue.Damage,
-                                    Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                },
-                                m_IsExtendable = true
-                            },
-                            isFromSpell: true)
+                            ContextDuration.Fixed(4, DurationRate.Hours, true))
                         .PartyMembers(ActionsBuilder.New()
                             .ApplyBuff(BuffRefs.SenseVitalsBuff.Reference.Get(),
-                                new Kingmaker.UnitLogic.Mechanics.ContextDurationValue()
-                                {
-                                    Rate = Kingmaker.UnitLogic.Mechanics.DurationRate.Hours,
-                                    DiceType = Kingmaker.RuleSystem.DiceType.Zero,
-                                    DiceCountValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                    {
-                                        ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                        Value = 0,
-                                        ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                        ValueShared = AbilitySharedValue.Damage,
-                                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                    },
-                                    BonusValue = new Kingmaker.UnitLogic.Mechanics.ContextValue()
-                                    {
-                                        ValueType = Kingmaker.UnitLogic.Mechanics.ContextValueType.Simple,
-                                        Value = 4,
-                                        ValueRank = Kingmaker.Enums.AbilityRankType.Default,
-                                        ValueShared = AbilitySharedValue.Damage,
-                                        Property = Kingmaker.UnitLogic.Mechanics.Properties.UnitProperty.None
-                                    },
-                                    m_IsExtendable = true
-                                },
+                                ContextDuration.Fixed(4, DurationRate.Hours, true),
                                 isFromSpell: true)))
-                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
-                .AddToSpellList(level: 6, spellList: SpellListRefs.BardSpellList.Reference.Get())
-                .AddToSpellList(level: 6, spellList: SpellListRefs.RangerSpellList.Reference.Get())
-                .AddToSpellList(level: 6, spellList: SpellListRefs.HunterSpelllist.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardDivinationSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.BardSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.RangerSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.HunterSpelllist.ToString())
                 .AddContextRankConfig(crc)
                 .AddAbilitySpawnFx(AbilitySpawnFxAnchor.SelectedTarget, orientationMode: AbilitySpawnFxOrientation.Copy, time: AbilitySpawnFxTime.OnApplyEffect, prefabLink: "c388856d0e8855f429a83ccba67944ba")
                 .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.AOE)
@@ -132,6 +91,7 @@ namespace DragonChanges.NewSpells
                 .SetAvailableMetamagic(Metamagic.Quicken | Metamagic.Extend | Metamagic.Heighten | Metamagic.Reach | Metamagic.CompletelyNormal)
                 .Configure();
             CommnualSenseVitalsScroll.ConfigureEnabled(x);
+            RandomHelpers.AddToThassilonian(x, 6);
             return x;
         }
     }

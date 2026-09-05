@@ -1,8 +1,5 @@
-﻿using System.Linq;
-using BlueprintCore.Actions.Builder;
-using BlueprintCore.Actions.Builder.BasicEx;
+﻿using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
@@ -13,16 +10,10 @@ using Kingmaker.Blueprints.Classes.Spells;
 using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
 using Kingmaker.RuleSystem;
-using Kingmaker.RuleSystem.Rules.Damage;
-using Kingmaker.UI.SettingsUI;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
-using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.UnitLogic.Mechanics.Actions;
 using Kingmaker.UnitLogic.Mechanics.Components;
-using Kingmaker.UnitLogic.Mechanics.Properties;
-using Kingmaker.Utility;
-using Kingmaker.View.Animation;
 using Kingmaker.Visual.Animation.Kingmaker.Actions;
 using static Kingmaker.UnitLogic.Commands.Base.UnitCommand;
 using static TabletopTweaks.Core.MechanicsChanges.MetamagicExtention;
@@ -71,17 +62,18 @@ namespace DragonChanges.NewSpells
             string spritepath = "Abilities.HeavenFireRay.png";
             if (SettingsAction.GetSetting<bool>("darthicons"))
                 spritepath = "Darth.HeavenfireRay.png";
-            ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount));
-            ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default));
-            AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
+            ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount))!;
+            ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default))!;
+            var x = AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)
                 // components
-                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
-                .AddToSpellList(level: 6, spellList: SpellListRefs.MagusSpellList.Reference.Get())
-                .AddToSpellList(level: 6, spellList: SpellListRefs.ClericSpellList.Reference.Get())
-                .AddToSpellList(level: 6, spellList: SpellListRefs.WitchSpellList.Reference.Get())
-                .AddToSpellList(level: 6, spellList: SpellListRefs.MagicDeceiverSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WizardEvocationSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.MagusSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.ClericSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.WitchSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.MagicDeceiverSpellList.ToString())
                 .AddAbilityDeliverProjectile(
                         projectiles: [ProjectileRefs.PolarRay00.Reference.Get(),
                                 ProjectileRefs.RayOfFrost00.Reference.Get(),
@@ -131,6 +123,7 @@ namespace DragonChanges.NewSpells
                     spellType: Kingmaker.Craft.CraftSpellType.Damage)
                 .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite(spritepath))
                 .Configure();
+            RandomHelpers.AddToThassilonian(x, 6);
         }
     }
 }
