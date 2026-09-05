@@ -1,3 +1,5 @@
+*** 1.22.1
+ - Check to make sure WoolooMod is extracted from zipfile correctly
 *** 1.22.0
  - Add new spells, Blood Slugs, Child of Ill Fortune, Glory of the Faithful, Warrior Reflexes, Spirit of War
  - Fix: Communal Sense Vitals is allowed to be used in the Wizard Divination special spell slot

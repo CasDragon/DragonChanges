@@ -71,6 +71,11 @@ namespace DragonChanges
         {
             log.Log("Loading wooloo from " + modPath);
             var path = Path.Combine(modPath, "WoolooBundle");
+            var assembly = Path.Combine(path, "Assemblies");
+            if (!Directory.Exists(assembly))
+            {
+                Directory.CreateDirectory(assembly);
+            }
             OwlcatModification owlcatModification = OwlcatModification
                 .LoadFromDirectory(path, path);
             if (owlcatModification == null)

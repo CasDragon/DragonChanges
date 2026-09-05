@@ -22,7 +22,7 @@ public class SpiritOfWar
 {
     // edit
     internal const string ability = "spiritofwar";
-    internal const string abilityguid = Guids.WarriorReflexesSpell;
+    internal const string abilityguid = Guids.SpiritOfWarSpell;
     internal const string settingName = "spiritofwar";
     internal const string settingDescription = "Adds a new spell, Spirit of War.";
     internal const string iconname = "Abilities.SpiritOfWar.png";
@@ -44,7 +44,7 @@ public class SpiritOfWar
         else
         {
             Main.log.Log($"{ability} disabled, configuring dummy");
-            WarriorReflexesBuff.ConfigureDummy();
+            SpiritOfWarBuff.ConfigureDummy();
             ConfigureDummy();
         }
     }
@@ -58,7 +58,7 @@ public class SpiritOfWar
     }
     public static BlueprintAbility ConfigureEnabled()
     {
-        var buff = WarriorReflexesBuff.ConfigureEnabled(icon);
+        var buff = SpiritOfWarBuff.ConfigureEnabled(icon);
         BlueprintAbility x = AbilityConfigurator.NewSpell(ability, abilityguid, SpellSchool.Conjuration, false)
             .SetDisplayName(abilityname)
             .SetDescription(abilitydescription)
