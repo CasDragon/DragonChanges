@@ -1,4 +1,4 @@
-*** 1.21.3
+*** 1.22.0
  - Add new spells, Blood Slugs, Child of Ill Fortune, Glory of the Faithful, Warrior Reflexes, Spirit of War
  - Fix: Communal Sense Vitals is allowed to be used in the Wizard Divination special spell slot
  - Toggle to readd vendor to Anevia
