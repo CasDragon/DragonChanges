@@ -1,3 +1,5 @@
 *** 1.21.3
- - Add new spells, Blood Slugs, Child of Ill Fortune, Glory of the Faithful
- - Fix: Communal Sense Vitals is allowed to be used in the Wizard Divination special spell slot 
+ - Add new spells, Blood Slugs, Child of Ill Fortune, Glory of the Faithful, Warrior Reflexes, Spirit of War
+ - Fix: Communal Sense Vitals is allowed to be used in the Wizard Divination special spell slot
+ - Toggle to readd vendor to Anevia
+ - Fix Wooloo Vendor being listed as friendly and is neutral instead (so it won't take part in the Tavern Defense any longer) 

@@ -240,11 +240,11 @@ namespace DragonChanges.Utils
         internal const string IllFortuneSpell = "8ce043f8-3ece-4b4c-8594-280eec764924";
         internal const string IllFortuneBuff = "9d0d0794-e474-4bff-b3c6-4d15133f80b2";
         internal const string IllFortuneScroll = "46d5f1ca-f461-4205-8897-b1cf6b2e81ea";
-        internal const string guid10 = "1c0193e1-7283-4e10-bc2c-5c922cb08179";
-        internal const string guid11 = "cfc2d05b-37f6-4d64-9f1a-1954b999d8d4";
-        internal const string guid12 = "bd342332-4342-45e0-bbce-6a3b6075adea";
-        internal const string guid13 = "9b987b85-53f5-4525-b21c-95a793d94b96";
-        internal const string guid14 = "951583b4-ef1a-423f-bf6a-64e34b9911dc";
+        internal const string WarriorReflexesSpell = "1c0193e1-7283-4e10-bc2c-5c922cb08179";
+        internal const string WarriorReflexesBuff = "cfc2d05b-37f6-4d64-9f1a-1954b999d8d4";
+        internal const string WarriorReflexesScroll = "bd342332-4342-45e0-bbce-6a3b6075adea";
+        internal const string SpiritOfWarSpell = "9b987b85-53f5-4525-b21c-95a793d94b96";
+        internal const string SpiritOfWarBuff = "951583b4-ef1a-423f-bf6a-64e34b9911dc";
         internal const string guid15 = "e4f1c000-f86c-4e1b-94db-5e344fe64490";
         internal const string guid16 = "306682f0-01e6-4ed8-b63e-109f44f3f3bd";
         internal const string guid17 = "62a0eb35-5893-4859-b942-b953fa9bb3ee";

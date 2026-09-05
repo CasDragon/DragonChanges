@@ -25,7 +25,7 @@ public class ChildOfIllFortune
     internal const string abilityguid = Guids.IllFortuneSpell;
     internal const string settingName = "illfortune";
     internal const string settingDescription = "Adds new spell, Child of Ill Fortune. In Cleric, Oracle, MD, and Angel lists ";
-    internal const string iconname = "Abilities.BloodSlugs.png";
+    internal const string iconname = "Abilities.ChildOfIllFortune.png";
     // don't edit
     internal const string name = "Child of Ill Fortune";
     [DragonLocalizedString(abilityname, name)]
@@ -45,7 +45,7 @@ public class ChildOfIllFortune
         else
         {
             Main.log.Log($"{ability} disabled, configuring dummy");
-            BloodSlugsBuff.ConfigureDummy();
+            ChildOfIllFortune.ConfigureDummy();
             ConfigureDummy();
         }
     }

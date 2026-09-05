@@ -78,6 +78,12 @@ New Content:
         Child of Ill Fortune:
             https://www.d20pfsrd.com/magic/3rd-party-spells/4-winds-fantasy-gaming-3rd-party-spells/child-of-ill-fortune/
             In Cleric, Oracle, MD, Angel spell lists
+        Warrior’s Reflexes:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/bloodstone-press/warriors-reflexes/
+            In Cleric, Paladin, Wizard, Sorc, MD, Warpriest spell lists
+        Spirit of War:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/bloodstone-press/spirit-of-war/
+            In Cleric, Paladin, MD, Warpriest spell lists
                         
     New Pets (yes I know the mount points are fucked):
         Griffon pet
