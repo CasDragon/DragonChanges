@@ -64,14 +64,15 @@ namespace DragonChanges.NewSpells
                 .AddSpellComponent(Kingmaker.Blueprints.Classes.Spells.SpellSchool.Divination)
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
-                        .ApplyBuff(BuffRefs.SenseVitalsBuff.Reference.Get(),
+                        .ApplyBuff(BuffRefs.SenseVitalsBuff.ToString(),
                             ContextDuration.Fixed(4, DurationRate.Hours, true))
                         .PartyMembers(ActionsBuilder.New()
-                            .ApplyBuff(BuffRefs.SenseVitalsBuff.Reference.Get(),
+                            .ApplyBuff(BuffRefs.SenseVitalsBuff.ToString(),
                                 ContextDuration.Fixed(4, DurationRate.Hours, true),
                                 isFromSpell: true)))
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WizardDivinationSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.LichWizardSpelllist.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.BardSpellList.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.RangerSpellList.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.HunterSpelllist.ToString())

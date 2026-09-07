@@ -245,15 +245,15 @@ namespace DragonChanges.Utils
         internal const string WarriorReflexesScroll = "bd342332-4342-45e0-bbce-6a3b6075adea";
         internal const string SpiritOfWarSpell = "9b987b85-53f5-4525-b21c-95a793d94b96";
         internal const string SpiritOfWarBuff = "951583b4-ef1a-423f-bf6a-64e34b9911dc";
-        internal const string guid15 = "e4f1c000-f86c-4e1b-94db-5e344fe64490";
-        internal const string guid16 = "306682f0-01e6-4ed8-b63e-109f44f3f3bd";
-        internal const string guid17 = "62a0eb35-5893-4859-b942-b953fa9bb3ee";
-        internal const string guid18 = "9be5cddc-105e-4900-8802-17b7a3a0238b";
-        internal const string guid19 = "391e5939-de05-4ef6-85e1-0183dda48dc3";
-        internal const string guid20 = "712a3e54-99bc-4eb1-93f8-b6aca3f63fd6";
-        internal const string guid21 = "490d01a9-65ac-419d-a5fe-25022ac711e2";
-        internal const string guid22 = "074c6632-c104-49ff-9ae6-3bfe288df684";
-        internal const string guid23 = "5d44099f-b8d4-4f18-b769-d05a2aa75da2";
+        internal const string FlashOfInsightSpell = "e4f1c000-f86c-4e1b-94db-5e344fe64490";
+        internal const string FlashOfInsightBuff = "306682f0-01e6-4ed8-b63e-109f44f3f3bd";
+        internal const string FlashOfInsightScroll = "62a0eb35-5893-4859-b942-b953fa9bb3ee";
+        internal const string EnergeticBurstSpell = "9be5cddc-105e-4900-8802-17b7a3a0238b";
+        internal const string EnergeticBurstBuff = "391e5939-de05-4ef6-85e1-0183dda48dc3";
+        internal const string EnergeticBurstScroll = "712a3e54-99bc-4eb1-93f8-b6aca3f63fd6";
+        internal const string DragonScalesSpell = "490d01a9-65ac-419d-a5fe-25022ac711e2";
+        internal const string DragonScalesBuff = "074c6632-c104-49ff-9ae6-3bfe288df684";
+        internal const string DragonScalesScroll = "5d44099f-b8d4-4f18-b769-d05a2aa75da2";
         internal const string guid24 = "98a4d028-d66f-4008-b4ab-d5e9936d6e18";
     }
 }

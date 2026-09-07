@@ -75,6 +75,7 @@ namespace DragonChanges.NewSpells
                 .AddToSpellList(4, SpellListRefs.BloodragerSpellList.ToString())
                 .AddToSpellList(4, SpellListRefs.MagusSpellList.ToString())
                 .AddToSpellList(4, SpellListRefs.WizardSpellList.ToString())
+                .AddToSpellList(4, SpellListRefs.LichWizardSpelllist.ToString())
                 .AddToSpellList(4, SpellListRefs.WizardTransmutationSpellList.ToString())
                 .AddToSpellList(4, SpellListRefs.WitchSpellList.ToString())
                 .AddToSpellList(4, SpellListRefs.MagicDeceiverSpellList.ToString())

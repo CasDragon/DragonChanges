@@ -61,17 +61,17 @@ namespace DragonChanges.NewSpells
                 .AddSpellComponent(Kingmaker.Blueprints.Classes.Spells.SpellSchool.Conjuration)
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
-                        .ApplyBuff(BuffRefs.EaglesoulBuff.Reference.Get(),
+                        .ApplyBuff(BuffRefs.EaglesoulBuff.ToString(),
                             ContextDuration.Fixed(4, DurationRate.Hours, true),
                             isFromSpell: true)
                         .PartyMembers(ActionsBuilder.New()
-                            .ApplyBuff(BuffRefs.EaglesoulBuff.Reference.Get(),
+                            .ApplyBuff(BuffRefs.EaglesoulBuff.ToString(),
                                 ContextDuration.Fixed(4, DurationRate.Hours, true),
                                 isFromSpell: true)))
                 .AddAbilitySpawnFx(AbilitySpawnFxAnchor.SelectedTarget, orientationMode: AbilitySpawnFxOrientation.Copy, time: AbilitySpawnFxTime.OnApplyEffect, prefabLink: "930c1a4aa129b8344a40c8c401d99a04")
-                .AddToSpellList(9, SpellListRefs.ClericSpellList.Reference.Get())
-                .AddToSpellList(9, SpellListRefs.AngelClericSpelllist.Reference.Get())
-                .AddToSpellList(9, SpellListRefs.MagicDeceiverSpellList.Reference.Get())
+                .AddToSpellList(9, SpellListRefs.ClericSpellList.ToString())
+                .AddToSpellList(9, SpellListRefs.AngelClericSpelllist.ToString())
+                .AddToSpellList(9, SpellListRefs.MagicDeceiverSpellList.ToString())
                 .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.AOE)
                 .SetIcon(AbilityRefs.Eaglesoul.Reference.Get().Icon)
                 .SetType(AbilityType.Spell)

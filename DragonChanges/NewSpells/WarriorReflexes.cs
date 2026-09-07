@@ -74,6 +74,7 @@ public class WarriorReflexes
                             isFromSpell: true)))
             .AddToSpellList(1, SpellListRefs.ClericSpellList.ToString())
             .AddToSpellList(1, SpellListRefs.WizardDivinationSpellList.ToString())
+            .AddToSpellList(1, SpellListRefs.LichWizardSpelllist.ToString())
             .AddToSpellList(1, SpellListRefs.MagicDeceiverSpellList.ToString())
             .AddToSpellList(1, SpellListRefs.WizardSpellList.ToString())
             .AddToSpellList(1, SpellListRefs.WarpriestSpelllist.ToString())

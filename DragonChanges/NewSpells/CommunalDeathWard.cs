@@ -56,27 +56,27 @@ namespace DragonChanges.NewSpells
                 .AddSpellComponent(Kingmaker.Blueprints.Classes.Spells.SpellSchool.Necromancy)
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
-                        .ApplyBuff(BuffRefs.DeathWardBuff.Reference.Get(),
+                        .ApplyBuff(BuffRefs.DeathWardBuff.ToString(),
                             ContextDuration.Fixed(4, DurationRate.Hours, true),
                             isFromSpell: true)
                         .PartyMembers(ActionsBuilder.New()
-                            .ApplyBuff(BuffRefs.DeathWardBuff.Reference.Get(),
+                            .ApplyBuff(BuffRefs.DeathWardBuff.ToString(),
                                 ContextDuration.Fixed(4, DurationRate.Hours, true),
                                 isFromSpell: true)))
                 .AddAbilitySpawnFx(AbilitySpawnFxAnchor.SelectedTarget, orientationMode: AbilitySpawnFxOrientation.Copy, time: AbilitySpawnFxTime.OnApplyEffect, prefabLink: "cbfe312cb8e63e240a859efaad8e467c")
-                .AddToSpellList(6, SpellListRefs.ClericSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.DruidSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.PaladinSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.AlchemistSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.InquisitorSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.ReposeDomainSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.KnowledgeDomainSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.WitchSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.SpiritWardenSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.LichWizardSpelllist.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.HunterSpelllist.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.AeonSpellList.Reference.Get())
-                .AddToSpellList(7, SpellListRefs.MagicDeceiverSpellList.Reference.Get())
+                .AddToSpellList(6, SpellListRefs.ClericSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.DruidSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.PaladinSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.AlchemistSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.InquisitorSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.ReposeDomainSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.KnowledgeDomainSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.WitchSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.SpiritWardenSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.LichWizardSpelllist.ToString())
+                .AddToSpellList(7, SpellListRefs.HunterSpelllist.ToString())
+                .AddToSpellList(7, SpellListRefs.AeonSpellList.ToString())
+                .AddToSpellList(7, SpellListRefs.MagicDeceiverSpellList.ToString())
                 .AddCraftInfoComponent(spellType: Kingmaker.Craft.CraftSpellType.Buff, savingThrow: Kingmaker.Craft.CraftSavingThrow.None, aOEType: Kingmaker.Craft.CraftAOE.AOE)
                 .SetIcon(AbilityRefs.DeathWardCast.Reference.Get().Icon)
                 .SetType(AbilityType.Spell)

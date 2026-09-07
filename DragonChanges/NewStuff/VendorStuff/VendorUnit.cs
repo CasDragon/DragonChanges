@@ -38,7 +38,7 @@ public static class VendorUnit
             .SetPortrait(aivu.PortraitSafe)
             .SetPrefab(aivu.Prefab)
             .SetVisual(aivu.Visual)
-            .SetFaction(FactionRefs.Neutrals.ToString())
+            .SetFaction(FactionRefs.Player.ToString())
             .SetBody(aivu.Body)
             .SetStrength(aivu.Strength)
             .SetIntelligence(aivu.Intelligence)

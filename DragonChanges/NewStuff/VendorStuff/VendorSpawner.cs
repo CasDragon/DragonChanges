@@ -2,14 +2,16 @@ using BlueprintCore.Utils;
 using DragonChanges.Utils;
 using Kingmaker;
 using Kingmaker.Blueprints;
+using Kingmaker.Blueprints.Area;
 using Kingmaker.PubSubSystem;
 using UnityEngine;
 
 namespace DragonChanges.NewStuff.VendorStuff;
 
-public class VendorSpawner: IAreaActivationHandler
+public class VendorSpawner: IAreaPartHandler//IAreaActivationHandler
 {
-    public void OnAreaActivated()
+    //public void OnAreaActivated()
+    public void OnAreaPartChanged(BlueprintAreaPart previous)
     {
         Main.log.Log("New area loaded");
         Main.log.Log($"Current Area - {Game.Instance.CurrentlyLoadedArea.AssetGuid.ToString()}");
@@ -52,4 +54,5 @@ public class VendorSpawner: IAreaActivationHandler
         var unitSpawned = Game.Instance.EntityCreator.SpawnUnit(BlueprintTool.Get<BlueprintUnit>(Guids.DLCVendorUnit),
             position, Quaternion.identity, Game.Instance.State.LoadedAreaState.MainState);
     }
+
 }

@@ -80,6 +80,7 @@ public class AcidRay
                 .SetDescription(spelldescription)
                 // components
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.ToString())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.LichWizardSpelllist.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WizardEvocationSpellList.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.MagusSpellList.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.ClericSpellList.ToString())

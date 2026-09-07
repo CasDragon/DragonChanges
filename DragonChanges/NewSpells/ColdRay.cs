@@ -78,6 +78,7 @@ public class ColdRay
                 // components
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WizardSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WizardEvocationSpellList.Reference.Get())
+                .AddToSpellList(level: 6, spellList: SpellListRefs.LichWizardSpelllist.ToString())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.MagusSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.ClericSpellList.Reference.Get())
                 .AddToSpellList(level: 6, spellList: SpellListRefs.WitchSpellList.Reference.Get())

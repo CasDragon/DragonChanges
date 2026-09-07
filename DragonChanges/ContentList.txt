@@ -84,6 +84,15 @@ New Content:
         Spirit of War:
             https://www.d20pfsrd.com/magic/3rd-party-spells/bloodstone-press/spirit-of-war/
             In Cleric, Paladin, MD, Warpriest spell lists
+        Flash of Insight:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/d20pfsrd-com-publishing/flash-of-insight/
+            In Wizard, Sorc, MD, Witch spell list
+        Energetic Burst:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/frog-god-games/energetic-burst/
+            In Cleric, Druid, Paladin, MD spell lists
+        Dragon Scales:
+            https://www.d20pfsrd.com/magic/3rd-party-spells/frog-god-games/dragon-scales/
+            In Sorc, Wizard, Magus, MD spell lists
                         
     New Pets (yes I know the mount points are fucked):
         Griffon pet
