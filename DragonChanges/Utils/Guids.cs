@@ -254,6 +254,31 @@ namespace DragonChanges.Utils
         internal const string DragonScalesSpell = "490d01a9-65ac-419d-a5fe-25022ac711e2";
         internal const string DragonScalesBuff = "074c6632-c104-49ff-9ae6-3bfe288df684";
         internal const string DragonScalesScroll = "5d44099f-b8d4-4f18-b769-d05a2aa75da2";
-        internal const string guid24 = "98a4d028-d66f-4008-b4ab-d5e9936d6e18";
+        internal const string ElephantStrengthSpell = "98a4d028-d66f-4008-b4ab-d5e9936d6e18";
+        internal const string ElephantStrengthBuff = "7e0397ce-3aa1-4bf7-958f-cf0c8683b6fd";
+        internal const string ElephantStrengthScroll = "cf51679e-e4b0-454b-a9b2-7cf7647fa31a";
+        internal const string guid2 = "e4c9a095-ce25-48dd-9749-a6bd4f108031";
+        internal const string guid3 = "68083b59-d6b5-4e1d-8f2d-3d2e7766be27";
+        internal const string guid4 = "12fad5d7-fc86-4095-a590-18bb54bd2ada";
+        internal const string guid5 = "8f28f2a1-ab96-4014-9335-ed6807c9e670";
+        internal const string guid6 = "d850da6d-5017-43d0-966a-aed78a32e552";
+        internal const string guid7 = "e1e91459-2e75-4883-a389-dba8a16d17f1";
+        internal const string guid8 = "22c1ee2c-5808-4a35-b4ce-1410ca66d427";
+        internal const string guid9 = "8baf93c9-5a81-4f47-9bd1-936e1a1aa23b";
+        internal const string guid10 = "719f0ff2-60a4-4e00-bc74-c68c63f76456";
+        internal const string guid11 = "05f4113b-8dba-45fe-9101-6bee702ec8f3";
+        internal const string guid12 = "17e99e6a-0d8d-4a34-99cd-42baf3cda79f";
+        internal const string guid13 = "09bb3ee4-16d2-463b-8620-b36130283839";
+        internal const string guid14 = "06524a32-8498-4568-b51b-e3491644deb6";
+        internal const string guid15 = "1e808c67-c656-4554-98bd-59ff9452101b";
+        internal const string guid16 = "8484086a-5ec5-4de6-b704-c52e8daebe42";
+        internal const string guid17 = "6aa8b689-c17d-488a-9f6f-a0a188fb15cf";
+        internal const string guid18 = "0b6a1791-81bd-41a7-b49d-ab5542ccb462";
+        internal const string guid19 = "7c7e1cda-4716-4680-aad1-1e1541dbd2b7";
+        internal const string guid20 = "f7d30dc6-e660-4374-9745-e4b6bc6b5b82";
+        internal const string guid21 = "3fdf198e-916c-46fc-998f-49028543e6fc";
+        internal const string guid22 = "9b2115c1-f7c7-4317-be8c-f2c683768279";
+        internal const string guid23 = "57cd56e1-0fa0-4982-8678-3f5a283dce8b";
+        internal const string guid24 = "d2b9b457-b28d-419b-94be-d78a8bdc7598";
     }
 }

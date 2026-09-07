@@ -1,5 +1,5 @@
 *** 1.23.0
- - New spells, Flash of Insight, Energetic Burst, Dragon Scales
+ - New spells, Flash of Insight, Energetic Burst, Dragon Scales, Elephant's Strength
 *** 1.22.1
  - Check to make sure WoolooMod is extracted from zipfile correctly
 *** 1.22.0
