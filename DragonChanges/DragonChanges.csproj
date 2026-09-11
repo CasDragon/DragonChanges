@@ -70,9 +70,6 @@
 		<PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" IncludeAssets="build; contentfiles" Version="0.4.2" PrivateAssets="all" />
 		<PackageReference Include="MicroUtils.HarmonyAnalyzers" Version="*" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="WoolooBundle\Assemblies\" />
-	</ItemGroup>	  
 
 	<Target Name="GenerateCustomPropsFile" Condition="$(WrathInstallDir) == ''">
 		<Exec Command="findstr /C:&quot;Mono path[0]&quot; &quot;$(WrathData)\Player.log&quot;" IgnoreExitCode="true" ConsoleToMSBuild="true">

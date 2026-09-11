@@ -46,8 +46,8 @@ public static class EnergeticBurst
         else
         {
             Main.log.Log($"{ability} disabled, configuring dummy");
-            FlashOfInsightBuff.ConfigureDummy();
-            FlashOfInsightScroll.ConfigureDummy();
+            EnergeticBurstBuff.ConfigureDummy();
+            EnergeticBurstScroll.ConfigureDummy();
             ConfigureDummy();
         }
     }
@@ -67,7 +67,7 @@ public static class EnergeticBurst
             .AddSpellComponent(SpellSchool.Conjuration)
             .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
-                    .ApplyBuff(FlashOfInsightBuff.ConfigureEnabled(icon),
+                    .ApplyBuff(EnergeticBurstBuff.ConfigureEnabled(icon),
                         ContextDuration.Variable(ContextValues.Property(UnitProperty.Level, true),
                             DurationRate.Rounds, true),
                         isFromSpell: true))
@@ -90,7 +90,7 @@ public static class EnergeticBurst
             .SetAvailableMetamagic(Metamagic.Extend | Metamagic.Heighten | Metamagic.Quicken |
                                    Metamagic.CompletelyNormal)
             .Configure();
-        FlashOfInsightScroll.ConfigureEnabled(x, icon);
+        EnergeticBurstScroll.ConfigureEnabled(x, icon);
         return x;
     }
 }

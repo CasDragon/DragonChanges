@@ -257,10 +257,10 @@ namespace DragonChanges.Utils
         internal const string ElephantStrengthSpell = "98a4d028-d66f-4008-b4ab-d5e9936d6e18";
         internal const string ElephantStrengthBuff = "7e0397ce-3aa1-4bf7-958f-cf0c8683b6fd";
         internal const string ElephantStrengthScroll = "cf51679e-e4b0-454b-a9b2-7cf7647fa31a";
-        internal const string guid2 = "e4c9a095-ce25-48dd-9749-a6bd4f108031";
-        internal const string guid3 = "68083b59-d6b5-4e1d-8f2d-3d2e7766be27";
-        internal const string guid4 = "12fad5d7-fc86-4095-a590-18bb54bd2ada";
-        internal const string guid5 = "8f28f2a1-ab96-4014-9335-ed6807c9e670";
+        internal const string BluntImpactSpell = "e4c9a095-ce25-48dd-9749-a6bd4f108031";
+        internal const string BluntImpactBuff = "68083b59-d6b5-4e1d-8f2d-3d2e7766be27";
+        internal const string BluntImpactScroll = "12fad5d7-fc86-4095-a590-18bb54bd2ada";
+        internal const string ExtraDiscoveryMW = "8f28f2a1-ab96-4014-9335-ed6807c9e670";
         internal const string guid6 = "d850da6d-5017-43d0-966a-aed78a32e552";
         internal const string guid7 = "e1e91459-2e75-4883-a389-dba8a16d17f1";
         internal const string guid8 = "22c1ee2c-5808-4a35-b4ce-1410ca66d427";

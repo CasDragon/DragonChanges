@@ -17,7 +17,6 @@ using Kingmaker.UnitLogic.Mechanics.Actions;
 using Kingmaker.UnitLogic.Mechanics.Components;
 using Kingmaker.Visual.Animation.Kingmaker.Actions;
 using TabletopTweaks.Core.MechanicsChanges;
-using Random = System.Random;
 
 namespace DragonChanges.NewSpells;
 

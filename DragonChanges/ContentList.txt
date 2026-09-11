@@ -96,6 +96,8 @@ New Content:
         Elephant’s Strength:
             https://www.d20pfsrd.com/magic/3rd-party-spells/frog-god-games/elephant-s-strength/
             In Bard, Cleric, Oracle, Sorc, Wizard, MD spell list
+        Blunt Impact:
+            Blunt version of Keen Edge, basically.
                         
     New Pets (yes I know the mount points are fucked):
         Griffon pet
@@ -127,6 +129,8 @@ New Content:
             You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage.
         Presence of Mind:
             Int bonus to Initiative
+        Extra Discovery (Mutation Warrior):
+            Extra Discovery but for Mutation Warrior. Can be taken 3 times (for total of 7, which is all the base game features)
         
     New Mythic Feats:
         Ascendant Critical:
