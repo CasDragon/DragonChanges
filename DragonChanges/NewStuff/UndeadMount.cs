@@ -39,7 +39,7 @@ namespace DragonChanges.NewStuff
                 Main.log.Log("Configuring undead mount");
                 BlueprintUnit unit = CreateUndeadMount();
                 BlueprintFeature feature = CreateUndeadMountFeature(unit);
-                AddUndeadMountToSelections(feature);
+                PetUtils.AddPetToAll(feature);
             }
             else
             {
@@ -136,82 +136,6 @@ namespace DragonChanges.NewStuff
             return PortraitConfigurator.New(UndeadMountPortrait, Guids.UndeadMountPortrait)
                 .SetData(data)
                 .Configure();
-        }
-        public static void AddUndeadMountToSelections(BlueprintFeature mountfeature)
-        {
-            if (SettingsAction.GetSetting<bool>(settingName))
-            {
-                Main.log.Log("Patching various animal selections to include undead mount");
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDivineHound)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDomain)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDomainSeparatist)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDruid)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionHunter)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionMadDog)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionPrimalDruid)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionRanger)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionSacredHuntsmaster)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionSylvanSorcerer)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionUrbanHunter)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionWildlandShaman)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.CavalierMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.BeastRiderMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.ArcaneRiderMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.BloodriderMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.GhostRiderGhostMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.NomadMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.OrderOfThePawMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.PaladinDivineMountSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.SoheiMonasticMountHorseSelection)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-                FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
-                    .AddToAllFeatures(mountfeature)
-                    .Configure();
-            }
         }
     }
 }

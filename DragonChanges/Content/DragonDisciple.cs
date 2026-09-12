@@ -1,10 +1,6 @@
-using BlueprintCore.Blueprints.Configurators.Classes;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes;
-using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
-using BlueprintCore.Utils.Types;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes.Spells;
@@ -30,10 +26,6 @@ public class DragonDisciple
             .ToReference<BlueprintFeatureBaseReference>();
         prog.LevelEntries[1].m_Features.Remove(selection);
         prog.LevelEntries[0].m_Features = [..prog.LevelEntries[0].m_Features, selection];
-        //ProgressionConfigurator.For(ProgressionRefs.DragonDiscipleProgression)
-        //    .AddToLevelEntries(1, FeatureSelectionRefs.DragonDiscipleSpellbookSelection.ToString())
-        //    .RemoveFromLevelEntries(2, FeatureSelectionRefs.DragonDiscipleSpellbookSelection.ToString())
-        //    .Configure();
     }
     private const string settingNameMSS = "ddmastershapeshifter";
     private const string settingDescriptionMSS = "Buffs Dragon Disciple class to allow MasterShapeshifter making Dragonform free";

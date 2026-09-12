@@ -2,30 +2,58 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
 using BlueprintCore.Blueprints.References;
 using DragonLibrary.ModRefs;
 using DragonLibrary.Utils;
-using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Classes.Selection;
 
 namespace DragonChanges.Utils;
 
-public class PetUtils
+public static class PetUtils
 {
+    private static readonly string[] BaseGameSelections =
+    [ 
+        FeatureSelectionRefs.AnimalCompanionSelectionBase.ToString(), FeatureSelectionRefs.AnimalCompanionSelectionDivineHound.ToString(),
+        FeatureSelectionRefs.AnimalCompanionSelectionDomain.ToString(), FeatureSelectionRefs.AnimalCompanionSelectionDomainSeparatist.ToString(),
+        FeatureSelectionRefs.AnimalCompanionSelectionDruid.ToString(), FeatureSelectionRefs.AnimalCompanionSelectionHunter.ToString(),
+        FeatureSelectionRefs.AnimalCompanionSelectionMadDog.ToString(), FeatureSelectionRefs.AnimalCompanionSelectionPrimalDruid.ToString(),
+        FeatureSelectionRefs.AnimalCompanionSelectionRanger.ToString(), FeatureSelectionRefs.AnimalCompanionSelectionSacredHuntsmaster.ToString(),
+        FeatureSelectionRefs.AnimalCompanionSelectionSylvanSorcerer.ToString(), FeatureSelectionRefs.AnimalCompanionSelectionUrbanHunter.ToString(),
+        FeatureSelectionRefs.AnimalCompanionSelectionWildlandShaman.ToString(), FeatureSelectionRefs.CavalierMountSelection.ToString(),
+        FeatureSelectionRefs.BeastRiderMountSelection.ToString(), FeatureSelectionRefs.ArcaneRiderMountSelection.ToString(),
+        FeatureSelectionRefs.BloodriderMountSelection.ToString(), FeatureSelectionRefs.GhostRiderGhostMountSelection.ToString(),
+        FeatureSelectionRefs.NomadMountSelection.ToString(), FeatureSelectionRefs.OrderOfThePawMountSelection.ToString(),
+        FeatureSelectionRefs.PaladinDivineMountSelection.ToString(), FeatureSelectionRefs.SoheiMonasticMountHorseSelection.ToString(),
+        FeatureSelectionRefs.OracleRevelationBondedMount.ToString(), FeatureSelectionRefs.SableMarineHippogriffCompanionSelection.ToString()
+    ];
+    private static readonly string[] TTTSelections =
+    [
+        TTTBaseRefs.DivineCommanderCompanionSelection,
+        TTTBaseRefs.AnimalAllyFeatureSelection
+    ];
+    
+    public static void AddPetToAll(BlueprintFeature pet, string[] guidExceptions)
+    {
+        AddPetToBaseGameSelection(pet, guidExceptions);
+        AddPetToTTTSelection(pet, guidExceptions);
+        AddPetToMCESelection(pet, guidExceptions);
+    }
     public static void AddPetToAll(BlueprintFeature pet)
     {
-        AddPetToBaseGameSelection(pet);
-        AddPetToTTTSelection(pet);
-        AddPetToMCESelection(pet);
+        AddPetToAll(pet, []);
     }
 
     public static void AddPetToTTTSelection(BlueprintFeature pet)
     {
+        AddPetToTTTSelection(pet, []);
+    }
+    public static void AddPetToTTTSelection(BlueprintFeature pet, string[] guidExceptions)
+    {
         if (!ModCompat.tttbase) return;
-        FeatureSelectionConfigurator.For(TTTBaseRefs.DivineCommanderCompanionSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(TTTBaseRefs.AnimalAllyFeatureSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
+        foreach (var selection in TTTSelections)
+        {
+            if (guidExceptions.Any(s => s == selection)) continue;
+            FeatureSelectionConfigurator.For(selection)
+                .AddToAllFeatures(pet)
+                .Configure();
+        }
     }
 
     public static void AddPetToMCESelection(BlueprintFeature pet)
@@ -35,76 +63,26 @@ public class PetUtils
             .AddToAllFeatures(pet)
             .Configure();
     }
+    public static void AddPetToMCESelection(BlueprintFeature pet, string[] guidExceptions)
+    {
+        if (!ModCompat.microscopic) return;
+        if (guidExceptions.Any(s => s == MicroscopicContentExpansionRefs.AntipaladinServantSelection)) return;
+        FeatureSelectionConfigurator.For(MicroscopicContentExpansionRefs.AntipaladinServantSelection)
+            .AddToAllFeatures(pet)
+            .Configure();
+    }
     public static void AddPetToBaseGameSelection(BlueprintFeature pet)
     {
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionBase)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDivineHound)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDomain)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDomainSeparatist)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionDruid)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionHunter)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionMadDog)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionPrimalDruid)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionRanger)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionSacredHuntsmaster)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionSylvanSorcerer)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionUrbanHunter)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.AnimalCompanionSelectionWildlandShaman)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.CavalierMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.BeastRiderMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.ArcaneRiderMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.BloodriderMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.GhostRiderGhostMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.NomadMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.OrderOfThePawMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.PaladinDivineMountSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.SoheiMonasticMountHorseSelection)
-            .AddToAllFeatures(pet)
-            .Configure();
-        FeatureSelectionConfigurator.For(FeatureSelectionRefs.OracleRevelationBondedMount)
-            .AddToAllFeatures(pet)
-            .Configure();
+        AddPetToBaseGameSelection(pet, []);
+    }
+    public static void AddPetToBaseGameSelection(BlueprintFeature pet, string[] guidExceptions)
+    {
+        foreach (var selection in BaseGameSelections)
+        {
+            if (guidExceptions.Any(s => s == selection)) return;
+            FeatureSelectionConfigurator.For(selection)
+                .AddToAllFeatures(pet)
+                .Configure();
+        }
     }
 }

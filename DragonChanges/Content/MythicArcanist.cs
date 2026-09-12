@@ -11,7 +11,6 @@ namespace DragonChanges.Content;
 
 public class MythicArcanist
 {
-    
     const string SettingName = "ma-archmage";
     const string SettingDescription = "Allow Archmage Armor to work with Mythic Arcanist's Mage Armor spells";
     [DragonConfigure]

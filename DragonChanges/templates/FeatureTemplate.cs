@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
+using Kingmaker.Blueprints.Classes;
 
 namespace DragonChanges.templates
 {
@@ -40,12 +41,13 @@ namespace DragonChanges.templates
                 .SetDescription(LocalizedStringHelper.disabledcontentstring)
                 .Configure();
         }
-        public static void ConfigureEnabled()
+        public static BlueprintFeature ConfigureEnabled()
         {
-            FeatureConfigurator.New(feature, featureguid)
+            var x = FeatureConfigurator.New(feature, featureguid)
                 .SetDisplayName(featurenamekey)
                 .SetDescription(featuredescriptionkey)
                 .Configure();
+            return x;
         }
     }
 }
