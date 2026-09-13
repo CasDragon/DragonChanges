@@ -66,12 +66,13 @@ public class WarriorReflexes
             .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
                     .ApplyBuff(buff,
-                        ContextDuration.Variable(ContextValues.Property(UnitProperty.Level), DurationRate.Minutes, true),
+                        ContextDuration.Variable(ContextValues.Rank(), DurationRate.Minutes, true),
                         isFromSpell: true)
                     .PartyMembers(ActionsBuilder.New()
                         .ApplyBuff(buff,
-                            ContextDuration.Variable(ContextValues.Property(UnitProperty.Level), DurationRate.Minutes, true),
+                            ContextDuration.Variable(ContextValues.Rank(), DurationRate.Minutes, true),
                             isFromSpell: true)))
+            .AddContextRankConfig(ContextRankConfigs.CasterLevel())
             .AddToSpellList(1, SpellListRefs.ClericSpellList.ToString())
             .AddToSpellList(1, SpellListRefs.WizardDivinationSpellList.ToString())
             .AddToSpellList(1, SpellListRefs.LichWizardSpelllist.ToString())

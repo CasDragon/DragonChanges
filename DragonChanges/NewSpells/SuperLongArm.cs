@@ -68,9 +68,10 @@ namespace DragonChanges.NewSpells
                 .AddAbilityEffectRunAction(
                     ActionsBuilder.New()
                         .ApplyBuff(SuperLongArmBuff.ConfigureEnabled(),
-                            ContextDuration.Variable(ContextValues.Property(UnitProperty.Level, true), 
+                            ContextDuration.Variable(ContextValues.Rank(),
                                 DurationRate.Minutes, true),
                                 isFromSpell: true))
+                .AddContextRankConfig(ContextRankConfigs.CasterLevel())
                 .AddToSpellList(4, SpellListRefs.AlchemistSpellList.ToString())
                 .AddToSpellList(4, SpellListRefs.BloodragerSpellList.ToString())
                 .AddToSpellList(4, SpellListRefs.MagusSpellList.ToString())

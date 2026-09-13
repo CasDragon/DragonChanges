@@ -68,9 +68,10 @@ public static class EnergeticBurst
             .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
                     .ApplyBuff(EnergeticBurstBuff.ConfigureEnabled(icon),
-                        ContextDuration.Variable(ContextValues.Property(UnitProperty.Level, true),
+                        ContextDuration.Variable(ContextValues.Rank(),
                             DurationRate.Rounds, true),
                         isFromSpell: true))
+            .AddContextRankConfig(ContextRankConfigs.CasterLevel())
             .AddToSpellList(2, SpellListRefs.ClericSpellList.ToString())
             .AddToSpellList(2, SpellListRefs.AngelClericSpelllist.ToString())
             .AddToSpellList(2, SpellListRefs.DruidSpellList.ToString())

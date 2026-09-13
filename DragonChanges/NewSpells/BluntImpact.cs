@@ -72,21 +72,22 @@ public static class BluntImpact
                         ifTrue:
                         ActionsBuilder.New()
                             .ApplyBuff(buff,
-                                ContextDuration.Variable(ContextValues.Property(UnitProperty.Level), DurationRate.TenMinutes, true),
+                                ContextDuration.Variable(ContextValues.Rank(), DurationRate.TenMinutes, true),
                                 isFromSpell: true)
                             .EnhanceWeapon(
-                                ContextDuration.Variable(ContextValues.Property(UnitProperty.Level), DurationRate.TenMinutes, true),
+                                ContextDuration.Variable(ContextValues.Rank(), DurationRate.TenMinutes, true),
                                 WeaponEnchantmentRefs.Keen.ToString()))
                     .Conditional(new ConditionsBuilder().
                             IsWeaponCategoryGroupEquipped(WeaponGroupCategory.Blunt, true, false),
                         ifTrue:
                         ActionsBuilder.New()
                             .ApplyBuff(buff,
-                                ContextDuration.Variable(ContextValues.Property(UnitProperty.Level), DurationRate.TenMinutes, true),
+                                ContextDuration.Variable(ContextValues.Rank(), DurationRate.TenMinutes, true),
                                 isFromSpell: true)
                             .EnhanceWeapon(
-                                ContextDuration.Variable(ContextValues.Property(UnitProperty.Level), DurationRate.TenMinutes, true),
+                                ContextDuration.Variable(ContextValues.Rank(), DurationRate.TenMinutes, true),
                                 WeaponEnchantmentRefs.Keen.ToString())))
+            .AddContextRankConfig(ContextRankConfigs.CasterLevel())
             .AddToSpellList(3, SpellListRefs.InquisitorSpellList.ToString())
             .AddToSpellList(3, SpellListRefs.WizardTransmutationSpellList.ToString())
             .AddToSpellList(3, SpellListRefs.LichWizardSpelllist.ToString())

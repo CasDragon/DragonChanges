@@ -72,9 +72,10 @@ public class BloodSlugs
                                 .ConditionalSaved(
                                     failed: new ActionsBuilder()
                                         .ApplyBuff(BloodSlugsBuff.ConfigureEnabled(icon),
-                                            ContextDuration.Variable(ContextValues.Property(UnitProperty.Level, true),
+                                            ContextDuration.Variable(ContextValues.Rank(),
                                             DurationRate.Rounds, true),
                                         isFromSpell: true))))
+            .AddContextRankConfig(ContextRankConfigs.CasterLevel())
             .AddToSpellList(4, SpellListRefs.DruidSpellList.ToString())
             .AddToSpellList(4, SpellListRefs.MagicDeceiverSpellList.ToString())
             .AddToSpellList(4, SpellListRefs.DemonSpelllist.ToString())

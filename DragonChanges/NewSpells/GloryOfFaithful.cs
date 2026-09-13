@@ -69,9 +69,10 @@ public class GloryOfFaithful
             .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
                     .ApplyBuff(GloryOfFaithfulBuff.ConfigureEnabled(icon),
-                        ContextDuration.Variable(ContextValues.Property(UnitProperty.Level, true),
+                        ContextDuration.Variable(ContextValues.Rank(),
                             DurationRate.Rounds, true),
                         isFromSpell: true))
+            .AddContextRankConfig(ContextRankConfigs.CasterLevel())
             .AddToSpellList(4, SpellListRefs.PaladinSpellList.Reference.Get())
             .SetLocalizedDuration(Duration.RoundPerLevel)
             .SetIcon(icon)
