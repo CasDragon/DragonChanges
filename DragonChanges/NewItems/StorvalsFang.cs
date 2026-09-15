@@ -42,7 +42,7 @@ namespace DragonChanges.NewItems
                 .SetWeaponComponent(SpikedLightShieldPlus1Sonic.ConfigureEnabled())
                 .SetArmorComponent(StorvalsFangArmor.ConfigureEnabled())
                 .Configure();
-            AneviaVendor.AddItem(shield);
+            AneviaVendor.AddItem(shield, AneviaVendor.ItemType.Shield);
             return shield;
         }
     }

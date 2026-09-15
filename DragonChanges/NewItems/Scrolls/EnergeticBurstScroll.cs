@@ -38,6 +38,6 @@ public class EnergeticBurstScroll
             .AddCopyScroll()
             .SetIcon(icon)
             .Configure();
-        AneviaVendor.AddItem(scroll, 99);
+        AneviaVendor.AddItem(scroll, AneviaVendor.ItemType.Scroll, 99);
     }
 }

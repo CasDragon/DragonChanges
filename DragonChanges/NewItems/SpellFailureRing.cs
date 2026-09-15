@@ -58,7 +58,7 @@ namespace DragonChanges.NewItems
                 .AddFactToEquipmentWielder(SpellFailureRingFeature.ConfigureEnabled())
                 .AddFactToEquipmentWielder(SpellFailureRingFeature2.ConfigureEnabled())
                 .Configure();
-            AneviaVendor.AddItem(ring);
+            AneviaVendor.AddItem(ring, AneviaVendor.ItemType.Ring);
         }
     }
 }

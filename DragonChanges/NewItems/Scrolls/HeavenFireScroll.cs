@@ -61,7 +61,7 @@ namespace DragonChanges.NewItems.Scrolls
             else
                 scrollconfig.SetIcon(ItemEquipmentUsableRefs.ScrollOfHellfireRay.Reference.Get().Icon);
             var scroll = scrollconfig.Configure();
-            AneviaVendor.AddItem(scroll, 99);
+            AneviaVendor.AddItem(scroll, AneviaVendor.ItemType.Scroll, 99);
         }
     }
 }

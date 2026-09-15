@@ -64,7 +64,7 @@ namespace DragonChanges.NewItems
                 .AddFactToEquipmentWielder(RangedCleaveBracersFeature.ConfigureEnabled())
                 .SetEquipmentEntity(ItemEquipmentWristRefs.BracersOfArchery.Reference.Get().m_EquipmentEntity)
                 .Configure();
-            AneviaVendor.AddItem(bracer);
+            AneviaVendor.AddItem(bracer, AneviaVendor.ItemType.Armor);
         }
     }
 }

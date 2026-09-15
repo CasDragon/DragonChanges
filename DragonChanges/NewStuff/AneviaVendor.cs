@@ -64,6 +64,7 @@ namespace DragonChanges.NewStuff
         public static void ConfigureEnd()
         {
             Main.log.Log("Attempting to finish vendor list");
+            AddItemsSorted();
             BlueprintSharedVendorTable loottable = aneviatable.Configure();
             BlueprintUnitUpgrader vendorupgrader = VendorUnitUpgrader.Configure(loottable);
             DoDLCSpawner(loottable);
@@ -90,11 +91,45 @@ namespace DragonChanges.NewStuff
 
             Main.log.Log("Anevia vendor created!");
         }
+
+        public enum ItemType
+        {
+            None,
+            Weapon,
+            Armor,
+            Helmet,
+            Shield,
+            Ring,
+            Necklace,
+            Scroll,
+            Useable,
+            Potion,
+            IounStone,
+            PetArmor,
+        }
+
         public static void AddItem(BlueprintItem? item, int amount = 1)
+        {
+            AddItem(item, ItemType.None, amount);
+        }
+
+        public static void AddItem(BlueprintItem? item, ItemType itemType, int amount = 1)
         {
             if (item == null || amount < 1)
                 return;
-            aneviatable.AddLootItemsPackFixed(amount, new LootItem() { m_Item = item.ToReference<BlueprintItemReference>(), m_Type = LootItemType.Item });
+            itemDict.Add((item,  amount, itemType));
+        }
+        
+        public static List<(BlueprintItem? item, int amount, ItemType itemType)> itemDict = [];
+        public static void AddItemsSorted()
+        {
+            var items = itemDict.OrderBy(x => x.itemType)
+                .ThenBy(x => x.item.NameSafe()).ToList();
+            foreach (var itemtuple in items)
+            {
+                aneviatable.AddLootItemsPackFixed(itemtuple.amount, new LootItem() 
+                    { m_Item = itemtuple.item.ToReference<BlueprintItemReference>(), m_Type = LootItemType.Item });
+            }
         }
     }
 }

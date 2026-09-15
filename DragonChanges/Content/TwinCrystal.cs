@@ -32,6 +32,6 @@ internal class TwinCrystal
         ItemWeaponConfigurator.For(ItemWeaponRefs.TwinCrystalsSecondItem)
             .SetVisualParameters(ItemWeaponRefs.HavocHarbingerItemSecond.Reference.Get().VisualParameters)
             .Configure();
-        AneviaVendor.AddItem(sword);
+        AneviaVendor.AddItem(sword, AneviaVendor.ItemType.Weapon);
     }
 }

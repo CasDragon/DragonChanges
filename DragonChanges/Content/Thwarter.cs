@@ -28,6 +28,6 @@ internal class Thwarter
         BlueprintItemWeapon tongi = ItemWeaponConfigurator.For(ItemWeaponRefs.JustifierTongiItem)
             .SetVisualParameters(ItemWeaponRefs.TongiKeenPlus1.Reference.Get().VisualParameters)
             .Configure();
-        AneviaVendor.AddItem(tongi);
+        AneviaVendor.AddItem(tongi, AneviaVendor.ItemType.Weapon);
     }
 }

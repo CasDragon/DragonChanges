@@ -1,8 +1,10 @@
-*** 1.2
+*** 1.23.1
+ - The vendor list is now sorted. It's unsorted nature was bothering me.
  - Fix descriptors for new hellfire ray variants
  - Darth has once again gotten annoyed by my icons, and provided new ones for the hellfire ray variants
  - Prestige Plus's Cloak and Dagger style now lasts entire combat, in the PP monk toggle setting because I can't be assed to make new toggle
  - Possible fix for EC adding my deity to literally every one it's deity selections :sus:
+ - Add Lion's Claw to wooloo vendor
 *** 1.23.0
  - New spells, Flash of Insight, Energetic Burst, Dragon Scales, Elephant's Strength, Blunt Impact
  - New feature Extra Discovery (for Mutation Warrior)

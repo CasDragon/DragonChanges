@@ -42,7 +42,7 @@ namespace DragonChanges.NewItems.Scrolls
                 .AddCopyScroll()
                 .SetIcon(ItemEquipmentUsableRefs.ScrollOfSenseVitals.Reference.Get().Icon)
                 .Configure();
-            AneviaVendor.AddItem(scroll, 99);
+            AneviaVendor.AddItem(scroll, AneviaVendor.ItemType.Scroll, 99);
         }
     }
 }

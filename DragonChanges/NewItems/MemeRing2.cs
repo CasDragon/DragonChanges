@@ -51,7 +51,7 @@ namespace DragonChanges.NewItems
                 .SetCR(10)
                 .AddFactToEquipmentWielder(MemeRing2Feature.ConfigureEnabled())
                 .Configure();
-            AneviaVendor.AddItem(ring);
+            AneviaVendor.AddItem(ring, AneviaVendor.ItemType.Ring);
         }
     }
 }

@@ -66,7 +66,7 @@ namespace DragonChanges.NewItems
             else
                 ringconfig.SetIcon(ItemEquipmentRingRefs.CopperRing.Reference.Get().Icon);
             BlueprintItemEquipmentRing ring = ringconfig.Configure();
-            AneviaVendor.AddItem(ring);
+            AneviaVendor.AddItem(ring, AneviaVendor.ItemType.Ring);
         }
     }
 }

@@ -38,7 +38,7 @@ namespace DragonChanges.NewItems
                     ModCompat.AddEquipmentToScalingDC(y);
                 }
                 catch { }
-                AneviaVendor.AddItem(y);
+                AneviaVendor.AddItem(y, AneviaVendor.ItemType.Weapon);
             }
             else
             {

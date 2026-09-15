@@ -60,7 +60,7 @@ namespace DragonChanges.NewItems.IounStones
                 .SetType(UsableItemType.Other)
                 .SetActivatableAbility(PaleBlueRhomboidAbility.ConfigureEnabled())
                 .Configure();
-            AneviaVendor.AddItem(itembp, 20);
+            AneviaVendor.AddItem(itembp, AneviaVendor.ItemType.IounStone, 20);
         }
     }
 }

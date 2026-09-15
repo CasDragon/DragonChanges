@@ -42,7 +42,7 @@ namespace DragonChanges.NewItems.Scrolls
                 .AddCopyScroll()
                 .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite("Abilities.SuperLongArms.png"))
                 .Configure();
-            AneviaVendor.AddItem(scroll, 99);
+            AneviaVendor.AddItem(scroll, AneviaVendor.ItemType.Scroll, 99);
         }
     }
 }

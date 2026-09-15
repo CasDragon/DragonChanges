@@ -52,6 +52,6 @@ public class IllFortuneScroll
             .AddCopyScroll()
             .SetIcon(ChildOfIllFortune.icon);
         var scroll = scrollconfig.Configure();
-        AneviaVendor.AddItem(scroll, 99);
+        AneviaVendor.AddItem(scroll, AneviaVendor.ItemType.Scroll, 99);
     }
 }

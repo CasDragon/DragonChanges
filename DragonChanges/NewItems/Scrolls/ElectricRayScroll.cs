@@ -36,7 +36,7 @@ public class ElectricRayScroll
     {
         string spritepath = "Abilities.HellShockRay.png";
         if (SettingsAction.GetSetting<bool>("darthicons"))
-            spritepath = "Darth.Hellshock_Ray_Ray.png";
+            spritepath = "Darth.Hellshock_Ray_Scroll.png";
         var scrollconfig = ItemEquipmentUsableConfigurator.New(item, itemguid)
             .SetCost(1650)
             .SetWeight(0.2f)
@@ -54,6 +54,6 @@ public class ElectricRayScroll
             .AddCopyScroll()
             .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite(spritepath));
         var scroll = scrollconfig.Configure();
-        AneviaVendor.AddItem(scroll, 99);
+        AneviaVendor.AddItem(scroll, AneviaVendor.ItemType.Scroll, 99);
     }
 }

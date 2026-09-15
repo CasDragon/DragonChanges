@@ -55,7 +55,7 @@ namespace DragonChanges.NewItems
                 .SetCR(10)
                 .AddFactToEquipmentWielder(FeatureRefs.CavalierForTheKing.Reference.Get())
                 .Configure();
-            AneviaVendor.AddItem(ring);
+            AneviaVendor.AddItem(ring, AneviaVendor.ItemType.Ring);
         }
     }
 }

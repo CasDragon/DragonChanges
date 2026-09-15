@@ -52,7 +52,7 @@ namespace DragonChanges.NewItems
                 .SetInventoryTakeSound("RingTake")
                 .AddFactToEquipmentWielder(StrDRNecklaceFeature.ConfigureEnabled())
                 .Configure();
-            AneviaVendor.AddItem(neck);
+            AneviaVendor.AddItem(neck, AneviaVendor.ItemType.Necklace);
         }
     }
 }

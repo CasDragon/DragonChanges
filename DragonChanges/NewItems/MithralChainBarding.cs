@@ -171,13 +171,13 @@ namespace DragonChanges.NewItems
                 .SetEquipmentEntity(itemref.m_EquipmentEntity)
                 .SetType(ArmorTypeRefs.HaramakiType.Reference.Get())
                 .Configure();
-            AneviaVendor.AddItem(item1, 10);
-            AneviaVendor.AddItem(item2, 10);
-            AneviaVendor.AddItem(item3, 10);
-            AneviaVendor.AddItem(item4, 10);
-            AneviaVendor.AddItem(item5, 10);
-            AneviaVendor.AddItem(item6, 10);
-            AneviaVendor.AddItem(item7, 10);
+            AneviaVendor.AddItem(item1, AneviaVendor.ItemType.PetArmor, 10);
+            AneviaVendor.AddItem(item2, AneviaVendor.ItemType.PetArmor, 10);
+            AneviaVendor.AddItem(item3, AneviaVendor.ItemType.PetArmor, 10);
+            AneviaVendor.AddItem(item4, AneviaVendor.ItemType.PetArmor, 10);
+            AneviaVendor.AddItem(item5, AneviaVendor.ItemType.PetArmor, 10);
+            AneviaVendor.AddItem(item6, AneviaVendor.ItemType.PetArmor, 10);
+            AneviaVendor.AddItem(item7, AneviaVendor.ItemType.PetArmor, 10);
         }
     }
 }

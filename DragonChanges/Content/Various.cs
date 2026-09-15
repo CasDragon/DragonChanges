@@ -52,27 +52,29 @@ internal class Various
     {
         if (!SettingsAction.GetSetting<bool>(itemsttingname)) return;
         Main.log.Log("Adding Walls of Sanctuary to anevia vendor");
-        AneviaVendor.AddItem(ItemShieldRefs.WallsOfTheSanctuaryShieldItem.Reference.Get());
+        AneviaVendor.AddItem(ItemShieldRefs.WallsOfTheSanctuaryShieldItem.Reference.Get(), AneviaVendor.ItemType.Armor);
         Main.log.Log("Adding Helmet of Guiding Light to anevia vendor");
-        AneviaVendor.AddItem(ItemEquipmentHeadRefs.HelmetOfTheGuidingLight.Reference.Get());
+        AneviaVendor.AddItem(ItemEquipmentHeadRefs.HelmetOfTheGuidingLight.Reference.Get(), AneviaVendor.ItemType.Helmet);
         Main.log.Log("Adding The Priceless Woe to anevia vendor");
-        AneviaVendor.AddItem(ItemWeaponRefs.DLC3_NahyndrianVorpalBladeWeaponItem.Reference.Get());
+        AneviaVendor.AddItem(ItemWeaponRefs.DLC3_NahyndrianVorpalBladeWeaponItem.Reference.Get(), AneviaVendor.ItemType.Weapon);
         Main.log.Log("Add Butchers Cleaver (DLC3) to anevia vendor");
-        AneviaVendor.AddItem(ItemWeaponRefs.ButcherCleaver_Item.Reference.Get());
+        AneviaVendor.AddItem(ItemWeaponRefs.ButcherCleaver_Item.Reference.Get(), AneviaVendor.ItemType.Weapon);
         Main.log.Log("Add Martyrs Blade to anevia vendor");
-        AneviaVendor.AddItem(ItemWeaponRefs.MartyrsBladeItem.Reference.Get());
+        AneviaVendor.AddItem(ItemWeaponRefs.MartyrsBladeItem.Reference.Get(), AneviaVendor.ItemType.Weapon);
         Main.log.Log("Add OpressorBastardSword to anevia vendor");
-        AneviaVendor.AddItem(ItemWeaponRefs.TheOpressorBastardSwordItem.Reference.Get());
+        AneviaVendor.AddItem(ItemWeaponRefs.TheOpressorBastardSwordItem.Reference.Get(), AneviaVendor.ItemType.Weapon);
         Main.log.Log("Add JagannathKhanda to anevia vendor");
-        AneviaVendor.AddItem(ItemWeaponRefs.JagannathKhanda.Reference.Get());
+        AneviaVendor.AddItem(ItemWeaponRefs.JagannathKhanda.Reference.Get(), AneviaVendor.ItemType.Weapon);
         Main.log.Log("Add GreaterMagicWeaponScroll to anevia vendor");
-        AneviaVendor.AddItem(ItemEquipmentUsableRefs.ScrollOfMagicWeaponGreaterPrimary.Reference.Get(), 99);
+        AneviaVendor.AddItem(ItemEquipmentUsableRefs.ScrollOfMagicWeaponGreaterPrimary.Reference.Get(), AneviaVendor.ItemType.Scroll, 99);
         Main.log.Log("Add PawsOfTheBearGodItem to anevia vendor");
-        AneviaVendor.AddItem(ItemEquipmentGlovesRefs.PawsOfTheBearGodItem.Reference.Get());
+        AneviaVendor.AddItem(ItemEquipmentGlovesRefs.PawsOfTheBearGodItem.Reference.Get(), AneviaVendor.ItemType.Armor);
         Main.log.Log("Add RuinItem to anevia vendor");
-        AneviaVendor.AddItem(ItemWeaponRefs.RuinItem.Reference.Get());
+        AneviaVendor.AddItem(ItemWeaponRefs.RuinItem.Reference.Get(), AneviaVendor.ItemType.Weapon);
         Main.log.Log("Add SerpentPrinceFauchItem to anevia vendor");
-        AneviaVendor.AddItem(ItemWeaponRefs.SerpentPrinceFauchItem.Reference.Get());
+        AneviaVendor.AddItem(ItemWeaponRefs.SerpentPrinceFauchItem.Reference.Get(), AneviaVendor.ItemType.Weapon);
+        Main.log.Log("Add LionsClaw to anevia vendor");
+        AneviaVendor.AddItem(ItemWeaponRefs.LionsClaw.Reference.Get(), AneviaVendor.ItemType.Weapon);
     }
 
     const string baphttingname = "baphitembuff";
