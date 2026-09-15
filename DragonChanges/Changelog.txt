@@ -1,4 +1,6 @@
 *** 1.2
+ - Fix descriptors for new hellfire ray variants
+ - Darth has once again gotten annoyed by my icons, and provided new ones for the hellfire ray variants
  - Prestige Plus's Cloak and Dagger style now lasts entire combat, in the PP monk toggle setting because I can't be assed to make new toggle
  - Possible fix for EC adding my deity to literally every one it's deity selections :sus:
 *** 1.23.0
