@@ -68,11 +68,12 @@ public class ElectricRay
                     MetamagicExtention.CustomMetamagic.ElementalFire | MetamagicExtention.CustomMetamagic.Flaring);
             }
             string spritepath = "Abilities.HellShockRay.png";
-            //if (SettingsAction.GetSetting<bool>("darthicons"))
-            //    spritepath = "Darth.HeavenfireRay.png";
+            if (SettingsAction.GetSetting<bool>("darthicons"))
+                spritepath = "Darth.Hellshock_Ray.png";
             ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount))!;
             ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default))!;
-            var x = AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
+            var x = AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, 
+                    true, SpellDescriptor.Electricity | SpellDescriptor.Evil)
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)
                 // components

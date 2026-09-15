@@ -34,6 +34,9 @@ public class AcidRayScroll
     }
     public static void ConfigureEnabled()
     {
+        string spritepath = "Abilities.HellAcidRay.png";
+        if (SettingsAction.GetSetting<bool>("darthicons"))
+            spritepath = "Darth.Hellacid_Ray.png";
         var scrollconfig = ItemEquipmentUsableConfigurator.New(item, itemguid)
             .SetCost(1650)
             .SetWeight(0.2f)
@@ -49,7 +52,7 @@ public class AcidRayScroll
             .SetSpellLevel(6)
             .SetType(UsableItemType.Scroll)
             .AddCopyScroll()
-            .SetIcon(ItemEquipmentUsableRefs.ScrollOfHellfireRay.Reference.Get().Icon);
+            .SetIcon(MicroAssetUtil.GetAssemblyResourceSprite(spritepath));
         var scroll = scrollconfig.Configure();
         AneviaVendor.AddItem(scroll, 99);
     }

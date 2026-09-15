@@ -70,11 +70,12 @@ public class AcidRay
                     MetamagicExtention.CustomMetamagic.ElementalFire | MetamagicExtention.CustomMetamagic.Flaring);
             }
             string spritepath = "Abilities.HellAcidRay.png";
-            //if (SettingsAction.GetSetting<bool>("darthicons"))
-            //    spritepath = "Darth.HeavenfireRay.png";
+            if (SettingsAction.GetSetting<bool>("darthicons"))
+                spritepath = "Darth.Hellacid_Ray.png";
             ContextRankConfig crc1 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.ProjectilesCount))!;
             ContextRankConfig crc2 = TTTHelpers.CreateCopy(hellfire.GetComponent<ContextRankConfig>(c => c.Type == AbilityRankType.Default))!;
-            var x = AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, true, SpellDescriptor.Fire | SpellDescriptor.Good)
+            var x = AbilityConfigurator.NewSpell(spell, spellguid, SpellSchool.Evocation, 
+                    true, SpellDescriptor.Acid | SpellDescriptor.Evil)
                 .SetDisplayName(spellname)
                 .SetDescription(spelldescription)
                 // components
