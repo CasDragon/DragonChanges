@@ -75,6 +75,10 @@ internal class Various
         AneviaVendor.AddItem(ItemWeaponRefs.SerpentPrinceFauchItem.Reference.Get(), AneviaVendor.ItemType.Weapon);
         Main.log.Log("Add LionsClaw to anevia vendor");
         AneviaVendor.AddItem(ItemWeaponRefs.LionsClaw.Reference.Get(), AneviaVendor.ItemType.Weapon);
+        Main.log.Log("Add AcerbicRingItem to anevia vendor");
+        AneviaVendor.AddItem(ItemEquipmentRingRefs.AcerbicRingItem.Reference.Get(), AneviaVendor.ItemType.Ring);
+        Main.log.Log("Add RingOfBigBoom to anevia vendor");
+        AneviaVendor.AddItem(ItemEquipmentRingRefs.RingOfBigBoom.Reference.Get(), AneviaVendor.ItemType.Ring);
     }
 
     const string baphttingname = "baphitembuff";

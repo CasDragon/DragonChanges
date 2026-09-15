@@ -1,3 +1,5 @@
+*** unreleased
+ - Add Acerbic Ring, Explosion Ring to Wooloo shop. Items are from KM, Explosion Ring works with DragonFixes installed, no idea about Acerbic Ring
 *** 1.23.1
  - The vendor list is now sorted. It's unsorted nature was bothering me.
  - Fix descriptors for new hellfire ray variants

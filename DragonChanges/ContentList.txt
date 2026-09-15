@@ -184,6 +184,9 @@ Base Game Changes:
         Adds Jagannath Khanda (toggeable)
         Adds Paws Of The Bear God  (toggeable)
         Adds Greater Magic Weapon scrolls (99x)  (toggeable)
+        Add Lion's Claw (toggeable)
+        AddsExplosion Ring (Requires DragonFixes to function correctly, it's old KM item) (toggeable)
+        Add Acerbic Ring (Old KM item, no idea if it actually works or not) (toggeable)        
         
     Classes:
         Dragon Disciple:
