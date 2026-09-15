@@ -1,4 +1,6 @@
+using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Spells;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using DragonChanges.Utils;
@@ -22,23 +24,33 @@ public class PrestigePlus
     {
         if (!ModCompat.pp) return;
         if (!SettingsAction.GetSetting<bool>(DJSettingName)) return;
+        Main.log.Log("Removing Monk Prerequisites for PP combat styles");
         // Grabbing Style
+        Main.log.Log("PP - Grabbing");
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.GrabbingStyle));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.GrabbingDrag));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.GrabbingDrag));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.GrabbingMaster));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.GrabbingMaster));
         // Jabbing Style
+        Main.log.Log("PP - Jabbing");
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.JabbingStyle));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.JabbingDancer));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.JabbingMaster));
         // Kraken Style
+        Main.log.Log("PP - Kraken");
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.KrakenStyle));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.KrakenWrack));
         // Snapping Turtle Style
+        Main.log.Log("PP - Snapping");
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.SnappingTurtleStyle));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.SnappingTurtleClutch));
         DragonHelpers.RemoveComponent<PrerequisiteClassLevel>(BlueprintTool.Get<BlueprintFeature>(PrestigePlusRefs.SnappingTurtleShell));
+    
+        Main.log.Log("Make Cloak and Dagger work entire combat maybe?");
+        ActivatableAbilityConfigurator.For(PrestigePlusRefs.CloakDaggerStyleStyleActivatableAbility)
+            .SetBuff(PrestigePlusRefs.CloakDaggerStyleStylebuff2)
+            .Configure();
     }
     
     [DragonConfigure]

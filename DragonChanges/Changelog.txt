@@ -1,3 +1,6 @@
+*** 1.2
+ - Prestige Plus's Cloak and Dagger style now lasts entire combat, in the PP monk toggle setting because I can't be assed to make new toggle
+ - Possible fix for EC adding my deity to literally every one it's deity selections :sus:
 *** 1.23.0
  - New spells, Flash of Insight, Energetic Burst, Dragon Scales, Elephant's Strength, Blunt Impact
  - New feature Extra Discovery (for Mutation Warrior)

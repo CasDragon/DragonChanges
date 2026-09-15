@@ -153,21 +153,18 @@ namespace DragonChanges.NewStuff
                     DeityNonsense.SeparatistAllowed.WaterDomainAllowedSeparatist,
                     DeityNonsense.SeparatistAllowed.WeatherDomainAllowedSeparatist,
                     DeityNonsense.SeparatistAllowed.ScalykindDomainAllowedSeparatist])
-                .SetGroups(Kingmaker.Blueprints.Classes.FeatureGroup.Deities)
+                //.SetGroups(FeatureGroup.Deities)
                 .SetRanks(1)
                 .SetIsClassFeature(true)
                 .SetIcon(icon)
                 .Configure();
-            /*FeatureSelectionConfigurator.For(FeatureSelectionRefs.DeitySelection)
-                .AddToAllFeatures([x])
-                .Configure();
-            CharacterClassConfigurator.For(CharacterClassRefs.PaladinClass)
-                .EditComponent<PrerequisiteFeaturesFromList>(c => 
-                    c.m_Features = [.. c.m_Features, x.ToReference<BlueprintFeatureReference>()])
-                .Configure();*/
+            x.Groups = [FeatureGroup.Deities];
+            var reference = x.ToReference<BlueprintFeatureReference>();
+            var selection = FeatureSelectionRefs.DeitySelection.Reference.Get();
+            selection.m_AllFeatures = [.. selection.m_AllFeatures, reference];
             var pala = CharacterClassRefs.PaladinClass.Reference.Get();
             var comp = pala.GetComponent<PrerequisiteFeaturesFromList>();
-            BlueprintFeatureReference[] feats = [.. comp!.m_Features, x.ToReference<BlueprintFeatureReference>()];
+            BlueprintFeatureReference[] feats = [.. comp!.m_Features, reference];
             var newcomp = new PrerequisiteFeaturesFromList
             {
                 HideInUI = true,

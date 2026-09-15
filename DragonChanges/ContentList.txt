@@ -165,6 +165,7 @@ Other Mod Changes:
     Prestige Plus:
         Adding Blade Lash to Warpriest/Inquist/MD spell list 
         Remove the Monk requirement from the new combat styles (toggeable) (Disabled by default)
+        Cloak and Dagger buff lasts entire combat, in the above toggle because I can't be assed to add new toggle
 
 --------------------------------
 
