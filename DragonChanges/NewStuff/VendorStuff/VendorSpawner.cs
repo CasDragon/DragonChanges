@@ -46,9 +46,21 @@ public class VendorSpawner: IAreaPartHandler//IAreaActivationHandler
 
     private void SpawnTheVendor(Vector3 position)
     {
-        if (Game.Instance.State.Units.Any(unit => unit.Blueprint.AssetGuid.ToString() == Guids.DLCVendorUnit))
+        foreach (var unit in Game.Instance.State.Units.All)
         {
-            return;
+            var guid = unit.Blueprint.AssetGuid.ToString();
+            //Main.log.Log($"Unit's guid is {guid}");
+            //Main.log.Log($"Unit's name is {unit.CharacterName}");
+            if (unit.Blueprint.AssetGuid == Guids.DLCVendorUnit)
+            {
+                Main.log.Log($"Found wooloo guid");
+                return;
+            }
+            if (unit.CharacterName == VendorUnit.unitname)
+            {
+                Main.log.Log($"Found wooloo name");
+                return;
+            }
         }
 
         var unitSpawned = Game.Instance.EntityCreator.SpawnUnit(BlueprintTool.Get<BlueprintUnit>(Guids.DLCVendorUnit),

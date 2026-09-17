@@ -1,6 +1,3 @@
-using System.Runtime.Remoting.Contexts;
-using BlueprintCore.Actions.Builder;
-using BlueprintCore.Actions.Builder.MiscEx;
 using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
@@ -8,29 +5,33 @@ using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
-using Kingmaker.Blueprints.Classes.Experience;
-using Kingmaker.Blueprints.Items;
-using Kingmaker.Designers.EventConditionActionSystem.Evaluators;
 using Kingmaker.Localization;
-using Kingmaker.PubSubSystem;
-using Kingmaker.UnitLogic.Interaction;
 using UnityEngine;
 
-namespace DragonChanges.NewStuff.VendorStuff;
+namespace DragonChanges.NewStuff.Pets;
 
-public static class VendorUnit
+public class LannPet
 {
-    internal const string unitBPName = "dlcvender";
-    [DragonLocalizedString(unitname, "Wooloo the Dragon Trader")]
-    internal const string unitname = "dlcvendor.name";
+    internal const string unitBPName = "lannpetunit";
+    [DragonLocalizedString(unitname, "Lann The Pet")]
+    internal const string unitname = "lannpetunit.name";
 
-    public static BlueprintUnit CreateVendorBlueprint(BlueprintSharedVendorTable loottable)
+    public static void ConfigureDisabled()
     {
-        var aivu = TTTHelpers.CreateCopy<BlueprintUnit>(BlueprintTool.Get<BlueprintUnit>(Guids.WoolooUnit));
+        UnitConfigurator.New(unitBPName, Guids.LannPetUnit).Configure();
+    }
+
+    public static BlueprintUnit ConfigureEnabled()
+    {
+        var aivu = TTTHelpers.CreateCopy<BlueprintUnit>(UnitRefs.Lann_Companion.Reference.Get());
         var shared = ScriptableObject.CreateInstance<SharedStringAsset>();
         shared.String = LocalizationTool.GetString(unitname);
-        var unit = UnitConfigurator.New(unitBPName, Guids.DLCVendorUnit)
+        var unit = UnitConfigurator.New(unitBPName, Guids.LannPetUnit)
             .CopyFrom(aivu, typeof(AddClassLevels))
+            .AddClassLevelLimit(1)
+            .AddMythicLevelLimit(0)
+            .AddAllowDyingCondition()
+            .AddResurrectOnRest()
             .SetLocalizedName(shared)
             .SetGender(aivu.Gender)
             .SetSize(aivu.Size)
@@ -38,7 +39,7 @@ public static class VendorUnit
             .SetPortrait(aivu.PortraitSafe)
             .SetPrefab(aivu.Prefab)
             .SetVisual(aivu.Visual)
-            .SetFaction(FactionRefs.Neutrals.ToString())
+            .SetFaction(aivu.Faction)
             .SetBody(aivu.Body)
             .SetStrength(aivu.Strength)
             .SetIntelligence(aivu.Intelligence)
@@ -48,8 +49,7 @@ public static class VendorUnit
             .SetCharisma(aivu.Charisma)
             .SetSpeed(aivu.Speed)
             .SetMaxHP(aivu.MaxHP)
-            .AddSharedVendor(loottable)
-            .AddActionsOnClick(new ActionsBuilder().StartTrade(new ClickedUnit()))
+            .SetSkills(aivu.Skills)
             .Configure();
         
         return unit;

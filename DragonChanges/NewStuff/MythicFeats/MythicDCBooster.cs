@@ -1,0 +1,49 @@
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes.Selection;
+using BlueprintCore.Blueprints.References;
+using BlueprintCore.Utils.Types;
+using DragonChanges.Utils;
+using DragonLibrary.Utils;
+using Kingmaker.Blueprints.Classes;
+using Kingmaker.Blueprints.Classes.Selection;
+
+namespace DragonChanges.NewStuff.MythicFeats
+{
+    internal class MythicDCBooster
+    {
+        // edit
+        internal const string feature = "MythicSupportNethys";
+        internal const string featureguid = Guids.MythicNethysSupport;
+        internal const string featurename = "Potent Spellcasting (Mythic)";
+        internal const string featuredescription = "Mythic power makes your spells almost impossible to resist.\nAdd +6 to the Difficulty Class for all saving throws against spells you cast. This bonus stacks with the bonuses from Potent Spellcasting, Improved Potent Spellcasting, and Greater Potent Spellcasting.";
+        // don't edit
+        [DragonLocalizedString(featurenamekey, featurename)]
+        internal const string featurenamekey = $"{feature}.name";
+        [DragonLocalizedString(featuredescriptionkey, featuredescription)]
+        internal const string featuredescriptionkey = $"{feature}.description";
+        public static void ConfigureDummy()
+        {
+            FeatureConfigurator.New(feature, featureguid)
+                .SetDisplayName(featurenamekey)
+                .SetDescription(LocalizedStringHelper.disabledcontentstring)
+                .Configure();
+        }
+        public static BlueprintFeature ConfigureEnabled(BlueprintFeature prereq)
+        {
+            BlueprintFeature x = FeatureConfigurator.New(feature, featureguid)
+                .SetDisplayName(featurenamekey)
+                .SetDescription(featuredescriptionkey)
+                .AddIncreaseAllSpellsDC(descriptor: Kingmaker.Enums.ModifierDescriptor.UntypedStackable, spellsOnly: true,
+                    value: ContextValues.Constant(6))
+                .AddToGroups(FeatureGroup.MythicFeat)
+                .AddRecommendationRequiresSpellbook()
+                .AddFeatureTagsComponent(FeatureTag.Magic)
+                .AddPrerequisiteFeature(prereq)
+                .Configure();
+            FeatureSelectionConfigurator.For(FeatureSelectionRefs.ExtraFeatMythicFeat)
+                .AddToAllFeatures(x)
+                .Configure();
+            return x;
+        }
+    }
+}

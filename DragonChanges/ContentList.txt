@@ -187,6 +187,7 @@ Base Game Changes:
         Add Lion's Claw (toggeable)
         AddsExplosion Ring (Requires DragonFixes to function correctly, it's old KM item) (toggeable)
         Add Acerbic Ring (Old KM item, no idea if it actually works or not) (toggeable)        
+        Add Cold Iron Arrow Quiver (toggeable)        
         
     Classes:
         Dragon Disciple:

@@ -5,6 +5,7 @@ using BlueprintCore.Blueprints.Configurators.DialogSystem;
 using BlueprintCore.Blueprints.Configurators.Items;
 using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.References;
+using DragonChanges.NewStuff.Unused;
 using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
@@ -42,7 +43,7 @@ namespace DragonChanges.NewStuff
         }
         
         internal const string settingName = "vendor";
-        internal const string settingDescription = "Adds a new vendor to every act, a Wooloo. ";
+        internal const string settingDescription = "Adds a new vendor to every act, a Wooloo. You can not disabled this setting once a Wooloo has been spawned in your save file.";
         [DragonSetting(SettingCategories.None, settingName, settingDescription)]
         public static void DoDLCSpawner(BlueprintSharedVendorTable loottable)
         {
@@ -106,6 +107,7 @@ namespace DragonChanges.NewStuff
             Potion,
             IounStone,
             PetArmor,
+            Arrows,
         }
 
         public static void AddItem(BlueprintItem? item, int amount = 1)

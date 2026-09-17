@@ -1,5 +1,7 @@
-*** unreleased
+*** 1.23.2
  - Add Acerbic Ring, Explosion Ring to Wooloo shop. Items are from KM, Explosion Ring works with DragonFixes installed, no idea about Acerbic Ring
+ - Add Cold Iron Arrows Quiver to Wooloo, by request of someone in Discord
+ - Fix multiple Wooloo vendors from spawning. (`Game.Instance.State.Units` contains every unit on the current area..... except Wooloo, apparently. I don't understand Owlcat's code I guess :( )
 *** 1.23.1
  - The vendor list is now sorted. It's unsorted nature was bothering me.
  - Fix descriptors for new hellfire ray variants

@@ -1,0 +1,53 @@
+﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
+using BlueprintCore.Blueprints.References;
+using DragonChanges.Utils;
+using DragonLibrary.Utils;
+using Kingmaker.EntitySystem.Stats;
+using Kingmaker.Enums;
+
+namespace DragonChanges.NewStuff.MythicAbilities
+{
+    internal class BowDexDamage
+    {
+        // edit
+        internal const string feature = "SuperDexShot";
+        internal const string featureguid = Guids.BowDexDamage;
+        internal const string settingName = "bowdexdamage";
+        internal const string settingDescription = "A new mythic ability that grants DEX damage to bows instead of STR.";
+        // don't edit
+        internal const string featurename = $"{feature}.name";
+        internal const string featuredescription = $"{feature}.description";
+        [DragonConfigure]
+        [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
+        public static void Configure()
+        {
+            if (SettingsAction.GetSetting<bool>(settingName))
+            {
+                Main.log.Log($"{feature} feature enabled, configuring");
+                ConfigureEnabled();
+            }
+            else
+            {
+                Main.log.Log($"{feature} disabled, configuring dummy");
+                ConfigureDummy();
+            }
+        }
+        public static void ConfigureDummy()
+        {
+            FeatureConfigurator.New(feature, featureguid).Configure();
+        }
+        public static void ConfigureEnabled()
+        {
+            FeatureConfigurator.New(feature, featureguid)
+                .SetDisplayName(featurename)
+                .SetDescription(featuredescription)
+                .SetIsClassFeature(true)
+                .AddToGroups(Kingmaker.Blueprints.Classes.FeatureGroup.MythicAbility)
+                .AddWeaponTypeDamageStatReplacement(WeaponCategory.Longbow, false, StatType.Dexterity, false)
+                .AddWeaponTypeDamageStatReplacement(WeaponCategory.Shortbow, false, StatType.Dexterity, false)
+                .AddPrerequisiteFeature(FeatureRefs.DeadlyAimFeature.Reference.Get())
+                .AddPrerequisiteFullStatValue(stat: StatType.Dexterity, value: 18)
+                .Configure();
+        }
+    }
+}
