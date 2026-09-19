@@ -38,7 +38,7 @@ public static class MythicCasterAbility
             .SetIcon(MythicCasterFeature.icon)
             .AddAbilityEffectRunAction(
                 ActionsBuilder.New()
-                    .ApplyBuffPermanent(MythicCasterBuff.ConfigureEnabled(MythicCasterFeature.icon),
+                    .ApplyBuffPermanentFixed(MythicCasterBuff.ConfigureEnabled(MythicCasterFeature.icon),
                         isFromSpell: false, asChild: true, toCaster: true))
             .SetType(AbilityType.Supernatural)
             .SetRange(AbilityRange.Personal)

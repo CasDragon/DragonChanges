@@ -1,30 +1,18 @@
 ﻿using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
-using BlueprintCore.Blueprints.Configurators.Facts;
 using BlueprintCore.Blueprints.Configurators.Items.Ecnchantments;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Conditions.Builder;
-using BlueprintCore.Conditions.Builder.ContextEx;
-using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
 using DragonChanges.Utils;
 using DragonLibrary.BPCoreExtensions;
-using Kingmaker.Blueprints.Classes;
 using Kingmaker.Blueprints.Items.Ecnchantments;
 using Kingmaker.Blueprints.Items.Shields;
-using Kingmaker.Blueprints.Items.Weapons;
-using Kingmaker.Enums;
 using Kingmaker.Enums.Damage;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.Buffs.Blueprints;
 using Kingmaker.UnitLogic.Mechanics;
-using Kingmaker.UnitLogic.Mechanics.Conditions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DragonChanges.NewEnchantments
 {
@@ -64,7 +52,7 @@ namespace DragonChanges.NewEnchantments
                 .SetFlags(BlueprintBuff.Flags.HiddenInUi)
                 .Configure();
             var thing = FeatureConfigurator.New("Storvalthingy", Guids.storavlthing)
-                .AddFactContextActions(activated: ActionsBuilder.New().ApplyBuffPermanent(feat),
+                .AddFactContextActions(activated: ActionsBuilder.New().ApplyBuffPermanentFixed(feat),
                     deactivated: ActionsBuilder.New().RemoveBuff(feat))
                 .SetHideInCharacterSheetAndLevelUp(true)
                 .SetHideInUI(true)
