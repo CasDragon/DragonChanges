@@ -3,6 +3,7 @@ using BlueprintCore.Blueprints.References;
 using DragonChanges.NewAbilities;
 using DragonChanges.NewEnchantments;
 using DragonChanges.NewStuff;
+using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using HarmonyLib;

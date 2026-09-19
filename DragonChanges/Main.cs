@@ -2,6 +2,7 @@
 using BlueprintCore.Utils;
 using DragonChanges.Content;
 using DragonChanges.NewStuff;
+using DragonChanges.NewStuff.VendorStuff;
 using DragonLibrary.Utils;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;

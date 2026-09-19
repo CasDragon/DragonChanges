@@ -7,6 +7,7 @@ using BlueprintCore.Blueprints.Configurators.Items;
 using BlueprintCore.Blueprints.Configurators.Items.Equipment;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff;
+using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Items.Equipment;

@@ -1,6 +1,7 @@
 ﻿using BlueprintCore.Blueprints.Configurators.Items.Weapons;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff;
+using DragonChanges.NewStuff.VendorStuff;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Items.Weapons;
 

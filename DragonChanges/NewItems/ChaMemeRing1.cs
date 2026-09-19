@@ -10,6 +10,7 @@ using BlueprintCore.Utils;
 using DragonChanges.New_Classes.Redditor;
 using DragonChanges.NewItems.StuffForItems;
 using DragonChanges.NewStuff;
+using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;

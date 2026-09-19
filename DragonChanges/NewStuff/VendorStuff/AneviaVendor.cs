@@ -3,10 +3,8 @@ using BlueprintCore.Actions.Builder.MiscEx;
 using BlueprintCore.Blueprints.Configurators;
 using BlueprintCore.Blueprints.Configurators.DialogSystem;
 using BlueprintCore.Blueprints.Configurators.Items;
-using BlueprintCore.Blueprints.CustomConfigurators;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff.Unused;
-using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints;
@@ -16,9 +14,8 @@ using Kingmaker.Designers.EventConditionActionSystem.Evaluators;
 using Kingmaker.DialogSystem.Blueprints;
 using Kingmaker.EntitySystem.Persistence.Versioning;
 using Kingmaker.PubSubSystem;
-using Kingmaker.UnitLogic.FactLogic;
 
-namespace DragonChanges.NewStuff
+namespace DragonChanges.NewStuff.VendorStuff
 {
     internal class AneviaVendor
     {

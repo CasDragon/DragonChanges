@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BlueprintCore.Blueprints.Configurators.Items.Equipment;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewStuff;
+using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
 using Kingmaker.Blueprints.Items.Equipment;
 using Kingmaker.Enums;
