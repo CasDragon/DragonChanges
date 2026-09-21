@@ -131,10 +131,14 @@ New Content:
             Int bonus to Initiative
         Extra Discovery (Mutation Warrior):
             Extra Discovery but for Mutation Warrior. Can be taken 3 times (for total of 7, which is all the base game features)
+        Disrupting Spells:
+            Upon hitting a target with a spell, dispel 1 buff or debuff from the target, based on your spell DC. Note this will affect both allies and enemies.
         
     New Mythic Feats:
         Ascendant Critical:
             Increases both crit range and cringe multiplier by 1
+        Mythic Disrupting Spells:
+            Same as Disrupting Spells but 5 buffs/debuffs. 
     
     New Mythic Abilities:
         Abundant All Is Darkness:
@@ -195,6 +199,8 @@ Base Game Changes:
             Full spellcasting (doesn't skip levels 1,5,9) (toggeable)
         Shaman:
             Adds the Plague hex to Extra Hex and regular Hex selections for Shaman (toggeable)
+        Dragonblood Shifter:
+            Change copper polymorphs model to aivu's model (Disabled by default) (toggeable)
     
     Items:
         Call of Fiery Things

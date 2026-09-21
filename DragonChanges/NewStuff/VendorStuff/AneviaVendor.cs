@@ -50,6 +50,8 @@ namespace DragonChanges.NewStuff.VendorStuff
                 var dlcvendor = VendorUnit.CreateVendorBlueprint(loottable);
                 var vendor = new VendorSpawner();
                 EventBus.Subscribe(vendor);
+                var vendor2 = new VendorSpawner2();
+                EventBus.Subscribe(vendor2);
             }
             else
             {

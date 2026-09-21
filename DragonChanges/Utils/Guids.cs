@@ -267,8 +267,8 @@ namespace DragonChanges.Utils
         internal const string MythicCasterBaseAbility = "8baf93c9-5a81-4f47-9bd1-936e1a1aa23b";
         internal const string MythicCasterBaseBuff = "719f0ff2-60a4-4e00-bc74-c68c63f76456";
         internal const string MythicCasterBaseResource = "05f4113b-8dba-45fe-9101-6bee702ec8f3";
-        internal const string guid12 = "17e99e6a-0d8d-4a34-99cd-42baf3cda79f";
-        internal const string guid13 = "09bb3ee4-16d2-463b-8620-b36130283839";
+        internal const string DisruptingSpells = "17e99e6a-0d8d-4a34-99cd-42baf3cda79f";
+        internal const string MythicDisruptingSpells = "09bb3ee4-16d2-463b-8620-b36130283839";
         internal const string guid14 = "06524a32-8498-4568-b51b-e3491644deb6";
         internal const string guid15 = "1e808c67-c656-4554-98bd-59ff9452101b";
         internal const string guid16 = "8484086a-5ec5-4de6-b704-c52e8daebe42";

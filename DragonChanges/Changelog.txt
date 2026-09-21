@@ -1,3 +1,7 @@
+*** 1.23.3
+ - Recompile for new BPCore version
+ - New toggle for making copper Dragonblood shifter's model be Aivu's model
+ - New feature, Disrupting Spells, Mythic Disrupting Spells
 *** 1.23.2
  - Add Acerbic Ring, Explosion Ring to Wooloo shop. Items are from KM, Explosion Ring works with DragonFixes installed, no idea about Acerbic Ring
  - Add Cold Iron Arrows Quiver to Wooloo, by request of someone in Discord
