@@ -36,7 +36,7 @@ internal static class DisruptingSpells
     internal static readonly Sprite icon = MicroAssetUtil.GetAssemblyResourceSprite(iconname);
 
     [DragonConfigure]
-    [DragonSetting(SettingCategories.NewAbilities, settingName, settingDescription)]
+    [DragonSetting(SettingCategories.NewFeatures, settingName, settingDescription)]
     public static void Configure()
     {
         if (SettingsAction.GetSetting<bool>(settingName))
@@ -70,9 +70,9 @@ internal static class DisruptingSpells
                 action: ActionsBuilder.New().Conditional(
                         ConditionsBuilder.New().IsCaster(true),
                         ActionsBuilder.New().Conditional(ConditionsBuilder.New().CasterHasFact(Guids.MythicDisruptingSpells),
-                            ActionsBuilder.New().DispelMagic(ContextActionDispelMagic.BuffType.All, RuleDispelMagic.CheckType.DC, 
+                            ActionsBuilder.New().DispelMagic(ContextActionDispelMagic.BuffType.FromSpells, RuleDispelMagic.CheckType.DC, 
                             ContextValues.Constant(10), countToRemove: ContextValues.Constant(5)),
-                            ActionsBuilder.New().DispelMagic(ContextActionDispelMagic.BuffType.All, RuleDispelMagic.CheckType.DC, 
+                            ActionsBuilder.New().DispelMagic(ContextActionDispelMagic.BuffType.FromSpells, RuleDispelMagic.CheckType.DC, 
                                 ContextValues.Constant(10), countToRemove: ContextValues.Constant(1)))))
             .SetGroups(FeatureGroup.WizardFeat, FeatureGroup.Feat)
             .SetIcon(icon)

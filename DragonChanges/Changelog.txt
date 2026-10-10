@@ -1,3 +1,7 @@
+*** 1.24.0
+ - New mythic ability, Mythic Mind Corruption, Mythic Feint
+ - New feats, Battlefield Intuition, Muscle Reaction, Backdown
+ - Fix Disrupting Spells removing features, now correctly dispels only spell buffs
 *** 1.23.3
  - Recompile for new BPCore version
  - New toggle for making copper Dragonblood shifter's model be Aivu's model

@@ -269,16 +269,16 @@ namespace DragonChanges.Utils
         internal const string MythicCasterBaseResource = "05f4113b-8dba-45fe-9101-6bee702ec8f3";
         internal const string DisruptingSpells = "17e99e6a-0d8d-4a34-99cd-42baf3cda79f";
         internal const string MythicDisruptingSpells = "09bb3ee4-16d2-463b-8620-b36130283839";
-        internal const string guid14 = "06524a32-8498-4568-b51b-e3491644deb6";
-        internal const string guid15 = "1e808c67-c656-4554-98bd-59ff9452101b";
-        internal const string guid16 = "8484086a-5ec5-4de6-b704-c52e8daebe42";
-        internal const string guid17 = "6aa8b689-c17d-488a-9f6f-a0a188fb15cf";
-        internal const string guid18 = "0b6a1791-81bd-41a7-b49d-ab5542ccb462";
-        internal const string guid19 = "7c7e1cda-4716-4680-aad1-1e1541dbd2b7";
-        internal const string guid20 = "f7d30dc6-e660-4374-9745-e4b6bc6b5b82";
-        internal const string guid21 = "3fdf198e-916c-46fc-998f-49028543e6fc";
-        internal const string guid22 = "9b2115c1-f7c7-4317-be8c-f2c683768279";
-        internal const string guid23 = "57cd56e1-0fa0-4982-8678-3f5a283dce8b";
-        internal const string guid24 = "d2b9b457-b28d-419b-94be-d78a8bdc7598";
+        internal const string MindCorruption = "06524a32-8498-4568-b51b-e3491644deb6";
+        internal const string FeintAoe = "1e808c67-c656-4554-98bd-59ff9452101b";
+        internal const string FeintAoeAbility = "8484086a-5ec5-4de6-b704-c52e8daebe42";
+        internal const string BattlefieldIntuition = "6aa8b689-c17d-488a-9f6f-a0a188fb15cf";
+        internal const string MuscleReaction = "0b6a1791-81bd-41a7-b49d-ab5542ccb462";
+        internal const string ImprovedCombatExpertiseFeature = "7c7e1cda-4716-4680-aad1-1e1541dbd2b7";
+        internal const string ImprovedCombatExpertiseBuff = "f7d30dc6-e660-4374-9745-e4b6bc6b5b82";
+        internal const string BackdownFeature = "3fdf198e-916c-46fc-998f-49028543e6fc";
+        internal const string BackdownBuff = "9b2115c1-f7c7-4317-be8c-f2c683768279";
+        internal const string BackdownProperty = "57cd56e1-0fa0-4982-8678-3f5a283dce8b";
+        internal const string BackdownFlatfootBuff = "d2b9b457-b28d-419b-94be-d78a8bdc7598";
     }
 }

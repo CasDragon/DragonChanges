@@ -8,9 +8,8 @@ using UnityEngine;
 
 namespace DragonChanges.NewStuff.VendorStuff;
 
-public class VendorSpawner: IAreaPartHandler//IAreaActivationHandler
+public class VendorSpawner: IAreaPartHandler
 {
-    //public void OnAreaActivated()
     public void OnAreaPartChanged(BlueprintAreaPart previous)
     {
         Main.log.Log("New area loaded");
@@ -51,18 +50,12 @@ public class VendorSpawner: IAreaPartHandler//IAreaActivationHandler
             var guid = unit.Blueprint.AssetGuid.ToString();
             //Main.log.Log($"Unit's guid is {guid}");
             //Main.log.Log($"Unit's name is {unit.CharacterName}");
-            if (unit.Blueprint.AssetGuid == Guids.DLCVendorUnit)
-            {
-                Main.log.Log($"Found wooloo guid");
-                return;
-            }
-            if (unit.CharacterName == VendorUnit.unitname)
-            {
-                Main.log.Log($"Found wooloo name");
-                return;
-            }
+            if (unit.Blueprint.AssetGuid != Guids.DLCVendorUnit && unit.CharacterName != VendorUnit.unitname) continue;
+            Main.log.Log($"Found wooloo unit already spawned");
+            return;
         }
 
+        Main.log.Log("Spawning Wooloo unit (IAreaPartHandler)");
         var unitSpawned = Game.Instance.EntityCreator.SpawnUnit(BlueprintTool.Get<BlueprintUnit>(Guids.DLCVendorUnit),
             position, Quaternion.identity, Game.Instance.State.LoadedAreaState.MainState);
     }
@@ -109,18 +102,11 @@ public class VendorSpawner2: IAreaActivationHandler
             var guid = unit.Blueprint.AssetGuid.ToString();
             //Main.log.Log($"Unit's guid is {guid}");
             //Main.log.Log($"Unit's name is {unit.CharacterName}");
-            if (unit.Blueprint.AssetGuid == Guids.DLCVendorUnit)
-            {
-                Main.log.Log($"Found wooloo guid");
-                return;
-            }
-            if (unit.CharacterName == VendorUnit.unitname)
-            {
-                Main.log.Log($"Found wooloo name");
-                return;
-            }
+            if (unit.Blueprint.AssetGuid != Guids.DLCVendorUnit && unit.CharacterName != VendorUnit.unitname) continue;
+            Main.log.Log($"Found wooloo unit already spawned");
+            return;
         }
-
+        Main.log.Log("Spawning Wooloo unit (IAreaActivationHandler)");
         var unitSpawned = Game.Instance.EntityCreator.SpawnUnit(BlueprintTool.Get<BlueprintUnit>(Guids.DLCVendorUnit),
             position, Quaternion.identity, Game.Instance.State.LoadedAreaState.MainState);
     }

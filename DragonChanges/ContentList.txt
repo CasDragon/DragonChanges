@@ -128,11 +128,21 @@ New Content:
         Powerful Wings:
             You gain two wing attacks. These are secondary natural attacks that each deal 2d8 damage.
         Presence of Mind:
+            https://www.d20pfsrd.com/feats/3rd-party-feats/4-winds-fantasy-gaming/combat-feats/presence-of-mind-combat/
             Int bonus to Initiative
         Extra Discovery (Mutation Warrior):
             Extra Discovery but for Mutation Warrior. Can be taken 3 times (for total of 7, which is all the base game features)
         Disrupting Spells:
             Upon hitting a target with a spell, dispel 1 buff or debuff from the target, based on your spell DC. Note this will affect both allies and enemies.
+        Battlefield Intuition:
+            https://www.d20pfsrd.com/feats/3rd-party-feats/4-winds-fantasy-gaming/combat-feats/battlefield-intuition-combat/
+            You add your Wisdom modifier to initiative checks. 
+        Muscle Reaction:
+            https://www.d20pfsrd.com/feats/3rd-party-feats/4-winds-fantasy-gaming/combat-feats/muscle-reaction-combat/
+            You add your Strength modifier to initiative checks. 
+        Backdown:
+            https://www.d20pfsrd.com/feats/3rd-party-feats/feats-raven-king-press/backdown-combat/
+            Buffed the DC to 10 + 1/2 character level + STR bonus + Intimidate, so it's not shit in Wrath
         
     New Mythic Feats:
         Ascendant Critical:
@@ -149,6 +159,10 @@ New Content:
             Gives Sword of Heaven (Angel mythic ability) unlimited rounds
         Mythic Body and Mind:
             You gain a bonus to all ability scores equal to 1 + half of your mythic rank.
+        Mythic Mind Corruption:
+            Bypass compulsion immunity
+        Mythic Feint:
+            20ft radius AoE version of Feint
            
 -------------------------------------
 
