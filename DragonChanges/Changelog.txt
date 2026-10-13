@@ -1,3 +1,5 @@
+*** Unreleased
+ - new spell, Flaming Fireball
 *** 1.24.0
  - New mythic ability, Mythic Mind Corruption, Mythic Feint
  - New feats, Battlefield Intuition, Muscle Reaction, Backdown

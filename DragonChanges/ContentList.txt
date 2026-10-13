@@ -98,6 +98,8 @@ New Content:
             In Bard, Cleric, Oracle, Sorc, Wizard, MD spell list
         Blunt Impact:
             Blunt version of Keen Edge, basically.
+        Flaming Fireball:
+            Fireball but with no cap on damage
                         
     New Pets (yes I know the mount points are fucked):
         Griffon pet

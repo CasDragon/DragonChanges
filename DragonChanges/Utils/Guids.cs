@@ -280,5 +280,30 @@ namespace DragonChanges.Utils
         internal const string BackdownBuff = "9b2115c1-f7c7-4317-be8c-f2c683768279";
         internal const string BackdownProperty = "57cd56e1-0fa0-4982-8678-3f5a283dce8b";
         internal const string BackdownFlatfootBuff = "d2b9b457-b28d-419b-94be-d78a8bdc7598";
+        internal const string FlamingFireball = "e7725943-392c-4660-9c53-eb1401f4db10";
+        internal const string guid1 = "66faf6b5-cb9f-4612-a393-38711861ea7a";
+        internal const string guid2 = "289cd74f-8abc-4f3c-a00f-4799569bc611";
+        internal const string guid3 = "bf3e315f-1b70-4769-ac9a-453cdeafd09e";
+        internal const string guid4 = "951554a5-d48b-48d7-a255-435e9638ace6";
+        internal const string guid5 = "1b37004c-ed85-402e-8e54-7402b436936b";
+        internal const string guid6 = "23621246-72b5-4080-aae0-27110a0393ac";
+        internal const string guid7 = "1d43aed0-2cd8-4f73-86aa-2409944ea63a";
+        internal const string guid8 = "4ea07178-1f00-486f-bc93-99e4c4a59ae9";
+        internal const string guid9 = "28d071ff-9e83-4688-9736-603047acd669";
+        internal const string guid10 = "82e4bb8c-8234-47db-bc3b-8cf6f8aef0c8";
+        internal const string guid11 = "4f947bce-5262-407b-bcd5-5df230370a02";
+        internal const string guid12 = "e0fccef7-d8b6-41e6-b451-475b5d0cd279";
+        internal const string guid13 = "4ac1ce9a-cae7-4cf8-b480-29935c2d91fb";
+        internal const string guid14 = "dfc68dc7-fb99-40c5-af5e-3c7d49a21c37";
+        internal const string guid15 = "802654bc-75ca-4dc6-b95d-9770ab991650";
+        internal const string guid16 = "9bb8835e-78b2-4ac8-9f52-1ee90e1b96bf";
+        internal const string guid17 = "f12f956d-8b5b-40cb-8e0e-8ca93e2691bf";
+        internal const string guid18 = "cc0840ec-25ba-49a3-9663-a98c40f2159d";
+        internal const string guid19 = "21ad1fa4-b58d-4fb4-932c-fba1ba7baf72";
+        internal const string guid20 = "9f7d023c-4496-4af2-a381-48907db93380";
+        internal const string guid21 = "713275a5-5cb2-4aeb-a4cb-cb4fb254ee60";
+        internal const string guid22 = "5c79cf08-09a7-486f-bf85-434251c835f1";
+        internal const string guid23 = "cb81e04b-bdbe-4b63-8c28-9b74adfb75bb";
+        internal const string guid24 = "bae02019-4eef-47bc-8390-b3a1a21b535a";
     }
 }
