@@ -281,7 +281,7 @@ namespace DragonChanges.Utils
         internal const string BackdownProperty = "57cd56e1-0fa0-4982-8678-3f5a283dce8b";
         internal const string BackdownFlatfootBuff = "d2b9b457-b28d-419b-94be-d78a8bdc7598";
         internal const string FlamingFireball = "e7725943-392c-4660-9c53-eb1401f4db10";
-        internal const string guid1 = "66faf6b5-cb9f-4612-a393-38711861ea7a";
+        internal const string DevastatingFormToggle = "66faf6b5-cb9f-4612-a393-38711861ea7a";
         internal const string guid2 = "289cd74f-8abc-4f3c-a00f-4799569bc611";
         internal const string guid3 = "bf3e315f-1b70-4769-ac9a-453cdeafd09e";
         internal const string guid4 = "951554a5-d48b-48d7-a255-435e9638ace6";

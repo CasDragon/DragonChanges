@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Blueprints.Configurators.Items;
-using BlueprintCore.Blueprints.Configurators.Items.Equipment;
+﻿using BlueprintCore.Blueprints.Configurators.Items.Equipment;
 using BlueprintCore.Blueprints.References;
 using DragonChanges.NewItems.IounStones.Abilities;
 using DragonChanges.NewItems.IounStones.Buffs;
-using DragonChanges.NewStuff;
 using DragonChanges.NewStuff.VendorStuff;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;

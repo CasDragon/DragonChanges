@@ -215,8 +215,12 @@ Base Game Changes:
             Full spellcasting (doesn't skip levels 1,5,9) (toggeable)
         Shaman:
             Adds the Plague hex to Extra Hex and regular Hex selections for Shaman (toggeable)
-        Dragonblood Shifter:
-            Change copper polymorphs model to aivu's model (Disabled by default) (toggeable)
+        Shifter:
+            Dragonblood:
+                Change copper polymorphs model to aivu's model (Disabled by default) (toggeable)
+            Rageshaper:
+                Devastating Form can now have infinite duration toggle with Master Shapeshifter (Disabled by default) (toggeable)
+            
     
     Items:
         Call of Fiery Things

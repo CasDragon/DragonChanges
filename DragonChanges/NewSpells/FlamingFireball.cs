@@ -3,7 +3,6 @@ using BlueprintCore.Actions.Builder.ContextEx;
 using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Abilities;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils.Types;
-using DragonChanges.NewSpells.Buffs;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
 using Kingmaker.Blueprints.Classes.Spells;
@@ -11,15 +10,14 @@ using Kingmaker.Craft;
 using Kingmaker.EntitySystem.Stats;
 using Kingmaker.Enums.Damage;
 using Kingmaker.RuleSystem;
-using Kingmaker.RuleSystem.Rules.Damage;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.UnitLogic.Abilities.Components;
 using Kingmaker.UnitLogic.Commands.Base;
+using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.Utility;
 using Kingmaker.Visual.Animation.Kingmaker.Actions;
 using TabletopTweaks.Core.MechanicsChanges;
-using UnityEngine;
 
 namespace DragonChanges.NewSpells;
 
@@ -33,7 +31,7 @@ internal static class FlamingFireball
     //internal const string iconname = "Abilities.spell.png";
     internal const string name = "Flaming Fireball";
 
-    internal const string description = "A fireball {g|Encyclopedia:Spell}spell{/g} generates a searing explosion of flame that detonates with a low roar and deals {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Energy_Damage}fire damage{/g} per {g|Encyclopedia:Caster_Level}caster level{/g} (no maximum) to every creature within the area. A successful {g|Encyclopedia:Saving_Throw}Reflex save{/g} halves this damage.";
+    internal const string description = "A fireball {g|Encyclopedia:Spell}spell{/g} generates a searing explosion of flame that detonates with a low roar and deals {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Energy_Damage}fire damage{/g} per {g|Encyclopedia:Caster_Level}caster level{/g} (no maximum) to every creature within the area. A successful {g|Encyclopedia:Saving_Throw}Reflex save{/g} halves this damage.\nApplys a debuff to enemy, dealing 1d6 Fire damage for 1 minute.";
 
     // don't edit
     [DragonLocalizedString(abilityname, name)]
@@ -72,7 +70,7 @@ internal static class FlamingFireball
     {
         var meta = Metamagic.Heighten | Metamagic.Quicken | Metamagic.CompletelyNormal | Metamagic.Bolstered |
                    Metamagic.Maximize | Metamagic.Persistent | Metamagic.Selective | Metamagic.Piercing |
-                   Metamagic.Intensified;
+                   Metamagic.Intensified | Metamagic.Extend;
         if (ModCompat.tttbase)
             meta = meta | (Metamagic)(MetamagicExtention.CustomMetamagic.Burning |
                                       MetamagicExtention.CustomMetamagic.ElementalAcid |
@@ -98,17 +96,13 @@ internal static class FlamingFireball
                 projectiles: [ProjectileRefs.Fireball00.ToString()],
                 needAttackRoll: false,
                 useMaxProjectilesCount: false)
-            .AddAbilityEffectRunAction(ActionsBuilder.New()
-                .DealDamage(damageType: new DamageTypeDescription()
-                {
-                    Type = DamageType.Energy,
-                    Common = new DamageTypeDescription.CommomData(),
-                    Physical = new DamageTypeDescription.PhysicalData(),
-                    Energy = DamageEnergyType.Fire
-                },
-                    value: ContextDice.Value(DiceType.D6, ContextValues.Rank()),
-                    isAoE: true,
-                    halfIfSaved: true),
+            .AddAbilityEffectRunAction(
+                ActionsBuilder.New()
+                    .DealDamage(damageType: DamageTypes.Energy(DamageEnergyType.Fire),
+                        value: ContextDice.Value(DiceType.D6, ContextValues.Rank()),
+                        isAoE: true,
+                        halfIfSaved: true)
+                    .ApplyBuff(BuffRefs.BurnBuff1d6.ToString(), ContextDuration.Fixed(1, DurationRate.Minutes, true)),
                 savingThrowType: SavingThrowType.Reflex)
             .AddAbilityTargetsAround(radius: new Feet(20), spreadSpeed: new Feet(25), includeDead: false, targetType: TargetType.Any)
             .AddContextRankConfig(ContextRankConfigs.CasterLevel())

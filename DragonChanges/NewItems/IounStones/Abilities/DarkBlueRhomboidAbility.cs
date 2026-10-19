@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
+﻿using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using DragonChanges.NewItems.IounStones.Buffs;
 using DragonChanges.Utils;
 using DragonLibrary.Utils;
@@ -38,6 +33,8 @@ namespace DragonChanges.NewItems.IounStones.Abilities
                 .SetDeactivateImmediately(false)
                 .SetDeactivateIfOwnerUnconscious(false)
                 .SetOnlyInCombat(false)
+                .SetIsOnByDefault(true)
+                .SetDoNotTurnOffOnRest(true)
                 .SetActivationType(AbilityActivationType.Immediately)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Free)
                 .SetBuff(DarkBlueRhomboidBuff.ConfigureEnabled())

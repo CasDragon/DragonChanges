@@ -34,6 +34,8 @@ namespace DragonChanges.NewItems.IounStones.Abilities
                 .SetDeactivateImmediately(false)
                 .SetDeactivateIfOwnerUnconscious(false)
                 .SetOnlyInCombat(false)
+                .SetIsOnByDefault(true)
+                .SetDoNotTurnOffOnRest(true)
                 .SetActivationType(AbilityActivationType.Immediately)
                 .SetActivateWithUnitCommand(UnitCommand.CommandType.Free)
                 .SetBuff(AmberSpindleBuff.ConfigureEnabled())

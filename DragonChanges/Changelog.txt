@@ -1,5 +1,7 @@
 *** Unreleased
  - new spell, Flaming Fireball
+ - Fix Ioun Stones being disabled upon rest
+ - Devastating Form (base game) now has an option in the modmenu, to let master shapeshifter give it an infinite duration toggle
 *** 1.24.0
  - New mythic ability, Mythic Mind Corruption, Mythic Feint
  - New feats, Battlefield Intuition, Muscle Reaction, Backdown
