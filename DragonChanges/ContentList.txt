@@ -100,6 +100,11 @@ New Content:
             Blunt version of Keen Edge, basically.
         Flaming Fireball:
             Fireball but with no cap on damage
+            Adds fire dot
+            (Honestly, open to suggestions on potential changes to this)
+        Communal Freedom of Movement:
+            Communal version of Freedom of Movement
+            In spells list that would get Freedom of Movement
                         
     New Pets (yes I know the mount points are fucked):
         Griffon pet
@@ -170,72 +175,79 @@ New Content:
 
 Other Mod Changes:
     Microscopic Content Expansion:
-        Add Nightmare pet to other class pet selections (toggeable)
-        Deadly Juggernaut spell DR stacks (toggeable)
+        Add Nightmare pet to other class pet selections (toggleable)
+        Deadly Juggernaut spell DR stacks (toggleable)
     
     Character Options Plus:
         Adds Dimensional Blade to Warpriest spell list
         
     Expanded Content:
-         Buffs drake stats to stupid OP levels (meme option) (toggeable) (Disabled by default)
+         Buffs drake stats to stupid OP levels (meme option) (toggleable) (Disabled by default)
          
     Mythic Arcanist:
-        Allows Mage Armor 2/3/4 to work with Archmage Armor (toggeable)
+        Allows Mage Armor 2/3/4 to work with Archmage Armor (toggleable)
         
     Prestige Plus:
         Adding Blade Lash to Warpriest/Inquist/MD spell list 
-        Remove the Monk requirement from the new combat styles (toggeable) (Disabled by default)
+        Remove the Monk requirement from the new combat styles (toggleable) (Disabled by default)
         Cloak and Dagger buff lasts entire combat, in the above toggle because I can't be assed to add new toggle
 
 --------------------------------
 
 Base Game Changes:
     Wooloo Vendor:
-        Adds Ruin Staff (toggeable)
-        Adds Thwarter (toggeable)
-        Adds Serpent Prince (toggeable)
-        Adds Twin Crystals (toggeable)
-        Adds Walls of Sanctuary (toggeable)
-        Adds Helmet of Guiding Light (toggeable)
-        Adds The Priceless Woe (toggeable)
-        Adds Butchers Cleaver (DLC3)  (toggeable)
-        Adds Martyrs Blade (toggeable)
-        Adds Oppressor (toggeable)
-        Adds Jagannath Khanda (toggeable)
-        Adds Paws Of The Bear God  (toggeable)
-        Adds Greater Magic Weapon scrolls (99x)  (toggeable)
-        Add Lion's Claw (toggeable)
-        AddsExplosion Ring (Requires DragonFixes to function correctly, it's old KM item) (toggeable)
-        Add Acerbic Ring (Old KM item, no idea if it actually works or not) (toggeable)        
-        Add Cold Iron Arrow Quiver (toggeable)        
+        Adds Ruin Staff (toggleable)
+        Adds Thwarter (toggleable)
+        Adds Serpent Prince (toggleable)
+        Adds Twin Crystals (toggleable)
+        Adds Walls of Sanctuary (toggleable)
+        Adds Helmet of Guiding Light (toggleable)
+        Adds The Priceless Woe (toggleable)
+        Adds Butchers Cleaver (DLC3)  (toggleable)
+        Adds Martyrs Blade (toggleable)
+        Adds Oppressor (toggleable)
+        Adds Jagannath Khanda (toggleable)
+        Adds Paws Of The Bear God  (toggleable)
+        Adds Greater Magic Weapon scrolls (99x)  (toggleable)
+        Add Lion's Claw (toggleable)
+        AddsExplosion Ring (Requires DragonFixes to function correctly, it's old KM item) (toggleable)
+        Add Acerbic Ring (Old KM item, no idea if it actually works or not) (toggleable)        
+        Add Cold Iron Arrow Quiver (toggleable)        
         
     Classes:
         Dragon Disciple:
-            MasterShapeshifter makes Dragonform free (toggeable)
-            Full spellcasting (doesn't skip levels 1,5,9) (toggeable)
+            MasterShapeshifter makes Dragonform free (toggleable)
+            Full spellcasting (doesn't skip levels 1,5,9) (toggleable)
         Shaman:
-            Adds the Plague hex to Extra Hex and regular Hex selections for Shaman (toggeable)
+            Adds the Plague hex to Extra Hex and regular Hex selections for Shaman (toggleable)
         Shifter:
             Dragonblood:
-                Change copper polymorphs model to aivu's model (Disabled by default) (toggeable)
+                Change copper polymorphs model to aivu's model (Disabled by default) (toggleable)
             Rageshaper:
-                Devastating Form can now have infinite duration toggle with Master Shapeshifter (Disabled by default) (toggeable)
+                Devastating Form can now have infinite duration toggle with Master Shapeshifter (Disabled by default) (toggleable)
             
     
     Items:
         Call of Fiery Things
-            Buffs  Call of Fiery Things to work on SLAs. (toggeable)    
+            Buffs  Call of Fiery Things to work on SLAs. (toggleable)    
+        Wide Sweep:
+            Unnerf it to dealing weapon damage in AoE instead of 2d4
+        Jinx:
+            Unnerf it to dealing weapon damage instead of base weapon damage
             
     Mythic Classes: 
         Trickster:
-            Buffs Stat Focus (Trickster feat) useless variants, such as Speed and Hit Points (Seriously, just a +1 to speed?) (toggeable)
+            Buffs Stat Focus (Trickster feat) useless variants, such as Speed and Hit Points (Seriously, just a +1 to speed?) (toggleable)
             
+    Mythic Abilities:
+        Any Means Necessary (Hell Knight mythic ability):
+            Grants fire immunity and 2d8 to weapon attacks (toggleable) - You can get fire/crit/sneak attack immunity with a dip in sorcer with fire elememt bloodline and mythic that gives capstone immediately, so this isn't OP
            
-    Insightful Comtemplation:
-        Adds a WIS buff to Insightful Contemplation, added for Cyrix (toggeable)
+    Insightful Contemplation:
+        Adds a WIS buff to Insightful Contemplation, added for Cyrix (toggleable)
     Mythic Weapon Focus/Specialization:
-        Buffs Mythic Weapon Focus/Weapon Specialization to add a scaling bonus equal to half your Mythic Rank. (toggeable)
+        Buffs Mythic Weapon Focus/Weapon Specialization to add a scaling bonus equal to half your Mythic Rank. (toggleable)
     Mythic Assault for Light Armor:
-        For Viggy, buffs Mythic Light Armor Assualt to work with Fighter's Finesse. Basically cheating. (toggeable) (Disabled by default)
+        For Viggy, buffs Mythic Light Armor Assault to work with Fighter's Finesse. Basically cheating. (toggleable) (Disabled by default)
     Hippogriff pet:
-        Added to various pet selections (toggeable)
+        Added to various pet selections (toggleable)

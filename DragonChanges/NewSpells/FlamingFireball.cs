@@ -72,12 +72,12 @@ internal static class FlamingFireball
                    Metamagic.Maximize | Metamagic.Persistent | Metamagic.Selective | Metamagic.Piercing |
                    Metamagic.Intensified | Metamagic.Extend;
         if (ModCompat.tttbase)
-            meta = meta | (Metamagic)(MetamagicExtention.CustomMetamagic.Burning |
-                                      MetamagicExtention.CustomMetamagic.ElementalAcid |
-                                      MetamagicExtention.CustomMetamagic.ElementalCold |
-                                      MetamagicExtention.CustomMetamagic.ElementalElectricity |
-                                      MetamagicExtention.CustomMetamagic.ElementalFire |
-                                      MetamagicExtention.CustomMetamagic.Flaring);
+            meta |= (Metamagic)(MetamagicExtention.CustomMetamagic.Burning |
+                                MetamagicExtention.CustomMetamagic.ElementalAcid |
+                                MetamagicExtention.CustomMetamagic.ElementalCold |
+                                MetamagicExtention.CustomMetamagic.ElementalElectricity |
+                                MetamagicExtention.CustomMetamagic.ElementalFire |
+                                MetamagicExtention.CustomMetamagic.Flaring);
         var x = AbilityConfigurator.New(ability, abilityguid)
             .SetDisplayName(abilityname)
             .SetDescription(abilitydescription)

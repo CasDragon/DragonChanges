@@ -282,9 +282,9 @@ namespace DragonChanges.Utils
         internal const string BackdownFlatfootBuff = "d2b9b457-b28d-419b-94be-d78a8bdc7598";
         internal const string FlamingFireball = "e7725943-392c-4660-9c53-eb1401f4db10";
         internal const string DevastatingFormToggle = "66faf6b5-cb9f-4612-a393-38711861ea7a";
-        internal const string guid2 = "289cd74f-8abc-4f3c-a00f-4799569bc611";
-        internal const string guid3 = "bf3e315f-1b70-4769-ac9a-453cdeafd09e";
-        internal const string guid4 = "951554a5-d48b-48d7-a255-435e9638ace6";
+        internal const string FreedomOfMovementCommunal = "289cd74f-8abc-4f3c-a00f-4799569bc611";
+        internal const string RobeOfRiftsEnchant = "bf3e315f-1b70-4769-ac9a-453cdeafd09e";
+        internal const string RobeOfRiftsFeature = "951554a5-d48b-48d7-a255-435e9638ace6";
         internal const string guid5 = "1b37004c-ed85-402e-8e54-7402b436936b";
         internal const string guid6 = "23621246-72b5-4080-aae0-27110a0393ac";
         internal const string guid7 = "1d43aed0-2cd8-4f73-86aa-2409944ea63a";
