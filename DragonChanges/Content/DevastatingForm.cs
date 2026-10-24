@@ -20,8 +20,8 @@ public class DevastatingForm
 {
     const string SettingName = "infinitedevastingform";
     const string SettingDescription = "Change Devastating Form from having a duration, to having a permanent buff with an ability to toggle off";
-    internal const string abilitynamekey = "dragonweaponfocus";
-    internal const string abilitdescriptionkey = "dragonweaponspecial";
+    internal const string abilitynamekey = "infinitedevastingformname";
+    internal const string abilitdescriptionkey = "infinitedevastingformdescription";
     [DragonLocalizedString(abilitynamekey, abilitynamekey)]
     internal const string abilityname = "End Devastating Form";
     [DragonLocalizedString(abilitdescriptionkey, abilitydescription)]
@@ -61,7 +61,7 @@ public class DevastatingForm
                 ActionsBuilder.New()
                     .Conditional(
                         ConditionsBuilder.New()
-                            .HasFact(fact: FeatureRefs.MasterShapeshifter.ToString()),
+                            .HasFact(fact: FeatureRefs.LimitlessRage.ToString()),
                         ifTrue:
                             ActionsBuilder.New().ApplyBuffPermanentFixed(buff, asChild: true),
                         ifFalse:

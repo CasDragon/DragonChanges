@@ -224,7 +224,7 @@ Base Game Changes:
             Dragonblood:
                 Change copper polymorphs model to aivu's model (Disabled by default) (toggleable)
             Rageshaper:
-                Devastating Form can now have infinite duration toggle with Master Shapeshifter (Disabled by default) (toggleable)
+                Devastating Form can now have infinite duration toggle with Limitless Rage (Disabled by default) (toggleable)
             
     
     Items:

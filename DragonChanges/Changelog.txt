@@ -1,3 +1,6 @@
+*** 1.25.1
+ - Fix Devastating Form toggle having wrong name/description
+ - Also change it to requiring Limitless Rage over Master Shapeshifter 
 *** 1.25.0
  - new spell, Flaming Fireball, Communal Freedom of Movement
  - Fix Ioun Stones being disabled upon rest
